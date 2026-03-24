@@ -240,8 +240,11 @@
     .prop-card.featured { grid-column: span 2; }
 
     .prop-img {
-      position: relative; overflow: hidden;
+      position: relative; overflow: hidden; display: block;
     }
+    a.prop-img { cursor: pointer; }
+    a.prop-img::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0); transition: background .3s; }
+    a.prop-img:hover::after { background: rgba(0,0,0,.15); }
     .prop-card.featured .prop-img { height: 380px; }
     .prop-card:not(.featured) .prop-img { height: 240px; }
 
@@ -557,10 +560,10 @@
 
         <!-- 1. B&B Casa Mariangela – San Bartolomeo (FEATURED) -->
         <div class="prop-card featured fade-up" style="transition-delay:.05s">
-          <div class="prop-img" style="background-image:url('img/camera1-mariangela.jpg');background-size:cover;background-position:center">
+          <a href="./casa-mariangela/" class="prop-img" style="background-image:url('img/camera1-mariangela.jpg');background-size:cover;background-position:center">
             <div class="prop-badge-location">&#127807; Liguria</div>
             <div class="prop-badge-rating"><span class="star">&#9733;</span> 4.97 &middot; 29 rec.</div>
-          </div>
+          </a>
           <div class="prop-body">
             <p class="prop-tipo">B&amp;B &middot; Mare</p>
             <h3>B&amp;B Casa Mariangela</h3>
@@ -578,16 +581,17 @@
             <div class="prop-actions">
               <a href="./casa-mariangela/" class="btn-card btn-card-primary">Scopri di pi&ugrave;</a>
               <a href="https://www.airbnb.it/rooms/1022566699352195921" target="_blank" class="btn-card btn-card-outline">Airbnb</a>
+              <a href="https://www.booking.com/hotel/it/b-amp-b-casa-mariangela.it.html?label=gen173bo-10CAsocUIXYi1hbXAtYi1jYXNhLW1hcmlhbmdlbGFIM1gDaHGIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGYAgaoAgG4AsL2iM4GwAIB0gIkYmFhYjZiMzAtNzg3MC00MTZkLWFiODItOWI3MDc4YjY3MzI32AIB4AIB&sid=408ba262120226241ffc0d8a2469b7ac&dist=0&sb_price_type=total&type=total&" target="_blank" class="btn-card btn-card-outline">Booking</a>
             </div>
           </div>
         </div>
 
         <!-- 2. Apartment with swimming pool – Leggiuno -->
         <div class="prop-card fade-up" style="transition-delay:.1s">
-          <div class="prop-img" style="background-image:url('appartamento-piscina/img/piscina1.jpg');background-size:cover;background-position:center">
+          <a href="./appartamento-piscina/" class="prop-img" style="background-image:url('appartamento-piscina/img/piscina1.jpg');background-size:cover;background-position:center">
             <div class="prop-badge-location">&#127807; Lago Maggiore</div>
             <div class="prop-badge-rating"><span class="star">&#9733;</span> 4.68 &middot; 25 rec.</div>
-          </div>
+          </a>
           <div class="prop-body">
             <p class="prop-tipo">Appartamento &middot; Lago</p>
             <h3>Apartment with Swimming Pool</h3>
@@ -604,19 +608,16 @@
             <div class="prop-actions">
               <a href="./appartamento-piscina/" class="btn-card btn-card-primary">Scopri di pi&ugrave;</a>
               <a href="https://www.airbnb.it/rooms/936851155880605469" target="_blank" class="btn-card btn-card-outline">Airbnb</a>
+              <a href="https://www.booking.com/Share-rDfiDJ" target="_blank" class="btn-card btn-card-outline">Booking</a>
             </div>
           </div>
         </div>
 
         <!-- 3. Casa Mariangela pool and garden – Leggiuno -->
         <div class="prop-card fade-up" style="transition-delay:.15s">
-          <div class="prop-img ph-lago">
-            <div class="prop-placeholder">
-              <span class="prop-placeholder-icon">&#127984;</span>
-              <span>Leggiuno</span>
-            </div>
+          <a href="./pool-and-garden/" class="prop-img" style="background-image:url('pool-and-garden/img/vista-lago.jpg');background-size:cover;background-position:center">
             <div class="prop-badge-location">&#127807; Lago Maggiore</div>
-          </div>
+          </a>
           <div class="prop-body">
             <p class="prop-tipo">Casa &middot; Lago</p>
             <h3>Casa Mariangela: Pool &amp; Garden</h3>
@@ -656,7 +657,7 @@
             </div>
             <p class="prop-cin">CIN: <strong>IT097042C246M9KVYP</strong></p>
             <div class="prop-actions">
-              <span class="btn-card btn-card-disabled">In preparazione</span>
+              <a href="https://www.airbnb.it/rooms/1550769806025179622?unique_share_id=a2d11464-c9d9-4b82-890c-ef102069228f&viralityEntryPoint=1&s=76" target="_blank" class="btn-card btn-card-primary">Airbnb</a>
               <a href="#contatti" class="btn-card btn-card-outline">Informazioni</a>
             </div>
           </div>
