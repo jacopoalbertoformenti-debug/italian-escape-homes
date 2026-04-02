@@ -81,13 +81,13 @@
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 48px;
+      padding: 18px 36px;
       transition: background .35s, box-shadow .35s, padding .35s;
     }
-    nav.scrolled { background: rgba(245,248,245,.96); backdrop-filter: blur(12px); box-shadow: var(--shadow-sm); padding: 12px 48px; }
-    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--white); letter-spacing: .04em; transition: color .35s; }
+    nav.scrolled { background: rgba(245,248,245,.96); backdrop-filter: blur(12px); box-shadow: var(--shadow-sm); padding: 12px 36px; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; white-space: nowrap; flex-shrink: 0; color: var(--white); letter-spacing: .04em; transition: color .35s; }
     nav.scrolled .nav-logo { color: var(--dark); }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links { display: flex; gap: 18px; list-style: none; }
     .nav-links a { font-size: .8rem; font-weight: 400; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.85); transition: color .25s; }
     nav.scrolled .nav-links a { color: var(--text-light); }
     .nav-links a:hover { color: var(--gold) !important; }

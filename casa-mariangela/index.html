@@ -107,7 +107,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 48px;
+      padding: 18px 32px;
       transition: background .35s, box-shadow .35s, padding .35s;
     }
 
@@ -115,11 +115,12 @@
       background: rgba(255,248,243,.96);
       backdrop-filter: blur(12px);
       box-shadow: var(--shadow-sm);
-      padding: 12px 48px;
+      padding: 12px 32px;
     }
 
     .nav-logo {
       font-family: 'Cormorant Garamond', serif;
+      white-space: nowrap; flex-shrink: 0;
       font-size: 1.35rem;
       font-weight: 600;
       color: var(--white);
@@ -130,12 +131,12 @@
 
     .nav-links {
       display: flex;
-      gap: 36px;
+      gap: 14px;
       list-style: none;
     }
 
     .nav-links a {
-      font-size: .82rem;
+      font-size: .75rem;
       font-weight: 400;
       letter-spacing: .12em;
       text-transform: uppercase;
