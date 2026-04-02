@@ -1,0 +1,10 @@
+# Build output
+dist/
+
+# Wrangler config
+wrangler.jsonc
+wrangler.json
+wrangler.toml
+
+# Git
+.git
