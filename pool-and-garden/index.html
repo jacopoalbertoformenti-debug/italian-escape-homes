@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Casa Mariangela: Pool & Garden – Leggiuno, Lago Maggiore</title>
-  <meta name="description" content="Casa con piscina privata e giardino a Leggiuno, Lago Maggiore. 2 camere, 4 ospiti, vista lago panoramica, parcheggio privato. Prenota su Airbnb." />
+  <title data-i18n="garden.meta.title">Casa Mariangela: Pool &amp; Garden – Leggiuno, Lago Maggiore</title>
+  <meta name="description" data-i18n="garden.meta.desc" content="Casa con piscina privata e giardino a Leggiuno, Lago Maggiore. 2 camere, 4 ospiti, vista lago panoramica, parcheggio privato. Prenota su Airbnb." />
   <link rel="canonical" href="https://www.italianescapeshomes.it/pool-and-garden/" />
+  <!-- hreflang multilingual -->
+  <link rel="alternate" hreflang="it" href="https://www.italianescapeshomes.it/pool-and-garden/" />
+  <link rel="alternate" hreflang="en" href="https://www.italianescapeshomes.it/pool-and-garden/" />
+  <link rel="alternate" hreflang="de" href="https://www.italianescapeshomes.it/pool-and-garden/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.italianescapeshomes.it/pool-and-garden/" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.italianescapeshomes.it/pool-and-garden/" />
@@ -46,6 +51,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="img/vista-lago.jpg" fetchpriority="high">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -183,7 +189,8 @@
     #galleria { background: var(--sand); }
     .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 220px; gap: 12px; margin-top: 48px; }
     .gallery-item { border-radius: var(--radius); overflow: hidden; cursor: pointer; position: relative; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: transform .4s, opacity .35s ease; }
+    .gallery-item img.img-loaded { opacity: 1; }
     .gallery-item:hover img { transform: scale(1.06); }
     .gallery-item.wide { grid-column: span 2; }
     .gallery-overlay { position: absolute; inset: 0; background: rgba(26,45,30,0); display: flex; align-items: center; justify-content: center; transition: background .3s; }
@@ -246,6 +253,14 @@
       .hero-content .btn { display: block; width: 100%; max-width: 320px; margin: 8px auto; }
       .servizi-grid { grid-template-columns: 1fr; }
     }
+
+    /* ── Language switcher ───────────────────────────────── */
+    .lang-switcher { display:flex; gap:4px; align-items:center; margin-left:16px; }
+    .lang-switcher button { background:transparent; border:1px solid rgba(255,255,255,.4); color:rgba(255,255,255,.7); font-family:'Inter',sans-serif; font-size:.64rem; font-weight:500; letter-spacing:.1em; padding:4px 7px; border-radius:4px; cursor:pointer; transition:all .2s; }
+    .lang-switcher button:hover,.lang-switcher button.lang-active { background:var(--gold); border-color:var(--gold); color:var(--dark); }
+    nav.scrolled .lang-switcher button { border-color:rgba(26,45,30,.3); color:var(--text-light); }
+    nav.scrolled .lang-switcher button:hover,nav.scrolled .lang-switcher button.lang-active { background:var(--primary); border-color:var(--primary); color:var(--white); }
+    @media (max-width:768px) { .lang-switcher { margin-left:8px; } .lang-switcher button { padding:3px 6px; font-size:.6rem; } }
   </style>
 </head>
 <body>
@@ -254,12 +269,17 @@
   <nav id="nav">
     <a href="../" class="nav-logo">&#8592; Italian Escapes Homes</a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#casa">La casa</a></li>
-      <li><a href="#servizi">Servizi</a></li>
-      <li><a href="#galleria">Galleria</a></li>
-      <li><a href="#posizione">Posizione</a></li>
-      <li><a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank" class="nav-cta">Prenota</a></li>
+      <li><a href="#casa" data-i18n="garden.nav.about">La casa</a></li>
+      <li><a href="#servizi" data-i18n="garden.nav.services">Servizi</a></li>
+      <li><a href="#galleria" data-i18n="garden.nav.gallery">Galleria</a></li>
+      <li><a href="#posizione" data-i18n="garden.nav.location">Posizione</a></li>
+      <li><a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank" class="nav-cta" data-i18n="common.book">Prenota</a></li>
     </ul>
+    <div class="lang-switcher">
+      <button data-lang-btn="it" onclick="iehSetLang('it')">IT</button>
+      <button data-lang-btn="en" onclick="iehSetLang('en')">EN</button>
+      <button data-lang-btn="de" onclick="iehSetLang('de')">DE</button>
+    </div>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
@@ -269,8 +289,8 @@
   <header class="hero">
     <div class="hero-carousel">
       <div class="hero-slide active" style="background-image:url('img/vista-lago.jpg')"></div>
-      <div class="hero-slide" style="background-image:url('img/piscina.jpg')"></div>
-      <div class="hero-slide" style="background-image:url('img/soggiorno-cucina.jpg')"></div>
+      <div class="hero-slide" data-bg="img/piscina.jpg"></div>
+      <div class="hero-slide" data-bg="img/soggiorno-cucina.webp"></div>
     </div>
     <div class="hero-wave"></div>
     <div class="hero-dots">
@@ -281,16 +301,16 @@
     <div class="hero-content">
       <span class="hero-eyebrow">Leggiuno &middot; Lago Maggiore</span>
       <h1>Casa Mariangela<br><em>Pool &amp; Garden</em></h1>
-      <p class="hero-sub">Casa con piscina privata e giardino, vista panoramica sul Lago Maggiore a 30 minuti da Malpensa</p>
+      <p class="hero-sub" data-i18n="garden.hero.sub">Casa con piscina privata e giardino, vista panoramica sul Lago Maggiore a 30 minuti da Malpensa</p>
       <div class="hero-rating">
         <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <span>Su Airbnb</span>
+        <span data-i18n="home.hero.stat_rating">Su Airbnb</span>
       </div>
       <br>
-      <a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank" class="btn btn-primary">Prenota su Airbnb</a>
-      <a href="#casa" class="btn btn-outline">Scopri di pi&ugrave;</a>
+      <a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank" class="btn btn-primary" data-i18n="common.book_airbnb">Prenota su Airbnb</a>
+      <a href="#casa" class="btn btn-outline" data-i18n="common.discover">Scopri di pi&ugrave;</a>
     </div>
-    <div class="hero-scroll">Scorri</div>
+    <div class="hero-scroll" data-i18n="common.scroll">Scorri</div>
   </header>
 
   <!-- HIGHLIGHTS -->
@@ -298,22 +318,22 @@
     <div class="highlights-inner">
       <div class="highlight-item">
         <div class="highlight-icon">&#127946;</div>
-        <div class="highlight-val">Piscina</div>
-        <div class="highlight-label">Privata</div>
+        <div class="highlight-val" data-i18n="garden.hl.pool.val">Piscina</div>
+        <div class="highlight-label" data-i18n="garden.hl.pool.lbl">Privata</div>
       </div>
       <div class="highlight-item">
         <div class="highlight-icon">&#127968;</div>
         <div class="highlight-val">2</div>
-        <div class="highlight-label">Camere</div>
+        <div class="highlight-label" data-i18n="garden.hl.rooms.lbl">Camere</div>
       </div>
       <div class="highlight-item">
         <div class="highlight-icon">&#128101;</div>
         <div class="highlight-val">4</div>
-        <div class="highlight-label">Ospiti max</div>
+        <div class="highlight-label" data-i18n="garden.hl.guests.lbl">Ospiti max</div>
       </div>
       <div class="highlight-item">
         <div class="highlight-icon">&#127796;</div>
-        <div class="highlight-val">Vista</div>
+        <div class="highlight-val" data-i18n="lake.hl.view.val">Vista</div>
         <div class="highlight-label">Lago Maggiore</div>
       </div>
     </div>
@@ -324,28 +344,28 @@
     <div class="section-inner">
       <div class="about-grid">
         <div class="about-img-wrap fade-up">
-          <img src="img/vista-lago.jpg" alt="Vista lago Maggiore da Casa Mariangela Pool & Garden" />
+          <img src="img/vista-lago.jpg" alt="Vista lago Maggiore da Casa Mariangela Pool & Garden" loading="lazy" decoding="async" />
           <div class="about-badge">
             <div class="big">&#127796;</div>
             <div class="small">Vista lago</div>
           </div>
         </div>
         <div class="fade-up" style="transition-delay:.15s">
-          <p class="section-label">Il tuo spazio</p>
-          <h2 class="section-title">Una casa<br>sul lago</h2>
+          <p class="section-label" data-i18n="garden.about.label">Il tuo spazio</p>
+          <h2 class="section-title" data-i18n="garden.about.title">Una casa<br>sul lago</h2>
           <div class="section-divider"></div>
-          <p class="section-text">
+          <p class="section-text" data-i18n="garden.about.p1">
             Casa Mariangela Pool &amp; Garden &egrave; un alloggio tranquillo con piscina e ampio giardino privato,
             immerso nel verde di Leggiuno con una vista panoramica mozzafiato sul Lago Maggiore.
           </p>
           <br>
-          <p class="section-text">
+          <p class="section-text" data-i18n="garden.about.p2">
             La casa dispone di 2 camere da letto, un ampio soggiorno con cucina completamente attrezzata
             e accesso diretto al giardino privato. Ideale per famiglie o coppie che cercano relax e natura,
             a soli 2 minuti dalle spiagge del lago e 30 minuti dall&rsquo;aeroporto di Malpensa.
           </p>
           <br>
-          <a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank" class="btn btn-primary">Prenota su Airbnb</a>
+          <a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank" class="btn btn-primary" data-i18n="common.book_airbnb">Prenota su Airbnb</a>
         </div>
       </div>
     </div>
@@ -355,36 +375,36 @@
   <section id="camere">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label">Gli spazi</p>
-        <h2 class="section-title">Dove dormirete</h2>
+        <p class="section-label" data-i18n="common.rooms_label">Gli spazi</p>
+        <h2 class="section-title" data-i18n="common.rooms_title">Dove dormirete</h2>
         <div class="section-divider"></div>
       </div>
       <div class="camere-grid">
         <div class="camera-card fade-up" style="transition-delay:.05s">
           <div class="camera-img">
-            <img src="img/camera1.jpg" alt="Camera matrimoniale" />
+            <img src="img/camera1.webp" alt="Camera matrimoniale" loading="lazy" decoding="async" />
           </div>
           <div class="camera-body">
-            <h3>Camera matrimoniale</h3>
-            <p>Ampia camera mansardata con letto matrimoniale, illuminazione d&rsquo;atmosfera e armadio a muro.</p>
+            <h3 data-i18n="garden.room1.title">Camera matrimoniale</h3>
+            <p data-i18n="garden.room1.text">Ampia camera mansardata con letto matrimoniale, illuminazione d&rsquo;atmosfera e armadio a muro.</p>
             <div class="camera-details">
-              <span class="camera-detail">&#127769; Letto matrimoniale</span>
-              <span class="camera-detail">&#129695; Armadio</span>
-              <span class="camera-detail">&#128261; Mansarda</span>
+              <span class="camera-detail" data-i18n="garden.room1.d1">&#127769; Letto matrimoniale</span>
+              <span class="camera-detail" data-i18n="garden.room1.d2">&#129695; Armadio</span>
+              <span class="camera-detail" data-i18n="garden.room1.d3">&#128261; Mansarda</span>
             </div>
           </div>
         </div>
         <div class="camera-card fade-up" style="transition-delay:.1s">
           <div class="camera-img">
-            <img src="img/soggiorno.jpg" alt="Soggiorno" />
+            <img src="img/soggiorno.webp" alt="Soggiorno" loading="lazy" decoding="async" />
           </div>
           <div class="camera-body">
-            <h3>Soggiorno &amp; seconda camera</h3>
-            <p>Spazioso soggiorno con divano letto, TV e accesso diretto al giardino privato con vista sul verde.</p>
+            <h3 data-i18n="garden.room2.title">Soggiorno &amp; seconda camera</h3>
+            <p data-i18n="garden.room2.text">Spazioso soggiorno con divano letto, TV e accesso diretto al giardino privato con vista sul verde.</p>
             <div class="camera-details">
-              <span class="camera-detail">&#128715; Divano letto</span>
-              <span class="camera-detail">&#128250; Smart TV</span>
-              <span class="camera-detail">&#127807; Giardino</span>
+              <span class="camera-detail" data-i18n="garden.room2.d1">&#128715; Divano letto</span>
+              <span class="camera-detail" data-i18n="garden.room2.d2">&#128250; Smart TV</span>
+              <span class="camera-detail" data-i18n="garden.room2.d3">&#127807; Giardino</span>
             </div>
           </div>
         </div>
@@ -396,51 +416,51 @@
   <section id="servizi">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label">Dotazioni</p>
-        <h2 class="section-title">Tutto il comfort<br>che cerchi</h2>
+        <p class="section-label" data-i18n="garden.svc.label">Dotazioni</p>
+        <h2 class="section-title" data-i18n="garden.svc.title">Tutto il comfort<br>che cerchi</h2>
         <div class="section-divider"></div>
       </div>
       <div class="servizi-grid">
         <div class="servizio-item fade-up" style="transition-delay:.05s">
           <div class="servizio-icon">&#127946;</div>
           <div>
-            <h4>Piscina privata</h4>
-            <p>Piscina ad uso esclusivo degli ospiti, con area solarium e lettini.</p>
+            <h4 data-i18n="garden.svc.s1.title">Piscina privata</h4>
+            <p data-i18n="garden.svc.s1.text">Piscina ad uso esclusivo degli ospiti, con area solarium e lettini.</p>
           </div>
         </div>
         <div class="servizio-item fade-up" style="transition-delay:.1s">
           <div class="servizio-icon">&#127807;</div>
           <div>
-            <h4>Giardino privato</h4>
-            <p>Ampio giardino privato con tavolo esterno, perfetto per cene all&rsquo;aperto.</p>
+            <h4 data-i18n="garden.svc.s2.title">Giardino privato</h4>
+            <p data-i18n="garden.svc.s2.text">Ampio giardino privato con tavolo esterno, perfetto per cene all&rsquo;aperto.</p>
           </div>
         </div>
         <div class="servizio-item fade-up" style="transition-delay:.15s">
           <div class="servizio-icon">&#128663;</div>
           <div>
-            <h4>Parcheggio privato</h4>
-            <p>Posto auto privato incluso nel soggiorno.</p>
+            <h4 data-i18n="garden.svc.s3.title">Parcheggio privato</h4>
+            <p data-i18n="garden.svc.s3.text">Posto auto privato incluso nel soggiorno.</p>
           </div>
         </div>
         <div class="servizio-item fade-up" style="transition-delay:.2s">
           <div class="servizio-icon">&#127860;</div>
           <div>
-            <h4>Cucina attrezzata</h4>
-            <p>Cucina rustica completa con forno, lavastoviglie e tutto l&rsquo;occorrente per cucinare.</p>
+            <h4 data-i18n="garden.svc.s4.title">Cucina attrezzata</h4>
+            <p data-i18n="garden.svc.s4.text">Cucina rustica completa con forno, lavastoviglie e tutto l&rsquo;occorrente per cucinare.</p>
           </div>
         </div>
         <div class="servizio-item fade-up" style="transition-delay:.25s">
           <div class="servizio-icon">&#128246;</div>
           <div>
-            <h4>Wi-Fi gratuito</h4>
-            <p>Connessione internet inclusa in tutta la casa.</p>
+            <h4 data-i18n="garden.svc.s5.title">Wi-Fi gratuito</h4>
+            <p data-i18n="garden.svc.s5.text">Connessione internet inclusa in tutta la casa.</p>
           </div>
         </div>
         <div class="servizio-item fade-up" style="transition-delay:.3s">
           <div class="servizio-icon">&#127796;</div>
           <div>
-            <h4>Vista panoramica</h4>
-            <p>Vista mozzafiato sul Lago Maggiore e sulle montagne circostanti.</p>
+            <h4 data-i18n="garden.svc.s6.title">Vista panoramica</h4>
+            <p data-i18n="garden.svc.s6.text">Vista mozzafiato sul Lago Maggiore e sulle montagne circostanti.</p>
           </div>
         </div>
       </div>
@@ -451,8 +471,8 @@
   <section id="posizione">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label">Dove siamo</p>
-        <h2 class="section-title">Leggiuno,<br>Lago Maggiore</h2>
+        <p class="section-label" data-i18n="common.location_label">Dove siamo</p>
+        <h2 class="section-title" data-i18n="garden.loc.title">Leggiuno,<br>Lago Maggiore</h2>
         <div class="section-divider"></div>
       </div>
       <div class="posizione-grid">
@@ -474,8 +494,8 @@
           <div class="location-item">
             <div class="location-item-icon">&#127796;</div>
             <div>
-              <h4>Lago Maggiore</h4>
-              <p>A 2 minuti dalle spiagge. Vista panoramica sul lago e sulle Alpi dalla proprietà.</p>
+              <h4 data-i18n="garden.loc.lake.title">Lago Maggiore</h4>
+              <p data-i18n="garden.loc.lake.text">A 2 minuti dalle spiagge. Vista panoramica sul lago e sulle Alpi dalla propriet&agrave;.</p>
             </div>
           </div>
           <div class="location-item">
@@ -501,45 +521,45 @@
   <section id="galleria">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label">Le foto</p>
-        <h2 class="section-title">Galleria</h2>
+        <p class="section-label" data-i18n="common.gallery_label">Le foto</p>
+        <h2 class="section-title" data-i18n="common.gallery_title">Galleria</h2>
         <div class="section-divider"></div>
       </div>
       <div class="gallery-grid">
         <div class="gallery-item wide fade-up" style="transition-delay:.05s" onclick="openLightbox('img/vista-lago.jpg','Vista Lago Maggiore')">
-          <img src="img/vista-lago.jpg" alt="Vista lago" />
+          <img src="img/vista-lago.jpg" alt="Vista lago" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Vista lago</span></div>
         </div>
         <div class="gallery-item fade-up" style="transition-delay:.1s" onclick="openLightbox('img/piscina.jpg','Piscina privata')">
-          <img src="img/piscina.jpg" alt="Piscina" />
+          <img src="img/piscina.jpg" alt="Piscina" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Piscina</span></div>
         </div>
-        <div class="gallery-item fade-up" style="transition-delay:.15s" onclick="openLightbox('img/camera2.jpg','Camera matrimoniale')">
-          <img src="img/camera2.jpg" alt="Camera" />
+        <div class="gallery-item fade-up" style="transition-delay:.15s" onclick="openLightbox('img/camera2.webp','Camera matrimoniale')">
+          <img src="img/camera2.webp" alt="Camera" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Camera</span></div>
         </div>
-        <div class="gallery-item fade-up" style="transition-delay:.2s" onclick="openLightbox('img/soggiorno-cucina.jpg','Soggiorno e cucina')">
-          <img src="img/soggiorno-cucina.jpg" alt="Soggiorno e cucina" />
+        <div class="gallery-item fade-up" style="transition-delay:.2s" onclick="openLightbox('img/soggiorno-cucina.webp','Soggiorno e cucina')">
+          <img src="img/soggiorno-cucina.webp" alt="Soggiorno e cucina" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Soggiorno</span></div>
         </div>
-        <div class="gallery-item wide fade-up" style="transition-delay:.25s" onclick="openLightbox('img/cucina.jpg','Cucina')">
-          <img src="img/cucina.jpg" alt="Cucina" />
+        <div class="gallery-item wide fade-up" style="transition-delay:.25s" onclick="openLightbox('img/cucina.webp','Cucina')">
+          <img src="img/cucina.webp" alt="Cucina" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Cucina</span></div>
         </div>
-        <div class="gallery-item fade-up" style="transition-delay:.3s" onclick="openLightbox('img/sala-pranzo.jpg','Sala da pranzo')">
-          <img src="img/sala-pranzo.jpg" alt="Sala da pranzo" />
+        <div class="gallery-item fade-up" style="transition-delay:.3s" onclick="openLightbox('img/sala-pranzo.webp','Sala da pranzo')">
+          <img src="img/sala-pranzo.webp" alt="Sala da pranzo" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Sala da pranzo</span></div>
         </div>
-        <div class="gallery-item fade-up" style="transition-delay:.35s" onclick="openLightbox('img/camera3.jpg','Camera')">
-          <img src="img/camera3.jpg" alt="Camera 2" />
+        <div class="gallery-item fade-up" style="transition-delay:.35s" onclick="openLightbox('img/camera3.webp','Camera')">
+          <img src="img/camera3.webp" alt="Camera 2" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Camera</span></div>
         </div>
         <div class="gallery-item fade-up" style="transition-delay:.4s" onclick="openLightbox('img/bagno.jpg','Bagno')">
-          <img src="img/bagno.jpg" alt="Bagno" />
+          <img src="img/bagno.jpg" alt="Bagno" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Bagno</span></div>
         </div>
         <div class="gallery-item fade-up" style="transition-delay:.45s" onclick="openLightbox('img/giardino.jpg','Giardino')">
-          <img src="img/giardino.jpg" alt="Giardino" />
+          <img src="img/giardino.jpg" alt="Giardino" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Giardino</span></div>
         </div>
       </div>
@@ -549,16 +569,16 @@
   <!-- CTA -->
   <section id="contatti">
     <div class="section-inner">
-      <p class="section-label fade-up">Prenota il tuo soggiorno</p>
-      <h2 class="section-title fade-up" style="transition-delay:.1s">Pronto a goderti<br>il lago?</h2>
+      <p class="section-label fade-up" data-i18n="common.book_stay">Prenota il tuo soggiorno</p>
+      <h2 class="section-title fade-up" style="transition-delay:.1s" data-i18n="garden.cta.title">Pronto a goderti<br>il lago?</h2>
       <div class="section-divider fade-up" style="margin:0 auto 32px;transition-delay:.15s"></div>
-      <p class="section-text fade-up" style="margin:0 auto 40px;transition-delay:.2s">
+      <p class="section-text fade-up" style="margin:0 auto 40px;transition-delay:.2s" data-i18n-html="common.check_avail">
         Controlla le disponibilit&agrave; e prenota direttamente su Airbnb.<br>
         Per qualsiasi informazione siamo a tua disposizione.
       </p>
       <div class="fade-up" style="transition-delay:.25s">
-        <a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank" class="btn btn-white">Prenota su Airbnb</a>
-        <a href="../#contatti" class="btn btn-outline">Contattaci</a>
+        <a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank" class="btn btn-white" data-i18n="common.book_airbnb">Prenota su Airbnb</a>
+        <a href="../#contatti" class="btn btn-outline" data-i18n="common.contact_us">Contattaci</a>
       </div>
       <p style="margin-top:32px;font-size:.75rem;color:rgba(255,255,255,.5);letter-spacing:.06em">
         CIN: <strong style="color:rgba(255,255,255,.7)">IT012088C22FDPNF3K</strong>
@@ -572,24 +592,24 @@
       <div class="footer-top">
         <div class="footer-brand">
           <h3>Casa Mariangela: Pool &amp; Garden</h3>
-          <p>Via XXIV Maggio 21, Leggiuno (VA)<br>Lago Maggiore &middot; 30 min da Malpensa</p>
+          <p data-i18n="garden.footer.tagline">Via XXIV Maggio 21, Leggiuno (VA)<br>Lago Maggiore &middot; 30 min da Malpensa</p>
         </div>
         <div class="footer-col">
-          <h4>Link utili</h4>
+          <h4 data-i18n="garden.footer.col1">Link utili</h4>
           <ul>
-            <li><a href="#casa">La casa</a></li>
-            <li><a href="#camere">Le camere</a></li>
-            <li><a href="#galleria">Galleria</a></li>
-            <li><a href="#posizione">Come arrivare</a></li>
+            <li><a href="#casa" data-i18n="garden.footer.f1">La casa</a></li>
+            <li><a href="#camere" data-i18n="garden.footer.f2">Le camere</a></li>
+            <li><a href="#galleria" data-i18n="garden.footer.f3">Galleria</a></li>
+            <li><a href="#posizione" data-i18n="garden.footer.f4">Come arrivare</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Italian Escapes Homes</h4>
           <ul>
-            <li><a href="../">Tutte le propriet&agrave;</a></li>
+            <li><a href="../" data-i18n="common.all_properties">Tutte le propriet&agrave;</a></li>
             <li><a href="../casa-mariangela/">B&amp;B Casa Mariangela</a></li>
             <li><a href="../appartamento-piscina/">Apartment with Swimming Pool</a></li>
-            <li><a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank">Prenota su Airbnb</a></li>
+            <li><a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank" data-i18n="common.book_airbnb">Prenota su Airbnb</a></li>
           </ul>
         </div>
       </div>
@@ -621,6 +641,10 @@
     function goToSlide(n) {
       slides[current].classList.remove('active'); dots[current].classList.remove('active');
       current = n;
+      if (slides[current].dataset.bg) {
+        slides[current].style.backgroundImage = `url('${slides[current].dataset.bg}')`;
+        delete slides[current].dataset.bg;
+      }
       slides[current].classList.add('active'); dots[current].classList.add('active');
       clearInterval(autoplay); autoplay = setInterval(nextSlide, 5000);
     }
@@ -638,6 +662,13 @@
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.12 });
     fadeEls.forEach(el => observer.observe(el));
+
+    // Progressive image fade-in on load
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      if (img.complete && img.naturalHeight !== 0) img.classList.add('img-loaded');
+      else img.addEventListener('load', () => img.classList.add('img-loaded'));
+    });
   </script>
+  <script src="../i18n.js" defer></script>
 </body>
 </html>

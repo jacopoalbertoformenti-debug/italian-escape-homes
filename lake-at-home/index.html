@@ -3,20 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lake At Home – Appartamento a Lecco, Lago di Como</title>
-  <meta name="description" content="Affitto vacanze moderno nel cuore di Lecco con vista sui monti e sul lago. 2 camere, 4 ospiti, design contemporaneo, a pochi passi dal lungolago. Prenota su Airbnb e Booking." />
+  <title data-i18n="lake.meta.title">Lake At Home – Appartamento a Lecco, Lago di Como</title>
+  <meta name="description" data-i18n="lake.meta.desc" content="Affitto vacanze moderno nel cuore di Lecco con vista sui monti e sul lago. 2 camere, 4 ospiti, design contemporaneo, a pochi passi dal lungolago. Prenota su Airbnb e Booking." />
   <link rel="canonical" href="https://www.italianescapeshomes.it/lake-at-home/" />
+  <!-- hreflang multilingual -->
+  <link rel="alternate" hreflang="it" href="https://www.italianescapeshomes.it/lake-at-home/" />
+  <link rel="alternate" hreflang="en" href="https://www.italianescapeshomes.it/lake-at-home/" />
+  <link rel="alternate" hreflang="de" href="https://www.italianescapeshomes.it/lake-at-home/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.italianescapeshomes.it/lake-at-home/" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.italianescapeshomes.it/lake-at-home/" />
   <meta property="og:title" content="Lake At Home – Appartamento a Lecco, Lago di Como" />
   <meta property="og:description" content="Affitto vacanze moderno nel cuore di Lecco con vista sui monti e sul lago. 2 camere, 4 ospiti, a pochi passi dal lungolago." />
-  <meta property="og:image" content="https://www.italianescapeshomes.it/lake-at-home/images/tramonto.jpg" />
+  <meta property="og:image" content="https://www.italianescapeshomes.it/lake-at-home/images/tramonto.webp" />
   <meta property="og:locale" content="it_IT" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Lake At Home – Appartamento a Lecco, Lago di Como" />
   <meta name="twitter:description" content="Affitto vacanze moderno nel cuore di Lecco con vista sui monti e sul lago. 2 camere, 4 ospiti." />
-  <meta name="twitter:image" content="https://www.italianescapeshomes.it/lake-at-home/images/tramonto.jpg" />
+  <meta name="twitter:image" content="https://www.italianescapeshomes.it/lake-at-home/images/tramonto.webp" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -24,7 +29,7 @@
     "name": "Lake At Home – Lecco, Lago di Como",
     "description": "Appartamento moderno nel cuore di Lecco con vista sui monti e sul lago. 2 camere, 4 ospiti, design contemporaneo.",
     "url": "https://www.italianescapeshomes.it/lake-at-home/",
-    "image": "https://www.italianescapeshomes.it/lake-at-home/images/tramonto.jpg",
+    "image": "https://www.italianescapeshomes.it/lake-at-home/images/tramonto.webp",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Via Pasubio 17",
@@ -46,6 +51,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="images/tramonto.webp" fetchpriority="high">
   <style>
     /* ─── Reset & Base ─────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -301,7 +307,8 @@
       gap: 12px; margin-top: 48px;
     }
     .gallery-item { border-radius: var(--radius); overflow: hidden; cursor: pointer; position: relative; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: transform .4s, opacity .35s ease; }
+    .gallery-item img.img-loaded { opacity: 1; }
     .gallery-item:hover img { transform: scale(1.06); }
     .gallery-item.wide { grid-column: span 2; }
     .gallery-overlay {
@@ -394,6 +401,14 @@
       .gallery-item.wide { grid-column: span 2; }
       .servizi-grid { grid-template-columns: 1fr; }
     }
+
+    /* ── Language switcher ───────────────────────────────── */
+    .lang-switcher { display:flex; gap:4px; align-items:center; margin-left:16px; }
+    .lang-switcher button { background:transparent; border:1px solid rgba(255,255,255,.4); color:rgba(255,255,255,.7); font-family:'Inter',sans-serif; font-size:.64rem; font-weight:500; letter-spacing:.1em; padding:4px 7px; border-radius:4px; cursor:pointer; transition:all .2s; }
+    .lang-switcher button:hover,.lang-switcher button.lang-active { background:var(--gold); border-color:var(--gold); color:var(--dark); }
+    nav.scrolled .lang-switcher button { border-color:rgba(26,44,61,.3); color:var(--text-light); }
+    nav.scrolled .lang-switcher button:hover,nav.scrolled .lang-switcher button.lang-active { background:var(--primary); border-color:var(--primary); color:var(--white); }
+    @media (max-width:768px) { .lang-switcher { margin-left:8px; } .lang-switcher button { padding:3px 6px; font-size:.6rem; } }
   </style>
 </head>
 <body>
@@ -402,12 +417,17 @@
   <nav id="nav">
     <a href="../" class="nav-logo">&#8592; Italian Escapes Homes</a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#appartamento">L&rsquo;appartamento</a></li>
-      <li><a href="#servizi">Servizi</a></li>
-      <li><a href="#galleria">Galleria</a></li>
-      <li><a href="#posizione">Posizione</a></li>
-      <li><a href="https://www.airbnb.it/rooms/1550769806025179622" target="_blank" class="nav-cta">Prenota</a></li>
+      <li><a href="#appartamento" data-i18n="lake.nav.about">L&rsquo;appartamento</a></li>
+      <li><a href="#servizi" data-i18n="lake.nav.services">Servizi</a></li>
+      <li><a href="#galleria" data-i18n="lake.nav.gallery">Galleria</a></li>
+      <li><a href="#posizione" data-i18n="lake.nav.location">Posizione</a></li>
+      <li><a href="https://www.airbnb.it/rooms/1550769806025179622" target="_blank" class="nav-cta" data-i18n="common.book">Prenota</a></li>
     </ul>
+    <div class="lang-switcher">
+      <button data-lang-btn="it" onclick="iehSetLang('it')">IT</button>
+      <button data-lang-btn="en" onclick="iehSetLang('en')">EN</button>
+      <button data-lang-btn="de" onclick="iehSetLang('de')">DE</button>
+    </div>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
@@ -416,9 +436,9 @@
   <!-- ── HERO ─────────────────────────────────────────────────────── -->
   <header class="hero">
     <div class="hero-carousel">
-      <div class="hero-slide active" style="background-image:url('images/tramonto.jpg')"></div>
-      <div class="hero-slide" style="background-image:url('images/soggiorno.jpg')"></div>
-      <div class="hero-slide" style="background-image:url('images/camera.jpg')"></div>
+      <div class="hero-slide active" style="background-image:url('images/tramonto.webp')"></div>
+      <div class="hero-slide" data-bg="images/soggiorno.webp"></div>
+      <div class="hero-slide" data-bg="images/camera.webp"></div>
     </div>
     <div class="hero-wave"></div>
     <div class="hero-dots">
@@ -429,17 +449,17 @@
     <div class="hero-content">
       <span class="hero-eyebrow">Lecco &middot; Lago di Como</span>
       <h1>Lake<br><em>At Home</em></h1>
-      <p class="hero-sub">Appartamento moderno nel cuore di Lecco, con vista sui monti e a pochi passi dal lungolago</p>
+      <p class="hero-sub" data-i18n="lake.hero.sub">Appartamento moderno nel cuore di Lecco, con vista sui monti e a pochi passi dal lungolago</p>
       <div class="hero-rating">
         <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <span>Eccellente &middot; Su Airbnb</span>
+        <span data-i18n="lake.hero.rating">Eccellente &middot; Su Airbnb</span>
       </div>
       <br>
-      <a href="https://www.airbnb.it/rooms/1550769806025179622" target="_blank" class="btn btn-primary">Prenota su Airbnb</a>
-      <a href="https://www.booking.com/hotel/it/lake-at-home.it.html" target="_blank" class="btn btn-primary">Prenota su Booking</a>
-      <a href="#appartamento" class="btn btn-outline">Scopri di pi&ugrave;</a>
+      <a href="https://www.airbnb.it/rooms/1550769806025179622" target="_blank" class="btn btn-primary" data-i18n="common.book_airbnb">Prenota su Airbnb</a>
+      <a href="https://www.booking.com/hotel/it/lake-at-home.it.html" target="_blank" class="btn btn-primary" data-i18n="common.book_booking">Prenota su Booking</a>
+      <a href="#appartamento" class="btn btn-outline" data-i18n="common.discover">Scopri di pi&ugrave;</a>
     </div>
-    <div class="hero-scroll">Scorri</div>
+    <div class="hero-scroll" data-i18n="common.scroll">Scorri</div>
   </header>
 
   <!-- ── HIGHLIGHTS ────────────────────────────────────────────────── -->
@@ -447,23 +467,23 @@
     <div class="highlights-inner">
       <div class="highlight-item">
         <div class="highlight-icon">&#9741;</div>
-        <div class="highlight-val">Vista</div>
-        <div class="highlight-label">Lago &amp; Monti</div>
+        <div class="highlight-val" data-i18n="lake.hl.view.val">Vista</div>
+        <div class="highlight-label" data-i18n="lake.hl.view.lbl">Lago &amp; Monti</div>
       </div>
       <div class="highlight-item">
         <div class="highlight-icon">&#128101;</div>
         <div class="highlight-val">4</div>
-        <div class="highlight-label">Ospiti max</div>
+        <div class="highlight-label" data-i18n="lake.hl.guests.lbl">Ospiti max</div>
       </div>
       <div class="highlight-item">
         <div class="highlight-icon">&#127968;</div>
-        <div class="highlight-val">2</div>
-        <div class="highlight-label">Camere da letto</div>
+        <div class="highlight-val" data-i18n="lake.hl.rooms.val">2</div>
+        <div class="highlight-label" data-i18n="lake.hl.rooms.lbl">Camere da letto</div>
       </div>
       <div class="highlight-item">
         <div class="highlight-icon">&#128205;</div>
-        <div class="highlight-val">Centro</div>
-        <div class="highlight-label">Di Lecco</div>
+        <div class="highlight-val" data-i18n="lake.hl.center.val">Centro</div>
+        <div class="highlight-label" data-i18n="lake.hl.center.lbl">Di Lecco</div>
       </div>
     </div>
   </div>
@@ -480,22 +500,22 @@
           </div>
         </div>
         <div class="fade-up" style="transition-delay:.15s">
-          <p class="section-label">Il tuo spazio</p>
-          <h2 class="section-title">Vivi Lecco<br>come a casa</h2>
+          <p class="section-label" data-i18n="lake.about.label">Il tuo spazio</p>
+          <h2 class="section-title" data-i18n="lake.about.title">Vivi Lecco<br>come a casa</h2>
           <div class="section-divider"></div>
-          <p class="section-text">
+          <p class="section-text" data-i18n="lake.about.p1">
             Un appartamento di design completamente ristrutturato nel cuore di Lecco, con finiture moderne e materiali di qualit&agrave;.
             Dalle finestre si apre una vista spettacolare sui monti e sul lago, che al tramonto regala colori unici.
           </p>
           <br>
-          <p class="section-text">
+          <p class="section-text" data-i18n="lake.about.p2">
             La posizione &egrave; ideale per esplorare il Lago di Como e la Valsassina: il lungolago, la Piazza XX Settembre
             e la stazione ferroviaria sono a pochi minuti a piedi. Perfetto per coppie e famiglie che vogliono vivere
             la citt&agrave; con tutto il comfort di casa.
           </p>
           <br>
-          <a href="https://www.airbnb.it/rooms/1550769806025179622" target="_blank" class="btn btn-primary">Prenota su Airbnb</a>
-          <a href="https://www.booking.com/hotel/it/lake-at-home.it.html" target="_blank" class="btn btn-white">Prenota su Booking</a>
+          <a href="https://www.airbnb.it/rooms/1550769806025179622" target="_blank" class="btn btn-primary" data-i18n="common.book_airbnb">Prenota su Airbnb</a>
+          <a href="https://www.booking.com/hotel/it/lake-at-home.it.html" target="_blank" class="btn btn-white" data-i18n="common.book_booking">Prenota su Booking</a>
         </div>
       </div>
     </div>
@@ -505,36 +525,36 @@
   <section id="camera">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label">Gli spazi</p>
-        <h2 class="section-title">Dove dormirete</h2>
+        <p class="section-label" data-i18n="common.rooms_label">Gli spazi</p>
+        <h2 class="section-title" data-i18n="common.rooms_title">Dove dormirete</h2>
         <div class="section-divider"></div>
       </div>
       <div class="camere-grid" style="margin-top:48px">
         <div class="camera-card fade-up" style="transition-delay:.05s">
           <div class="camera-img">
-            <img src="images/camera.jpg" alt="Camera da letto principale" />
+            <img src="images/camera.webp" alt="Camera da letto principale" loading="lazy" decoding="async" />
           </div>
           <div class="camera-body">
-            <h3>Camera da letto</h3>
-            <p>Ampia camera con letto matrimoniale, armadio a muro e finestra con vista sul quartiere storico di Lecco.</p>
+            <h3 data-i18n="lake.room1.title">Camera da letto</h3>
+            <p data-i18n="lake.room1.text">Ampia camera con letto matrimoniale, armadio a muro e finestra con vista sul quartiere storico di Lecco.</p>
             <div class="camera-details">
-              <span class="camera-detail">&#127769; Letto matrimoniale</span>
-              <span class="camera-detail">&#129695; Armadio a muro</span>
-              <span class="camera-detail">&#128261; Vista citt&agrave;</span>
+              <span class="camera-detail" data-i18n="lake.room1.d1">&#127769; Letto matrimoniale</span>
+              <span class="camera-detail" data-i18n="lake.room1.d2">&#129695; Armadio a muro</span>
+              <span class="camera-detail" data-i18n="lake.room1.d3">&#128261; Vista citt&agrave;</span>
             </div>
           </div>
         </div>
         <div class="camera-card fade-up" style="transition-delay:.1s">
           <div class="camera-img">
-            <img src="images/soggiorno.jpg" alt="Soggiorno" />
+            <img src="images/soggiorno.webp" alt="Soggiorno" loading="lazy" decoding="async" />
           </div>
           <div class="camera-body">
-            <h3>Soggiorno</h3>
-            <p>Spazioso living con divano, smart TV e zona pranzo. Il divano &egrave; convertibile per ospitare fino a 4 persone in totale.</p>
+            <h3 data-i18n="lake.room2.title">Soggiorno</h3>
+            <p data-i18n="lake.room2.text">Spazioso living con divano, smart TV e zona pranzo. Il divano &egrave; convertibile per ospitare fino a 4 persone in totale.</p>
             <div class="camera-details">
-              <span class="camera-detail">&#128715; Divano letto</span>
-              <span class="camera-detail">&#128250; Smart TV</span>
-              <span class="camera-detail">&#127860; Zona pranzo</span>
+              <span class="camera-detail" data-i18n="lake.room2.d1">&#128715; Divano letto</span>
+              <span class="camera-detail" data-i18n="lake.room2.d2">&#128250; Smart TV</span>
+              <span class="camera-detail" data-i18n="lake.room2.d3">&#127860; Zona pranzo</span>
             </div>
           </div>
         </div>
@@ -546,51 +566,51 @@
   <section id="servizi">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label">Dotazioni</p>
-        <h2 class="section-title">Tutto quello che ti serve</h2>
+        <p class="section-label" data-i18n="lake.svc.label">Dotazioni</p>
+        <h2 class="section-title" data-i18n="lake.svc.title">Tutto quello che ti serve</h2>
         <div class="section-divider"></div>
       </div>
       <div class="servizi-grid">
         <div class="servizio-item fade-up">
           <div class="servizio-icon">&#128247;</div>
           <div>
-            <h4>Design moderno</h4>
-            <p>Appartamento completamente ristrutturato con finiture di qualit&agrave; e arredi contemporanei.</p>
+            <h4 data-i18n="lake.svc.s1.title">Design moderno</h4>
+            <p data-i18n="lake.svc.s1.text">Appartamento completamente ristrutturato con finiture di qualit&agrave; e arredi contemporanei.</p>
           </div>
         </div>
         <div class="servizio-item fade-up" style="transition-delay:.05s">
           <div class="servizio-icon">&#128421;</div>
           <div>
-            <h4>Smart TV &amp; Wi-Fi</h4>
-            <p>Connessione Wi-Fi veloce e smart TV per intrattenersi dopo una giornata sul lago.</p>
+            <h4 data-i18n="lake.svc.s2.title">Smart TV &amp; Wi-Fi</h4>
+            <p data-i18n="lake.svc.s2.text">Connessione Wi-Fi veloce e smart TV per intrattenersi dopo una giornata sul lago.</p>
           </div>
         </div>
         <div class="servizio-item fade-up" style="transition-delay:.1s">
           <div class="servizio-icon">&#127860;</div>
           <div>
-            <h4>Cucina attrezzata</h4>
-            <p>Cucina completa con piano cottura a gas, forno, frigorifero e tutto l&rsquo;occorrente.</p>
+            <h4 data-i18n="lake.svc.s3.title">Cucina attrezzata</h4>
+            <p data-i18n="lake.svc.s3.text">Cucina completa con piano cottura a gas, forno, frigorifero e tutto l&rsquo;occorrente.</p>
           </div>
         </div>
         <div class="servizio-item fade-up" style="transition-delay:.15s">
           <div class="servizio-icon">&#128705;</div>
           <div>
-            <h4>Lavatrice</h4>
-            <p>Lavatrice disponibile per soggiorni pi&ugrave; lunghi.</p>
+            <h4 data-i18n="lake.svc.s4.title">Lavatrice</h4>
+            <p data-i18n="lake.svc.s4.text">Lavatrice disponibile per soggiorni pi&ugrave; lunghi.</p>
           </div>
         </div>
         <div class="servizio-item fade-up" style="transition-delay:.2s">
           <div class="servizio-icon">&#10052;</div>
           <div>
-            <h4>Aria condizionata</h4>
-            <p>Climatizzatore per un soggiorno confortevole in ogni stagione.</p>
+            <h4 data-i18n="lake.svc.s5.title">Aria condizionata</h4>
+            <p data-i18n="lake.svc.s5.text">Climatizzatore per un soggiorno confortevole in ogni stagione.</p>
           </div>
         </div>
         <div class="servizio-item fade-up" style="transition-delay:.25s">
           <div class="servizio-icon">&#128205;</div>
           <div>
-            <h4>Posizione centrale</h4>
-            <p>A pochi minuti a piedi dal lungolago, dalla stazione e dai principali servizi.</p>
+            <h4 data-i18n="lake.svc.s6.title">Posizione centrale</h4>
+            <p data-i18n="lake.svc.s6.text">A pochi minuti a piedi dal lungolago, dalla stazione e dai principali servizi.</p>
           </div>
         </div>
       </div>
@@ -601,73 +621,73 @@
   <section id="galleria">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label">Immagini</p>
-        <h2 class="section-title">Scopri gli spazi</h2>
+        <p class="section-label" data-i18n="lake.gallery.label">Immagini</p>
+        <h2 class="section-title" data-i18n="lake.gallery.title">Scopri gli spazi</h2>
         <div class="section-divider"></div>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item wide fade-up" onclick="openLightbox('images/tramonto.jpg','Vista tramonto su Lecco')">
-          <img src="images/tramonto.jpg" alt="Tramonto su Lecco" />
+        <div class="gallery-item wide fade-up" onclick="openLightbox('images/tramonto.webp','Vista tramonto su Lecco')">
+          <img src="images/tramonto.webp" alt="Tramonto su Lecco" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Vista tramonto</span></div>
         </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/vista-lago.jpg','Vista lago e monti')">
-          <img src="images/vista-lago.jpg" alt="Vista lago e monti" />
+        <div class="gallery-item fade-up" onclick="openLightbox('images/vista-lago.webp','Vista lago e monti')">
+          <img src="images/vista-lago.webp" alt="Vista lago e monti" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Vista lago</span></div>
         </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/soggiorno.jpg','Soggiorno')">
-          <img src="images/soggiorno.jpg" alt="Soggiorno" />
+        <div class="gallery-item fade-up" onclick="openLightbox('images/soggiorno.webp','Soggiorno')">
+          <img src="images/soggiorno.webp" alt="Soggiorno" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Soggiorno</span></div>
         </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/soggiorno2.jpg','Soggiorno')">
-          <img src="images/soggiorno2.jpg" alt="Soggiorno" />
+        <div class="gallery-item fade-up" onclick="openLightbox('images/soggiorno2.webp','Soggiorno')">
+          <img src="images/soggiorno2.webp" alt="Soggiorno" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Soggiorno</span></div>
         </div>
-        <div class="gallery-item wide fade-up" onclick="openLightbox('images/sala-pranzo1.jpg','Zona pranzo')">
-          <img src="images/sala-pranzo1.jpg" alt="Zona pranzo" />
+        <div class="gallery-item wide fade-up" onclick="openLightbox('images/sala-pranzo1.webp','Zona pranzo')">
+          <img src="images/sala-pranzo1.webp" alt="Zona pranzo" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Zona pranzo</span></div>
         </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/sala-pranzo2.jpg','Tavolo da pranzo')">
-          <img src="images/sala-pranzo2.jpg" alt="Tavolo da pranzo" />
+        <div class="gallery-item fade-up" onclick="openLightbox('images/sala-pranzo2.webp','Tavolo da pranzo')">
+          <img src="images/sala-pranzo2.webp" alt="Tavolo da pranzo" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Tavolo da pranzo</span></div>
         </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/cucina1.jpg','Cucina')">
-          <img src="images/cucina1.jpg" alt="Cucina" />
+        <div class="gallery-item fade-up" onclick="openLightbox('images/cucina1.webp','Cucina')">
+          <img src="images/cucina1.webp" alt="Cucina" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Cucina</span></div>
         </div>
-        <div class="gallery-item wide fade-up" onclick="openLightbox('images/cucina2.jpg','Cucina con affaccio')">
-          <img src="images/cucina2.jpg" alt="Cucina con affaccio sui monti" />
+        <div class="gallery-item wide fade-up" onclick="openLightbox('images/cucina2.webp','Cucina con affaccio')">
+          <img src="images/cucina2.webp" alt="Cucina con affaccio sui monti" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Cucina con affaccio</span></div>
         </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/camera.jpg','Camera da letto')">
-          <img src="images/camera.jpg" alt="Camera da letto" />
+        <div class="gallery-item fade-up" onclick="openLightbox('images/camera.webp','Camera da letto')">
+          <img src="images/camera.webp" alt="Camera da letto" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Camera da letto</span></div>
         </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/camera2.jpg','Camera da letto')">
-          <img src="images/camera2.jpg" alt="Camera da letto" />
+        <div class="gallery-item fade-up" onclick="openLightbox('images/camera2.webp','Camera da letto')">
+          <img src="images/camera2.webp" alt="Camera da letto" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Camera da letto</span></div>
         </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/camera3.jpg','Camera da letto')">
-          <img src="images/camera3.jpg" alt="Camera da letto" />
+        <div class="gallery-item fade-up" onclick="openLightbox('images/camera3.webp','Camera da letto')">
+          <img src="images/camera3.webp" alt="Camera da letto" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Camera da letto</span></div>
         </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/camera-tv.jpg','Camera con TV')">
-          <img src="images/camera-tv.jpg" alt="Camera con TV" />
+        <div class="gallery-item fade-up" onclick="openLightbox('images/camera-tv.webp','Camera con TV')">
+          <img src="images/camera-tv.webp" alt="Camera con TV" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Camera con TV</span></div>
         </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/bagno.jpg','Bagno')">
-          <img src="images/bagno.jpg" alt="Bagno" />
+        <div class="gallery-item fade-up" onclick="openLightbox('images/bagno.webp','Bagno')">
+          <img src="images/bagno.webp" alt="Bagno" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Bagno</span></div>
         </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/doccia.jpg','Doccia')">
-          <img src="images/doccia.jpg" alt="Doccia" />
+        <div class="gallery-item fade-up" onclick="openLightbox('images/doccia.webp','Doccia')">
+          <img src="images/doccia.webp" alt="Doccia" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Doccia</span></div>
         </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/vista-finestra.jpg','Vista dalla finestra')">
-          <img src="images/vista-finestra.jpg" alt="Vista dalla finestra" />
+        <div class="gallery-item fade-up" onclick="openLightbox('images/vista-finestra.webp','Vista dalla finestra')">
+          <img src="images/vista-finestra.webp" alt="Vista dalla finestra" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Vista dalla finestra</span></div>
         </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/balcone.jpg','Balcone')">
-          <img src="images/balcone.jpg" alt="Balcone" />
+        <div class="gallery-item fade-up" onclick="openLightbox('images/balcone.webp','Balcone')">
+          <img src="images/balcone.webp" alt="Balcone" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Balcone</span></div>
         </div>
       </div>
@@ -684,8 +704,8 @@
   <!-- ── POSIZIONE ─────────────────────────────────────────────────── -->
   <section id="posizione">
     <div class="section-inner">
-      <p class="section-label fade-up">Dove siamo</p>
-      <h2 class="section-title fade-up">Lecco, sul Lago di Como</h2>
+      <p class="section-label fade-up" data-i18n="common.location_label">Dove siamo</p>
+      <h2 class="section-title fade-up" data-i18n="lake.loc.title">Lecco, sul Lago di Como</h2>
       <div class="posizione-grid">
         <div class="map-wrap fade-up">
           <iframe
@@ -737,12 +757,12 @@
   <!-- ── CTA ───────────────────────────────────────────────────────── -->
   <section id="contatti">
     <div class="section-inner">
-      <p class="section-label fade-up">Prenota ora</p>
-      <h2 class="section-title fade-up">Pronto per Lecco?</h2>
+      <p class="section-label fade-up" data-i18n="common.book_stay">Prenota ora</p>
+      <h2 class="section-title fade-up" data-i18n="lake.cta.title">Pronto per Lecco?</h2>
       <div class="section-divider fade-up"></div>
-      <p class="section-text fade-up">Verifica la disponibilit&agrave; e prenota direttamente su Airbnb.</p>
-      <a href="https://www.airbnb.it/rooms/1550769806025179622" target="_blank" class="btn btn-white fade-up">Prenota su Airbnb</a>
-      <a href="https://www.booking.com/hotel/it/lake-at-home.it.html" target="_blank" class="btn btn-white fade-up">Prenota su Booking</a>
+      <p class="section-text fade-up" data-i18n-html="lake.cta.text">Verifica la disponibilit&agrave; e prenota direttamente su Airbnb.</p>
+      <a href="https://www.airbnb.it/rooms/1550769806025179622" target="_blank" class="btn btn-white fade-up" data-i18n="common.book_airbnb">Prenota su Airbnb</a>
+      <a href="https://www.booking.com/hotel/it/lake-at-home.it.html" target="_blank" class="btn btn-white fade-up" data-i18n="common.book_booking">Prenota su Booking</a>
     </div>
   </section>
 
@@ -752,23 +772,23 @@
       <div class="footer-top">
         <div class="footer-brand">
           <h3>Lake At Home</h3>
-          <p>Appartamento moderno nel cuore di Lecco,<br>affacciato sul Lago di Como.</p>
+          <p data-i18n="lake.footer.tagline">Appartamento moderno nel cuore di Lecco,<br>affacciato sul Lago di Como.</p>
         </div>
         <div class="footer-col">
-          <h4>Sezioni</h4>
+          <h4 data-i18n="common.useful_links">Sezioni</h4>
           <ul>
-            <li><a href="#appartamento">L&rsquo;appartamento</a></li>
-            <li><a href="#servizi">Servizi</a></li>
-            <li><a href="#galleria">Galleria</a></li>
-            <li><a href="#posizione">Posizione</a></li>
+            <li><a href="#appartamento" data-i18n="lake.nav.about">L&rsquo;appartamento</a></li>
+            <li><a href="#servizi" data-i18n="lake.nav.services">Servizi</a></li>
+            <li><a href="#galleria" data-i18n="common.gallery_title">Galleria</a></li>
+            <li><a href="#posizione" data-i18n="common.how_to_arrive">Posizione</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Prenota</h4>
+          <h4 data-i18n="common.book_stay">Prenota</h4>
           <ul>
-            <li><a href="https://www.airbnb.it/rooms/1550769806025179622" target="_blank">Airbnb</a></li>
-            <li><a href="../">Italian Escapes Homes</a></li>
-            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="https://www.airbnb.it/rooms/1550769806025179622" target="_blank" data-i18n="common.book_airbnb">Airbnb</a></li>
+            <li><a href="../" data-i18n="common.all_properties">Italian Escapes Homes</a></li>
+            <li><a href="../privacy.html" data-i18n="common.privacy">Privacy Policy</a></li>
           </ul>
         </div>
       </div>
@@ -800,6 +820,10 @@
       slides[current].classList.remove('active');
       dots[current].classList.remove('active');
       current = (n + slides.length) % slides.length;
+      if (slides[current].dataset.bg) {
+        slides[current].style.backgroundImage = `url('${slides[current].dataset.bg}')`;
+        delete slides[current].dataset.bg;
+      }
       slides[current].classList.add('active');
       dots[current].classList.add('active');
       clearInterval(timer);
@@ -823,6 +847,13 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.12 });
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Progressive image fade-in on load
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      if (img.complete && img.naturalHeight !== 0) img.classList.add('img-loaded');
+      else img.addEventListener('load', () => img.classList.add('img-loaded'));
+    });
   </script>
+  <script src="../i18n.js" defer></script>
 </body>
 </html>

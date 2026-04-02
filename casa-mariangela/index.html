@@ -3,20 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>B&B Casa Mariangela – San Bartolomeo al Mare, Liguria</title>
-  <meta name="description" content="Affitto vacanze con 2 camere a 30 metri dal mare nel cuore di San Bartolomeo al Mare. Parcheggio gratuito, Wi-Fi, aria condizionata. 4.97/5 stelle su Airbnb. Prenota online." />
+  <title data-i18n="mari.meta.title">B&amp;B Casa Mariangela – San Bartolomeo al Mare, Liguria</title>
+  <meta name="description" data-i18n="mari.meta.desc" content="Affitto vacanze con 2 camere a 30 metri dal mare nel cuore di San Bartolomeo al Mare. Parcheggio gratuito, Wi-Fi, aria condizionata. 4.97/5 stelle su Airbnb. Prenota online." />
   <link rel="canonical" href="https://www.italianescapeshomes.it/casa-mariangela/" />
+  <!-- hreflang multilingual -->
+  <link rel="alternate" hreflang="it" href="https://www.italianescapeshomes.it/casa-mariangela/" />
+  <link rel="alternate" hreflang="en" href="https://www.italianescapeshomes.it/casa-mariangela/" />
+  <link rel="alternate" hreflang="de" href="https://www.italianescapeshomes.it/casa-mariangela/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.italianescapeshomes.it/casa-mariangela/" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.italianescapeshomes.it/casa-mariangela/" />
   <meta property="og:title" content="B&B Casa Mariangela – San Bartolomeo al Mare, Liguria" />
   <meta property="og:description" content="Affitto vacanze sul mare a San Bartolomeo: 2 camere, parcheggio gratuito, Wi-Fi, aria condizionata. 4.97/5 stelle. Prenota su Airbnb e Booking." />
-  <meta property="og:image" content="https://www.italianescapeshomes.it/casa-mariangela/img/camera1.jpg" />
+  <meta property="og:image" content="https://www.italianescapeshomes.it/casa-mariangela/img/camera1.webp" />
   <meta property="og:locale" content="it_IT" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="B&B Casa Mariangela – San Bartolomeo al Mare, Liguria" />
   <meta name="twitter:description" content="Affitto vacanze sul mare a San Bartolomeo: 2 camere, parcheggio gratuito, Wi-Fi. 4.97/5 stelle su Airbnb." />
-  <meta name="twitter:image" content="https://www.italianescapeshomes.it/casa-mariangela/img/camera1.jpg" />
+  <meta name="twitter:image" content="https://www.italianescapeshomes.it/casa-mariangela/img/camera1.webp" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -24,7 +29,7 @@
     "name": "B&B Casa Mariangela",
     "description": "Appartamento con 2 camere a 30 metri dal mare nel cuore di San Bartolomeo al Mare. Parcheggio gratuito, Wi-Fi, aria condizionata.",
     "url": "https://www.italianescapeshomes.it/casa-mariangela/",
-    "image": "https://www.italianescapeshomes.it/casa-mariangela/img/camera1.jpg",
+    "image": "https://www.italianescapeshomes.it/casa-mariangela/img/camera1.webp",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "San Bartolomeo al Mare",
@@ -51,6 +56,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="img/mare1.webp" fetchpriority="high">
   <style>
     /* ─── Reset & Base ─────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -750,8 +756,10 @@
       height: 220px;
       object-fit: cover;
       display: block;
-      transition: transform .45s ease;
+      opacity: 0;
+      transition: transform .45s ease, opacity .35s ease;
     }
+    .gallery-item img.img-loaded { opacity: 1; }
 
     .gallery-item:hover img { transform: scale(1.06); }
 
@@ -1048,6 +1056,14 @@
       .btn { padding: 14px 28px; font-size: .76rem; display: block; width: 100%; max-width: 320px; margin: 8px auto; }
       .highlights-inner { grid-template-columns: 1fr 1fr; }
     }
+
+    /* ── Language switcher ───────────────────────────────── */
+    .lang-switcher { display:flex; gap:4px; align-items:center; margin-left:16px; }
+    .lang-switcher button { background:transparent; border:1px solid rgba(255,255,255,.4); color:rgba(255,255,255,.7); font-family:'Inter',sans-serif; font-size:.64rem; font-weight:500; letter-spacing:.1em; padding:4px 7px; border-radius:4px; cursor:pointer; transition:all .2s; }
+    .lang-switcher button:hover,.lang-switcher button.lang-active { background:var(--gold); border-color:var(--gold); color:var(--dark); }
+    nav.scrolled .lang-switcher button { border-color:rgba(44,24,16,.3); color:var(--text-light); }
+    nav.scrolled .lang-switcher button:hover,nav.scrolled .lang-switcher button.lang-active { background:var(--terracotta); border-color:var(--terracotta); color:var(--white); }
+    @media (max-width:768px) { .lang-switcher { margin-left:8px; } .lang-switcher button { padding:3px 6px; font-size:.6rem; } }
   </style>
 </head>
 <body>
@@ -1056,15 +1072,20 @@
   <nav id="nav">
     <a href="../" class="nav-logo">&#8592; Italian Escapes Homes</a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#appartamento">L'appartamento</a></li>
-      <li><a href="#camere">Camere</a></li>
-      <li><a href="#servizi">Servizi</a></li>
-      <li><a href="#posizione">Posizione</a></li>
-      <li><a href="#galleria">Galleria</a></li>
-      <li><a href="#recensioni">Recensioni</a></li>
-      <li><a href="#contatti">Contatti</a></li>
-      <li><a href="https://www.airbnb.it/rooms/1022566699352195921" target="_blank" class="nav-cta">Prenota</a></li>
+      <li><a href="#appartamento" data-i18n="mari.nav.about">L&rsquo;appartamento</a></li>
+      <li><a href="#camere" data-i18n="mari.nav.rooms">Camere</a></li>
+      <li><a href="#servizi" data-i18n="mari.nav.services">Servizi</a></li>
+      <li><a href="#posizione" data-i18n="mari.nav.location">Posizione</a></li>
+      <li><a href="#galleria" data-i18n="mari.nav.gallery">Galleria</a></li>
+      <li><a href="#recensioni" data-i18n="mari.nav.reviews">Recensioni</a></li>
+      <li><a href="#contatti" data-i18n="mari.nav.contacts">Contatti</a></li>
+      <li><a href="https://www.airbnb.it/rooms/1022566699352195921" target="_blank" class="nav-cta" data-i18n="common.book">Prenota</a></li>
     </ul>
+    <div class="lang-switcher">
+      <button data-lang-btn="it" onclick="iehSetLang('it')">IT</button>
+      <button data-lang-btn="en" onclick="iehSetLang('en')">EN</button>
+      <button data-lang-btn="de" onclick="iehSetLang('de')">DE</button>
+    </div>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
@@ -1073,8 +1094,8 @@
   <!-- ── HERO ──────────────────────────────────────────── -->
   <header class="hero">
     <div class="hero-carousel">
-      <div class="hero-slide active" style="background-image:url('img/mare1.jpg')"></div>
-      <div class="hero-slide" style="background-image:url('img/mare2.jpg')"></div>
+      <div class="hero-slide active" style="background-image:url('img/mare1.webp')"></div>
+      <div class="hero-slide" data-bg="img/mare2.webp"></div>
     </div>
     <div class="hero-wave"></div>
     <div class="hero-dots">
@@ -1084,16 +1105,16 @@
     <div class="hero-content">
       <span class="hero-eyebrow">San Bartolomeo al Mare &middot; Liguria</span>
       <h1>B&B <em>Casa</em><br>Mariangela</h1>
-      <p class="hero-sub">A soli 30 metri dal mare, nel cuore della Riviera Ligure di Ponente</p>
+      <p class="hero-sub" data-i18n="mari.hero.sub">A soli 30 metri dal mare, nel cuore della Riviera Ligure di Ponente</p>
       <div class="hero-rating">
         <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <span><strong>4.97</strong> su 5 &middot; 29 recensioni su Airbnb</span>
+        <span data-i18n-html="mari.hero.rating"><strong>4.97</strong> su 5 &middot; 29 recensioni su Airbnb</span>
       </div>
       <br>
-      <a href="https://www.airbnb.it/rooms/1022566699352195921" target="_blank" class="btn btn-primary">Controlla disponibilit&agrave;</a>
-      <a href="#appartamento" class="btn btn-outline">Scopri di pi&ugrave;</a>
+      <a href="https://www.airbnb.it/rooms/1022566699352195921" target="_blank" class="btn btn-primary" data-i18n="mari.nav.check">Controlla disponibilit&agrave;</a>
+      <a href="#appartamento" class="btn btn-outline" data-i18n="common.discover">Scopri di pi&ugrave;</a>
     </div>
-    <div class="hero-scroll">Scorri</div>
+    <div class="hero-scroll" data-i18n="common.scroll">Scorri</div>
   </header>
 
   <!-- ── HIGHLIGHTS BAR ────────────────────────────────── -->
@@ -1102,22 +1123,22 @@
       <div class="highlight-item">
         <div class="highlight-icon">&#127754;</div>
         <div class="highlight-value">30 m</div>
-        <div class="highlight-label">dal mare</div>
+        <div class="highlight-label" data-i18n="mari.hl.sea.lbl">dal mare</div>
       </div>
       <div class="highlight-item">
         <div class="highlight-icon">&#11088;</div>
         <div class="highlight-value">4.97</div>
-        <div class="highlight-label">Punteggio Airbnb</div>
+        <div class="highlight-label" data-i18n="mari.hl.rating.lbl">Punteggio Airbnb</div>
       </div>
       <div class="highlight-item">
         <div class="highlight-icon">&#127968;</div>
         <div class="highlight-value">2</div>
-        <div class="highlight-label">Camere da letto</div>
+        <div class="highlight-label" data-i18n="mari.hl.rooms.lbl">Camere da letto</div>
       </div>
       <div class="highlight-item">
         <div class="highlight-icon">&#128663;</div>
-        <div class="highlight-value">Free</div>
-        <div class="highlight-label">Parcheggio</div>
+        <div class="highlight-value" data-i18n="mari.hl.parking.val">Free</div>
+        <div class="highlight-label" data-i18n="mari.hl.parking.lbl">Parcheggio</div>
       </div>
     </div>
   </div>
@@ -1128,7 +1149,7 @@
       <div class="about-grid">
         <div class="about-image-wrap fade-up">
           <div class="about-img">
-            <img src="img/soggiorno.jpg" alt="Soggiorno B&B Casa Mariangela" style="width:100%;height:100%;object-fit:cover;" />
+            <img src="img/soggiorno.webp" alt="Soggiorno B&B Casa Mariangela" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async" />
           </div>
           <div class="about-badge">
             <span class="big">29</span>
@@ -1136,24 +1157,24 @@
           </div>
         </div>
         <div class="fade-up" style="transition-delay:.15s">
-          <p class="section-label">L'appartamento</p>
-          <h2 class="section-title">La tua casa<br>sul mare</h2>
+          <p class="section-label" data-i18n="mari.about.label">L&rsquo;appartamento</p>
+          <h2 class="section-title" data-i18n="mari.about.title">La tua casa<br>sul mare</h2>
           <div class="section-divider"></div>
-          <p class="section-text">
+          <p class="section-text" data-i18n="mari.about.p1">
             Vivi la tua splendida vacanza in questo accogliente appartamento a 30 metri dal mare,
             nel centro di San Bartolomeo al Mare. Un'oasi di comfort e stile, con tutto il necessario
             per un soggiorno indimenticabile sulla Riviera Ligure di Ponente.
           </p>
-          <p class="section-text" style="margin-top:14px">
+          <p class="section-text" style="margin-top:14px" data-i18n="mari.about.p2">
             L'appartamento &egrave; curato in ogni dettaglio per farti sentire come a casa,
             con un'atmosfera calda e accogliente che ti accoglie fin dal primo momento.
           </p>
           <div class="about-features">
-            <span class="feature-tag">&#127968; Appartamento intero</span>
-            <span class="feature-tag">&#128101; Fino a 4 ospiti</span>
-            <span class="feature-tag">&#127754; 30 m dal mare</span>
-            <span class="feature-tag">&#128663; Parcheggio gratuito</span>
-            <span class="feature-tag">&#127807; Liguria</span>
+            <span class="feature-tag" data-i18n="mari.about.f1">&#127968; Appartamento intero</span>
+            <span class="feature-tag" data-i18n="mari.about.f2">&#128101; Fino a 4 ospiti</span>
+            <span class="feature-tag" data-i18n="mari.about.f3">&#127754; 30 m dal mare</span>
+            <span class="feature-tag" data-i18n="mari.about.f4">&#128663; Parcheggio gratuito</span>
+            <span class="feature-tag" data-i18n="mari.about.f5">&#127807; Liguria</span>
           </div>
         </div>
       </div>
@@ -1164,36 +1185,36 @@
   <section id="camere">
     <div class="section-inner">
       <div class="fade-up" style="text-align:center">
-        <p class="section-label">Le camere</p>
-        <h2 class="section-title">Due camere, tutto il comfort</h2>
+        <p class="section-label" data-i18n="mari.rooms.label">Le camere</p>
+        <h2 class="section-title" data-i18n="mari.rooms.title">Due camere, tutto il comfort</h2>
         <div class="section-divider" style="margin:0 auto 0"></div>
       </div>
       <div class="camere-grid">
         <div class="camera-card fade-up" style="transition-delay:.1s">
           <div class="camera-img">
-            <img src="img/camera1.jpg" alt="Camera matrimoniale" style="width:100%;height:100%;object-fit:cover;" />
+            <img src="img/camera1.webp" alt="Camera matrimoniale" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async" />
           </div>
           <div class="camera-body">
-            <h3>Camera Principale</h3>
-            <p>Spaziosa e luminosa, arredata con cura per garantire il massimo del comfort. Perfetta per una coppia in cerca di relax e tranquillit&agrave;.</p>
+            <h3 data-i18n="mari.room1.title">Camera Principale</h3>
+            <p data-i18n="mari.room1.text">Spaziosa e luminosa, arredata con cura per garantire il massimo del comfort. Perfetta per una coppia in cerca di relax e tranquillit&agrave;.</p>
             <div class="camera-details">
-              <span class="camera-detail">&#127769; Letto matrimoniale</span>
-              <span class="camera-detail">&#129695; Armadio</span>
-              <span class="camera-detail">&#128261; Vista</span>
+              <span class="camera-detail" data-i18n="mari.room1.d1">&#127769; Letto matrimoniale</span>
+              <span class="camera-detail" data-i18n="mari.room1.d2">&#129695; Armadio</span>
+              <span class="camera-detail" data-i18n="mari.room1.d3">&#128261; Vista</span>
             </div>
           </div>
         </div>
         <div class="camera-card fade-up" style="transition-delay:.2s">
           <div class="camera-img">
-            <img src="img/camera2.jpg" alt="Seconda camera" style="width:100%;height:100%;object-fit:cover;" />
+            <img src="img/camera2.webp" alt="Seconda camera" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async" />
           </div>
           <div class="camera-body">
-            <h3>Seconda Camera</h3>
-            <p>Accogliente e versatile, ideale per bambini o ospiti aggiuntivi. Arredata con gusto in uno stile fresco e moderno.</p>
+            <h3 data-i18n="mari.room2.title">Seconda Camera</h3>
+            <p data-i18n="mari.room2.text">Accogliente e versatile, ideale per bambini o ospiti aggiuntivi. Arredata con gusto in uno stile fresco e moderno.</p>
             <div class="camera-details">
-              <span class="camera-detail">&#127769; Letti singoli</span>
-              <span class="camera-detail">&#129695; Armadio</span>
-              <span class="camera-detail">&#128261; Luminosa</span>
+              <span class="camera-detail" data-i18n="mari.room2.d1">&#127769; Letti singoli</span>
+              <span class="camera-detail" data-i18n="mari.room2.d2">&#129695; Armadio</span>
+              <span class="camera-detail" data-i18n="mari.room2.d3">&#128261; Luminosa</span>
             </div>
           </div>
         </div>
@@ -1205,42 +1226,42 @@
   <section id="servizi">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label">Cosa offriamo</p>
-        <h2 class="section-title">Tutti i comfort<br>per la tua vacanza</h2>
+        <p class="section-label" data-i18n="mari.svc.label">Cosa offriamo</p>
+        <h2 class="section-title" data-i18n="mari.svc.title">Tutti i comfort<br>per la tua vacanza</h2>
         <div class="section-divider"></div>
       </div>
       <div class="servizi-grid">
         <div class="servizio-card fade-up" style="transition-delay:.05s">
           <div class="servizio-icon">&#127754;</div>
-          <div class="servizio-name">Vicinissimo al mare</div>
+          <div class="servizio-name" data-i18n="mari.svc.s1">Vicinissimo al mare</div>
         </div>
         <div class="servizio-card fade-up" style="transition-delay:.1s">
           <div class="servizio-icon">&#128663;</div>
-          <div class="servizio-name">Parcheggio gratuito</div>
+          <div class="servizio-name" data-i18n="mari.svc.s2">Parcheggio gratuito</div>
         </div>
         <div class="servizio-card fade-up" style="transition-delay:.15s">
           <div class="servizio-icon">&#128167;</div>
-          <div class="servizio-name">Bagno privato</div>
+          <div class="servizio-name" data-i18n="mari.svc.s3">Bagno privato</div>
         </div>
         <div class="servizio-card fade-up" style="transition-delay:.2s">
           <div class="servizio-icon">&#127868;</div>
-          <div class="servizio-name">Cucina attrezzata</div>
+          <div class="servizio-name" data-i18n="mari.svc.s4">Cucina attrezzata</div>
         </div>
         <div class="servizio-card fade-up" style="transition-delay:.25s">
           <div class="servizio-icon">&#127776;</div>
-          <div class="servizio-name">Aria condizionata</div>
+          <div class="servizio-name" data-i18n="mari.svc.s5">Aria condizionata</div>
         </div>
         <div class="servizio-card fade-up" style="transition-delay:.3s">
           <div class="servizio-icon">&#128246;</div>
-          <div class="servizio-name">Wi-Fi gratuito</div>
+          <div class="servizio-name" data-i18n="mari.svc.s6">Wi-Fi gratuito</div>
         </div>
         <div class="servizio-card fade-up" style="transition-delay:.35s">
           <div class="servizio-icon">&#129529;</div>
-          <div class="servizio-name">Lavatrice</div>
+          <div class="servizio-name" data-i18n="mari.svc.s7">Lavatrice</div>
         </div>
         <div class="servizio-card fade-up" style="transition-delay:.4s">
           <div class="servizio-icon">&#128138;</div>
-          <div class="servizio-name">Biancheria inclusa</div>
+          <div class="servizio-name" data-i18n="mari.svc.s8">Biancheria inclusa</div>
         </div>
       </div>
     </div>
@@ -1250,8 +1271,8 @@
   <section id="posizione">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label">Dove siamo</p>
-        <h2 class="section-title">Nel cuore di<br>San Bartolomeo al Mare</h2>
+        <p class="section-label" data-i18n="common.location_label">Dove siamo</p>
+        <h2 class="section-title" data-i18n="mari.loc.title">Nel cuore di<br>San Bartolomeo al Mare</h2>
         <div class="section-divider"></div>
       </div>
       <div class="posizione-grid">
@@ -1268,29 +1289,29 @@
           <div class="location-item">
             <div class="location-item-icon">&#128205;</div>
             <div class="location-item-text">
-              <h4>Indirizzo</h4>
-              <p>Via Colombo 16<br>18016 San Bartolomeo al Mare (IM)<br>Liguria, Italia</p>
+              <h4 data-i18n="common.address">Indirizzo</h4>
+              <p data-i18n-html="mari.loc.addr.text">Via Colombo 16<br>18016 San Bartolomeo al Mare (IM)<br>Liguria, Italia</p>
             </div>
           </div>
           <div class="location-item">
             <div class="location-item-icon">&#127754;</div>
             <div class="location-item-text">
-              <h4>Dal mare</h4>
-              <p>Solo 30 metri dalla spiaggia. Puoi sentire il profumo del mare direttamente dall'appartamento.</p>
+              <h4 data-i18n="mari.loc.sea.title">Dal mare</h4>
+              <p data-i18n="mari.loc.sea.text">Solo 30 metri dalla spiaggia. Puoi sentire il profumo del mare direttamente dall'appartamento.</p>
             </div>
           </div>
           <div class="location-item">
             <div class="location-item-icon">&#128663;</div>
             <div class="location-item-text">
-              <h4>Parcheggio</h4>
-              <p>Parcheggio gratuito incluso nel soggiorno. Nessun pensiero per la tua auto.</p>
+              <h4 data-i18n="mari.loc.parking.title">Parcheggio</h4>
+              <p data-i18n="mari.loc.parking.text">Parcheggio gratuito incluso nel soggiorno. Nessun pensiero per la tua auto.</p>
             </div>
           </div>
           <div class="location-item">
             <div class="location-item-icon">&#128722;</div>
             <div class="location-item-text">
-              <h4>Nei dintorni</h4>
-              <p>Ristoranti, gelaterie e negozi a pochi passi. Tutto a portata di mano.</p>
+              <h4 data-i18n="mari.loc.nearby.title">Nei dintorni</h4>
+              <p data-i18n="mari.loc.nearby.text">Ristoranti, gelaterie e negozi a pochi passi. Tutto a portata di mano.</p>
             </div>
           </div>
         </div>
@@ -1302,8 +1323,8 @@
   <section id="recensioni">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label">Cosa dicono gli ospiti</p>
-        <h2 class="section-title">Recensioni</h2>
+        <p class="section-label" data-i18n="mari.rev.label">Cosa dicono gli ospiti</p>
+        <h2 class="section-title" data-i18n="mari.rev.title">Recensioni</h2>
         <div class="section-divider"></div>
       </div>
       <div class="rating-hero fade-up" style="transition-delay:.1s">
@@ -1349,7 +1370,7 @@
         </div>
       </div>
       <div style="text-align:center; margin-top:40px" class="fade-up" style="transition-delay:.4s">
-        <a href="https://www.airbnb.it/rooms/1022566699352195921" target="_blank" class="btn btn-primary" style="background:var(--dark)">Leggi tutte le recensioni su Airbnb</a>
+        <a href="https://www.airbnb.it/rooms/1022566699352195921" target="_blank" class="btn btn-primary" style="background:var(--dark)" data-i18n="mari.rev.btn">Leggi tutte le recensioni su Airbnb</a>
       </div>
     </div>
   </section>
@@ -1358,53 +1379,53 @@
   <section id="galleria">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label">Scorri le foto</p>
-        <h2 class="section-title">Galleria</h2>
+        <p class="section-label" data-i18n="common.gallery_label">Scorri le foto</p>
+        <h2 class="section-title" data-i18n="common.gallery_title">Galleria</h2>
         <div class="section-divider"></div>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item wide fade-up" style="transition-delay:.05s" onclick="openLightbox('img/soggiorno.jpg','Soggiorno')">
-          <img src="img/soggiorno.jpg" alt="Soggiorno" />
+        <div class="gallery-item wide fade-up" style="transition-delay:.05s" onclick="openLightbox('img/soggiorno.webp','Soggiorno')">
+          <img src="img/soggiorno.webp" alt="Soggiorno" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Soggiorno</span></div>
         </div>
-        <div class="gallery-item fade-up" style="transition-delay:.1s" onclick="openLightbox('img/camera1.jpg','Camera matrimoniale')">
-          <img src="img/camera1.jpg" alt="Camera matrimoniale" />
+        <div class="gallery-item fade-up" style="transition-delay:.1s" onclick="openLightbox('img/camera1.webp','Camera matrimoniale')">
+          <img src="img/camera1.webp" alt="Camera matrimoniale" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Camera matrimoniale</span></div>
         </div>
-        <div class="gallery-item fade-up" style="transition-delay:.15s" onclick="openLightbox('img/camera2.jpg','Seconda camera')">
-          <img src="img/camera2.jpg" alt="Seconda camera" />
+        <div class="gallery-item fade-up" style="transition-delay:.15s" onclick="openLightbox('img/camera2.webp','Seconda camera')">
+          <img src="img/camera2.webp" alt="Seconda camera" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Seconda camera</span></div>
         </div>
-        <div class="gallery-item fade-up" style="transition-delay:.2s" onclick="openLightbox('img/cucina.jpg','Cucina')">
-          <img src="img/cucina.jpg" alt="Cucina" />
+        <div class="gallery-item fade-up" style="transition-delay:.2s" onclick="openLightbox('img/cucina.webp','Cucina')">
+          <img src="img/cucina.webp" alt="Cucina" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Cucina</span></div>
         </div>
-        <div class="gallery-item fade-up" style="transition-delay:.25s" onclick="openLightbox('img/bagno.jpg','Bagno')">
-          <img src="img/bagno.jpg" alt="Bagno" />
+        <div class="gallery-item fade-up" style="transition-delay:.25s" onclick="openLightbox('img/bagno.webp','Bagno')">
+          <img src="img/bagno.webp" alt="Bagno" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Bagno</span></div>
         </div>
-        <div class="gallery-item fade-up" style="transition-delay:.3s" onclick="openLightbox('img/balcone.jpg','Balcone')">
-          <img src="img/balcone.jpg" alt="Balcone" />
+        <div class="gallery-item fade-up" style="transition-delay:.3s" onclick="openLightbox('img/balcone.webp','Balcone')">
+          <img src="img/balcone.webp" alt="Balcone" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Balcone</span></div>
         </div>
-        <div class="gallery-item wide fade-up" style="transition-delay:.35s" onclick="openLightbox('img/soggiorno2.jpg','Sala da pranzo')">
-          <img src="img/soggiorno2.jpg" alt="Sala da pranzo" />
+        <div class="gallery-item wide fade-up" style="transition-delay:.35s" onclick="openLightbox('img/soggiorno2.webp','Sala da pranzo')">
+          <img src="img/soggiorno2.webp" alt="Sala da pranzo" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Sala da pranzo</span></div>
         </div>
-        <div class="gallery-item fade-up" style="transition-delay:.4s" onclick="openLightbox('img/camera1b.jpg','Camera matrimoniale')">
-          <img src="img/camera1b.jpg" alt="Camera matrimoniale" />
+        <div class="gallery-item fade-up" style="transition-delay:.4s" onclick="openLightbox('img/camera1b.webp','Camera matrimoniale')">
+          <img src="img/camera1b.webp" alt="Camera matrimoniale" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Camera matrimoniale</span></div>
         </div>
-        <div class="gallery-item fade-up" style="transition-delay:.45s" onclick="openLightbox('img/ingresso.jpg','Ingresso')">
-          <img src="img/ingresso.jpg" alt="Ingresso" />
+        <div class="gallery-item fade-up" style="transition-delay:.45s" onclick="openLightbox('img/ingresso.webp','Ingresso')">
+          <img src="img/ingresso.webp" alt="Ingresso" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Ingresso</span></div>
         </div>
-        <div class="gallery-item fade-up" style="transition-delay:.5s" onclick="openLightbox('img/parcheggio.jpg','Parcheggio gratuito')">
-          <img src="img/parcheggio.jpg" alt="Parcheggio" />
+        <div class="gallery-item fade-up" style="transition-delay:.5s" onclick="openLightbox('img/parcheggio.webp','Parcheggio gratuito')">
+          <img src="img/parcheggio.webp" alt="Parcheggio" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Parcheggio</span></div>
         </div>
-        <div class="gallery-item fade-up" style="transition-delay:.55s" onclick="openLightbox('img/camera2b.jpg','Seconda camera')">
-          <img src="img/camera2b.jpg" alt="Seconda camera" />
+        <div class="gallery-item fade-up" style="transition-delay:.55s" onclick="openLightbox('img/camera2b.webp','Seconda camera')">
+          <img src="img/camera2b.webp" alt="Seconda camera" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Seconda camera</span></div>
         </div>
       </div>
@@ -1422,31 +1443,31 @@
   <section id="contatti">
     <div class="section-inner">
       <div class="fade-up" style="text-align:center">
-        <p class="section-label">Hai domande?</p>
-        <h2 class="section-title">Contattaci</h2>
+        <p class="section-label" data-i18n="mari.cont.label">Hai domande?</p>
+        <h2 class="section-title" data-i18n="mari.cont.title">Contattaci</h2>
         <div class="section-divider" style="margin:0 auto 0"></div>
-        <p class="section-text" style="margin: 20px auto 0; text-align:center">
+        <p class="section-text" style="margin: 20px auto 0; text-align:center" data-i18n="mari.cont.text">
           Siamo a tua disposizione per qualsiasi informazione sul soggiorno, le disponibilit&agrave; o i servizi offerti.
         </p>
       </div>
       <div class="contatti-grid">
         <div class="contatto-card fade-up" style="transition-delay:.1s">
           <div class="contatto-icon-wrap">&#128222;</div>
-          <div class="contatto-label">Telefono &amp; WhatsApp</div>
+          <div class="contatto-label" data-i18n="mari.cont.phone.lbl">Telefono &amp; WhatsApp</div>
           <div class="contatto-value">347 412 0611</div>
-          <a href="tel:+393474120611" class="contatto-link">Chiama ora &rarr;</a>
+          <a href="tel:+393474120611" class="contatto-link" data-i18n="mari.cont.phone.link">Chiama ora &rarr;</a>
         </div>
         <div class="contatto-card fade-up" style="transition-delay:.2s">
           <div class="contatto-icon-wrap">&#128140;</div>
-          <div class="contatto-label">Email</div>
+          <div class="contatto-label" data-i18n="mari.cont.email.lbl">Email</div>
           <div class="contatto-value" style="font-size:1rem">jacopoalbertoformenti<br>@gmail.com</div>
-          <a href="mailto:jacopoalbertoformenti@gmail.com" class="contatto-link">Scrivi un messaggio &rarr;</a>
+          <a href="mailto:jacopoalbertoformenti@gmail.com" class="contatto-link" data-i18n="mari.cont.email.link">Scrivi un messaggio &rarr;</a>
         </div>
         <div class="contatto-card fade-up" style="transition-delay:.3s">
           <div class="contatto-icon-wrap">&#127968;</div>
-          <div class="contatto-label">Prenota online</div>
+          <div class="contatto-label" data-i18n="mari.cont.book.lbl">Prenota online</div>
           <div class="contatto-value">Airbnb</div>
-          <a href="https://www.airbnb.it/rooms/1022566699352195921" target="_blank" class="contatto-link">Vai all'annuncio &rarr;</a>
+          <a href="https://www.airbnb.it/rooms/1022566699352195921" target="_blank" class="contatto-link" data-i18n="mari.cont.book.link">Vai all'annuncio &rarr;</a>
         </div>
       </div>
     </div>
@@ -1455,13 +1476,13 @@
   <!-- ── PRENOTA CTA ───────────────────────────────────── -->
   <section id="prenota">
     <div class="section-inner fade-up">
-      <p class="section-label">Pronti per partire?</p>
-      <h2 class="section-title">Prenota il tuo soggiorno</h2>
+      <p class="section-label" data-i18n="mari.cta.label">Pronti per partire?</p>
+      <h2 class="section-title" data-i18n="mari.cta.title">Prenota il tuo soggiorno</h2>
       <div class="section-divider"></div>
-      <p class="section-text">
+      <p class="section-text" data-i18n="mari.cta.text">
         Controlla le date disponibili e prenota direttamente su Airbnb. Risposta rapida garantita!
       </p>
-      <a href="https://www.airbnb.it/rooms/1022566699352195921" target="_blank" class="btn btn-white">
+      <a href="https://www.airbnb.it/rooms/1022566699352195921" target="_blank" class="btn btn-white" data-i18n="mari.cta.btn">
         Controlla disponibilit&agrave; su Airbnb
       </a>
     </div>
@@ -1473,26 +1494,26 @@
       <div class="footer-top">
         <div class="footer-brand">
           <h3>B&B Casa Mariangela</h3>
-          <p>Il tuo angolo di Liguria a 30 metri dal mare, con tutto il calore di una casa privata.</p>
+          <p data-i18n="mari.footer.tagline">Il tuo angolo di Liguria a 30 metri dal mare, con tutto il calore di una casa privata.</p>
         </div>
         <div class="footer-col">
-          <h4>Navigazione</h4>
+          <h4 data-i18n="mari.footer.col1">Navigazione</h4>
           <ul>
-            <li><a href="#appartamento">L'appartamento</a></li>
-            <li><a href="#camere">Le camere</a></li>
-            <li><a href="#servizi">Servizi</a></li>
-            <li><a href="#posizione">Posizione</a></li>
-            <li><a href="#recensioni">Recensioni</a></li>
-            <li><a href="#contatti">Contatti</a></li>
+            <li><a href="#appartamento" data-i18n="mari.nav.about">L'appartamento</a></li>
+            <li><a href="#camere" data-i18n="mari.nav.rooms">Le camere</a></li>
+            <li><a href="#servizi" data-i18n="mari.nav.services">Servizi</a></li>
+            <li><a href="#posizione" data-i18n="mari.nav.location">Posizione</a></li>
+            <li><a href="#recensioni" data-i18n="mari.nav.reviews">Recensioni</a></li>
+            <li><a href="#contatti" data-i18n="mari.nav.contacts">Contatti</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Informazioni</h4>
+          <h4 data-i18n="mari.footer.col2">Informazioni</h4>
           <ul>
             <li><a href="#">Via Colombo 16</a></li>
             <li><a href="#">San Bartolomeo al Mare</a></li>
             <li><a href="#">Liguria, Italia</a></li>
-            <li><a href="https://www.airbnb.it/rooms/1022566699352195921" target="_blank">Prenota su Airbnb</a></li>
+            <li><a href="https://www.airbnb.it/rooms/1022566699352195921" target="_blank" data-i18n="common.book_airbnb">Prenota su Airbnb</a></li>
           </ul>
         </div>
       </div>
@@ -1520,6 +1541,10 @@
       slides[current].classList.remove('active');
       dots[current].classList.remove('active');
       current = n;
+      if (slides[current].dataset.bg) {
+        slides[current].style.backgroundImage = `url('${slides[current].dataset.bg}')`;
+        delete slides[current].dataset.bg;
+      }
       slides[current].classList.add('active');
       dots[current].classList.add('active');
       clearInterval(autoplay);
@@ -1565,6 +1590,12 @@
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+    // Progressive image fade-in on load
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      if (img.complete && img.naturalHeight !== 0) img.classList.add('img-loaded');
+      else img.addEventListener('load', () => img.classList.add('img-loaded'));
+    });
+
     // ── Lightbox ──
     function openLightbox(src, caption) {
       document.getElementById('lightbox-img').src = src;
@@ -1578,5 +1609,6 @@
     }
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
   </script>
+  <script src="../i18n.js" defer></script>
 </body>
 </html>
