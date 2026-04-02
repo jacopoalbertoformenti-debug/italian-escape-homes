@@ -1065,7 +1065,31 @@
     nav.scrolled .lang-switcher button { border-color:rgba(44,24,16,.3); color:var(--text-light); }
     nav.scrolled .lang-switcher button:hover,nav.scrolled .lang-switcher button.lang-active { background:var(--terracotta); border-color:var(--terracotta); color:var(--white); }
     @media (max-width:768px) { .lang-switcher { margin-left:8px; } .lang-switcher button { padding:3px 6px; font-size:.6rem; } }
+
+    /* ── FAQ accordion ── */
+    .faq-list { max-width:720px; margin:0 auto; }
+    .faq-item { border-bottom:1px solid var(--sand-dark); }
+    .faq-q { width:100%; text-align:left; padding:18px 0; background:none; border:none; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--text); display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    .faq-q::after { content:'+'; font-size:1.4rem; flex-shrink:0; transition:transform .2s; }
+    .faq-item.open .faq-q::after { content:'−'; }
+    .faq-a { max-height:0; overflow:hidden; transition:max-height .3s ease; }
+    .faq-item.open .faq-a { max-height:300px; }
+    .faq-a p { padding-bottom:18px; color:var(--text-light); line-height:1.7; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Quanto dista Casa Mariangela dal mare?","acceptedAnswer":{"@type":"Answer","text":"Solo 30 metri dalla spiaggia di San Bartolomeo al Mare, sulla Riviera Ligure di Ponente."}},
+      {"@type":"Question","name":"C'è il parcheggio gratuito?","acceptedAnswer":{"@type":"Answer","text":"Sì, parcheggio privato gratuito incluso nel soggiorno. Nessun costo aggiuntivo."}},
+      {"@type":"Question","name":"Quante persone può ospitare?","acceptedAnswer":{"@type":"Answer","text":"Fino a 4 persone, con 2 camere da letto: una matrimoniale e una con letti singoli."}},
+      {"@type":"Question","name":"Dove si trova San Bartolomeo al Mare?","acceptedAnswer":{"@type":"Answer","text":"San Bartolomeo al Mare è un borgo sulla Riviera Ligure di Ponente, in provincia di Imperia, vicino a Diano Marina e Albenga."}},
+      {"@type":"Question","name":"Quali sono gli orari di check-in e check-out?","acceptedAnswer":{"@type":"Answer","text":"Check-in dalle 15:00, check-out entro le 10:00. Possibile concordare orari flessibili."}},
+      {"@type":"Question","name":"Come si prenota?","acceptedAnswer":{"@type":"Answer","text":"Direttamente su Airbnb. Per domande contattaci via telefono al 347 412 0611 o via email."}}
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -1474,6 +1498,41 @@
     </div>
   </section>
 
+  <!-- ── FAQ ──────────────────────────────────────────────────────── -->
+  <section id="faq">
+    <div class="section-inner">
+      <p class="section-label fade-up" data-i18n="common.faq_label">FAQ</p>
+      <h2 class="section-title fade-up" data-i18n="common.faq_title">Domande frequenti</h2>
+      <div class="section-divider fade-up"></div>
+      <div class="faq-list fade-up">
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="mari.faq.q1">Quanto dista Casa Mariangela dal mare?</button>
+          <div class="faq-a"><p data-i18n="mari.faq.a1">Solo 30 metri dalla spiaggia di San Bartolomeo al Mare, sulla Riviera Ligure di Ponente.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="mari.faq.q2">C'è il parcheggio gratuito?</button>
+          <div class="faq-a"><p data-i18n="mari.faq.a2">Sì, parcheggio privato gratuito incluso nel soggiorno. Nessun costo aggiuntivo.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="mari.faq.q3">Quante persone può ospitare?</button>
+          <div class="faq-a"><p data-i18n="mari.faq.a3">Fino a 4 persone, con 2 camere da letto: una matrimoniale e una con letti singoli.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="mari.faq.q4">Dove si trova San Bartolomeo al Mare?</button>
+          <div class="faq-a"><p data-i18n="mari.faq.a4">San Bartolomeo al Mare è un borgo sulla Riviera Ligure di Ponente, in provincia di Imperia, vicino a Diano Marina e Albenga.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="mari.faq.q5">Quali sono gli orari di check-in e check-out?</button>
+          <div class="faq-a"><p data-i18n="mari.faq.a5">Check-in dalle 15:00, check-out entro le 10:00. Possibile concordare orari flessibili.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="mari.faq.q6">Come si prenota?</button>
+          <div class="faq-a"><p data-i18n="mari.faq.a6">Direttamente su Airbnb. Per domande contattaci via telefono al 347 412 0611 o via email.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── PRENOTA CTA ───────────────────────────────────── -->
   <section id="prenota">
     <div class="section-inner fade-up">
@@ -1609,6 +1668,16 @@
       document.body.style.overflow = '';
     }
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    // FAQ accordion toggle
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
   </script>
   <script src="../i18n.js" defer></script>
 </body>

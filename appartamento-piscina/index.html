@@ -403,7 +403,30 @@
     nav.scrolled .lang-switcher button { border-color:rgba(26,44,61,.3); color:var(--text-light); }
     nav.scrolled .lang-switcher button:hover,nav.scrolled .lang-switcher button.lang-active { background:var(--primary); border-color:var(--primary); color:var(--white); }
     @media (max-width:768px) { .lang-switcher { margin-left:8px; } .lang-switcher button { padding:3px 6px; font-size:.6rem; } }
+
+    /* ── FAQ accordion ── */
+    .faq-list { max-width:720px; margin:0 auto; }
+    .faq-item { border-bottom:1px solid var(--sand-dark); }
+    .faq-q { width:100%; text-align:left; padding:18px 0; background:none; border:none; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--text); display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    .faq-q::after { content:'+'; font-size:1.4rem; flex-shrink:0; transition:transform .2s; }
+    .faq-item.open .faq-q::after { content:'−'; }
+    .faq-a { max-height:0; overflow:hidden; transition:max-height .3s ease; }
+    .faq-item.open .faq-a { max-height:300px; }
+    .faq-a p { padding-bottom:18px; color:var(--text-light); line-height:1.7; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Dove si trova l'appartamento?","acceptedAnswer":{"@type":"Answer","text":"A Leggiuno, sul Lago Maggiore (VA), Lombardia. A soli 2 minuti in auto dalle spiagge del lago e a 30 minuti dall'aeroporto di Milano Malpensa."}},
+      {"@type":"Question","name":"C'è davvero una piscina?","acceptedAnswer":{"@type":"Answer","text":"Sì, piscina condominiale stagionale aperta fino al 15 settembre, con lettini e ombrelloni."}},
+      {"@type":"Question","name":"Quante persone può ospitare?","acceptedAnswer":{"@type":"Answer","text":"Fino a 4 persone: camera matrimoniale più zona soggiorno con letto aggiuntivo."}},
+      {"@type":"Question","name":"C'è il parcheggio?","acceptedAnswer":{"@type":"Answer","text":"Sì, posto auto privato incluso, con vista sul Lago Maggiore."}},
+      {"@type":"Question","name":"Come si prenota?","acceptedAnswer":{"@type":"Answer","text":"Direttamente su Airbnb o Booking.com. Risposta rapida garantita."}}
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -709,6 +732,37 @@
     </div>
   </section>
 
+  <!-- ── FAQ ──────────────────────────────────────────────────────── -->
+  <section id="faq">
+    <div class="section-inner">
+      <p class="section-label fade-up" data-i18n="common.faq_label">FAQ</p>
+      <h2 class="section-title fade-up" data-i18n="common.faq_title">Domande frequenti</h2>
+      <div class="section-divider fade-up"></div>
+      <div class="faq-list fade-up">
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="pool.faq.q1">Dove si trova l'appartamento?</button>
+          <div class="faq-a"><p data-i18n="pool.faq.a1">A Leggiuno, sul Lago Maggiore (VA), Lombardia. A soli 2 minuti in auto dalle spiagge del lago e a 30 minuti dall'aeroporto di Milano Malpensa.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="pool.faq.q2">C'è davvero una piscina?</button>
+          <div class="faq-a"><p data-i18n="pool.faq.a2">Sì, piscina condominiale stagionale aperta fino al 15 settembre, con lettini e ombrelloni.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="pool.faq.q3">Quante persone può ospitare?</button>
+          <div class="faq-a"><p data-i18n="pool.faq.a3">Fino a 4 persone: camera matrimoniale più zona soggiorno con letto aggiuntivo.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="pool.faq.q4">C'è il parcheggio?</button>
+          <div class="faq-a"><p data-i18n="pool.faq.a4">Sì, posto auto privato incluso, con vista sul Lago Maggiore.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="pool.faq.q5">Come si prenota?</button>
+          <div class="faq-a"><p data-i18n="pool.faq.a5">Direttamente su Airbnb o Booking.com. Risposta rapida garantita.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── CTA ──────────────────────────────────────────────────────── -->
   <section id="contatti">
     <div class="section-inner" style="text-align:center">
@@ -828,6 +882,16 @@
     document.querySelectorAll('.gallery-item img').forEach(img => {
       if (img.complete && img.naturalHeight !== 0) img.classList.add('img-loaded');
       else img.addEventListener('load', () => img.classList.add('img-loaded'));
+    });
+
+    // FAQ accordion toggle
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
     });
   </script>
   <script src="../i18n.js" defer></script>

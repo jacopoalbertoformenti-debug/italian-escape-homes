@@ -261,7 +261,30 @@
     nav.scrolled .lang-switcher button { border-color:rgba(26,45,30,.3); color:var(--text-light); }
     nav.scrolled .lang-switcher button:hover,nav.scrolled .lang-switcher button.lang-active { background:var(--primary); border-color:var(--primary); color:var(--white); }
     @media (max-width:768px) { .lang-switcher { margin-left:8px; } .lang-switcher button { padding:3px 6px; font-size:.6rem; } }
+
+    /* ── FAQ accordion ── */
+    .faq-list { max-width:720px; margin:0 auto; }
+    .faq-item { border-bottom:1px solid var(--sand-dark); }
+    .faq-q { width:100%; text-align:left; padding:18px 0; background:none; border:none; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--text); display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    .faq-q::after { content:'+'; font-size:1.4rem; flex-shrink:0; transition:transform .2s; }
+    .faq-item.open .faq-q::after { content:'−'; }
+    .faq-a { max-height:0; overflow:hidden; transition:max-height .3s ease; }
+    .faq-item.open .faq-a { max-height:300px; }
+    .faq-a p { padding-bottom:18px; color:var(--text-light); line-height:1.7; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"La piscina è privata o condivisa?","acceptedAnswer":{"@type":"Answer","text":"Privata ed esclusiva per gli ospiti, con ampio giardino. Non condivisa con altri alloggi."}},
+      {"@type":"Question","name":"Si vede il Lago Maggiore?","acceptedAnswer":{"@type":"Answer","text":"Sì, vista panoramica sul Lago Maggiore dal giardino e dalla terrazza."}},
+      {"@type":"Question","name":"Quante camere ha la casa?","acceptedAnswer":{"@type":"Answer","text":"Due camere da letto per un totale di 4 posti letto, più soggiorno con accesso diretto al giardino."}},
+      {"@type":"Question","name":"Quanto dista da Milano e da Malpensa?","acceptedAnswer":{"@type":"Answer","text":"Circa 50 minuti da Milano e 30 minuti dall'aeroporto internazionale di Malpensa (MXP)."}},
+      {"@type":"Question","name":"Come si prenota?","acceptedAnswer":{"@type":"Answer","text":"Direttamente su Airbnb. Per domande siamo disponibili via telefono o email."}}
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -566,6 +589,37 @@
     </div>
   </section>
 
+  <!-- ── FAQ ──────────────────────────────────────────────────────── -->
+  <section id="faq">
+    <div class="section-inner">
+      <p class="section-label fade-up" data-i18n="common.faq_label">FAQ</p>
+      <h2 class="section-title fade-up" data-i18n="common.faq_title">Domande frequenti</h2>
+      <div class="section-divider fade-up"></div>
+      <div class="faq-list fade-up">
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="garden.faq.q1">La piscina è privata o condivisa?</button>
+          <div class="faq-a"><p data-i18n="garden.faq.a1">Privata ed esclusiva per gli ospiti, con ampio giardino. Non condivisa con altri alloggi.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="garden.faq.q2">Si vede il Lago Maggiore?</button>
+          <div class="faq-a"><p data-i18n="garden.faq.a2">Sì, vista panoramica sul Lago Maggiore dal giardino e dalla terrazza.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="garden.faq.q3">Quante camere ha la casa?</button>
+          <div class="faq-a"><p data-i18n="garden.faq.a3">Due camere da letto per un totale di 4 posti letto, più soggiorno con accesso diretto al giardino.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="garden.faq.q4">Quanto dista da Milano e da Malpensa?</button>
+          <div class="faq-a"><p data-i18n="garden.faq.a4">Circa 50 minuti da Milano e 30 minuti dall'aeroporto internazionale di Malpensa (MXP).</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="garden.faq.q5">Come si prenota?</button>
+          <div class="faq-a"><p data-i18n="garden.faq.a5">Direttamente su Airbnb. Per domande siamo disponibili via telefono o email.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section id="contatti">
     <div class="section-inner">
@@ -667,6 +721,16 @@
     document.querySelectorAll('.gallery-item img').forEach(img => {
       if (img.complete && img.naturalHeight !== 0) img.classList.add('img-loaded');
       else img.addEventListener('load', () => img.classList.add('img-loaded'));
+    });
+
+    // FAQ accordion toggle
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
     });
   </script>
   <script src="../i18n.js" defer></script>

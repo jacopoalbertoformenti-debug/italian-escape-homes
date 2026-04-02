@@ -410,7 +410,30 @@
     nav.scrolled .lang-switcher button { border-color:rgba(26,44,61,.3); color:var(--text-light); }
     nav.scrolled .lang-switcher button:hover,nav.scrolled .lang-switcher button.lang-active { background:var(--primary); border-color:var(--primary); color:var(--white); }
     @media (max-width:768px) { .lang-switcher { margin-left:8px; } .lang-switcher button { padding:3px 6px; font-size:.6rem; } }
+
+    /* ── FAQ accordion ── */
+    .faq-list { max-width:720px; margin:0 auto; }
+    .faq-item { border-bottom:1px solid var(--sand-dark); }
+    .faq-q { width:100%; text-align:left; padding:18px 0; background:none; border:none; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--text); display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    .faq-q::after { content:'+'; font-size:1.4rem; flex-shrink:0; transition:transform .2s; }
+    .faq-item.open .faq-q::after { content:'−'; }
+    .faq-a { max-height:0; overflow:hidden; transition:max-height .3s ease; }
+    .faq-item.open .faq-a { max-height:300px; }
+    .faq-a p { padding-bottom:18px; color:var(--text-light); line-height:1.7; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Lake At Home è vicino al lago?","acceptedAnswer":{"@type":"Answer","text":"Sì, si trova nel centro di Lecco, a pochi passi dal lungolago del Lago di Como."}},
+      {"@type":"Question","name":"Quante camere ha l'appartamento?","acceptedAnswer":{"@type":"Answer","text":"Due camere da letto con design contemporaneo, per un totale di 4 posti letto."}},
+      {"@type":"Question","name":"Quanto dista da Milano?","acceptedAnswer":{"@type":"Answer","text":"Circa 40-50 minuti da Milano in auto o in treno (stazione di Lecco, collegamento diretto)."}},
+      {"@type":"Question","name":"Cosa si può visitare nelle vicinanze?","acceptedAnswer":{"@type":"Answer","text":"Lungolago di Lecco, Grigne, Valsassina, i paesi manzoniani, Varenna, Bellagio e tutto il Lago di Como."}},
+      {"@type":"Question","name":"Come si prenota?","acceptedAnswer":{"@type":"Answer","text":"Su Airbnb o Booking.com. L'appartamento è disponibile su entrambe le piattaforme."}}
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -755,6 +778,37 @@
     </div>
   </div>
 
+  <!-- ── FAQ ──────────────────────────────────────────────────────── -->
+  <section id="faq">
+    <div class="section-inner">
+      <p class="section-label fade-up" data-i18n="common.faq_label">FAQ</p>
+      <h2 class="section-title fade-up" data-i18n="common.faq_title">Domande frequenti</h2>
+      <div class="section-divider fade-up"></div>
+      <div class="faq-list fade-up">
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="lake.faq.q1">Lake At Home è vicino al lago?</button>
+          <div class="faq-a"><p data-i18n="lake.faq.a1">Sì, si trova nel centro di Lecco, a pochi passi dal lungolago del Lago di Como.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="lake.faq.q2">Quante camere ha l'appartamento?</button>
+          <div class="faq-a"><p data-i18n="lake.faq.a2">Due camere da letto con design contemporaneo, per un totale di 4 posti letto.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="lake.faq.q3">Quanto dista da Milano?</button>
+          <div class="faq-a"><p data-i18n="lake.faq.a3">Circa 40-50 minuti da Milano in auto o in treno (stazione di Lecco, collegamento diretto).</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="lake.faq.q4">Cosa si può visitare nelle vicinanze?</button>
+          <div class="faq-a"><p data-i18n="lake.faq.a4">Lungolago di Lecco, Grigne, Valsassina, i paesi manzoniani, Varenna, Bellagio e tutto il Lago di Como.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" data-i18n="lake.faq.q5">Come si prenota?</button>
+          <div class="faq-a"><p data-i18n="lake.faq.a5">Su Airbnb o Booking.com. L'appartamento è disponibile su entrambe le piattaforme.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── CTA ───────────────────────────────────────────────────────── -->
   <section id="contatti">
     <div class="section-inner">
@@ -853,6 +907,16 @@
     document.querySelectorAll('.gallery-item img').forEach(img => {
       if (img.complete && img.naturalHeight !== 0) img.classList.add('img-loaded');
       else img.addEventListener('load', () => img.classList.add('img-loaded'));
+    });
+
+    // FAQ accordion toggle
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
     });
   </script>
   <script src="../i18n.js" defer></script>
