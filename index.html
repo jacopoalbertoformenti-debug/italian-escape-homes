@@ -35,7 +35,41 @@
     "logo": "https://www.italianescapeshomes.it/favicon.svg",
     "image": "https://www.italianescapeshomes.it/img/camera1-mariangela.webp",
     "address": { "@type": "PostalAddress", "addressCountry": "IT" },
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "bestRating": "5", "reviewCount": "54" }
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "bestRating": "5", "reviewCount": "54" },
+    "datePublished": "2026-03-24",
+    "dateModified": "2026-04-03"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Italian Escapes Homes",
+    "url": "https://www.italianescapeshomes.it",
+    "logo": "https://www.italianescapeshomes.it/favicon.svg",
+    "description": "Affitti vacanze selezionati in Italia: mare in Liguria, Lago Maggiore, Lago di Como e Alpi."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Italian Escapes Homes",
+    "url": "https://www.italianescapeshomes.it"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Quante proprietà gestite?","acceptedAnswer":{"@type":"Answer","text":"Cinque alloggi selezionati in quattro destinazioni italiane: Liguria (mare), Lago Maggiore, Lago di Como e Valmalenco (montagna)."}},
+      {"@type":"Question","name":"In quali regioni si trovano le vostre case?","acceptedAnswer":{"@type":"Answer","text":"Liguria (San Bartolomeo al Mare), Lombardia (Leggiuno sul Lago Maggiore, Lecco sul Lago di Como) e Valmalenco nelle Alpi."}},
+      {"@type":"Question","name":"Come si prenota?","acceptedAnswer":{"@type":"Answer","text":"Tutte le proprietà sono prenotabili su Airbnb e la maggior parte anche su Booking.com. Puoi anche contattarci direttamente tramite il modulo sul sito."}},
+      {"@type":"Question","name":"Qual è la capacità massima di ospiti?","acceptedAnswer":{"@type":"Answer","text":"Ogni alloggio ospita fino a 4 persone. Sono ideali per coppie, famiglie con bambini o piccoli gruppi."}},
+      {"@type":"Question","name":"Accettate animali domestici?","acceptedAnswer":{"@type":"Answer","text":"La politica sugli animali varia in base alla proprietà. Ti invitiamo a contattarci prima di prenotare per verificare la disponibilità."}},
+      {"@type":"Question","name":"È possibile soggiornare in più proprietà?","acceptedAnswer":{"@type":"Answer","text":"Sì, gestiamo direttamente tutte le proprietà. Contattaci per organizzare itinerari combinati tra mare, lago e montagna."}}
+    ]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -567,6 +601,16 @@
       .lang-switcher { margin-left: 8px; }
       .lang-switcher button { padding: 3px 6px; font-size: .6rem; }
     }
+
+    /* ── FAQ ────────────────────────────────────────────── */
+    .faq-list { max-width:720px; margin:0 auto; }
+    .faq-item { border-bottom:1px solid var(--sand-dark); }
+    .faq-q { width:100%; text-align:left; padding:18px 0; background:none; border:none; cursor:pointer; font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--text); display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    .faq-q::after { content:'+'; font-size:1.4rem; flex-shrink:0; transition:transform .2s; }
+    .faq-item.open .faq-q::after { content:'−'; }
+    .faq-a { max-height:0; overflow:hidden; transition:max-height .3s ease; }
+    .faq-item.open .faq-a { max-height:300px; }
+    .faq-a p { padding-bottom:18px; color:var(--text-light); line-height:1.7; }
   </style>
 </head>
 <body>
@@ -856,6 +900,43 @@
     </div>
   </section>
 
+  <!-- ── FAQ ─────────────────────────────────────────── -->
+  <section id="faq">
+    <div class="section-inner">
+      <div class="fade-up" style="text-align:center">
+        <p class="section-label">FAQ</p>
+        <h2 class="section-title">Domande frequenti</h2>
+        <div class="section-divider" style="margin:0 auto 48px"></div>
+      </div>
+      <div class="faq-list fade-up">
+        <div class="faq-item">
+          <button class="faq-q">Quante proprietà gestite?</button>
+          <div class="faq-a"><p>Cinque alloggi selezionati in quattro destinazioni italiane: Liguria (mare), Lago Maggiore, Lago di Como e Valmalenco (montagna).</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">In quali regioni si trovano le vostre case?</button>
+          <div class="faq-a"><p>Liguria (San Bartolomeo al Mare), Lombardia (Leggiuno sul Lago Maggiore, Lecco sul Lago di Como) e Valmalenco nelle Alpi.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Come si prenota?</button>
+          <div class="faq-a"><p>Tutte le proprietà sono prenotabili su Airbnb e la maggior parte anche su Booking.com. Puoi anche contattarci direttamente tramite il modulo sul sito.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Qual è la capacità massima di ospiti?</button>
+          <div class="faq-a"><p>Ogni alloggio ospita fino a 4 persone. Sono ideali per coppie, famiglie con bambini o piccoli gruppi.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Accettate animali domestici?</button>
+          <div class="faq-a"><p>La politica sugli animali varia in base alla proprietà. Ti invitiamo a contattarci prima di prenotare per verificare la disponibilità.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">È possibile soggiornare in più proprietà?</button>
+          <div class="faq-a"><p>Sì, gestiamo direttamente tutte le proprietà. Contattaci per organizzare itinerari combinati tra mare, lago e montagna.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── CONTATTI ───────────────────────────────────── -->
   <section id="contatti">
     <div class="section-inner">
@@ -965,6 +1046,16 @@
       });
     }, { rootMargin: '200px 0px' });
     document.querySelectorAll('.prop-img[data-bg]').forEach(el => bgObserver.observe(el));
+
+    // ── FAQ accordion ──
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
   </script>
   <script src="./i18n.js" defer></script>
 </body>
