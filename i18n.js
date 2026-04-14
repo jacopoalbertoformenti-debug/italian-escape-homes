@@ -124,7 +124,7 @@ const IEH_TRANSLATIONS = {
     "home.card2.d2"          : "🏊 Piscina",
     "home.card2.d3"          : "✈️ 30 min da Malpensa",
 
-    "home.card3.title"       : "Casa Mariangela: Pool &amp; Garden",
+    "home.card3.title"       : "Casa Mariangela: Pool & Garden",
     "home.card3.tipo"        : "Casa · Lago",
     "home.card3.desc"        : "Alloggio tranquillo con piscina e ampio giardino privato, in un residence panoramico a 2 minuti dal Lago Maggiore e 30 minuti da Malpensa.",
     "home.card3.d1"          : "👥 4 ospiti",
@@ -694,7 +694,7 @@ const IEH_TRANSLATIONS = {
     "home.card2.d2"          : "🏊 Pool",
     "home.card2.d3"          : "✈️ 30 min from Malpensa",
 
-    "home.card3.title"       : "Casa Mariangela: Pool &amp; Garden",
+    "home.card3.title"       : "Casa Mariangela: Pool & Garden",
     "home.card3.tipo"        : "House · Lake",
     "home.card3.desc"        : "Peaceful holiday home with private pool and large garden in a panoramic residence, 2 minutes from Lake Maggiore and 30 minutes from Malpensa Airport.",
     "home.card3.d1"          : "👥 4 guests",
@@ -1264,7 +1264,7 @@ const IEH_TRANSLATIONS = {
     "home.card2.d2"          : "🏊 Pool",
     "home.card2.d3"          : "✈️ 30 Min. von Malpensa",
 
-    "home.card3.title"       : "Casa Mariangela: Pool &amp; Garden",
+    "home.card3.title"       : "Casa Mariangela: Pool & Garden",
     "home.card3.tipo"        : "Ferienhaus · See",
     "home.card3.desc"        : "Ruhiges Ferienhaus mit privatem Pool und großem Garten in einer Panoramaanlage, 2 Minuten vom Lago Maggiore und 30 Minuten vom Flughafen Malpensa.",
     "home.card3.d1"          : "👥 4 Gäste",
@@ -1832,7 +1832,7 @@ const IEH_TRANSLATIONS = {
     "home.card2.d2"          : "🏊 Piscine",
     "home.card2.d3"          : "✈️ 30 min de Malpensa",
 
-    "home.card3.title"       : "Casa Mariangela: Pool &amp; Garden",
+    "home.card3.title"       : "Casa Mariangela: Pool & Garden",
     "home.card3.tipo"        : "Maison · Lac",
     "home.card3.desc"        : "Maison de vacances paisible avec piscine privée et grand jardin dans une résidence panoramique, à 2 minutes du lac Majeur et à 30 minutes de l'aéroport de Malpensa.",
     "home.card3.d1"          : "👥 4 hôtes",
