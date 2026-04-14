@@ -109,6 +109,7 @@ const IEH_TRANSLATIONS = {
     "home.props.intro"       : "Ogni alloggio è selezionato e curato personalmente per garantire il massimo comfort, in location uniche tra il mare ligure, i laghi e le Alpi.",
 
     /* ── Property cards ── */
+    "home.card1.title"       : "B&B Casa Mariangela a San Bartolomeo al Mare",
     "home.card1.tipo"        : "B&B · Mare",
     "home.card1.desc"        : "A 30 metri dal mare nel cuore di San Bartolomeo al Mare. Appartamento con 2 camere da letto, aria condizionata, Wi-Fi e parcheggio gratuito. Una delle nostre proprietà con il punteggio più alto su Airbnb.",
     "home.card1.d1"          : "🏠 2 camere",
@@ -116,12 +117,14 @@ const IEH_TRANSLATIONS = {
     "home.card1.d3"          : "🌊 30 m dal mare",
     "home.card1.d4"          : "🚗 Parcheggio",
 
+    "home.card2.title"       : "Appartamento con piscina a Leggiuno",
     "home.card2.tipo"        : "Appartamento · Lago",
     "home.card2.desc"        : "In un residence panoramico immerso nel verde, a 2 minuti dal Lago Maggiore. Piscina stagionale, sentieri e vicinanza alle attrazioni locali.",
     "home.card2.d1"          : "👥 4 ospiti",
     "home.card2.d2"          : "🏊 Piscina",
     "home.card2.d3"          : "✈️ 30 min da Malpensa",
 
+    "home.card3.title"       : "Casa con piscina privata a Leggiuno",
     "home.card3.tipo"        : "Casa · Lago",
     "home.card3.desc"        : "Alloggio tranquillo con piscina e ampio giardino privato, in un residence panoramico a 2 minuti dal Lago Maggiore e 30 minuti da Malpensa.",
     "home.card3.d1"          : "👥 4 ospiti",
@@ -129,6 +132,7 @@ const IEH_TRANSLATIONS = {
     "home.card3.d3"          : "🌿 Giardino",
     "home.card3.d4"          : "🌄 Vista lago",
 
+    "home.card4.title"       : "Appartamento Lake At Home a Lecco",
     "home.card4.tipo"        : "Appartamento · Lago",
     "home.card4.desc"        : "Appartamento moderno nel cuore di Lecco, con vista spettacolare sui monti e sul lago. A pochi passi dal lungolago e dalla stazione.",
     "home.card4.d1"          : "👥 4 ospiti",
@@ -186,8 +190,8 @@ const IEH_TRANSLATIONS = {
     "home.footer.cookie"     : "Questo sito non utilizza cookie di profilazione",
 
     /* ── Pool apartment meta ── */
-    "pool.meta.title"        : "Appartamento con Piscina – Leggiuno, Lago Maggiore",
-    "pool.meta.desc"         : "Affitto vacanze con piscina stagionale a Leggiuno, Lago Maggiore. 1 camera, 4 ospiti, parcheggio gratuito, Wi-Fi, 30 minuti da Malpensa.",
+    "pool.meta.title"        : "Appartamento con piscina a Leggiuno (Lago Maggiore) – Affitto breve per 4 persone",
+    "pool.meta.desc"         : "Appartamento con piscina a Leggiuno sul Lago Maggiore. Affitto breve per 4 persone, parcheggio privato, Wi-Fi. A 2 min dal lago, 30 min da Malpensa. Prenota ora.",
 
     /* ── Pool apartment nav ── */
     "pool.nav.about"         : "L'appartamento",
@@ -196,8 +200,25 @@ const IEH_TRANSLATIONS = {
     "pool.nav.location"      : "Posizione",
 
     /* ── Pool apartment hero ── */
+    "pool.hero.title"        : "Appartamento con<br><em>piscina</em> a Leggiuno",
     "pool.hero.sub"          : "Un rifugio tranquillo immerso nel verde, a due passi dal Lago Maggiore e a 30 minuti da Malpensa",
     "pool.hero.rating"       : "<strong>4.68</strong> su 5 · 25 recensioni su Airbnb",
+
+    /* ── Pool SEO description section ── */
+    "pool.desc.label"        : "La destinazione",
+    "pool.desc.title"        : "Appartamento con piscina a Leggiuno, Lago Maggiore",
+    "pool.desc.p1"           : "Cercate un <strong>appartamento con piscina a Leggiuno</strong> o nelle vicinanze del Lago Maggiore? Questo alloggio in <strong>affitto breve</strong> è la scelta ideale per famiglie e coppie che vogliono godersi la tranquillità del lago con tutti i comfort. Situato in un residence immerso nel verde di Via XXIV Maggio 84, offre accesso alla piscina condominiale stagionale, parcheggio privato incluso e una posizione a soli 2 minuti in auto dalle rive del Lago Maggiore.",
+    "pool.desc.p2"           : "Leggiuno è un piccolo comune della provincia di Varese, adagiato sulle colline che scendono dolcemente verso il Lago Maggiore. Il paese è circondato da boschi e sentieri naturalistici, ed è posizionato strategicamente a metà strada tra Varese e Verbania. A soli 30 minuti dall'aeroporto internazionale di Milano Malpensa, è una base ideale sia per <strong>vacanze estive sul Lago Maggiore</strong> che per soggiorni di transito.",
+    "pool.desc.p3"           : "La <strong>casa vacanze a Leggiuno</strong> dispone di una camera matrimoniale spaziosa con armadio a muro, un soggiorno open space con zona living, cucina completamente attrezzata e letto aggiuntivo (fino a 4 ospiti), bagno moderno con doccia, Smart TV e Wi-Fi gratuito ad alta velocità. Ogni ambiente è curato nei dettagli per garantire un soggiorno piacevole e rilassante.",
+    "pool.desc.p4"           : "Il vero punto di forza di questo <strong>appartamento sul Lago Maggiore</strong> è la piscina condominiale stagionale, aperta fino al 15 settembre con lettini e ombrelloni inclusi. Per le famiglie con bambini è un vantaggio fondamentale: basta scendere per ritrovarsi in piscina, senza code né traffico. La sera, il parcheggio privato con affaccio sul Lago Maggiore regala tramonti indimenticabili.",
+    "pool.desc.p5"           : "La struttura si distingue per la valutazione di 4,68 su 5 basata su 25 recensioni verificate su Airbnb. Tra i motivi più apprezzati: la pulizia, la tranquillità del residence, la vicinanza al lago e la comodità del parcheggio privato con vista. L'appartamento è registrato con CIN IT012088C2B2FQHKFY, nel pieno rispetto della normativa italiana sugli affitti brevi.",
+    "pool.desc.nearby_title" : "Cosa visitare nei dintorni",
+    "pool.desc.near1"        : "Eremo di Santa Caterina del Sasso – 5 minuti in auto",
+    "pool.desc.near2"        : "Funivia del Sasso del Ferro di Laveno – 10 minuti",
+    "pool.desc.near3"        : "Borghi di Arolo e Ranco – pochi minuti",
+    "pool.desc.near4"        : "Stresa e le Isole Borromee – 30 minuti",
+    "pool.desc.near5"        : "Villa Taranto e Verbania – 35 minuti",
+    "pool.desc.near6"        : "Lago di Varese e Sacro Monte di Varese",
 
     /* ── Pool highlights ── */
     "pool.hl.pool.val"       : "Piscina",
@@ -256,8 +277,25 @@ const IEH_TRANSLATIONS = {
     "pool.footer.tagline"    : "Via XXIV Maggio 84, Leggiuno (VA)\nLago Maggiore · 30 min da Malpensa",
 
     /* ── Casa Mariangela meta ── */
-    "mari.meta.title"        : "B&B Casa Mariangela – San Bartolomeo al Mare, Liguria",
-    "mari.meta.desc"         : "Affitto vacanze con 2 camere a 30 metri dal mare nel cuore di San Bartolomeo al Mare. Parcheggio gratuito, Wi-Fi, aria condizionata. 4.97/5 stelle su Airbnb. Prenota online.",
+    "mari.meta.title"        : "B&B Casa Mariangela a San Bartolomeo al Mare – Liguria, 30 m dal mare, 4 persone",
+    "mari.meta.desc"         : "Casa vacanze a 30 m dal mare a San Bartolomeo al Mare, Riviera Ligure di Ponente. 2 camere, 4 ospiti, parcheggio, Wi-Fi, aria condizionata. 4.97/5 su Airbnb. Prenota ora.",
+
+    /* ── Casa Mariangela hero ── */
+    "mari.hero.title"        : "B&B Casa Mariangela<br>a <em>San Bartolomeo al Mare</em>",
+
+    /* ── Casa Mariangela SEO description section ── */
+    "mari.desc.label"        : "La destinazione",
+    "mari.desc.title"        : "B&B Casa Mariangela a San Bartolomeo al Mare",
+    "mari.desc.p1"           : "Cercate una <strong>casa vacanze a San Bartolomeo al Mare</strong> a pochi passi dal mare? B&B Casa Mariangela è un appartamento accogliente in <strong>affitto breve</strong>, situato a soli 30 metri dalla spiaggia, nel cuore della <strong>Riviera Ligure di Ponente</strong>. Ideale per famiglie e coppie fino a 4 persone, con 2 camere da letto, parcheggio privato gratuito, Wi-Fi e aria condizionata.",
+    "mari.desc.p2"           : "<strong>San Bartolomeo al Mare</strong> è un borgo marinaro della provincia di Imperia, incastonato tra il mare e i rilievi liguri. A pochi minuti da Diano Marina, Cervo e a circa 30 km da Sanremo. Il porto turistico, i ristoranti di pesce e il mercato del giovedì animano il centro, mentre le spiagge di sabbia fine e ciottoli si estendono per oltre un chilometro. Via Colombo 16, dove si trova Casa Mariangela, è nel cuore della zona balneare: tutto è raggiungibile a piedi.",
+    "mari.desc.p3"           : "L'appartamento dispone di <strong>2 camere da letto</strong> (una matrimoniale, una con letti singoli), soggiorno con cucina completamente attrezzata, bagno privato, Smart TV, Wi-Fi e aria condizionata. Il <strong>parcheggio privato gratuito</strong> è un plus raro a San Bartolomeo al Mare, soprattutto in alta stagione.",
+    "mari.desc.p4"           : "Con una valutazione di <strong>4,97 su 5</strong> su 29 recensioni verificate Airbnb, B&B Casa Mariangela è tra le strutture più apprezzate della Riviera Ligure di Ponente. Gli ospiti lodano la pulizia impeccabile, la posizione a 30 metri dal mare e l'accoglienza della proprietà. Registrato con CIN IT008052C22DNK6SGM.",
+    "mari.desc.nearby_title" : "Cosa visitare nei dintorni",
+    "mari.desc.near1"        : "Cervo, borgo medievale – 5 minuti in auto",
+    "mari.desc.near2"        : "Diano Marina e spiagge – 5 minuti",
+    "mari.desc.near3"        : "Imperia, capoluogo di provincia – 15 minuti",
+    "mari.desc.near4"        : "Sanremo – 30 minuti",
+    "mari.desc.near5"        : "Entroterra ligure e olivi centenari",
 
     /* ── Casa Mariangela nav ── */
     "mari.nav.about"         : "L'appartamento",
@@ -353,8 +391,8 @@ const IEH_TRANSLATIONS = {
     "mari.cta.btn"           : "Controlla disponibilità su Airbnb",
 
     /* ── Lake At Home meta ── */
-    "lake.meta.title"        : "Lake At Home – Appartamento con Vista Lago, Lecco (Lago di Como)",
-    "lake.meta.desc"         : "Appartamento moderno ristrutturato nel centro di Lecco, Lago di Como. Vista sui monti e sul lago, 2 camere, 4 ospiti, Wi-Fi, aria condizionata. A pochi passi dal lungolago.",
+    "lake.meta.title"        : "Appartamento a Lecco sul Lago di Como – Affitto breve design, 4 persone",
+    "lake.meta.desc"         : "Appartamento di design nel centro di Lecco, Lago di Como. 2 camere, 4 ospiti, vista lago e monti, lungolago a piedi. Prenota su Airbnb e Booking. Prenota ora.",
 
     /* ── Lake At Home nav ── */
     "lake.nav.about"         : "L'appartamento",
@@ -363,8 +401,24 @@ const IEH_TRANSLATIONS = {
     "lake.nav.location"      : "Posizione",
 
     /* ── Lake At Home hero ── */
+    "lake.hero.title"        : "Appartamento a Lecco<br><em>sul Lago di Como</em>",
     "lake.hero.sub"          : "Appartamento moderno nel cuore di Lecco, con vista sui monti e a pochi passi dal lungolago",
     "lake.hero.rating"       : "Eccellente · Su Airbnb",
+
+    /* ── Lake SEO description section ── */
+    "lake.desc.label"        : "La destinazione",
+    "lake.desc.title"        : "Appartamento a Lecco sul Lago di Como",
+    "lake.desc.p1"           : "Cercate un <strong>appartamento a Lecco sul Lago di Como</strong> per un affitto breve? Lake At Home è la scelta ideale: un appartamento di design completamente ristrutturato, nel cuore del centro storico di Lecco, a pochi passi dal <strong>lungolago del Lago di Como</strong> e dalla stazione ferroviaria. Ospita fino a 4 persone in 2 camere da letto moderne e luminose.",
+    "lake.desc.p2"           : "<strong>Lecco</strong> è una città affascinante all'estremità del ramo orientale del Lago di Como, circondata dalle Grigne e dal massiccio del Resegone. Conosciuta come la città di Alessandro Manzoni, offre un lungolago scenografico, un centro storico vivace e una posizione perfetta per escursioni in montagna, giri in barca e visite ai borghi del lago. Via Pasubio 17 è nel cuore della città, a meno di 5 minuti a piedi dal lungolago.",
+    "lake.desc.p3"           : "L'appartamento dispone di <strong>2 camere da letto</strong> con design contemporaneo, soggiorno open space con zona dining e cucina attrezzata, 2 bagni con doccia, Smart TV, Wi-Fi gratuito e aria condizionata. Dalle finestre si apre una spettacolare <strong>vista sul Lago di Como e sui monti lecchesi</strong>.",
+    "lake.desc.p4"           : "La posizione è eccezionale: a pochi minuti a piedi dal lungolago, dalla Piazza XX Settembre e dalla stazione ferroviaria (Milano in 40 minuti). Ristoranti, bar e negozi raggiungibili a piedi. In auto, i borghi di <strong>Varenna e Bellagio</strong> sono a 30-45 minuti.",
+    "lake.desc.p5"           : "Registrato con CIN IT097042C246M9KVYP nel rispetto della normativa italiana sugli affitti brevi. Disponibile su Airbnb e Booking.com.",
+    "lake.desc.nearby_title" : "Cosa visitare nei dintorni",
+    "lake.desc.near1"        : "Lungolago di Lecco – 5 minuti a piedi",
+    "lake.desc.near2"        : "Stazione Lecco (Milano in 40 min) – 5 min a piedi",
+    "lake.desc.near3"        : "Varenna e Lago di Como – 30 minuti in auto",
+    "lake.desc.near4"        : "Bellagio – 45 minuti in auto",
+    "lake.desc.near5"        : "Grigne e Valsassina (escursioni)",
 
     /* ── Lake highlights ── */
     "lake.hl.view.val"       : "Vista",
@@ -429,8 +483,8 @@ const IEH_TRANSLATIONS = {
     "lake.footer.tagline"    : "Via Pasubio 17, Lecco\nLago di Como · Centro città",
 
     /* ── Pool & Garden meta ── */
-    "garden.meta.title"      : "Casa Mariangela: Pool & Garden – Leggiuno, Lago Maggiore",
-    "garden.meta.desc"       : "Casa con piscina privata e giardino panoramico a Leggiuno, Lago Maggiore. 2 camere, 4 ospiti, vista lago, parcheggio privato. 30 minuti da Milano Malpensa.",
+    "garden.meta.title"      : "Casa con piscina privata a Leggiuno (Lago Maggiore) – Affitto breve, 4 persone",
+    "garden.meta.desc"       : "Casa vacanze con piscina privata e giardino panoramico a Leggiuno, Lago Maggiore. 2 camere, 4 ospiti, vista lago, parcheggio. A 30 min da Malpensa. Prenota ora.",
 
     /* ── Pool & Garden nav ── */
     "garden.nav.about"       : "La casa",
@@ -440,7 +494,23 @@ const IEH_TRANSLATIONS = {
     "garden.nav.location"    : "Posizione",
 
     /* ── Pool & Garden hero ── */
+    "garden.hero.title"      : "Casa con piscina privata<br><em>a Leggiuno, Lago Maggiore</em>",
     "garden.hero.sub"        : "Piscina privata, giardino panoramico e vista mozzafiato sul Lago Maggiore a Leggiuno",
+
+    /* ── Pool & Garden SEO description section ── */
+    "garden.desc.label"      : "La destinazione",
+    "garden.desc.title"      : "Casa con piscina privata a Leggiuno, Lago Maggiore",
+    "garden.desc.p1"         : "Cercate una <strong>casa con piscina privata a Leggiuno</strong> o nelle vicinanze del Lago Maggiore? Pool &amp; Garden è una villa in <strong>affitto breve</strong> con piscina esclusiva e ampio giardino privato, immersa nel verde panoramico di Leggiuno, in provincia di Varese. Con 2 camere da letto e capacità per 4 ospiti, offre privacy totale e una vista mozzafiato sul Lago Maggiore.",
+    "garden.desc.p2"         : "Leggiuno è collocato su un promontorio naturale con affaccio diretto sul <strong>Lago Maggiore</strong>. Via XXIV Maggio 21, dove si trova la proprietà, è una delle zone più panoramiche del paese: il giardino e la terrazza godono di una vista libera sul lago e sulle Alpi piemontesi. A soli 2 minuti in auto dalle spiagge e 30 minuti dall'aeroporto di Milano Malpensa.",
+    "garden.desc.p3"         : "La <strong>casa vacanze a Leggiuno</strong> dispone di 2 camere da letto, un ampio soggiorno con accesso diretto al giardino, cucina completamente attrezzata con forno e lavastoviglie, bagno con doccia e Wi-Fi gratuito. L'ampio giardino privato con tavolo e sedie è perfetto per cene all'aperto al tramonto sul lago.",
+    "garden.desc.p4"         : "Il fiore all'occhiello è la <strong>piscina privata esclusiva</strong>, non condivisa con altri alloggi. Aperta nella stagione estiva, circondata da spazi relax con lettini e ombrelloni. Dal bordo piscina si gode di un panorama eccezionale sul lago e sui rilievi circostanti. La sera, i tramonti sul Lago Maggiore sono semplicemente indimenticabili.",
+    "garden.desc.p5"         : "L'immobile è registrato con CIN IT012088C22FDPNF3K nel rispetto della normativa italiana sugli affitti brevi. Disponibile su Airbnb con risposta rapida.",
+    "garden.desc.nearby_title": "Cosa visitare nei dintorni",
+    "garden.desc.near1"      : "Eremo di Santa Caterina del Sasso – 5 minuti in auto",
+    "garden.desc.near2"      : "Funivia del Sasso del Ferro di Laveno – 10 minuti",
+    "garden.desc.near3"      : "Stresa e le Isole Borromee – 30 minuti",
+    "garden.desc.near4"      : "Villa Taranto e Verbania – 35 minuti",
+    "garden.desc.near5"      : "Lago di Varese e Sacro Monte di Varese",
 
     /* ── Pool & Garden highlights ── */
     "garden.hl.pool.val"     : "Piscina",
@@ -609,6 +679,7 @@ const IEH_TRANSLATIONS = {
     "home.props.intro"       : "Each accommodation is personally selected and managed to ensure maximum comfort, in unique locations along the Ligurian coast, the Italian lakes, and the Alps.",
 
     /* ── Property cards ── */
+    "home.card1.title"       : "B&B Casa Mariangela in San Bartolomeo al Mare",
     "home.card1.tipo"        : "B&B · Seaside",
     "home.card1.desc"        : "Just 30 metres from the sea in the heart of San Bartolomeo al Mare. Apartment with 2 bedrooms, air conditioning, Wi-Fi and free parking. One of our highest-rated properties on Airbnb.",
     "home.card1.d1"          : "🏠 2 bedrooms",
@@ -616,12 +687,14 @@ const IEH_TRANSLATIONS = {
     "home.card1.d3"          : "🌊 30 m from sea",
     "home.card1.d4"          : "🚗 Parking",
 
+    "home.card2.title"       : "Apartment with pool in Leggiuno",
     "home.card2.tipo"        : "Apartment · Lake",
     "home.card2.desc"        : "In a panoramic residence surrounded by greenery, 2 minutes from Lake Maggiore. Seasonal pool, walking trails and easy access to local attractions.",
     "home.card2.d1"          : "👥 4 guests",
     "home.card2.d2"          : "🏊 Pool",
     "home.card2.d3"          : "✈️ 30 min from Malpensa",
 
+    "home.card3.title"       : "Private pool villa in Leggiuno",
     "home.card3.tipo"        : "House · Lake",
     "home.card3.desc"        : "Peaceful holiday home with private pool and large garden in a panoramic residence, 2 minutes from Lake Maggiore and 30 minutes from Malpensa Airport.",
     "home.card3.d1"          : "👥 4 guests",
@@ -629,6 +702,7 @@ const IEH_TRANSLATIONS = {
     "home.card3.d3"          : "🌿 Garden",
     "home.card3.d4"          : "🌄 Lake view",
 
+    "home.card4.title"       : "Lake At Home apartment in Lecco",
     "home.card4.tipo"        : "Apartment · Lake",
     "home.card4.desc"        : "Modern apartment in the heart of Lecco, with spectacular views of the mountains and Lake Como. A short walk from the lakefront promenade and train station.",
     "home.card4.d1"          : "👥 4 guests",
@@ -686,8 +760,8 @@ const IEH_TRANSLATIONS = {
     "home.footer.cookie"     : "This website does not use profiling cookies",
 
     /* ── Pool apartment meta ── */
-    "pool.meta.title"        : "Apartment with Swimming Pool – Leggiuno, Lake Maggiore, Italy",
-    "pool.meta.desc"         : "Holiday rental with seasonal pool in Leggiuno, Lake Maggiore. 1 bedroom, 4 guests, free parking, Wi-Fi, 30 minutes from Milan Malpensa Airport. Book on Airbnb.",
+    "pool.meta.title"        : "Apartment with Pool in Leggiuno (Lake Maggiore) – Short-term rental, 4 guests",
+    "pool.meta.desc"         : "Apartment with pool in Leggiuno, Lake Maggiore. Short-term rental for 4 guests, free parking, Wi-Fi. 2 min from the lake, 30 min from Malpensa Airport. Book now.",
 
     /* ── Pool apartment nav ── */
     "pool.nav.about"         : "The apartment",
@@ -696,8 +770,25 @@ const IEH_TRANSLATIONS = {
     "pool.nav.location"      : "Location",
 
     /* ── Pool apartment hero ── */
+    "pool.hero.title"        : "Apartment with<br><em>Swimming Pool</em> in Leggiuno",
     "pool.hero.sub"          : "A peaceful retreat surrounded by greenery, steps from Lake Maggiore and 30 minutes from Malpensa Airport",
     "pool.hero.rating"       : "<strong>4.68</strong> out of 5 · 25 reviews on Airbnb",
+
+    /* ── Pool SEO description section ── */
+    "pool.desc.label"        : "The destination",
+    "pool.desc.title"        : "Apartment with pool in Leggiuno, Lake Maggiore",
+    "pool.desc.p1"           : "Looking for an apartment with a pool near Lake Maggiore? This short-term rental in Leggiuno is the ideal choice for families and couples who want to enjoy the tranquillity of the lake with all the comforts. Set in a green residence on Via XXIV Maggio 84, it offers access to the seasonal shared pool, free private parking, and a location just 2 minutes by car from the shores of Lake Maggiore.",
+    "pool.desc.p2"           : "Leggiuno is a small town in the province of Varese, nestled on the hills that slope gently down to Lake Maggiore. Surrounded by forests and nature trails, it is strategically located halfway between Varese and Verbania. Just 30 minutes from Milan Malpensa International Airport, it is an ideal base for summer holidays and transit stays alike.",
+    "pool.desc.p3"           : "This holiday apartment sleeps up to 4 guests and features a spacious double bedroom with wardrobe, an open-plan living area with kitchen and extra bed, a modern bathroom with shower, Smart TV and free high-speed Wi-Fi. Every detail is designed to make your stay comfortable and relaxing.",
+    "pool.desc.p4"           : "The highlight of this holiday home in Leggiuno is the seasonal shared pool, open until 15 September with sun loungers and parasols included. For families with children, it's a game-changer: just step outside and you're poolside. In the evening, the private parking area overlooks Lake Maggiore for unforgettable sunsets.",
+    "pool.desc.p5"           : "The property stands out with a rating of 4.68 out of 5 based on 25 verified Airbnb reviews. Guests most appreciate the cleanliness, the peaceful setting, proximity to the lake and the convenience of the private parking with a view. The apartment is registered under CIN IT012088C2B2FQHKFY, fully compliant with Italian short-term rental regulations.",
+    "pool.desc.nearby_title" : "Nearby attractions",
+    "pool.desc.near1"        : "Santa Caterina del Sasso Hermitage – 5 minutes by car",
+    "pool.desc.near2"        : "Laveno Ferro Cable Car – 10 minutes",
+    "pool.desc.near3"        : "Villages of Arolo and Ranco – a few minutes away",
+    "pool.desc.near4"        : "Stresa and the Borromean Islands – 30 minutes",
+    "pool.desc.near5"        : "Villa Taranto and Verbania – 35 minutes",
+    "pool.desc.near6"        : "Varese Lake and Sacro Monte di Varese",
 
     /* ── Pool highlights ── */
     "pool.hl.pool.val"       : "Pool",
@@ -756,8 +847,25 @@ const IEH_TRANSLATIONS = {
     "pool.footer.tagline"    : "Via XXIV Maggio 84, Leggiuno (VA)\nLake Maggiore · 30 min from Malpensa",
 
     /* ── Casa Mariangela meta ── */
-    "mari.meta.title"        : "B&B Casa Mariangela – San Bartolomeo al Mare, Ligurian Riviera, Italy",
-    "mari.meta.desc"         : "Beachfront holiday rental 30 metres from the sea in San Bartolomeo al Mare, Liguria. 2 bedrooms, free parking, Wi-Fi, air conditioning. Rated 4.97/5 on Airbnb. Book online.",
+    "mari.meta.title"        : "B&B Casa Mariangela in San Bartolomeo al Mare – Ligurian Riviera, 30 m from the sea",
+    "mari.meta.desc"         : "Holiday rental 30 metres from the sea in San Bartolomeo al Mare, Liguria. 2 bedrooms, 4 guests, free parking, Wi-Fi, air conditioning. 4.97/5 on Airbnb. Book now.",
+
+    /* ── Casa Mariangela hero ── */
+    "mari.hero.title"        : "B&B Casa Mariangela<br>in <em>San Bartolomeo al Mare</em>",
+
+    /* ── Casa Mariangela SEO description section ── */
+    "mari.desc.label"        : "The destination",
+    "mari.desc.title"        : "B&B Casa Mariangela in San Bartolomeo al Mare",
+    "mari.desc.p1"           : "Looking for a <strong>holiday rental in San Bartolomeo al Mare</strong> steps from the sea? B&B Casa Mariangela is a welcoming apartment in the heart of the <strong>Ligurian Riviera di Ponente</strong>, just 30 metres from the beach. Perfect for families and couples up to 4 guests, with 2 bedrooms, free private parking, Wi-Fi and air conditioning.",
+    "mari.desc.p2"           : "<strong>San Bartolomeo al Mare</strong> is a seaside village in the province of Imperia, nestled between the sea and the Ligurian hills. Just minutes from Diano Marina and Cervo, and about 30 km from Sanremo. The fishing harbour, seafood restaurants and Thursday market bring the centre to life, while sandy beaches stretch for over a kilometre. Via Colombo 16 is in the heart of the beach area.",
+    "mari.desc.p3"           : "The apartment features <strong>2 bedrooms</strong> (one double, one with twin beds), a living room with fully equipped kitchen, private bathroom, Smart TV, Wi-Fi and air conditioning. <strong>Free private parking</strong> is a rare bonus in San Bartolomeo al Mare, especially in high season.",
+    "mari.desc.p4"           : "Rated <strong>4.97 out of 5</strong> based on 29 verified Airbnb reviews, B&B Casa Mariangela is among the most appreciated properties on the Ligurian Riviera. Guests praise the spotless cleanliness, the 30-metre proximity to the sea and the warm welcome. Registered under CIN IT008052C22DNK6SGM.",
+    "mari.desc.nearby_title" : "Nearby attractions",
+    "mari.desc.near1"        : "Cervo, medieval village – 5 minutes by car",
+    "mari.desc.near2"        : "Diano Marina and beaches – 5 minutes",
+    "mari.desc.near3"        : "Imperia, provincial capital – 15 minutes",
+    "mari.desc.near4"        : "Sanremo – 30 minutes",
+    "mari.desc.near5"        : "Ligurian hinterland and century-old olive groves",
 
     /* ── Casa Mariangela nav ── */
     "mari.nav.about"         : "The apartment",
@@ -853,8 +961,8 @@ const IEH_TRANSLATIONS = {
     "mari.cta.btn"           : "Check availability on Airbnb",
 
     /* ── Lake At Home meta ── */
-    "lake.meta.title"        : "Lake At Home – Apartment with Lake View, Lecco (Lake Como), Italy",
-    "lake.meta.desc"         : "Renovated modern apartment in Lecco city centre, Lake Como. Mountain and lake views, 2 bedrooms, 4 guests, Wi-Fi, air conditioning. Steps from the lakefront promenade.",
+    "lake.meta.title"        : "Apartment in Lecco on Lake Como – Short-term rental, design, 4 guests",
+    "lake.meta.desc"         : "Design apartment in Lecco city centre, Lake Como. Lake and mountain views, 2 bedrooms, 4 guests, Wi-Fi, air conditioning. Steps from the lakefront promenade. Book now.",
 
     /* ── Lake At Home nav ── */
     "lake.nav.about"         : "The apartment",
@@ -863,8 +971,24 @@ const IEH_TRANSLATIONS = {
     "lake.nav.location"      : "Location",
 
     /* ── Lake At Home hero ── */
+    "lake.hero.title"        : "Apartment in Lecco<br><em>on Lake Como</em>",
     "lake.hero.sub"          : "Modern apartment in the heart of Lecco, with mountain views and steps from the lakefront",
     "lake.hero.rating"       : "Excellent · On Airbnb",
+
+    /* ── Lake SEO description section ── */
+    "lake.desc.label"        : "The destination",
+    "lake.desc.title"        : "Apartment in Lecco on Lake Como",
+    "lake.desc.p1"           : "Looking for an <strong>apartment in Lecco on Lake Como</strong> for a short-term stay? Lake At Home is the ideal choice: a fully renovated design apartment in the heart of Lecco's historic centre, steps from the <strong>Lake Como waterfront promenade</strong> and the train station. It sleeps up to 4 guests in 2 modern, light-filled bedrooms.",
+    "lake.desc.p2"           : "<strong>Lecco</strong> is a captivating city at the eastern branch of Lake Como, surrounded by the Grigne mountains and the Resegone massif. Known as the city of Alessandro Manzoni, it offers a scenic waterfront, a lively historic centre and a prime position for mountain hikes, boat trips and visits to the lake's villages. Via Pasubio 17 is in the heart of the city, less than 5 minutes' walk from the lakefront.",
+    "lake.desc.p3"           : "The apartment features <strong>2 bedrooms</strong> with contemporary design, an open-plan living and dining area with fully equipped kitchen, 2 shower bathrooms, Smart TV, free Wi-Fi and air conditioning. From the windows there are spectacular <strong>views of Lake Como and the Lecco mountains</strong>.",
+    "lake.desc.p4"           : "The location is exceptional: a short walk from the lakefront, Piazza XX Settembre and the train station (Milan in 40 minutes). Restaurants, bars and shops within walking distance. By car, the villages of <strong>Varenna and Bellagio</strong> are 30–45 minutes away.",
+    "lake.desc.p5"           : "Registered under CIN IT097042C246M9KVYP in compliance with Italian short-term rental regulations. Available on Airbnb and Booking.com.",
+    "lake.desc.nearby_title" : "Nearby attractions",
+    "lake.desc.near1"        : "Lecco lakefront promenade – 5 minutes' walk",
+    "lake.desc.near2"        : "Lecco train station (Milan in 40 min) – 5 min walk",
+    "lake.desc.near3"        : "Varenna and Lake Como – 30 minutes by car",
+    "lake.desc.near4"        : "Bellagio – 45 minutes by car",
+    "lake.desc.near5"        : "Grigne mountains and Valsassina valley (hiking)",
 
     /* ── Lake highlights ── */
     "lake.hl.view.val"       : "Views",
@@ -929,8 +1053,8 @@ const IEH_TRANSLATIONS = {
     "lake.footer.tagline"    : "Via Pasubio 17, Lecco\nLake Como · City centre",
 
     /* ── Pool & Garden meta ── */
-    "garden.meta.title"      : "Casa Mariangela: Pool & Garden – Leggiuno, Lake Maggiore, Italy",
-    "garden.meta.desc"       : "Holiday home with private pool and panoramic garden in Leggiuno, Lake Maggiore. 2 bedrooms, 4 guests, lake view, private parking. 30 minutes from Milan Malpensa Airport.",
+    "garden.meta.title"      : "Private pool villa in Leggiuno (Lake Maggiore) – Holiday rental, 4 guests",
+    "garden.meta.desc"       : "Holiday home with private pool and panoramic garden in Leggiuno, Lake Maggiore. 2 bedrooms, 4 guests, lake view, private parking. 30 minutes from Milan Malpensa Airport. Book now.",
 
     /* ── Pool & Garden nav ── */
     "garden.nav.about"       : "The house",
@@ -940,7 +1064,23 @@ const IEH_TRANSLATIONS = {
     "garden.nav.location"    : "Location",
 
     /* ── Pool & Garden hero ── */
+    "garden.hero.title"      : "Private pool villa<br><em>in Leggiuno, Lake Maggiore</em>",
     "garden.hero.sub"        : "Private pool, panoramic garden and breathtaking views over Lake Maggiore in Leggiuno",
+
+    /* ── Pool & Garden SEO description section ── */
+    "garden.desc.label"      : "The destination",
+    "garden.desc.title"      : "Private pool villa in Leggiuno, Lake Maggiore",
+    "garden.desc.p1"         : "Looking for a <strong>holiday home with private pool near Lake Maggiore</strong>? Pool &amp; Garden is a villa available for short-term rental with an exclusive pool and large private garden, set in the panoramic greenery of Leggiuno, province of Varese. With 2 bedrooms and capacity for 4 guests, it offers total privacy and breathtaking views over Lake Maggiore.",
+    "garden.desc.p2"         : "Leggiuno sits on a natural promontory overlooking <strong>Lake Maggiore</strong>. Via XXIV Maggio 21, where the property stands, is one of the most scenic spots in the village: the garden and terrace enjoy unobstructed views of the lake and the Piedmontese Alps. Just 2 minutes by car from the lake beaches and 30 minutes from Milan Malpensa Airport.",
+    "garden.desc.p3"         : "The <strong>holiday house in Leggiuno</strong> features 2 bedrooms, a spacious living room with direct garden access, a fully equipped kitchen with oven and dishwasher, a shower bathroom and free Wi-Fi. The large private garden with table and chairs is perfect for outdoor dinners at sunset over the lake.",
+    "garden.desc.p4"         : "The highlight is the <strong>exclusive private pool</strong>, not shared with other properties. Open in summer, surrounded by a sunbathing area with loungers and umbrellas. From the poolside, the views of the lake and surrounding hills are simply unforgettable.",
+    "garden.desc.p5"         : "The property is registered under CIN IT012088C22FDPNF3K in compliance with Italian short-term rental regulations. Available on Airbnb with fast response.",
+    "garden.desc.nearby_title": "Nearby attractions",
+    "garden.desc.near1"      : "Santa Caterina del Sasso Hermitage – 5 minutes by car",
+    "garden.desc.near2"      : "Laveno Ferro Cable Car – 10 minutes",
+    "garden.desc.near3"      : "Stresa and the Borromean Islands – 30 minutes",
+    "garden.desc.near4"      : "Villa Taranto and Verbania – 35 minutes",
+    "garden.desc.near5"      : "Varese Lake and Sacro Monte di Varese",
 
     /* ── Pool & Garden highlights ── */
     "garden.hl.pool.val"     : "Pool",
@@ -1109,6 +1249,7 @@ const IEH_TRANSLATIONS = {
     "home.props.intro"       : "Jede Unterkunft wird persönlich ausgewählt und betreut, um höchsten Komfort zu gewährleisten – an einzigartigen Orten entlang der ligurischen Küste, an Italiens Seen und in den Alpen.",
 
     /* ── Property cards ── */
+    "home.card1.title"       : "B&B Casa Mariangela in San Bartolomeo al Mare",
     "home.card1.tipo"        : "B&B · Meerseite",
     "home.card1.desc"        : "Nur 30 Meter vom Meer entfernt im Herzen von San Bartolomeo al Mare. Wohnung mit 2 Schlafzimmern, Klimaanlage, WLAN und kostenlosem Parkplatz. Eine unserer bestbewerteten Unterkünfte auf Airbnb.",
     "home.card1.d1"          : "🏠 2 Schlafzimmer",
@@ -1116,12 +1257,14 @@ const IEH_TRANSLATIONS = {
     "home.card1.d3"          : "🌊 30 m vom Meer",
     "home.card1.d4"          : "🚗 Parkplatz",
 
+    "home.card2.title"       : "Ferienwohnung mit Pool in Leggiuno",
     "home.card2.tipo"        : "Ferienwohnung · See",
     "home.card2.desc"        : "In einer Panoramaanlage inmitten von Grün, 2 Minuten vom Lago Maggiore. Saisonaler Pool, Wanderwege und Nähe zu lokalen Attraktionen.",
     "home.card2.d1"          : "👥 4 Gäste",
     "home.card2.d2"          : "🏊 Pool",
     "home.card2.d3"          : "✈️ 30 Min. von Malpensa",
 
+    "home.card3.title"       : "Ferienhaus mit privatem Pool in Leggiuno",
     "home.card3.tipo"        : "Ferienhaus · See",
     "home.card3.desc"        : "Ruhiges Ferienhaus mit privatem Pool und großem Garten in einer Panoramaanlage, 2 Minuten vom Lago Maggiore und 30 Minuten vom Flughafen Malpensa.",
     "home.card3.d1"          : "👥 4 Gäste",
@@ -1129,6 +1272,7 @@ const IEH_TRANSLATIONS = {
     "home.card3.d3"          : "🌿 Garten",
     "home.card3.d4"          : "🌄 Seeblick",
 
+    "home.card4.title"       : "Lake At Home Ferienwohnung in Lecco",
     "home.card4.tipo"        : "Ferienwohnung · See",
     "home.card4.desc"        : "Moderne Wohnung im Herzen von Lecco, mit spektakulärem Blick auf die Berge und den Comer See. Nur wenige Schritte vom Seeufer und Bahnhof.",
     "home.card4.d1"          : "👥 4 Gäste",
@@ -1186,8 +1330,8 @@ const IEH_TRANSLATIONS = {
     "home.footer.cookie"     : "Diese Website verwendet keine Profiling-Cookies",
 
     /* ── Pool apartment meta ── */
-    "pool.meta.title"        : "Ferienwohnung mit Pool – Leggiuno, Lago Maggiore, Italien",
-    "pool.meta.desc"         : "Ferienwohnung mit Saisonpool in Leggiuno am Lago Maggiore. 1 Schlafzimmer, 4 Gäste, kostenloser Parkplatz, WLAN, 30 Minuten vom Flughafen Mailand Malpensa.",
+    "pool.meta.title"        : "Ferienwohnung mit Pool in Leggiuno (Lago Maggiore) – Kurzzeitmiete für 4 Personen",
+    "pool.meta.desc"         : "Ferienwohnung mit Pool in Leggiuno am Lago Maggiore. Kurzzeitmiete für 4 Gäste, Privatparkplatz, WLAN. 2 Min. zum See, 30 Min. vom Flughafen Malpensa. Jetzt buchen.",
 
     /* ── Pool apartment nav ── */
     "pool.nav.about"         : "Die Wohnung",
@@ -1196,8 +1340,25 @@ const IEH_TRANSLATIONS = {
     "pool.nav.location"      : "Lage",
 
     /* ── Pool apartment hero ── */
+    "pool.hero.title"        : "Ferienwohnung mit<br><em>Pool</em> in Leggiuno",
     "pool.hero.sub"          : "Ein ruhiges Refugium inmitten von Grün, direkt am Lago Maggiore und 30 Minuten vom Flughafen Malpensa",
     "pool.hero.rating"       : "<strong>4,68</strong> von 5 · 25 Bewertungen auf Airbnb",
+
+    /* ── Pool SEO description section ── */
+    "pool.desc.label"        : "Das Reiseziel",
+    "pool.desc.title"        : "Ferienwohnung mit Pool in Leggiuno, Lago Maggiore",
+    "pool.desc.p1"           : "Suchen Sie eine Ferienwohnung mit Pool in der Nähe des Lago Maggiore? Diese Kurzzeitmiete in Leggiuno ist die ideale Wahl für Familien und Paare, die die Ruhe des Sees mit vollem Komfort genießen möchten. In einer grünen Anlage an der Via XXIV Maggio 84 gelegen, bietet sie Zugang zum Gemeinschaftspool, kostenlosen Privatparkplatz und eine Lage nur 2 Autominuten vom Seeufer entfernt.",
+    "pool.desc.p2"           : "Leggiuno ist eine kleine Gemeinde in der Provinz Varese, eingebettet in die Hügel, die sanft zum Lago Maggiore abfallen. Umgeben von Wäldern und Naturwanderwegen, strategisch zwischen Varese und Verbania gelegen – und nur 30 Minuten vom internationalen Flughafen Mailand Malpensa entfernt.",
+    "pool.desc.p3"           : "Die Ferienwohnung bietet Platz für bis zu 4 Gäste: geräumiges Doppelzimmer mit Einbauschrank, offener Wohn-/Küchenbereich mit Zusatzbett, modernes Bad mit Dusche, Smart-TV und kostenlosem WLAN.",
+    "pool.desc.p4"           : "Das Highlight ist der Gemeinschaftspool, bis 15. September geöffnet, mit Sonnenliegen und Sonnenschirmen inklusive. Für Familien mit Kindern ein entscheidender Vorteil. Abends bietet der Privatparkplatz unvergessliche Sonnenuntergänge über dem Lago Maggiore.",
+    "pool.desc.p5"           : "Die Unterkunft überzeugt mit einer Bewertung von 4,68 von 5 auf Basis von 25 verifizierten Airbnb-Bewertungen. Registriert unter CIN IT012088C2B2FQHKFY, vollständig konform mit den italienischen Kurzzeitvermietungsvorschriften.",
+    "pool.desc.nearby_title" : "Sehenswürdigkeiten in der Nähe",
+    "pool.desc.near1"        : "Einsiedelei Santa Caterina del Sasso – 5 Minuten mit dem Auto",
+    "pool.desc.near2"        : "Seilbahn Laveno Sasso del Ferro – 10 Minuten",
+    "pool.desc.near3"        : "Ortschaften Arolo und Ranco – wenige Minuten",
+    "pool.desc.near4"        : "Stresa und Borromäische Inseln – 30 Minuten",
+    "pool.desc.near5"        : "Villa Taranto und Verbania – 35 Minuten",
+    "pool.desc.near6"        : "Varesiner See und Sacro Monte di Varese",
 
     /* ── Pool highlights ── */
     "pool.hl.pool.val"       : "Pool",
@@ -1256,8 +1417,8 @@ const IEH_TRANSLATIONS = {
     "pool.footer.tagline"    : "Via XXIV Maggio 84, Leggiuno (VA)\nLago Maggiore · 30 Min. von Malpensa",
 
     /* ── Casa Mariangela meta ── */
-    "mari.meta.title"        : "B&B Casa Mariangela – San Bartolomeo al Mare, Ligurische Riviera, Italien",
-    "mari.meta.desc"         : "Strandnahe Ferienwohnung 30 Meter vom Meer in San Bartolomeo al Mare, Ligurien. 2 Schlafzimmer, kostenloser Parkplatz, WLAN, Klimaanlage. 4,97/5 auf Airbnb. Online buchen.",
+    "mari.meta.title"        : "B&B Casa Mariangela in San Bartolomeo al Mare – Ligurische Riviera, 30 m vom Meer",
+    "mari.meta.desc"         : "Strandnahe Ferienwohnung 30 Meter vom Meer in San Bartolomeo al Mare, Ligurien. 2 Schlafzimmer, 4 Gäste, kostenloser Parkplatz, WLAN, Klimaanlage. 4,97/5 auf Airbnb. Jetzt buchen.",
 
     /* ── Casa Mariangela nav ── */
     "mari.nav.about"         : "Die Wohnung",
@@ -1270,7 +1431,22 @@ const IEH_TRANSLATIONS = {
     "mari.nav.check"         : "Verfügbarkeit prüfen",
 
     /* ── Casa Mariangela hero ── */
+    "mari.hero.title"        : "B&B Casa Mariangela<br>in <em>San Bartolomeo al Mare</em>",
     "mari.hero.sub"          : "Nur 30 Meter vom Meer, im Herzen der Ligurischen Riviera di Ponente",
+
+    /* ── Casa Mariangela SEO description section ── */
+    "mari.desc.label"        : "Das Reiseziel",
+    "mari.desc.title"        : "B&B Casa Mariangela in San Bartolomeo al Mare",
+    "mari.desc.p1"           : "Suchen Sie eine <strong>Ferienwohnung in San Bartolomeo al Mare</strong>, direkt am Meer? B&B Casa Mariangela ist eine einladende Unterkunft im Herzen der <strong>Ligurischen Riviera di Ponente</strong>, nur 30 Meter vom Strand entfernt. Ideal für Familien und Paare bis zu 4 Personen, mit 2 Schlafzimmern, kostenlosem Privatparkplatz, WLAN und Klimaanlage.",
+    "mari.desc.p2"           : "<strong>San Bartolomeo al Mare</strong> ist ein Küstenort in der Provinz Imperia, zwischen Meer und ligurischen Hügeln gelegen. Nur wenige Minuten von Diano Marina und Cervo entfernt, ca. 30 km von Sanremo. Der Fischerhafen, Fischrestaurants und der Donnerstagmarkt prägen das Zentrum, während sich Sandstrände über mehr als einen Kilometer erstrecken. Via Colombo 16 liegt im Herzen des Badegebiets.",
+    "mari.desc.p3"           : "Die Wohnung verfügt über <strong>2 Schlafzimmer</strong> (ein Doppel- und ein Zweibettzimmer), ein Wohnzimmer mit vollständig ausgestatteter Küche, privatem Bad, Smart-TV, WLAN und Klimaanlage. Der <strong>kostenlose Privatparkplatz</strong> ist ein seltener Bonus in San Bartolomeo al Mare, besonders in der Hochsaison.",
+    "mari.desc.p4"           : "Mit einer Bewertung von <strong>4,97 von 5</strong> auf Basis von 29 verifizierten Airbnb-Bewertungen gehört B&B Casa Mariangela zu den beliebtesten Unterkünften an der Ligurischen Riviera. Gäste loben die makellose Sauberkeit, die Lage 30 Meter vom Meer und die herzliche Gastfreundschaft. Registriert unter CIN IT008052C22DNK6SGM.",
+    "mari.desc.nearby_title" : "Sehenswürdigkeiten in der Nähe",
+    "mari.desc.near1"        : "Cervo, mittelalterliches Dorf – 5 Minuten mit dem Auto",
+    "mari.desc.near2"        : "Diano Marina und Strände – 5 Minuten",
+    "mari.desc.near3"        : "Imperia, Provinzhauptstadt – 15 Minuten",
+    "mari.desc.near4"        : "Sanremo – 30 Minuten",
+    "mari.desc.near5"        : "Ligurisches Hinterland und jahrhundertealte Olivenhaine",
     "mari.hero.rating"       : "<strong>4,97</strong> von 5 · 29 Bewertungen auf Airbnb",
 
     /* ── Casa Mariangela highlights ── */
@@ -1353,8 +1529,8 @@ const IEH_TRANSLATIONS = {
     "mari.cta.btn"           : "Verfügbarkeit auf Airbnb prüfen",
 
     /* ── Lake At Home meta ── */
-    "lake.meta.title"        : "Lake At Home – Ferienwohnung mit Seeblick, Lecco (Comer See), Italien",
-    "lake.meta.desc"         : "Renovierte moderne Ferienwohnung im Zentrum von Lecco, Comer See. Berg- und Seeblick, 2 Schlafzimmer, 4 Gäste, WLAN, Klimaanlage. Wenige Schritte vom Seeufer.",
+    "lake.meta.title"        : "Ferienwohnung in Lecco am Comer See – Kurzzeitmiete, Design, 4 Gäste",
+    "lake.meta.desc"         : "Designwohnung im Zentrum von Lecco, Comer See. See- und Bergblick, 2 Schlafzimmer, 4 Gäste, WLAN, Klimaanlage. Wenige Schritte vom Seeufer. Jetzt buchen.",
 
     /* ── Lake At Home nav ── */
     "lake.nav.about"         : "Die Wohnung",
@@ -1363,7 +1539,23 @@ const IEH_TRANSLATIONS = {
     "lake.nav.location"      : "Lage",
 
     /* ── Lake At Home hero ── */
+    "lake.hero.title"        : "Ferienwohnung in Lecco<br><em>am Comer See</em>",
     "lake.hero.sub"          : "Moderne Ferienwohnung im Herzen von Lecco, mit Bergblick und direkt am Seeufer",
+
+    /* ── Lake SEO description section ── */
+    "lake.desc.label"        : "Das Reiseziel",
+    "lake.desc.title"        : "Ferienwohnung in Lecco am Comer See",
+    "lake.desc.p1"           : "Suchen Sie eine <strong>Ferienwohnung in Lecco am Comer See</strong> für einen Kurzaufenthalt? Lake At Home ist die ideale Wahl: eine vollständig renovierte Designwohnung im Herzen der Leccoer Altstadt, wenige Schritte von der <strong>Uferpromenade des Comer Sees</strong> und dem Bahnhof entfernt. Platz für bis zu 4 Gäste in 2 modernen, hellen Schlafzimmern.",
+    "lake.desc.p2"           : "<strong>Lecco</strong> ist eine faszinierende Stadt am östlichen Arm des Comer Sees, umgeben von den Grigna-Bergen und dem Resegone-Massiv. Als Stadt Alessandro Manzonis bekannt, bietet sie eine malerische Uferpromenade, ein lebendiges historisches Zentrum und eine ideale Lage für Bergwanderungen, Bootsausflüge und Besuche der Seegemeinden. Die Via Pasubio 17 liegt im Stadtzentrum, weniger als 5 Gehminuten vom Seeufer.",
+    "lake.desc.p3"           : "Die Wohnung verfügt über <strong>2 Schlafzimmer</strong> mit zeitgemäßem Design, einen offenen Wohn-/Essbereich mit vollständig ausgestatteter Küche, 2 Duschbäder, Smart-TV, kostenloses WLAN und Klimaanlage. Aus den Fenstern öffnet sich ein spektakulärer <strong>Blick auf den Comer See und die Leccoer Berge</strong>.",
+    "lake.desc.p4"           : "Die Lage ist außergewöhnlich: nur wenige Gehminuten vom Seeufer, der Piazza XX Settembre und dem Bahnhof (Mailand in 40 Minuten). Restaurants, Bars und Geschäfte zu Fuß erreichbar. Mit dem Auto sind die Ortschaften <strong>Varenna und Bellagio</strong> in 30–45 Minuten erreichbar.",
+    "lake.desc.p5"           : "Registriert unter CIN IT097042C246M9KVYP gemäß den italienischen Vorschriften für Kurzzeitvermietungen. Verfügbar auf Airbnb und Booking.com.",
+    "lake.desc.nearby_title" : "Sehenswürdigkeiten in der Nähe",
+    "lake.desc.near1"        : "Seeufer Lecco – 5 Gehminuten",
+    "lake.desc.near2"        : "Bahnhof Lecco (Mailand in 40 Min.) – 5 Gehminuten",
+    "lake.desc.near3"        : "Varenna und Comer See – 30 Minuten mit dem Auto",
+    "lake.desc.near4"        : "Bellagio – 45 Minuten mit dem Auto",
+    "lake.desc.near5"        : "Grigna-Berge und Valsassina (Wandern)",
     "lake.hero.rating"       : "Ausgezeichnet · Auf Airbnb",
 
     /* ── Lake highlights ── */
@@ -1429,8 +1621,8 @@ const IEH_TRANSLATIONS = {
     "lake.footer.tagline"    : "Via Pasubio 17, Lecco\nComer See · Stadtzentrum",
 
     /* ── Pool & Garden meta ── */
-    "garden.meta.title"      : "Casa Mariangela: Pool & Garden – Leggiuno, Lago Maggiore, Italien",
-    "garden.meta.desc"       : "Ferienhaus mit privatem Pool und Panoramaterrassengarten in Leggiuno, Lago Maggiore. 2 Schlafzimmer, 4 Gäste, Seeblick, privater Parkplatz. 30 Minuten vom Flughafen Malpensa.",
+    "garden.meta.title"      : "Ferienhaus mit privatem Pool in Leggiuno (Lago Maggiore) – Kurzzeitmiete, 4 Gäste",
+    "garden.meta.desc"       : "Ferienhaus mit privatem Pool und Panoramaterrassengarten in Leggiuno, Lago Maggiore. 2 Schlafzimmer, 4 Gäste, Seeblick, privater Parkplatz. 30 Minuten vom Flughafen Malpensa. Jetzt buchen.",
 
     /* ── Pool & Garden nav ── */
     "garden.nav.about"       : "Das Haus",
@@ -1440,7 +1632,23 @@ const IEH_TRANSLATIONS = {
     "garden.nav.location"    : "Lage",
 
     /* ── Pool & Garden hero ── */
+    "garden.hero.title"      : "Ferienhaus mit privatem Pool<br><em>in Leggiuno, Lago Maggiore</em>",
     "garden.hero.sub"        : "Privater Pool, Panoramagarten und atemberaubender Blick auf den Lago Maggiore in Leggiuno",
+
+    /* ── Pool & Garden SEO description section ── */
+    "garden.desc.label"      : "Das Reiseziel",
+    "garden.desc.title"      : "Ferienhaus mit privatem Pool in Leggiuno, Lago Maggiore",
+    "garden.desc.p1"         : "Suchen Sie ein <strong>Ferienhaus mit privatem Pool in der Nähe des Lago Maggiore</strong>? Pool &amp; Garden ist eine Villa zur Kurzzeitmiete mit exklusivem Pool und großem Privatgarten, eingebettet in das Panoramagrün von Leggiuno in der Provinz Varese. Mit 2 Schlafzimmern und Platz für 4 Gäste bietet es totale Privatsphäre und atemberaubenden Blick auf den Lago Maggiore.",
+    "garden.desc.p2"         : "Leggiuno liegt auf einem natürlichen Vorsprung mit direktem Blick auf den <strong>Lago Maggiore</strong>. Via XXIV Maggio 21, wo sich die Unterkunft befindet, ist einer der malerischsten Orte des Dorfes: Garten und Terrasse genießen freien Blick auf den See und die piemontesischen Alpen. Nur 2 Autominuten von den Stränden und 30 Minuten vom Flughafen Mailand Malpensa.",
+    "garden.desc.p3"         : "Das <strong>Ferienhaus in Leggiuno</strong> verfügt über 2 Schlafzimmer, ein geräumiges Wohnzimmer mit direktem Gartenzugang, vollständig ausgestattete Küche mit Ofen und Spülmaschine, Duschbad und kostenloses WLAN. Der große Privatgarten mit Tisch und Stühlen eignet sich perfekt für Abendessen im Freien bei Sonnenuntergang über dem See.",
+    "garden.desc.p4"         : "Das Highlight ist der <strong>exklusive Privatpool</strong>, nicht mit anderen Unterkünften geteilt. Im Sommer geöffnet, umgeben von einer Sonnenterrasse mit Sonnenliegen und Sonnenschirmen. Vom Poolrand aus genießt man einen außergewöhnlichen Panoramablick auf den See und die umliegenden Hügel.",
+    "garden.desc.p5"         : "Die Unterkunft ist unter CIN IT012088C22FDPNF3K gemäß den italienischen Kurzzeitvermietungsvorschriften registriert. Verfügbar auf Airbnb mit schneller Antwort.",
+    "garden.desc.nearby_title": "Sehenswürdigkeiten in der Nähe",
+    "garden.desc.near1"      : "Einsiedelei Santa Caterina del Sasso – 5 Minuten mit dem Auto",
+    "garden.desc.near2"      : "Seilbahn Laveno Sasso del Ferro – 10 Minuten",
+    "garden.desc.near3"      : "Stresa und Borromäische Inseln – 30 Minuten",
+    "garden.desc.near4"      : "Villa Taranto und Verbania – 35 Minuten",
+    "garden.desc.near5"      : "Varesiner See und Sacro Monte di Varese",
 
     /* ── Pool & Garden highlights ── */
     "garden.hl.pool.val"     : "Pool",
@@ -1502,6 +1710,576 @@ const IEH_TRANSLATIONS = {
     "garden.footer.f2"       : "Schlafzimmer",
     "garden.footer.f3"       : "Galerie",
     "garden.footer.f4"       : "Anreise",
+  },
+
+
+  /* ═══════════════════════════════════════════════════════════════
+     FRENCH
+  ═══════════════════════════════════════════════════════════════ */
+  fr: {
+    /* ── Commun ── */
+    "common.book"            : "Réserver",
+    "common.discover"        : "Découvrir",
+    "common.contact_us"      : "Nous contacter",
+    "common.scroll"          : "Défiler",
+    "common.gallery_label"   : "Photos",
+    "common.gallery_title"   : "Galerie",
+    "common.services_label"  : "Équipements",
+    "common.location_label"  : "Emplacement",
+    "common.rooms_label"     : "Espaces de vie",
+    "common.rooms_title"     : "Où vous dormirez",
+    "common.book_airbnb"     : "Réserver sur Airbnb",
+    "common.book_booking"    : "Réserver sur Booking.com",
+    "common.all_properties"  : "Toutes les propriétés",
+    "common.privacy"         : "Politique de confidentialité",
+    "common.useful_links"    : "Liens utiles",
+    "common.how_to_arrive"   : "Comment venir",
+    "common.bedrooms"        : "Chambres",
+    "common.max_guests"      : "Hôtes max",
+    "common.address"         : "Adresse",
+    "common.nearby"          : "Attractions à proximité",
+    "common.airport"         : "Aéroport de Malpensa",
+    "common.book_stay"       : "Réservez votre séjour",
+    "common.check_avail"     : "Vérifiez les disponibilités et réservez directement sur Airbnb.<br>Nous sommes à votre disposition pour toute question.",
+    "common.faq_label"       : "Foire aux questions",
+    "common.faq_title"       : "Tout ce que\nvous voulez savoir",
+
+    /* ── FAQ – Appartamento con Piscina ── */
+    "pool.faq.q1" : "Où se trouve l'appartement ?",
+    "pool.faq.a1" : "À Leggiuno, sur le lac Majeur (VA), Lombardie. À seulement 2 minutes en voiture des plages du lac et à 30 minutes de l'aéroport de Milan Malpensa.",
+    "pool.faq.q2" : "Y a-t-il vraiment une piscine ?",
+    "pool.faq.a2" : "Oui, une piscine commune saisonnière ouverte jusqu'au 15 septembre, avec chaises longues et parasols.",
+    "pool.faq.q3" : "Combien de personnes peut-il accueillir ?",
+    "pool.faq.a3" : "Jusqu'à 4 personnes : une chambre double plus un espace salon avec lit supplémentaire.",
+    "pool.faq.q4" : "Y a-t-il un parking ?",
+    "pool.faq.a4" : "Oui, une place de parking privée est incluse, avec vue sur le lac Majeur.",
+    "pool.faq.q5" : "Comment réserver ?",
+    "pool.faq.a5" : "Directement sur Airbnb ou Booking.com. Réponse rapide garantie.",
+
+    /* ── FAQ – Pool & Garden ── */
+    "garden.faq.q1" : "La piscine est-elle privée ou partagée ?",
+    "garden.faq.a1" : "Entièrement privée et exclusive pour les hôtes, avec un grand jardin. Non partagée avec d'autres logements.",
+    "garden.faq.q2" : "Peut-on voir le lac Majeur ?",
+    "garden.faq.a2" : "Oui, vue panoramique sur le lac Majeur depuis le jardin et la terrasse.",
+    "garden.faq.q3" : "Combien de chambres a la maison ?",
+    "garden.faq.a3" : "Deux chambres pour jusqu'à 4 hôtes, plus un salon avec accès direct au jardin.",
+    "garden.faq.q4" : "À quelle distance se trouvent Milan et l'aéroport de Malpensa ?",
+    "garden.faq.a4" : "Environ 50 minutes de Milan et 30 minutes de l'aéroport international de Milan Malpensa (MXP).",
+    "garden.faq.q5" : "Comment réserver ?",
+    "garden.faq.a5" : "Directement sur Airbnb. Pour toute question, nous sommes disponibles par téléphone ou e-mail.",
+
+    /* ── FAQ – Casa Mariangela ── */
+    "mari.faq.q1" : "À quelle distance se trouve Casa Mariangela de la mer ?",
+    "mari.faq.a1" : "À seulement 30 mètres de la plage de San Bartolomeo al Mare, sur la Riviera Ligure di Ponente.",
+    "mari.faq.q2" : "Le parking gratuit est-il inclus ?",
+    "mari.faq.a2" : "Oui, une place de parking privée est incluse dans le séjour sans frais supplémentaires.",
+    "mari.faq.q3" : "Combien de personnes peut-il accueillir ?",
+    "mari.faq.a3" : "Jusqu'à 4 personnes, avec 2 chambres : une double et une avec lits jumeaux.",
+    "mari.faq.q4" : "Où se trouve San Bartolomeo al Mare ?",
+    "mari.faq.a4" : "San Bartolomeo al Mare est un village balnéaire sur la Riviera Ligure di Ponente, dans la province d'Imperia, près de Diano Marina et d'Albenga.",
+    "mari.faq.q5" : "Quels sont les horaires d'arrivée et de départ ?",
+    "mari.faq.a5" : "Arrivée à partir de 15h00, départ avant 10h00. Des horaires flexibles peuvent être arrangés sur demande.",
+    "mari.faq.q6" : "Comment réserver ?",
+    "mari.faq.a6" : "Directement sur Airbnb. Pour toute question, contactez-nous par téléphone au +39 347 412 0611 ou par e-mail.",
+
+    /* ── FAQ – Lake At Home ── */
+    "lake.faq.q1" : "Lake At Home est-il proche du lac ?",
+    "lake.faq.a1" : "Oui, il est situé au cœur de Lecco, à quelques pas de la promenade du lac de Côme.",
+    "lake.faq.q2" : "Combien de chambres a l'appartement ?",
+    "lake.faq.a2" : "Deux chambres au design contemporain, pour jusqu'à 4 hôtes.",
+    "lake.faq.q3" : "À quelle distance se trouve Milan ?",
+    "lake.faq.a3" : "Environ 40 à 50 minutes de Milan en voiture ou en train (gare de Lecco, liaison directe).",
+    "lake.faq.q4" : "Que peut-on visiter à proximité ?",
+    "lake.faq.a4" : "La promenade de Lecco, les Grigne, la Valsassina, les villages de Manzoni, Varenna, Bellagio et tout le lac de Côme.",
+    "lake.faq.q5" : "Comment réserver ?",
+    "lake.faq.a5" : "Sur Airbnb ou Booking.com. L'appartement est disponible sur les deux plateformes.",
+
+    /* ── Page d'accueil méta ── */
+    "home.meta.title"        : "Italian Escapes Homes – Séjours d'exception en Italie",
+    "home.meta.desc"         : "Cinq hébergements sélectionnés entre mer, lacs et montagne. Propriétés en Ligurie, lac Majeur, lac de Côme et dans les Alpes. Noté 4,8+ sur Airbnb.",
+
+    /* ── Navigation ── */
+    "home.nav.properties"    : "Propriétés",
+    "home.nav.destinations"  : "Destinations",
+    "home.nav.contacts"      : "Contact",
+
+    /* ── Hero ── */
+    "home.hero.eyebrow"      : "Séjours d'exception en Italie",
+    "home.hero.tagline"      : "Mer, lac et montagne — cinq maisons pour cinq expériences uniques",
+    "home.hero.stat_prop"    : "Propriétés",
+    "home.hero.stat_dest"    : "Destinations",
+    "home.hero.stat_rating"  : "Sur Airbnb",
+    "home.hero.cta_discover" : "Découvrir nos maisons",
+
+    /* ── Section propriétés ── */
+    "home.props.label"       : "Nos maisons",
+    "home.props.title"       : "Cinq propriétés,\nune seule qualité",
+    "home.props.intro"       : "Chaque hébergement est sélectionné et géré personnellement pour garantir un confort maximal, dans des emplacements uniques le long de la côte ligurienne, des lacs italiens et des Alpes.",
+
+    /* ── Cartes propriétés ── */
+    "home.card1.title"       : "B&B Casa Mariangela à San Bartolomeo al Mare",
+    "home.card1.tipo"        : "B&B · Bord de mer",
+    "home.card1.desc"        : "À 30 mètres de la mer au cœur de San Bartolomeo al Mare. Appartement avec 2 chambres, climatisation, Wi-Fi et parking gratuit. L'une de nos propriétés les mieux notées sur Airbnb.",
+    "home.card1.d1"          : "🏠 2 chambres",
+    "home.card1.d2"          : "👥 4 hôtes",
+    "home.card1.d3"          : "🌊 30 m de la mer",
+    "home.card1.d4"          : "🚗 Parking",
+
+    "home.card2.title"       : "Appartement avec piscine à Leggiuno",
+    "home.card2.tipo"        : "Appartement · Lac",
+    "home.card2.desc"        : "Dans une résidence panoramique entourée de verdure, à 2 minutes du lac Majeur. Piscine saisonnière, sentiers et accès facile aux attractions locales.",
+    "home.card2.d1"          : "👥 4 hôtes",
+    "home.card2.d2"          : "🏊 Piscine",
+    "home.card2.d3"          : "✈️ 30 min de Malpensa",
+
+    "home.card3.title"       : "Villa avec piscine privée à Leggiuno",
+    "home.card3.tipo"        : "Maison · Lac",
+    "home.card3.desc"        : "Maison de vacances paisible avec piscine privée et grand jardin dans une résidence panoramique, à 2 minutes du lac Majeur et à 30 minutes de l'aéroport de Malpensa.",
+    "home.card3.d1"          : "👥 4 hôtes",
+    "home.card3.d2"          : "🏊 Piscine privée",
+    "home.card3.d3"          : "🌿 Jardin",
+    "home.card3.d4"          : "🌄 Vue lac",
+
+    "home.card4.title"       : "Appartement Lake At Home à Lecco",
+    "home.card4.tipo"        : "Appartement · Lac",
+    "home.card4.desc"        : "Appartement moderne au cœur de Lecco, avec une vue spectaculaire sur les montagnes et le lac de Côme. À quelques pas de la promenade et de la gare.",
+    "home.card4.d1"          : "👥 4 hôtes",
+    "home.card4.d2"          : "⛵ Vue lac",
+    "home.card4.d3"          : "🏠 Lecco",
+
+    "home.card5.tipo"        : "Suite · Montagne",
+    "home.card5.desc"        : "Une suite de charme au pied du massif de la Bernina dans les Alpes de la Valmalenco. Idéale pour ceux qui recherchent le silence, la nature et des panoramas alpins inoubliables.",
+    "home.card5.d1"          : "👥 4 hôtes",
+    "home.card5.d2"          : "⛰ Montagne",
+    "home.card5.d3"          : "🏟 Ski & nature",
+    "home.card5.soon"        : "Bientôt disponible",
+    "home.card5.info"        : "Plus d'infos",
+
+    /* ── Section marque ── */
+    "home.brand.label"       : "À propos",
+    "home.brand.title"       : "Notre philosophie",
+    "home.brand.text"        : "Italian Escapes Homes est né d'une passion pour l'hospitalité authentique. Chaque propriété est soigneusement entretenue pour offrir une expérience unique, que ce soit au bord de la mer, sur les lacs ou en montagne.",
+    "home.brand.v1.title"    : "Qualité",
+    "home.brand.v1.text"     : "Hébergements sélectionnés et gérés personnellement, avec des standards élevés dans chaque détail.",
+    "home.brand.v2.title"    : "Emplacements uniques",
+    "home.brand.v2.text"     : "La côte ligurienne, le lac Majeur, le lac de Côme et les Alpes : les plus beaux cadres d'Italie.",
+    "home.brand.v3.title"    : "Hospitalité",
+    "home.brand.v3.text"     : "Réponses rapides, disponibilité et vrai soin pour nos hôtes sont notre priorité.",
+    "home.brand.v4.title"    : "Fiabilité",
+    "home.brand.v4.text"     : "Plus de 50 avis Airbnb avec des scores supérieurs à 4,6 sur 5.",
+
+    /* ── Section destinations ── */
+    "home.dest.label"        : "Où nous sommes",
+    "home.dest.title"        : "Nos destinations",
+    "home.dest.d1.count"     : "1 propriété",
+    "home.dest.d2.count"     : "2 propriétés",
+    "home.dest.d3.count"     : "1 propriété",
+    "home.dest.d4.count"     : "1 propriété",
+
+    /* ── Section contacts ── */
+    "home.contacts.label"    : "Écrivez-nous",
+    "home.contacts.title"    : "Contactez-nous",
+    "home.contacts.text"     : "Pour des informations sur les disponibilités, les prix ou toute question sur nos propriétés.",
+    "home.contacts.c1.label" : "Téléphone & WhatsApp",
+    "home.contacts.c1.link"  : "Appeler maintenant →",
+    "home.contacts.c2.label" : "E-mail",
+    "home.contacts.c2.link"  : "Écrire →",
+    "home.contacts.c3.label" : "Airbnb",
+    "home.contacts.c3.value" : "Toutes les propriétés",
+    "home.contacts.c3.link"  : "Voir sur Airbnb →",
+
+    /* ── Pied de page ── */
+    "home.footer.tagline"    : "Cinq maisons de vacances sélectionnées entre mer, lacs et montagne. La plus belle Italie, à portée de main.",
+    "home.footer.col1"       : "Propriétés",
+    "home.footer.col2"       : "Destinations",
+    "home.footer.col3"       : "Contact",
+    "home.footer.bernina"    : "Bernina Apartment (bientôt)",
+    "home.footer.copy"       : "© 2026 Italian Escapes Homes · Tous droits réservés",
+    "home.footer.cookie"     : "Ce site n'utilise pas de cookies de profilage",
+
+    /* ── Appartement avec piscine méta ── */
+    "pool.meta.title"        : "Appartement avec piscine à Leggiuno (Lac Majeur) – Location courte durée, 4 personnes",
+    "pool.meta.desc"         : "Appartement avec piscine à Leggiuno sur le lac Majeur. Location pour 4 personnes, parking privé, Wi-Fi. À 2 min du lac, 30 min de Malpensa. Réservez maintenant.",
+
+    /* ── Navigation appartement piscine ── */
+    "pool.nav.about"         : "L'appartement",
+    "pool.nav.services"      : "Équipements",
+    "pool.nav.gallery"       : "Galerie",
+    "pool.nav.location"      : "Emplacement",
+
+    /* ── Hero appartement piscine ── */
+    "pool.hero.title"        : "Appartement avec<br><em>piscine</em> à Leggiuno",
+    "pool.hero.sub"          : "Un havre de paix entouré de verdure, à deux pas du lac Majeur et à 30 minutes de Malpensa",
+    "pool.hero.rating"       : "<strong>4,68</strong> sur 5 · 25 avis sur Airbnb",
+
+    /* ── Section SEO appartement piscine ── */
+    "pool.desc.label"        : "La destination",
+    "pool.desc.title"        : "Appartement avec piscine à Leggiuno, lac Majeur",
+    "pool.desc.p1"           : "Vous cherchez un <strong>appartement avec piscine à Leggiuno</strong> ou à proximité du lac Majeur ? Cette location courte durée est le choix idéal pour les familles et les couples souhaitant profiter de la tranquillité du lac avec tout le confort. Situé dans une résidence verdoyante au Via XXIV Maggio 84, il offre l'accès à la piscine commune saisonnière, un parking privé gratuit et une situation à seulement 2 minutes en voiture des rives du lac Majeur.",
+    "pool.desc.p2"           : "Leggiuno est une petite commune de la province de Varèse, nichée sur les collines qui descendent doucement vers le lac Majeur. Entourée de forêts et de sentiers naturels, elle est stratégiquement située à mi-chemin entre Varèse et Verbania. À seulement 30 minutes de l'aéroport international de Milan Malpensa, c'est une base idéale pour les vacances estivales et les séjours de transit.",
+    "pool.desc.p3"           : "L'appartement accueille jusqu'à 4 personnes et dispose d'une spacieuse chambre double avec armoire, d'un espace de vie ouvert avec cuisine équipée et lit supplémentaire, d'une salle de bain moderne avec douche, Smart TV et Wi-Fi gratuit haut débit. Chaque détail est soigné pour garantir un séjour agréable et reposant.",
+    "pool.desc.p4"           : "Le point fort est la piscine commune saisonnière, ouverte jusqu'au 15 septembre avec chaises longues et parasols inclus. Pour les familles avec enfants, c'est un avantage décisif : il suffit de descendre pour se retrouver au bord de la piscine. Le soir, le parking privé avec vue sur le lac Majeur offre des couchers de soleil inoubliables.",
+    "pool.desc.p5"           : "La propriété se distingue par une note de 4,68 sur 5 basée sur 25 avis vérifiés sur Airbnb. Les hôtes apprécient particulièrement la propreté, le cadre calme, la proximité du lac et la commodité du parking privé avec vue. L'appartement est enregistré sous CIN IT012088C2B2FQHKFY, en conformité avec la réglementation italienne sur les locations courte durée.",
+    "pool.desc.nearby_title" : "À visiter dans les environs",
+    "pool.desc.near1"        : "Ermitage de Santa Caterina del Sasso – 5 minutes en voiture",
+    "pool.desc.near2"        : "Téléphérique de Laveno Sasso del Ferro – 10 minutes",
+    "pool.desc.near3"        : "Villages d'Arolo et Ranco – quelques minutes",
+    "pool.desc.near4"        : "Stresa et les îles Borroméennes – 30 minutes",
+    "pool.desc.near5"        : "Villa Taranto et Verbania – 35 minutes",
+    "pool.desc.near6"        : "Lac de Varèse et Sacro Monte di Varese",
+
+    /* ── Points forts piscine ── */
+    "pool.hl.pool.val"       : "Piscine",
+    "pool.hl.pool.lbl"       : "Saisonnière",
+    "pool.hl.guests.lbl"     : "Hôtes max",
+    "pool.hl.lake.val"       : "2 min",
+    "pool.hl.lake.lbl"       : "Du lac",
+    "pool.hl.airport.val"    : "30 min",
+    "pool.hl.airport.lbl"    : "De Malpensa",
+
+    /* ── À propos appartement piscine ── */
+    "pool.about.label"       : "Votre espace",
+    "pool.about.title"       : "Détente sur\nle lac Majeur",
+    "pool.about.p1"          : "Détendez-vous en famille dans cet appartement paisible dans une résidence avec piscine saisonnière (ouverte jusqu'au 15 septembre). L'appartement se trouve dans une résidence panoramique entourée de verdure, à seulement 2 minutes des plages du lac.",
+    "pool.about.p2"          : "L'emplacement est idéal pour explorer les beautés du lac Majeur : l'ermitage de Santa Caterina del Sasso, le téléphérique de Laveno et les sentiers naturels de la région sont tous accessibles en quelques minutes. À 30 minutes de l'aéroport de Malpensa, il est parfait pour les séjours de transit.",
+
+    /* ── Chambres appartement piscine ── */
+    "pool.room1.title"       : "Chambre à coucher",
+    "pool.room1.text"        : "Spacieuse chambre double avec de grandes fenêtres donnant sur la verdure de la résidence et une armoire encastrée.",
+    "pool.room1.d1"          : "🌙 Lit double",
+    "pool.room1.d2"          : "🛟 Armoire",
+    "pool.room1.d3"          : "💡 Vue jardin",
+    "pool.room2.title"       : "Salon",
+    "pool.room2.text"        : "Espace de vie ouvert avec coin salon, cuisine équipée et lit supplémentaire pour des hôtes additionnels. Télévision à écran plat incluse.",
+    "pool.room2.d1"          : "🛏 Lit supplémentaire",
+    "pool.room2.d2"          : "📺 Smart TV",
+    "pool.room2.d3"          : "🍽 Cuisine équipée",
+
+    /* ── Services appartement piscine ── */
+    "pool.svc.label"         : "Équipements",
+    "pool.svc.title"         : "Tout le confort\ndont vous avez besoin",
+    "pool.svc.s1.title"      : "Piscine saisonnière",
+    "pool.svc.s1.text"       : "Piscine commune ouverte jusqu'au 15 septembre, avec chaises longues et parasols.",
+    "pool.svc.s2.title"      : "Parking gratuit",
+    "pool.svc.s2.text"       : "Place de parking privée incluse, avec vue sur le lac Majeur.",
+    "pool.svc.s3.title"      : "Wi-Fi gratuit",
+    "pool.svc.s3.text"       : "Connexion internet haut débit dans tout l'appartement.",
+    "pool.svc.s4.title"      : "Cuisine équipée",
+    "pool.svc.s4.text"       : "Cuisine complète avec plaque de cuisson, réfrigérateur, lave-vaisselle et tout le nécessaire.",
+    "pool.svc.s5.title"      : "Smart TV",
+    "pool.svc.s5.text"       : "Télévision à écran plat avec accès aux principaux services de streaming.",
+    "pool.svc.s6.title"      : "Vue lac",
+    "pool.svc.s6.text"       : "Parking avec vue sur le lac Majeur et résidence entourée de verdure panoramique.",
+
+    /* ── Emplacement appartement piscine ── */
+    "pool.loc.title"         : "Leggiuno,\nLac Majeur",
+    "pool.loc.lake.title"    : "Lac Majeur",
+    "pool.loc.lake.text"     : "À seulement 2 minutes en voiture des plages. Accès direct aux sentiers et réserves naturelles.",
+    "pool.loc.airport.text"  : "À seulement 30 minutes en voiture de l'aéroport international de Milan Malpensa (MXP).",
+    "pool.loc.nearby.text"   : "Ermitage de Santa Caterina del Sasso, téléphérique de Laveno, îles Borroméennes, Stresa.",
+
+    /* ── CTA appartement piscine ── */
+    "pool.cta.title"         : "Prêt à vous détendre\nsur le lac ?",
+
+    /* ── Pied de page appartement piscine ── */
+    "pool.footer.tagline"    : "Via XXIV Maggio 84, Leggiuno (VA)\nLac Majeur · 30 min de Malpensa",
+
+    /* ── Casa Mariangela méta ── */
+    "mari.meta.title"        : "B&B Casa Mariangela à San Bartolomeo al Mare – Riviera Ligure, 30 m de la mer",
+    "mari.meta.desc"         : "Location de vacances à 30 mètres de la mer à San Bartolomeo al Mare, Ligurie. 2 chambres, 4 hôtes, parking gratuit, Wi-Fi, climatisation. 4,97/5 sur Airbnb. Réservez.",
+
+    /* ── Hero Casa Mariangela ── */
+    "mari.hero.title"        : "B&B Casa Mariangela<br>à <em>San Bartolomeo al Mare</em>",
+
+    /* ── Section SEO Casa Mariangela ── */
+    "mari.desc.label"        : "La destination",
+    "mari.desc.title"        : "B&B Casa Mariangela à San Bartolomeo al Mare",
+    "mari.desc.p1"           : "Vous cherchez une <strong>location de vacances à San Bartolomeo al Mare</strong> à deux pas de la mer ? B&B Casa Mariangela est un appartement accueillant au cœur de la <strong>Riviera Ligure di Ponente</strong>, à seulement 30 mètres de la plage. Idéal pour les familles et les couples jusqu'à 4 personnes, avec 2 chambres, parking privé gratuit, Wi-Fi et climatisation.",
+    "mari.desc.p2"           : "<strong>San Bartolomeo al Mare</strong> est un village balnéaire de la province d'Imperia, niché entre la mer et les collines liguriennes. À quelques minutes de Diano Marina et Cervo, et à environ 30 km de Sanremo. Le port de pêche, les restaurants de poisson et le marché du jeudi animent le centre, tandis que les plages de sable et de galets s'étendent sur plus d'un kilomètre. Via Colombo 16 est au cœur de la zone balnéaire.",
+    "mari.desc.p3"           : "L'appartement dispose de <strong>2 chambres</strong> (une double, une avec lits jumeaux), d'un salon avec cuisine entièrement équipée, d'une salle de bain privée, Smart TV, Wi-Fi et climatisation. Le <strong>parking privé gratuit</strong> est un avantage rare à San Bartolomeo al Mare, surtout en haute saison.",
+    "mari.desc.p4"           : "Avec une note de <strong>4,97 sur 5</strong> basée sur 29 avis vérifiés Airbnb, B&B Casa Mariangela est parmi les hébergements les plus appréciés de la Riviera Ligure. Les hôtes saluent la propreté impeccable, la proximité de 30 mètres de la mer et l'accueil chaleureux. Enregistré sous CIN IT008052C22DNK6SGM.",
+    "mari.desc.nearby_title" : "À visiter dans les environs",
+    "mari.desc.near1"        : "Cervo, village médiéval – 5 minutes en voiture",
+    "mari.desc.near2"        : "Diano Marina et plages – 5 minutes",
+    "mari.desc.near3"        : "Imperia, chef-lieu de province – 15 minutes",
+    "mari.desc.near4"        : "Sanremo – 30 minutes",
+    "mari.desc.near5"        : "Arrière-pays ligure et oliveraies centenaires",
+
+    /* ── Navigation Casa Mariangela ── */
+    "mari.nav.about"         : "L'appartement",
+    "mari.nav.rooms"         : "Chambres",
+    "mari.nav.services"      : "Équipements",
+    "mari.nav.location"      : "Emplacement",
+    "mari.nav.gallery"       : "Galerie",
+    "mari.nav.reviews"       : "Avis",
+    "mari.nav.contacts"      : "Contact",
+    "mari.nav.check"         : "Vérifier les disponibilités",
+
+    /* ── Hero Casa Mariangela (suite) ── */
+    "mari.hero.sub"          : "À seulement 30 mètres de la mer, au cœur de la Riviera Ligure di Ponente",
+    "mari.hero.rating"       : "<strong>4,97</strong> sur 5 · 29 avis sur Airbnb",
+
+    /* ── Points forts Casa Mariangela ── */
+    "mari.hl.sea.lbl"        : "de la mer",
+    "mari.hl.rating.lbl"     : "Note Airbnb",
+    "mari.hl.rooms.lbl"      : "Chambres",
+    "mari.hl.parking.val"    : "Gratuit",
+    "mari.hl.parking.lbl"    : "Parking",
+
+    /* ── À propos Casa Mariangela ── */
+    "mari.about.label"       : "L'appartement",
+    "mari.about.title"       : "Votre maison\nau bord de la mer",
+    "mari.about.p1"          : "Profitez de vos vacances dans ce bel appartement à 30 mètres de la mer, dans le centre de San Bartolomeo al Mare. Une oasis de confort et de style sur la Riviera Ligure di Ponente, avec tout le nécessaire pour un séjour inoubliable.",
+    "mari.about.p2"          : "Chaque détail a été soigné pour vous faire sentir comme chez vous, avec une atmosphère chaleureuse et accueillante dès le premier instant.",
+    "mari.about.f1"          : "🏠 Appartement entier",
+    "mari.about.f2"          : "👥 Jusqu'à 4 hôtes",
+    "mari.about.f3"          : "🌊 30 m de la mer",
+    "mari.about.f4"          : "🚗 Parking gratuit",
+    "mari.about.f5"          : "🌿 Ligurie",
+
+    /* ── Chambres Casa Mariangela ── */
+    "mari.rooms.label"       : "Chambres",
+    "mari.rooms.title"       : "Deux chambres, tout le confort",
+    "mari.room1.title"       : "Chambre principale",
+    "mari.room1.text"        : "Spacieuse et lumineuse, soigneusement meublée pour un confort maximal. Parfaite pour un couple en quête de détente et de tranquillité.",
+    "mari.room1.d1"          : "🌙 Lit double",
+    "mari.room1.d2"          : "🛟 Armoire",
+    "mari.room1.d3"          : "💡 Vue",
+    "mari.room2.title"       : "Deuxième chambre",
+    "mari.room2.text"        : "Confortable et polyvalente, idéale pour les enfants ou les hôtes supplémentaires. Décorée avec goût dans un style frais et moderne.",
+    "mari.room2.d1"          : "🌙 Lits jumeaux",
+    "mari.room2.d2"          : "🛟 Armoire",
+    "mari.room2.d3"          : "💡 Lumineuse",
+
+    /* ── Services Casa Mariangela ── */
+    "mari.svc.label"         : "Ce que nous offrons",
+    "mari.svc.title"         : "Tout le confort\npour vos vacances",
+    "mari.svc.s1"            : "À deux pas de la mer",
+    "mari.svc.s2"            : "Parking gratuit",
+    "mari.svc.s3"            : "Salle de bain privée",
+    "mari.svc.s4"            : "Cuisine équipée",
+    "mari.svc.s5"            : "Climatisation",
+    "mari.svc.s6"            : "Wi-Fi gratuit",
+    "mari.svc.s7"            : "Machine à laver",
+    "mari.svc.s8"            : "Linge inclus",
+
+    /* ── Emplacement Casa Mariangela ── */
+    "mari.loc.title"         : "Au cœur de\nSan Bartolomeo al Mare",
+    "mari.loc.sea.title"     : "De la mer",
+    "mari.loc.sea.text"      : "À seulement 30 mètres de la plage. Vous pouvez sentir l'air marin directement depuis l'appartement.",
+    "mari.loc.parking.title" : "Parking",
+    "mari.loc.parking.text"  : "Parking gratuit inclus dans le séjour. Pas de souci pour votre voiture.",
+    "mari.loc.nearby.title"  : "À proximité",
+    "mari.loc.nearby.text"   : "Restaurants, glaciers et boutiques à quelques pas. Tout à portée de main.",
+
+    /* ── Avis Casa Mariangela ── */
+    "mari.rev.label"         : "Ce que disent nos hôtes",
+    "mari.rev.title"         : "Avis",
+
+    /* ── Pied de page Casa Mariangela ── */
+    "mari.footer.tagline"    : "Via Colombo 16, San Bartolomeo al Mare (IM)\nRiviera Ligure di Ponente · Ligurie",
+    "mari.footer.col1"       : "Navigation",
+    "mari.footer.col2"       : "Informations",
+
+    /* ── Extras Casa Mariangela ── */
+    "mari.loc.addr.text"     : "Via Colombo 16<br>18016 San Bartolomeo al Mare (IM)<br>Ligurie, Italie",
+    "mari.rev.btn"           : "Lire tous les avis sur Airbnb",
+    "mari.cont.label"        : "Des questions ?",
+    "mari.cont.title"        : "Contactez-nous",
+    "mari.cont.text"         : "Nous sommes à votre disposition pour toute question concernant votre séjour, les disponibilités ou les équipements.",
+    "mari.cont.phone.lbl"    : "Téléphone &amp; WhatsApp",
+    "mari.cont.phone.link"   : "Appeler maintenant →",
+    "mari.cont.email.lbl"    : "E-mail",
+    "mari.cont.email.link"   : "Envoyer un message →",
+    "mari.cont.book.lbl"     : "Réserver en ligne",
+    "mari.cont.book.link"    : "Voir l'annonce →",
+    "mari.cta.label"         : "Prêts à partir ?",
+    "mari.cta.title"         : "Réservez votre séjour",
+    "mari.cta.text"          : "Vérifiez les disponibilités et réservez directement sur Airbnb. Réponse rapide garantie !",
+    "mari.cta.btn"           : "Vérifier les disponibilités sur Airbnb",
+
+    /* ── Lake At Home méta ── */
+    "lake.meta.title"        : "Appartement à Lecco sur le lac de Côme – Location courte durée, design, 4 personnes",
+    "lake.meta.desc"         : "Appartement de design dans le centre de Lecco, lac de Côme. Vue lac et montagnes, 2 chambres, 4 hôtes, Wi-Fi, climatisation. À deux pas de la promenade. Réservez.",
+
+    /* ── Navigation Lake At Home ── */
+    "lake.nav.about"         : "L'appartement",
+    "lake.nav.services"      : "Équipements",
+    "lake.nav.gallery"       : "Galerie",
+    "lake.nav.location"      : "Emplacement",
+
+    /* ── Hero Lake At Home ── */
+    "lake.hero.title"        : "Appartement à Lecco<br><em>sur le lac de Côme</em>",
+    "lake.hero.sub"          : "Appartement moderne au cœur de Lecco, avec vue sur les montagnes et à deux pas de la promenade lacustre",
+    "lake.hero.rating"       : "Excellent · Sur Airbnb",
+
+    /* ── Section SEO Lake At Home ── */
+    "lake.desc.label"        : "La destination",
+    "lake.desc.title"        : "Appartement à Lecco sur le lac de Côme",
+    "lake.desc.p1"           : "Vous cherchez un <strong>appartement à Lecco sur le lac de Côme</strong> pour un séjour courte durée ? Lake At Home est le choix idéal : un appartement de design entièrement rénové au cœur du centre historique de Lecco, à quelques pas de la <strong>promenade du lac de Côme</strong> et de la gare ferroviaire. Il accueille jusqu'à 4 personnes dans 2 chambres modernes et lumineuses.",
+    "lake.desc.p2"           : "<strong>Lecco</strong> est une ville fascinante à l'extrémité du bras oriental du lac de Côme, entourée des Grigne et du massif du Resegone. Connue comme la ville d'Alessandro Manzoni, elle offre une promenade lacustre pittoresque, un centre historique animé et une position idéale pour les randonnées, les sorties en bateau et les visites des villages du lac. Via Pasubio 17 est au cœur de la ville, à moins de 5 minutes à pied du front de lac.",
+    "lake.desc.p3"           : "L'appartement dispose de <strong>2 chambres</strong> au design contemporain, d'un espace de vie et salle à manger ouverts avec cuisine équipée, de 2 salles de bain avec douche, Smart TV, Wi-Fi gratuit et climatisation. Les fenêtres offrent une spectaculaire <strong>vue sur le lac de Côme et les montagnes de Lecco</strong>.",
+    "lake.desc.p4"           : "L'emplacement est exceptionnel : à quelques minutes à pied du front de lac, de la Piazza XX Settembre et de la gare (Milan en 40 minutes). Restaurants, bars et boutiques accessibles à pied. En voiture, les villages de <strong>Varenna et Bellagio</strong> sont à 30–45 minutes.",
+    "lake.desc.p5"           : "Enregistré sous CIN IT097042C246M9KVYP conformément à la réglementation italienne sur les locations courte durée. Disponible sur Airbnb et Booking.com.",
+    "lake.desc.nearby_title" : "À visiter dans les environs",
+    "lake.desc.near1"        : "Promenade du lac de Lecco – 5 minutes à pied",
+    "lake.desc.near2"        : "Gare de Lecco (Milan en 40 min) – 5 min à pied",
+    "lake.desc.near3"        : "Varenna et lac de Côme – 30 minutes en voiture",
+    "lake.desc.near4"        : "Bellagio – 45 minutes en voiture",
+    "lake.desc.near5"        : "Montagnes de Grigna et Valsassina (randonnée)",
+
+    /* ── Points forts Lake At Home ── */
+    "lake.hl.view.val"       : "Vue",
+    "lake.hl.view.lbl"       : "Lac & Montagnes",
+    "lake.hl.guests.lbl"     : "Hôtes max",
+    "lake.hl.rooms.val"      : "2",
+    "lake.hl.rooms.lbl"      : "Chambres",
+    "lake.hl.center.val"     : "Centre",
+    "lake.hl.center.lbl"     : "De Lecco",
+
+    /* ── À propos Lake At Home ── */
+    "lake.about.label"       : "Votre espace",
+    "lake.about.title"       : "Vivre Lecco\ncomme un local",
+    "lake.about.p1"          : "Un appartement de design entièrement rénové au cœur de Lecco, avec des finitions modernes et des matériaux de qualité. Les fenêtres encadrent une vue spectaculaire sur les montagnes et le lac, aux couleurs uniques au coucher du soleil.",
+    "lake.about.p2"          : "L'emplacement est idéal pour explorer le lac de Côme et la Valsassina : la promenade lacustre, la Piazza XX Settembre et la gare ferroviaire sont à quelques minutes à pied. Parfait pour les couples et les familles qui souhaitent vivre la ville avec tout le confort d'un foyer.",
+
+    /* ── Chambres Lake At Home ── */
+    "lake.room1.title"       : "Chambre à coucher",
+    "lake.room1.text"        : "Spacieuse chambre double avec armoire encastrée et fenêtre avec vue sur le quartier historique de Lecco.",
+    "lake.room1.d1"          : "🌙 Lit double",
+    "lake.room1.d2"          : "🛟 Armoire encastrée",
+    "lake.room1.d3"          : "💡 Vue ville",
+    "lake.room2.title"       : "Salon",
+    "lake.room2.text"        : "Salon spacieux avec canapé, Smart TV et coin repas. Le canapé est convertible pour accueillir jusqu'à 4 personnes au total.",
+    "lake.room2.d1"          : "🛏 Canapé-lit",
+    "lake.room2.d2"          : "📺 Smart TV",
+    "lake.room2.d3"          : "🍽 Coin repas",
+
+    /* ── Services Lake At Home ── */
+    "lake.svc.label"         : "Équipements",
+    "lake.svc.title"         : "Tout ce dont vous avez besoin",
+    "lake.svc.s1.title"      : "Design moderne",
+    "lake.svc.s1.text"       : "Appartement entièrement rénové avec des finitions de qualité et un mobilier contemporain.",
+    "lake.svc.s2.title"      : "Smart TV & Wi-Fi",
+    "lake.svc.s2.text"       : "Wi-Fi rapide et Smart TV pour se détendre après une journée sur le lac.",
+    "lake.svc.s3.title"      : "Cuisine équipée",
+    "lake.svc.s3.text"       : "Cuisine complète avec plaque de cuisson à gaz, four, réfrigérateur et tout le nécessaire.",
+    "lake.svc.s4.title"      : "Machine à laver",
+    "lake.svc.s4.text"       : "Machine à laver disponible pour les séjours plus longs.",
+    "lake.svc.s5.title"      : "Climatisation",
+    "lake.svc.s5.text"       : "Climatisation pour un séjour confortable en toute saison.",
+    "lake.svc.s6.title"      : "Emplacement central",
+    "lake.svc.s6.text"       : "À quelques minutes à pied du front de lac, de la gare et des principaux services.",
+
+    /* ── Emplacement Lake At Home ── */
+    "lake.loc.title"         : "Lecco,\nLac de Côme",
+    "lake.loc.lake.title"    : "Lac de Côme",
+    "lake.loc.lake.text"     : "À quelques minutes à pied de la promenade de Lecco, point de départ pour les randonnées et les sorties en bateau.",
+    "lake.loc.train.title"   : "Gare ferroviaire",
+    "lake.loc.train.text"    : "La gare de Lecco est à quelques minutes à pied, avec des liaisons directes vers Milan et d'autres villes.",
+    "lake.loc.nearby.text"   : "Varenna, Bellagio, Menaggio, Abbaye de Piona, sentiers de la Valsassina.",
+
+    /* ── Galerie Lake At Home ── */
+    "lake.gallery.label"     : "Photos",
+    "lake.gallery.title"     : "Découvrir les espaces",
+
+    /* ── CTA Lake At Home ── */
+    "lake.cta.title"         : "Prêt à découvrir\nle lac de Côme ?",
+    "lake.cta.text"          : "Vérifiez les disponibilités et réservez directement sur Airbnb ou Booking.com.<br>Nous sommes à votre disposition pour toute question.",
+
+    /* ── Pied de page Lake At Home ── */
+    "lake.footer.tagline"    : "Via Pasubio 17, Lecco\nLac de Côme · Centre-ville",
+
+    /* ── Pool & Garden méta ── */
+    "garden.meta.title"      : "Villa avec piscine privée à Leggiuno (Lac Majeur) – Location vacances, 4 personnes",
+    "garden.meta.desc"       : "Maison de vacances avec piscine privée et jardin panoramique à Leggiuno, lac Majeur. 2 chambres, 4 hôtes, vue lac, parking privé. À 30 min de Malpensa. Réservez.",
+
+    /* ── Navigation Pool & Garden ── */
+    "garden.nav.about"       : "La maison",
+    "garden.nav.rooms"       : "Chambres",
+    "garden.nav.services"    : "Équipements",
+    "garden.nav.gallery"     : "Galerie",
+    "garden.nav.location"    : "Emplacement",
+
+    /* ── Hero Pool & Garden ── */
+    "garden.hero.title"      : "Villa avec piscine privée<br><em>à Leggiuno, lac Majeur</em>",
+    "garden.hero.sub"        : "Piscine privée, jardin panoramique et vue imprenable sur le lac Majeur à Leggiuno",
+
+    /* ── Section SEO Pool & Garden ── */
+    "garden.desc.label"      : "La destination",
+    "garden.desc.title"      : "Villa avec piscine privée à Leggiuno, lac Majeur",
+    "garden.desc.p1"         : "Vous cherchez une <strong>maison de vacances avec piscine privée près du lac Majeur</strong> ? Pool &amp; Garden est une villa en location courte durée avec une piscine exclusive et un grand jardin privé, nichée dans la verdure panoramique de Leggiuno, province de Varèse. Avec 2 chambres et une capacité de 4 hôtes, elle offre une totale intimité et une vue imprenable sur le lac Majeur.",
+    "garden.desc.p2"         : "Leggiuno est situé sur un promontoire naturel avec vue directe sur le <strong>lac Majeur</strong>. Via XXIV Maggio 21, où se trouve la propriété, est l'un des endroits les plus panoramiques du village : le jardin et la terrasse jouissent d'une vue dégagée sur le lac et les Alpes piémontaises. À seulement 2 minutes en voiture des plages et à 30 minutes de l'aéroport de Milan Malpensa.",
+    "garden.desc.p3"         : "La <strong>maison de vacances à Leggiuno</strong> dispose de 2 chambres, d'un spacieux salon avec accès direct au jardin, d'une cuisine entièrement équipée avec four et lave-vaisselle, d'une salle de bain avec douche et du Wi-Fi gratuit. Le grand jardin privé avec table et chaises est parfait pour les dîners en plein air au coucher du soleil sur le lac.",
+    "garden.desc.p4"         : "Le point fort est la <strong>piscine privée exclusive</strong>, non partagée avec d'autres logements. Ouverte en saison estivale, entourée d'un espace bronzage avec chaises longues et parasols. Du bord de la piscine, on jouit d'une vue exceptionnelle sur le lac et les collines environnantes.",
+    "garden.desc.p5"         : "La propriété est enregistrée sous CIN IT012088C22FDPNF3K conformément à la réglementation italienne sur les locations courte durée. Disponible sur Airbnb avec réponse rapide.",
+    "garden.desc.nearby_title": "À visiter dans les environs",
+    "garden.desc.near1"      : "Ermitage de Santa Caterina del Sasso – 5 minutes en voiture",
+    "garden.desc.near2"      : "Téléphérique de Laveno Sasso del Ferro – 10 minutes",
+    "garden.desc.near3"      : "Stresa et les îles Borroméennes – 30 minutes",
+    "garden.desc.near4"      : "Villa Taranto et Verbania – 35 minutes",
+    "garden.desc.near5"      : "Lac de Varèse et Sacro Monte di Varese",
+
+    /* ── Points forts Pool & Garden ── */
+    "garden.hl.pool.val"     : "Piscine",
+    "garden.hl.pool.lbl"     : "Privée",
+    "garden.hl.guests.lbl"   : "Hôtes max",
+    "garden.hl.rooms.lbl"    : "Chambres",
+    "garden.hl.airport.lbl"  : "De Malpensa",
+
+    /* ── À propos Pool & Garden ── */
+    "garden.about.label"     : "Votre maison",
+    "garden.about.title"     : "Détente avec piscine\nsur le lac Majeur",
+    "garden.about.p1"        : "Une maison de vacances indépendante avec piscine privée et grand jardin dans une résidence panoramique à Leggiuno. La terrasse et le jardin offrent une vue imprenable sur le lac Majeur et les Alpes environnantes.",
+    "garden.about.p2"        : "Idéale pour les familles et les groupes à la recherche d'intimité et de détente. À 2 minutes des plages et à 30 minutes de l'aéroport de Malpensa, c'est la base parfaite pour explorer le lac Majeur.",
+
+    /* ── Chambres Pool & Garden ── */
+    "garden.rooms.label"     : "Chambres",
+    "garden.rooms.title"     : "Deux chambres, tout le confort",
+    "garden.room1.title"     : "Chambre double",
+    "garden.room1.text"      : "Spacieuse chambre double avec armoire et fenêtres donnant sur le jardin privé.",
+    "garden.room1.d1"        : "🌙 Lit double",
+    "garden.room1.d2"        : "🛟 Armoire",
+    "garden.room1.d3"        : "🌿 Vue jardin",
+    "garden.room2.title"     : "Salon & deuxième chambre",
+    "garden.room2.text"      : "Spacieux salon avec canapé-lit, TV et accès direct au jardin privé.",
+    "garden.room2.d1"        : "🛏 Canapé-lit",
+    "garden.room2.d2"        : "📺 Smart TV",
+    "garden.room2.d3"        : "🌿 Jardin",
+
+    /* ── Services Pool & Garden ── */
+    "garden.svc.label"       : "Équipements",
+    "garden.svc.title"       : "Tout le confort\ndont vous avez besoin",
+    "garden.svc.s1.title"    : "Piscine privée",
+    "garden.svc.s1.text"     : "Piscine à usage exclusif des hôtes, avec espace bronzage et chaises longues.",
+    "garden.svc.s2.title"    : "Jardin privé",
+    "garden.svc.s2.text"     : "Grand jardin privé avec table extérieure, parfait pour les repas en plein air.",
+    "garden.svc.s3.title"    : "Parking privé",
+    "garden.svc.s3.text"     : "Place de parking privée incluse dans le séjour.",
+    "garden.svc.s4.title"    : "Cuisine équipée",
+    "garden.svc.s4.text"     : "Cuisine rustique complète avec four, lave-vaisselle et tout le nécessaire pour cuisiner.",
+    "garden.svc.s5.title"    : "Wi-Fi gratuit",
+    "garden.svc.s5.text"     : "Connexion internet incluse dans toute la maison.",
+    "garden.svc.s6.title"    : "Vue panoramique",
+    "garden.svc.s6.text"     : "Vue imprenable sur le lac Majeur et les montagnes environnantes.",
+
+    /* ── Emplacement Pool & Garden ── */
+    "garden.loc.title"       : "Leggiuno,\nLac Majeur",
+    "garden.loc.lake.title"  : "Lac Majeur",
+    "garden.loc.lake.text"   : "À 2 minutes des plages. Vue panoramique sur le lac et les Alpes depuis la propriété.",
+    "garden.loc.airport.text": "À 30 minutes en voiture de l'aéroport international de Milan Malpensa (MXP).",
+    "garden.loc.nearby.text" : "Ermitage de Santa Caterina del Sasso, téléphérique de Laveno, îles Borroméennes, Stresa.",
+
+    /* ── CTA Pool & Garden ── */
+    "garden.cta.title"       : "Prêt à profiter\ndu lac ?",
+
+    /* ── Pied de page Pool & Garden ── */
+    "garden.footer.tagline"  : "Via XXIV Maggio 21, Leggiuno (VA)\nLac Majeur · 30 min de Malpensa",
+    "garden.footer.col1"     : "Liens utiles",
+    "garden.footer.f1"       : "La maison",
+    "garden.footer.f2"       : "Chambres",
+    "garden.footer.f3"       : "Galerie",
+    "garden.footer.f4"       : "Comment venir",
   }
 };
 
