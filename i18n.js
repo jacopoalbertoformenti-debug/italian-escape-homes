@@ -403,7 +403,7 @@ const IEH_TRANSLATIONS = {
     /* ── Lake At Home hero ── */
     "lake.hero.title"        : "Lake At Home<br><em>Lecco, Lago di Como</em>",
     "lake.hero.sub"          : "Appartamento moderno nel cuore di Lecco, con vista sui monti e a pochi passi dal lungolago",
-    "lake.hero.rating"       : "Eccellente · Su Airbnb",
+    "lake.hero.rating"       : "5.0 · 5 recensioni · Airbnb",
 
     /* ── Lake SEO description section ── */
     "lake.desc.label"        : "La destinazione",
@@ -973,7 +973,7 @@ const IEH_TRANSLATIONS = {
     /* ── Lake At Home hero ── */
     "lake.hero.title"        : "Lake At Home<br><em>Lecco, Lago di Como</em>",
     "lake.hero.sub"          : "Modern apartment in the heart of Lecco, with mountain views and steps from the lakefront",
-    "lake.hero.rating"       : "Excellent · On Airbnb",
+    "lake.hero.rating"       : "5.0 · 5 reviews · Airbnb",
 
     /* ── Lake SEO description section ── */
     "lake.desc.label"        : "The destination",
@@ -1556,7 +1556,7 @@ const IEH_TRANSLATIONS = {
     "lake.desc.near3"        : "Varenna und Comer See – 30 Minuten mit dem Auto",
     "lake.desc.near4"        : "Bellagio – 45 Minuten mit dem Auto",
     "lake.desc.near5"        : "Grigna-Berge und Valsassina (Wandern)",
-    "lake.hero.rating"       : "Ausgezeichnet · Auf Airbnb",
+    "lake.hero.rating"       : "5,0 · 5 Bewertungen · Airbnb",
 
     /* ── Lake highlights ── */
     "lake.hl.view.val"       : "Aussicht",
@@ -2111,7 +2111,7 @@ const IEH_TRANSLATIONS = {
     /* ── Hero Lake At Home ── */
     "lake.hero.title"        : "Lake At Home<br><em>Lecco, Lago di Como</em>",
     "lake.hero.sub"          : "Appartement moderne au cœur de Lecco, avec vue sur les montagnes et à deux pas de la promenade lacustre",
-    "lake.hero.rating"       : "Excellent · Sur Airbnb",
+    "lake.hero.rating"       : "5,0 · 5 avis · Airbnb",
 
     /* ── Section SEO Lake At Home ── */
     "lake.desc.label"        : "La destination",
