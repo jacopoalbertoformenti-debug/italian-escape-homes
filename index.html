@@ -361,6 +361,14 @@
       letter-spacing: .1em; text-transform: uppercase; color: var(--white);
     }
 
+    .prop-badge-new {
+      position: absolute; top: 16px; right: 16px;
+      background: #B68B5C; border-radius: 20px;
+      padding: 5px 14px; font-size: .66rem; font-weight: 500;
+      letter-spacing: .12em; text-transform: uppercase; color: var(--white);
+      box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    }
+
     .prop-body { padding: 28px 30px 32px; flex: 1; display: flex; flex-direction: column; }
 
     .prop-tipo {
@@ -790,28 +798,29 @@
           </div>
         </div>
 
-        <!-- 5. Bernina Apartment – Chiesa in Valmalenco -->
+        <!-- 5. Dolce Vetta Valmalenco – Chiesa in Valmalenco -->
         <div class="prop-card fade-up" style="transition-delay:.25s">
-          <div class="prop-img" data-bg="img/bernina.webp">
-            <div class="prop-badge-location">&#127807; Valmalenco</div>
-            <div class="prop-badge-coming">Prossimamente</div>
-          </div>
+          <a href="./dolce-vetta-valmalenco/" class="prop-img" data-bg="dolce-vetta-valmalenco/img/hero.webp">
+            <div class="prop-badge-location">&#127956; Valmalenco</div>
+            <div class="prop-badge-new">Novit&agrave;</div>
+          </a>
           <div class="prop-body">
-            <p class="prop-tipo" data-i18n="home.card5.tipo">Suite &middot; Montagna</p>
-            <h3>Bernina Apartment</h3>
+            <p class="prop-tipo" data-i18n="home.card5.tipo">Appartamento &middot; Montagna</p>
+            <h3 data-i18n="home.card5.title">Dolce Vetta Valmalenco</h3>
             <p class="prop-desc" data-i18n="home.card5.desc">
-              Una suite di charme ai piedi del Bernina, tra le Alpi della Valmalenco.
-              Perfetta per chi cerca silenzio, natura e panorami alpini indimenticabili.
+              Appartamento di charme nel centro di Chiesa in Valmalenco, ai piedi del Bernina.
+              A pochi passi dalla cabinovia Snow Eagle, perfetto per sci ed escursioni.
             </p>
             <div class="prop-details">
               <span class="prop-detail" data-i18n="home.card5.d1">&#128101; 4 ospiti</span>
-              <span class="prop-detail" data-i18n="home.card5.d2">&#9968; Montagna</span>
-              <span class="prop-detail" data-i18n="home.card5.d3">&#127981; Sci &amp; natura</span>
+              <span class="prop-detail" data-i18n="home.card5.d2">&#127935; Snow Eagle</span>
+              <span class="prop-detail" data-i18n="home.card5.d3">&#127956; Terrazzo privato</span>
             </div>
-            <p class="prop-cin">CIN: <strong>Coming soon</strong></p>
+            <p class="prop-cin">CIN: <strong>IT014019C2Y82LZ89V</strong></p>
             <div class="prop-actions">
-              <span class="btn-card btn-card-disabled" data-i18n="home.card5.soon">In preparazione</span>
-              <a href="#contatti" class="btn-card btn-card-outline" data-i18n="home.card5.info">Informazioni</a>
+              <a href="./dolce-vetta-valmalenco/" class="btn-card btn-card-primary" data-i18n="common.discover">Scopri di pi&ugrave;</a>
+              <a href="https://www.airbnb.it/rooms/1681051848122956854" target="_blank" class="btn-card btn-card-outline">Airbnb</a>
+              <a href="https://www.booking.com/hotel/it/dolce-vetta-valmalenco.it.html" target="_blank" class="btn-card btn-card-outline">Booking</a>
             </div>
           </div>
         </div>
@@ -989,7 +998,7 @@
             <li><a href="https://www.airbnb.it/rooms/936851155880605469" target="_blank">Apartment w/ Pool</a></li>
             <li><a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank">Casa Mariangela Pool</a></li>
             <li><a href="./lake-at-home/">Lake At Home</a></li>
-            <li><a href="#contatti" data-i18n="home.footer.bernina">Bernina Apartment (presto)</a></li>
+            <li><a href="./dolce-vetta-valmalenco/" data-i18n="home.footer.bernina">Dolce Vetta Valmalenco</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -1060,6 +1069,6 @@
       });
     });
   </script>
-  <script src="./i18n.js?v=5" defer></script>
+  <script src="./i18n.js?v=6" defer></script>
 </body>
 </html>
