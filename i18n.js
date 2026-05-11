@@ -665,7 +665,7 @@ const IEH_TRANSLATIONS = {
     "dvv.gal.bedroom"        : "Camera",
     "dvv.gal.terrace"        : "Terrazzo",
     "dvv.gal.bath"           : "Bagno",
-    "dvv.gal.entry"          : "Ingresso",
+    "dvv.gal.entry"          : "Anticamera",
     "dvv.gal.kitchen"        : "Cucina",
     "dvv.gal.openspace"      : "Open space",
 
@@ -1343,7 +1343,7 @@ const IEH_TRANSLATIONS = {
     "dvv.gal.bedroom"        : "Bedroom",
     "dvv.gal.terrace"        : "Terrace",
     "dvv.gal.bath"           : "Bathroom",
-    "dvv.gal.entry"          : "Entry",
+    "dvv.gal.entry"          : "Anteroom",
     "dvv.gal.kitchen"        : "Kitchen",
     "dvv.gal.openspace"      : "Open space",
 
@@ -2016,7 +2016,7 @@ const IEH_TRANSLATIONS = {
     "dvv.gal.bedroom"        : "Schlafzimmer",
     "dvv.gal.terrace"        : "Terrasse",
     "dvv.gal.bath"           : "Badezimmer",
-    "dvv.gal.entry"          : "Eingang",
+    "dvv.gal.entry"          : "Vorzimmer",
     "dvv.gal.kitchen"        : "Küche",
     "dvv.gal.openspace"      : "Open Space",
 
@@ -2691,7 +2691,7 @@ const IEH_TRANSLATIONS = {
     "dvv.gal.bedroom"        : "Chambre",
     "dvv.gal.terrace"        : "Terrasse",
     "dvv.gal.bath"           : "Salle de bains",
-    "dvv.gal.entry"          : "Entrée",
+    "dvv.gal.entry"          : "Antichambre",
     "dvv.gal.kitchen"        : "Cuisine",
     "dvv.gal.openspace"      : "Open space",
 
