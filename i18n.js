@@ -666,6 +666,8 @@ const IEH_TRANSLATIONS = {
     "dvv.gal.terrace"        : "Terrazzo",
     "dvv.gal.bath"           : "Bagno",
     "dvv.gal.entry"          : "Ingresso",
+    "dvv.gal.kitchen"        : "Cucina",
+    "dvv.gal.openspace"      : "Open space",
 
     /* ── Dolce Vetta – FAQ ── */
     "dvv.faq.q1"             : "Dove si trova l'appartamento?",
@@ -1342,6 +1344,8 @@ const IEH_TRANSLATIONS = {
     "dvv.gal.terrace"        : "Terrace",
     "dvv.gal.bath"           : "Bathroom",
     "dvv.gal.entry"          : "Entry",
+    "dvv.gal.kitchen"        : "Kitchen",
+    "dvv.gal.openspace"      : "Open space",
 
     "dvv.faq.q1"             : "Where is the apartment located?",
     "dvv.faq.a1"             : "On Via Squadrani 15A, in the centre of Chiesa in Valmalenco (SO), within walking distance of shops, restaurants and the Snow Eagle cable car.",
@@ -2013,6 +2017,8 @@ const IEH_TRANSLATIONS = {
     "dvv.gal.terrace"        : "Terrasse",
     "dvv.gal.bath"           : "Badezimmer",
     "dvv.gal.entry"          : "Eingang",
+    "dvv.gal.kitchen"        : "Küche",
+    "dvv.gal.openspace"      : "Open Space",
 
     "dvv.faq.q1"             : "Wo befindet sich die Wohnung?",
     "dvv.faq.a1"             : "In der Via Squadrani 15A, im Zentrum von Chiesa in Valmalenco (SO), fußläufig zu Geschäften, Restaurants und der Seilbahn Snow Eagle.",
@@ -2686,6 +2692,8 @@ const IEH_TRANSLATIONS = {
     "dvv.gal.terrace"        : "Terrasse",
     "dvv.gal.bath"           : "Salle de bains",
     "dvv.gal.entry"          : "Entrée",
+    "dvv.gal.kitchen"        : "Cuisine",
+    "dvv.gal.openspace"      : "Open space",
 
     "dvv.faq.q1"             : "Où se trouve l'appartement ?",
     "dvv.faq.a1"             : "Via Squadrani 15A, au centre de Chiesa in Valmalenco (SO), à deux pas des boutiques, des restaurants et du téléphérique Snow Eagle.",
