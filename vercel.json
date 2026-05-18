@@ -1,0 +1,11 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "italianescapeshomes.it" }],
+      "destination": "https://www.italianescapeshomes.it/$1",
+      "permanent": true
+    }
+  ],
+  "trailingSlash": true
+}
