@@ -8,3 +8,4 @@ wrangler.toml
 
 # Git
 .git
+.vercel

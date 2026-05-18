@@ -378,6 +378,8 @@
 
     .prop-body h3 { font-size: 1.55rem; color: var(--dark); margin-bottom: 10px; }
     .prop-card.featured .prop-body h3 { font-size: 1.9rem; }
+    .prop-body-link { display: flex; flex-direction: column; flex: 1; color: inherit; text-decoration: none; cursor: pointer; }
+    .prop-body-link:hover h3 { color: var(--terracotta); transition: color .2s; }
 
     .prop-desc {
       font-size: .87rem; color: var(--text-light); line-height: 1.75;
@@ -697,19 +699,21 @@
             <div class="prop-badge-rating"><span class="star">&#9733;</span> 4.97 &middot; 29 rec.</div>
           </a>
           <div class="prop-body">
-            <p class="prop-tipo" data-i18n="home.card1.tipo">B&amp;B &middot; Mare</p>
-            <h3 data-i18n="home.card1.title">B&amp;B Casa Mariangela</h3>
-            <p class="prop-desc" data-i18n="home.card1.desc">
-              A 30 metri dal mare nel cuore di San Bartolomeo al Mare. Appartamento con 2 camere da letto,
-              aria condizionata, Wi-Fi e parcheggio gratuito. Una delle nostre propriet&agrave; con il punteggio pi&ugrave; alto su Airbnb.
-            </p>
-            <div class="prop-details">
-              <span class="prop-detail" data-i18n="home.card1.d1">&#127968; 2 camere</span>
-              <span class="prop-detail" data-i18n="home.card1.d2">&#128101; 4 ospiti</span>
-              <span class="prop-detail" data-i18n="home.card1.d3">&#127754; 30 m dal mare</span>
-              <span class="prop-detail" data-i18n="home.card1.d4">&#128663; Parcheggio</span>
-            </div>
-            <p class="prop-cin">CIN: <strong>IT008052C22DNK6SGM</strong></p>
+            <a href="./casa-mariangela/" class="prop-body-link">
+              <p class="prop-tipo" data-i18n="home.card1.tipo">B&amp;B &middot; Mare</p>
+              <h3 data-i18n="home.card1.title">B&amp;B Casa Mariangela</h3>
+              <p class="prop-desc" data-i18n="home.card1.desc">
+                A 30 metri dal mare nel cuore di San Bartolomeo al Mare. Appartamento con 2 camere da letto,
+                aria condizionata, Wi-Fi e parcheggio gratuito. Una delle nostre propriet&agrave; con il punteggio pi&ugrave; alto su Airbnb.
+              </p>
+              <div class="prop-details">
+                <span class="prop-detail" data-i18n="home.card1.d1">&#127968; 2 camere</span>
+                <span class="prop-detail" data-i18n="home.card1.d2">&#128101; 4 ospiti</span>
+                <span class="prop-detail" data-i18n="home.card1.d3">&#127754; 30 m dal mare</span>
+                <span class="prop-detail" data-i18n="home.card1.d4">&#128663; Parcheggio</span>
+              </div>
+              <p class="prop-cin">CIN: <strong>IT008052C22DNK6SGM</strong></p>
+            </a>
             <div class="prop-actions">
               <a href="./casa-mariangela/" class="btn-card btn-card-primary" data-i18n="common.discover">Scopri di pi&ugrave;</a>
               <a href="https://www.airbnb.it/rooms/1022566699352195921" target="_blank" class="btn-card btn-card-outline">Airbnb</a>
@@ -725,18 +729,20 @@
             <div class="prop-badge-rating"><span class="star">&#9733;</span> 4.68 &middot; 25 rec.</div>
           </a>
           <div class="prop-body">
-            <p class="prop-tipo" data-i18n="home.card2.tipo">Appartamento &middot; Lago</p>
-            <h3 data-i18n="home.card2.title">Apartment with swimming pool</h3>
-            <p class="prop-desc" data-i18n="home.card2.desc">
-              In un residence panoramico immerso nel verde, a 2 minuti dal Lago Maggiore.
-              Piscina stagionale, sentieri e vicinanza alle attrazioni locali.
-            </p>
-            <div class="prop-details">
-              <span class="prop-detail" data-i18n="home.card2.d1">&#128101; 4 ospiti</span>
-              <span class="prop-detail" data-i18n="home.card2.d2">&#127946; Piscina</span>
-              <span class="prop-detail" data-i18n="home.card2.d3">&#9992; 30 min da Malpensa</span>
-            </div>
-            <p class="prop-cin">CIN: <strong>IT012088C2B2FQHKFY</strong></p>
+            <a href="./appartamento-piscina/" class="prop-body-link">
+              <p class="prop-tipo" data-i18n="home.card2.tipo">Appartamento &middot; Lago</p>
+              <h3 data-i18n="home.card2.title">Apartment with swimming pool</h3>
+              <p class="prop-desc" data-i18n="home.card2.desc">
+                In un residence panoramico immerso nel verde, a 2 minuti dal Lago Maggiore.
+                Piscina stagionale, sentieri e vicinanza alle attrazioni locali.
+              </p>
+              <div class="prop-details">
+                <span class="prop-detail" data-i18n="home.card2.d1">&#128101; 4 ospiti</span>
+                <span class="prop-detail" data-i18n="home.card2.d2">&#127946; Piscina</span>
+                <span class="prop-detail" data-i18n="home.card2.d3">&#9992; 30 min da Malpensa</span>
+              </div>
+              <p class="prop-cin">CIN: <strong>IT012088C2B2FQHKFY</strong></p>
+            </a>
             <div class="prop-actions">
               <a href="./appartamento-piscina/" class="btn-card btn-card-primary" data-i18n="common.discover">Scopri di pi&ugrave;</a>
               <a href="https://www.airbnb.it/rooms/936851155880605469" target="_blank" class="btn-card btn-card-outline">Airbnb</a>
@@ -751,19 +757,21 @@
             <div class="prop-badge-location">&#127807; Lago Maggiore</div>
           </a>
           <div class="prop-body">
-            <p class="prop-tipo" data-i18n="home.card3.tipo">Casa &middot; Lago</p>
-            <h3 data-i18n="home.card3.title">Casa Mariangela: Pool &amp; Garden</h3>
-            <p class="prop-desc" data-i18n="home.card3.desc">
-              Alloggio tranquillo con piscina e ampio giardino privato, in un residence panoramico
-              a 2 minuti dal Lago Maggiore e 30 minuti da Malpensa.
-            </p>
-            <div class="prop-details">
-              <span class="prop-detail" data-i18n="home.card3.d1">&#128101; 4 ospiti</span>
-              <span class="prop-detail" data-i18n="home.card3.d2">&#127946; Piscina privata</span>
-              <span class="prop-detail" data-i18n="home.card3.d3">&#127807; Giardino</span>
-              <span class="prop-detail" data-i18n="home.card3.d4">&#127796; Vista lago</span>
-            </div>
-            <p class="prop-cin">CIN: <strong>IT012088C22FDPNF3K</strong></p>
+            <a href="./pool-and-garden/" class="prop-body-link">
+              <p class="prop-tipo" data-i18n="home.card3.tipo">Casa &middot; Lago</p>
+              <h3 data-i18n="home.card3.title">Casa Mariangela: Pool &amp; Garden</h3>
+              <p class="prop-desc" data-i18n="home.card3.desc">
+                Alloggio tranquillo con piscina e ampio giardino privato, in un residence panoramico
+                a 2 minuti dal Lago Maggiore e 30 minuti da Malpensa.
+              </p>
+              <div class="prop-details">
+                <span class="prop-detail" data-i18n="home.card3.d1">&#128101; 4 ospiti</span>
+                <span class="prop-detail" data-i18n="home.card3.d2">&#127946; Piscina privata</span>
+                <span class="prop-detail" data-i18n="home.card3.d3">&#127807; Giardino</span>
+                <span class="prop-detail" data-i18n="home.card3.d4">&#127796; Vista lago</span>
+              </div>
+              <p class="prop-cin">CIN: <strong>IT012088C22FDPNF3K</strong></p>
+            </a>
             <div class="prop-actions">
               <a href="./pool-and-garden/" class="btn-card btn-card-primary" data-i18n="common.discover">Scopri di pi&ugrave;</a>
               <a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank" class="btn-card btn-card-outline">Airbnb</a>
@@ -778,18 +786,20 @@
             <div class="prop-badge-rating"><span class="star">&#9733;</span> 5.0 &middot; 5 rec.</div>
           </a>
           <div class="prop-body">
-            <p class="prop-tipo" data-i18n="home.card4.tipo">Appartamento &middot; Lago</p>
-            <h3 data-i18n="home.card4.title">Lake At Home</h3>
-            <p class="prop-desc" data-i18n="home.card4.desc">
-              Appartamento moderno nel cuore di Lecco, con vista spettacolare sui monti e sul lago.
-              A pochi passi dal lungolago e dalla stazione.
-            </p>
-            <div class="prop-details">
-              <span class="prop-detail" data-i18n="home.card4.d1">&#128101; 4 ospiti</span>
-              <span class="prop-detail" data-i18n="home.card4.d2">&#9741; Vista lago</span>
-              <span class="prop-detail" data-i18n="home.card4.d3">&#127968; Lecco</span>
-            </div>
-            <p class="prop-cin">CIN: <strong>IT097042C246M9KVYP</strong></p>
+            <a href="./lake-at-home/" class="prop-body-link">
+              <p class="prop-tipo" data-i18n="home.card4.tipo">Appartamento &middot; Lago</p>
+              <h3 data-i18n="home.card4.title">Lake At Home</h3>
+              <p class="prop-desc" data-i18n="home.card4.desc">
+                Appartamento moderno nel cuore di Lecco, con vista spettacolare sui monti e sul lago.
+                A pochi passi dal lungolago e dalla stazione.
+              </p>
+              <div class="prop-details">
+                <span class="prop-detail" data-i18n="home.card4.d1">&#128101; 4 ospiti</span>
+                <span class="prop-detail" data-i18n="home.card4.d2">&#9741; Vista lago</span>
+                <span class="prop-detail" data-i18n="home.card4.d3">&#127968; Lecco</span>
+              </div>
+              <p class="prop-cin">CIN: <strong>IT097042C246M9KVYP</strong></p>
+            </a>
             <div class="prop-actions">
               <a href="./lake-at-home/" class="btn-card btn-card-primary" data-i18n="common.discover">Scopri di pi&ugrave;</a>
               <a href="https://www.airbnb.it/rooms/1550769806025179622" target="_blank" class="btn-card btn-card-outline">Airbnb</a>
@@ -805,18 +815,20 @@
             <div class="prop-badge-new">Novit&agrave;</div>
           </a>
           <div class="prop-body">
-            <p class="prop-tipo" data-i18n="home.card5.tipo">Appartamento &middot; Montagna</p>
-            <h3 data-i18n="home.card5.title">Dolce Vetta Valmalenco</h3>
-            <p class="prop-desc" data-i18n="home.card5.desc">
-              Appartamento di charme nel centro di Chiesa in Valmalenco, ai piedi del Bernina.
-              A pochi passi dalla cabinovia Snow Eagle, perfetto per sci ed escursioni.
-            </p>
-            <div class="prop-details">
-              <span class="prop-detail" data-i18n="home.card5.d1">&#128101; 4 ospiti</span>
-              <span class="prop-detail" data-i18n="home.card5.d2">&#127935; Snow Eagle</span>
-              <span class="prop-detail" data-i18n="home.card5.d3">&#127956; Terrazzo privato</span>
-            </div>
-            <p class="prop-cin">CIN: <strong>IT014019C2Y82LZ89V</strong></p>
+            <a href="./dolce-vetta-valmalenco/" class="prop-body-link">
+              <p class="prop-tipo" data-i18n="home.card5.tipo">Appartamento &middot; Montagna</p>
+              <h3 data-i18n="home.card5.title">Dolce Vetta Valmalenco</h3>
+              <p class="prop-desc" data-i18n="home.card5.desc">
+                Appartamento di charme nel centro di Chiesa in Valmalenco, ai piedi del Bernina.
+                A pochi passi dalla cabinovia Snow Eagle, perfetto per sci ed escursioni.
+              </p>
+              <div class="prop-details">
+                <span class="prop-detail" data-i18n="home.card5.d1">&#128101; 4 ospiti</span>
+                <span class="prop-detail" data-i18n="home.card5.d2">&#127935; Snow Eagle</span>
+                <span class="prop-detail" data-i18n="home.card5.d3">&#127956; Terrazzo privato</span>
+              </div>
+              <p class="prop-cin">CIN: <strong>IT014019C2Y82LZ89V</strong></p>
+            </a>
             <div class="prop-actions">
               <a href="./dolce-vetta-valmalenco/" class="btn-card btn-card-primary" data-i18n="common.discover">Scopri di pi&ugrave;</a>
               <a href="https://www.airbnb.it/rooms/1681051848122956854" target="_blank" class="btn-card btn-card-outline">Airbnb</a>

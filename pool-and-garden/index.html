@@ -234,7 +234,14 @@
     .lightbox.open { display: flex; }
     .lightbox img { max-width: 90vw; max-height: 88vh; border-radius: 8px; object-fit: contain; }
     .lightbox-close { position: absolute; top: 24px; right: 32px; color: rgba(255,255,255,.7); font-size: 2rem; cursor: pointer; }
-    .lightbox-caption { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+    .lightbox-media { position: relative; }
+    .lightbox-caption { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.85); white-space: nowrap; }
+    .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,.15); border: none; color: #fff; font-size: 2.2rem; width: 52px; height: 52px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .2s; user-select: none; line-height: 1; }
+    .lightbox-nav:hover { background: rgba(255,255,255,.28); }
+    .lightbox-prev { left: 20px; }
+    .lightbox-next { right: 20px; }
+    .lightbox-counter { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,.85); font-size: .78rem; letter-spacing: .12em; white-space: nowrap; }
+    @media (max-width: 600px) { .lightbox-nav { width: 40px; height: 40px; font-size: 1.6rem; } .lightbox-prev { left: 8px; } .lightbox-next { right: 8px; } }
 
     /* ── CTA ── */
     #contatti { background: var(--green); padding: 96px 0; text-align: center; }
@@ -743,10 +750,15 @@
   </footer>
 
   <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <span class="lightbox-close">&times;</span>
-    <img id="lightboxImg" src="" alt="" />
-    <div class="lightbox-caption" id="lightboxCaption"></div>
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">&#8249;</button>
+    <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">&#8250;</button>
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <div class="lightbox-media">
+      <img id="lightboxImg" src="" alt="" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+      <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
   </div>
 
   <script>
@@ -772,12 +784,46 @@
     }
     function nextSlide() { goToSlide((current + 1) % slides.length); }
 
+    let _lbImages = [], _lbIndex = 0;
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      const m = (item.getAttribute('onclick') || '').match(/openLightbox\('([^']+)','([^']+)'\)/);
+      if (m) _lbImages.push({ src: m[1], caption: m[2] });
+    });
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+    (function() {
+      let tx = 0, lb = document.getElementById('lightbox');
+      lb.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+      lb.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) navigateLightbox(dx < 0 ? 1 : -1); }, { passive: true });
+    })();
     function openLightbox(src, caption) {
-      document.getElementById('lightboxImg').src = src;
-      document.getElementById('lightboxCaption').textContent = caption;
+      const idx = _lbImages.findIndex(img => img.src === src);
+      _lbIndex = idx >= 0 ? idx : 0;
+      _showLightboxImage();
       document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
     }
-    function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); }
+    function _showLightboxImage() {
+      const item = _lbImages[_lbIndex];
+      document.getElementById('lightboxImg').src = item.src;
+      document.getElementById('lightboxCaption').textContent = item.caption;
+      document.getElementById('lightboxCounter').textContent = (_lbIndex + 1) + ' / ' + _lbImages.length;
+    }
+    function navigateLightbox(dir) {
+      _lbIndex = (_lbIndex + dir + _lbImages.length) % _lbImages.length;
+      _showLightboxImage();
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'ArrowRight') navigateLightbox(1);
+      else if (e.key === 'ArrowLeft') navigateLightbox(-1);
+      else if (e.key === 'Escape') closeLightbox();
+    });
 
     const fadeEls = document.querySelectorAll('.fade-up');
     const observer = new IntersectionObserver(entries => {
