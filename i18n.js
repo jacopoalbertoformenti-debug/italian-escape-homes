@@ -58,7 +58,7 @@ const IEH_TRANSLATIONS = {
     "garden.faq.q4" : "Quanto dista da Milano e da Malpensa?",
     "garden.faq.a4" : "Circa 50 minuti da Milano e 30 minuti dall'aeroporto internazionale di Malpensa (MXP).",
     "garden.faq.q5" : "Come si prenota?",
-    "garden.faq.a5" : "Direttamente su Airbnb. Per domande siamo disponibili via telefono o email.",
+    "garden.faq.a5" : "Direttamente su Airbnb o Booking.com. Per domande siamo disponibili via telefono o email.",
 
     /* ── FAQ – Casa Mariangela ── */
     "mari.faq.q1" : "Quanto dista Casa Mariangela dal mare?",
@@ -505,7 +505,7 @@ const IEH_TRANSLATIONS = {
     "garden.desc.p2"         : "Leggiuno è collocato su un promontorio naturale con affaccio diretto sul <strong>Lago Maggiore</strong>. Via XXIV Maggio 21, dove si trova la proprietà, è una delle zone più panoramiche del paese: il giardino e la terrazza godono di una vista libera sul lago e sulle Alpi piemontesi. A soli 2 minuti in auto dalle spiagge e 30 minuti dall'aeroporto di Milano Malpensa.",
     "garden.desc.p3"         : "La <strong>casa vacanze a Leggiuno</strong> dispone di 2 camere da letto, un ampio soggiorno con accesso diretto al giardino, cucina completamente attrezzata con forno e lavastoviglie, bagno con doccia e Wi-Fi gratuito. L'ampio giardino privato con tavolo e sedie è perfetto per cene all'aperto al tramonto sul lago.",
     "garden.desc.p4"         : "Il fiore all'occhiello è la <strong>piscina privata esclusiva</strong>, non condivisa con altri alloggi. Aperta nella stagione estiva, circondata da spazi relax con lettini e ombrelloni. Dal bordo piscina si gode di un panorama eccezionale sul lago e sui rilievi circostanti. La sera, i tramonti sul Lago Maggiore sono semplicemente indimenticabili.",
-    "garden.desc.p5"         : "L'immobile è registrato con CIN IT012088C22FDPNF3K nel rispetto della normativa italiana sugli affitti brevi. Disponibile su Airbnb con risposta rapida.",
+    "garden.desc.p5"         : "L'immobile è registrato con CIN IT012088C22FDPNF3K nel rispetto della normativa italiana sugli affitti brevi. Disponibile su Airbnb e Booking.com con risposta rapida.",
     "garden.desc.nearby_title": "Cosa visitare nei dintorni",
     "garden.desc.near1"      : "Eremo di Santa Caterina del Sasso – 5 minuti in auto",
     "garden.desc.near2"      : "Funivia del Sasso del Ferro di Laveno – 10 minuti",
@@ -746,7 +746,7 @@ const IEH_TRANSLATIONS = {
     "garden.faq.q4" : "How far is it from Milan and Malpensa Airport?",
     "garden.faq.a4" : "About 50 minutes from Milan and 30 minutes from Milan Malpensa International Airport (MXP).",
     "garden.faq.q5" : "How do I book?",
-    "garden.faq.a5" : "Directly on Airbnb. For questions we are available by phone or email.",
+    "garden.faq.a5" : "Directly on Airbnb or Booking.com. For questions we are available by phone or email.",
 
     /* ── FAQ – Casa Mariangela ── */
     "mari.faq.q1" : "How far is Casa Mariangela from the sea?",
@@ -1193,7 +1193,7 @@ const IEH_TRANSLATIONS = {
     "garden.desc.p2"         : "Leggiuno sits on a natural promontory overlooking <strong>Lake Maggiore</strong>. Via XXIV Maggio 21, where the property stands, is one of the most scenic spots in the village: the garden and terrace enjoy unobstructed views of the lake and the Piedmontese Alps. Just 2 minutes by car from the lake beaches and 30 minutes from Milan Malpensa Airport.",
     "garden.desc.p3"         : "The <strong>holiday house in Leggiuno</strong> features 2 bedrooms, a spacious living room with direct garden access, a fully equipped kitchen with oven and dishwasher, a shower bathroom and free Wi-Fi. The large private garden with table and chairs is perfect for outdoor dinners at sunset over the lake.",
     "garden.desc.p4"         : "The highlight is the <strong>exclusive private pool</strong>, not shared with other properties. Open in summer, surrounded by a sunbathing area with loungers and umbrellas. From the poolside, the views of the lake and surrounding hills are simply unforgettable.",
-    "garden.desc.p5"         : "The property is registered under CIN IT012088C22FDPNF3K in compliance with Italian short-term rental regulations. Available on Airbnb with fast response.",
+    "garden.desc.p5"         : "The property is registered under CIN IT012088C22FDPNF3K in compliance with Italian short-term rental regulations. Available on Airbnb and Booking.com with fast response.",
     "garden.desc.nearby_title": "Nearby attractions",
     "garden.desc.near1"      : "Santa Caterina del Sasso Hermitage – 5 minutes by car",
     "garden.desc.near2"      : "Laveno Ferro Cable Car – 10 minutes",
@@ -1422,7 +1422,7 @@ const IEH_TRANSLATIONS = {
     "garden.faq.q4" : "Wie weit ist es von Mailand und dem Flughafen Malpensa?",
     "garden.faq.a4" : "Etwa 50 Minuten von Mailand und 30 Minuten vom internationalen Flughafen Mailand Malpensa (MXP).",
     "garden.faq.q5" : "Wie kann ich buchen?",
-    "garden.faq.a5" : "Direkt auf Airbnb. Bei Fragen stehen wir per Telefon oder E-Mail zur Verfügung.",
+    "garden.faq.a5" : "Direkt auf Airbnb oder Booking.com. Bei Fragen stehen wir per Telefon oder E-Mail zur Verfügung.",
 
     /* ── Casa Mariangela FAQ ── */
     "mari.faq.q1" : "Wie weit ist Casa Mariangela vom Meer entfernt?",
@@ -1867,7 +1867,7 @@ const IEH_TRANSLATIONS = {
     "garden.desc.p2"         : "Leggiuno liegt auf einem natürlichen Vorsprung mit direktem Blick auf den <strong>Lago Maggiore</strong>. Via XXIV Maggio 21, wo sich die Unterkunft befindet, ist einer der malerischsten Orte des Dorfes: Garten und Terrasse genießen freien Blick auf den See und die piemontesischen Alpen. Nur 2 Autominuten von den Stränden und 30 Minuten vom Flughafen Mailand Malpensa.",
     "garden.desc.p3"         : "Das <strong>Ferienhaus in Leggiuno</strong> verfügt über 2 Schlafzimmer, ein geräumiges Wohnzimmer mit direktem Gartenzugang, vollständig ausgestattete Küche mit Ofen und Spülmaschine, Duschbad und kostenloses WLAN. Der große Privatgarten mit Tisch und Stühlen eignet sich perfekt für Abendessen im Freien bei Sonnenuntergang über dem See.",
     "garden.desc.p4"         : "Das Highlight ist der <strong>exklusive Privatpool</strong>, nicht mit anderen Unterkünften geteilt. Im Sommer geöffnet, umgeben von einer Sonnenterrasse mit Sonnenliegen und Sonnenschirmen. Vom Poolrand aus genießt man einen außergewöhnlichen Panoramablick auf den See und die umliegenden Hügel.",
-    "garden.desc.p5"         : "Die Unterkunft ist unter CIN IT012088C22FDPNF3K gemäß den italienischen Kurzzeitvermietungsvorschriften registriert. Verfügbar auf Airbnb mit schneller Antwort.",
+    "garden.desc.p5"         : "Die Unterkunft ist unter CIN IT012088C22FDPNF3K gemäß den italienischen Kurzzeitvermietungsvorschriften registriert. Verfügbar auf Airbnb und Booking.com mit schneller Antwort.",
     "garden.desc.nearby_title": "Sehenswürdigkeiten in der Nähe",
     "garden.desc.near1"      : "Einsiedelei Santa Caterina del Sasso – 5 Minuten mit dem Auto",
     "garden.desc.near2"      : "Seilbahn Laveno Sasso del Ferro – 10 Minuten",
@@ -2096,7 +2096,7 @@ const IEH_TRANSLATIONS = {
     "garden.faq.q4" : "À quelle distance se trouvent Milan et l'aéroport de Malpensa ?",
     "garden.faq.a4" : "Environ 50 minutes de Milan et 30 minutes de l'aéroport international de Milan Malpensa (MXP).",
     "garden.faq.q5" : "Comment réserver ?",
-    "garden.faq.a5" : "Directement sur Airbnb. Pour toute question, nous sommes disponibles par téléphone ou e-mail.",
+    "garden.faq.a5" : "Directement sur Airbnb ou Booking.com. Pour toute question, nous sommes disponibles par téléphone ou e-mail.",
 
     /* ── FAQ – Casa Mariangela ── */
     "mari.faq.q1" : "À quelle distance se trouve Casa Mariangela de la mer ?",
@@ -2543,7 +2543,7 @@ const IEH_TRANSLATIONS = {
     "garden.desc.p2"         : "Leggiuno est situé sur un promontoire naturel avec vue directe sur le <strong>lac Majeur</strong>. Via XXIV Maggio 21, où se trouve la propriété, est l'un des endroits les plus panoramiques du village : le jardin et la terrasse jouissent d'une vue dégagée sur le lac et les Alpes piémontaises. À seulement 2 minutes en voiture des plages et à 30 minutes de l'aéroport de Milan Malpensa.",
     "garden.desc.p3"         : "La <strong>maison de vacances à Leggiuno</strong> dispose de 2 chambres, d'un spacieux salon avec accès direct au jardin, d'une cuisine entièrement équipée avec four et lave-vaisselle, d'une salle de bain avec douche et du Wi-Fi gratuit. Le grand jardin privé avec table et chaises est parfait pour les dîners en plein air au coucher du soleil sur le lac.",
     "garden.desc.p4"         : "Le point fort est la <strong>piscine privée exclusive</strong>, non partagée avec d'autres logements. Ouverte en saison estivale, entourée d'un espace bronzage avec chaises longues et parasols. Du bord de la piscine, on jouit d'une vue exceptionnelle sur le lac et les collines environnantes.",
-    "garden.desc.p5"         : "La propriété est enregistrée sous CIN IT012088C22FDPNF3K conformément à la réglementation italienne sur les locations courte durée. Disponible sur Airbnb avec réponse rapide.",
+    "garden.desc.p5"         : "La propriété est enregistrée sous CIN IT012088C22FDPNF3K conformément à la réglementation italienne sur les locations courte durée. Disponible sur Airbnb et Booking.com avec réponse rapide.",
     "garden.desc.nearby_title": "À visiter dans les environs",
     "garden.desc.near1"      : "Ermitage de Santa Caterina del Sasso – 5 minutes en voiture",
     "garden.desc.near2"      : "Téléphérique de Laveno Sasso del Ferro – 10 minutes",
