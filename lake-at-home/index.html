@@ -566,35 +566,78 @@
     </div>
   </div>
 
-  <!-- ── DESCRIZIONE SEO ──────────────────────────────────────────── -->
-  <section id="descrizione" style="background:var(--white)">
+  <!-- ── GALLERIA ──────────────────────────────────────────────────── -->
+  <section id="galleria">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label" data-i18n="lake.desc.label">La destinazione</p>
-        <h2 class="section-title" data-i18n="lake.desc.title">Appartamento a Lecco sul Lago di Como</h2>
+        <p class="section-label" data-i18n="lake.gallery.label">Immagini</p>
+        <h2 class="section-title" data-i18n="lake.gallery.title">Scopri gli spazi</h2>
         <div class="section-divider"></div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px">
-        <div class="fade-up" style="transition-delay:.1s">
-          <p class="section-text" style="max-width:100%" data-i18n-html="lake.desc.p1">Cercate un <strong>appartamento a Lecco sul Lago di Como</strong> per un affitto breve? Lake At Home è la scelta ideale: un appartamento di design completamente ristrutturato, nel cuore del centro storico di Lecco, a pochi passi dal <strong>lungolago del Lago di Como</strong> e dalla stazione ferroviaria. Ospita fino a 4 persone in 2 camere da letto moderne e luminose.</p>
-          <br>
-          <p class="section-text" style="max-width:100%" data-i18n-html="lake.desc.p2"><strong>Lecco</strong> è una città affascinante adagiata all&rsquo;estremità meridionale del ramo orientale del Lago di Como, circondata dalle pareti dolomitiche delle Grigne e dal massiccio del Resegone. Conosciuta come la città di Alessandro Manzoni, Lecco offre un lungolago scenografico, un centro storico vivace e una posizione perfetta per escursioni in montagna, giri in barca e visite ai borghi del lago. Via Pasubio, dove si trova Lake At Home, è nel cuore della città, a meno di 5 minuti a piedi dal lungolago.</p>
-          <br>
-          <p class="section-text" style="max-width:100%" data-i18n-html="lake.desc.p3">L&rsquo;appartamento Lake At Home dispone di <strong>2 camere da letto</strong> con design contemporaneo, soggiorno open space con zona dining e cucina attrezzata, 2 bagni moderni con doccia, Smart TV, Wi-Fi ad alta velocità gratuito e aria condizionata. Dalle finestre si apre una spettacolare <strong>vista sul Lago di Como e sui monti lecchesi</strong>, che al tramonto si tingono di colori caldi e unici.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item wide fade-up" onclick="openLightbox('images/tramonto.webp','Vista tramonto su Lecco')">
+          <img src="images/tramonto.webp" alt="Tramonto sul Lago di Como da appartamento affitto breve Lecco" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Vista tramonto</span></div>
         </div>
-        <div class="fade-up" style="transition-delay:.2s">
-          <p class="section-text" style="max-width:100%" data-i18n-html="lake.desc.p4">La posizione è uno dei punti di forza principali: a pochi minuti a piedi dal lungolago di Lecco, dalla Piazza XX Settembre e dalla stazione ferroviaria (collegamento diretto per Milano in 40 minuti). I ristoranti, bar e negozi del centro sono raggiungibili a piedi. In auto, i borghi di <strong>Varenna e Bellagio sul Lago di Como</strong> sono a 30-45 minuti.</p>
-          <br>
-          <p class="section-text" style="max-width:100%" data-i18n="lake.desc.p5">L'appartamento è registrato con CIN IT097042C246M9KVYP nel rispetto della normativa italiana sugli affitti brevi. Disponibile su Airbnb e Booking.com con risposta rapida garantita.</p>
-          <br>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--dark);margin-bottom:16px" data-i18n="lake.desc.nearby_title">Cosa visitare nei dintorni</h3>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="lake.desc.near1">Lungolago di Lecco &ndash; 5 minuti a piedi</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="lake.desc.near2">Stazione Lecco (Milano in 40 min) &ndash; 5 min a piedi</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="lake.desc.near3">Varenna e Lago di Como &ndash; 30 minuti in auto</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="lake.desc.near4">Bellagio &ndash; 45 minuti in auto</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="lake.desc.near5">Grigne e Valsassina (escursioni)</span></li>
-          </ul>
+        <div class="gallery-item fade-up" onclick="openLightbox('images/vista-lago.webp','Vista lago e monti')">
+          <img src="images/vista-lago.webp" alt="Vista Lago di Como e monti lecchesi da appartamento Lake At Home" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Vista lago</span></div>
+        </div>
+        <div class="gallery-item fade-up" onclick="openLightbox('images/soggiorno.webp','Soggiorno')">
+          <img src="images/soggiorno.webp" alt="Soggiorno open space appartamento Lake At Home Lecco Lago di Como" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Soggiorno</span></div>
+        </div>
+        <div class="gallery-item fade-up" onclick="openLightbox('images/soggiorno2.webp','Soggiorno')">
+          <img src="images/soggiorno2.webp" alt="Zona living appartamento affitto breve Lecco Lago di Como" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Soggiorno</span></div>
+        </div>
+        <div class="gallery-item wide fade-up" onclick="openLightbox('images/sala-pranzo1.webp','Zona pranzo')">
+          <img src="images/sala-pranzo1.webp" alt="Zona pranzo appartamento affitto breve Lecco centro" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Zona pranzo</span></div>
+        </div>
+        <div class="gallery-item fade-up" onclick="openLightbox('images/sala-pranzo2.webp','Tavolo da pranzo')">
+          <img src="images/sala-pranzo2.webp" alt="Tavolo da pranzo appartamento Lake At Home affitto breve Lecco" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Tavolo da pranzo</span></div>
+        </div>
+        <div class="gallery-item fade-up" onclick="openLightbox('images/cucina1.webp','Cucina')">
+          <img src="images/cucina1.webp" alt="Cucina attrezzata appartamento Lake At Home Lecco" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Cucina</span></div>
+        </div>
+        <div class="gallery-item wide fade-up" onclick="openLightbox('images/cucina2.webp','Cucina con affaccio')">
+          <img src="images/cucina2.webp" alt="Cucina attrezzata con affaccio sui monti lecchesi appartamento Lecco" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Cucina con affaccio</span></div>
+        </div>
+        <div class="gallery-item fade-up" onclick="openLightbox('images/camera.webp','Camera da letto')">
+          <img src="images/camera.webp" alt="Camera matrimoniale appartamento Lake At Home Lecco Lago di Como" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Camera da letto</span></div>
+        </div>
+        <div class="gallery-item fade-up" onclick="openLightbox('images/camera2.webp','Camera da letto')">
+          <img src="images/camera2.webp" alt="Seconda camera da letto appartamento affitto breve Lecco" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Camera da letto</span></div>
+        </div>
+        <div class="gallery-item fade-up" onclick="openLightbox('images/camera3.webp','Camera da letto')">
+          <img src="images/camera3.webp" alt="Camera design affitto breve Lecco Lago di Como" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Camera da letto</span></div>
+        </div>
+        <div class="gallery-item fade-up" onclick="openLightbox('images/camera-tv.webp','Camera con TV')">
+          <img src="images/camera-tv.webp" alt="Camera con Smart TV appartamento Lake At Home Lecco" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Camera con TV</span></div>
+        </div>
+        <div class="gallery-item fade-up" onclick="openLightbox('images/bagno.webp','Bagno')">
+          <img src="images/bagno.webp" alt="Bagno con doccia appartamento affitto breve Lecco Lago di Como" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Bagno</span></div>
+        </div>
+        <div class="gallery-item fade-up" onclick="openLightbox('images/doccia.webp','Doccia')">
+          <img src="images/doccia.webp" alt="Doccia moderna appartamento Lake At Home Lecco" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Doccia</span></div>
+        </div>
+        <div class="gallery-item fade-up" onclick="openLightbox('images/vista-finestra.webp','Vista dalla finestra')">
+          <img src="images/vista-finestra.webp" alt="Vista Lago di Como e monti lecchesi dalla finestra appartamento Lecco" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Vista dalla finestra</span></div>
+        </div>
+        <div class="gallery-item fade-up" onclick="openLightbox('images/balcone.webp','Balcone')">
+          <img src="images/balcone.webp" alt="Balcone appartamento Lake At Home Lecco con vista lago e monti" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Balcone</span></div>
         </div>
       </div>
     </div>
@@ -729,82 +772,6 @@
     </div>
   </section>
 
-  <!-- ── GALLERIA ──────────────────────────────────────────────────── -->
-  <section id="galleria">
-    <div class="section-inner">
-      <div class="fade-up">
-        <p class="section-label" data-i18n="lake.gallery.label">Immagini</p>
-        <h2 class="section-title" data-i18n="lake.gallery.title">Scopri gli spazi</h2>
-        <div class="section-divider"></div>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item wide fade-up" onclick="openLightbox('images/tramonto.webp','Vista tramonto su Lecco')">
-          <img src="images/tramonto.webp" alt="Tramonto sul Lago di Como da appartamento affitto breve Lecco" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Vista tramonto</span></div>
-        </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/vista-lago.webp','Vista lago e monti')">
-          <img src="images/vista-lago.webp" alt="Vista Lago di Como e monti lecchesi da appartamento Lake At Home" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Vista lago</span></div>
-        </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/soggiorno.webp','Soggiorno')">
-          <img src="images/soggiorno.webp" alt="Soggiorno open space appartamento Lake At Home Lecco Lago di Como" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Soggiorno</span></div>
-        </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/soggiorno2.webp','Soggiorno')">
-          <img src="images/soggiorno2.webp" alt="Zona living appartamento affitto breve Lecco Lago di Como" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Soggiorno</span></div>
-        </div>
-        <div class="gallery-item wide fade-up" onclick="openLightbox('images/sala-pranzo1.webp','Zona pranzo')">
-          <img src="images/sala-pranzo1.webp" alt="Zona pranzo appartamento affitto breve Lecco centro" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Zona pranzo</span></div>
-        </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/sala-pranzo2.webp','Tavolo da pranzo')">
-          <img src="images/sala-pranzo2.webp" alt="Tavolo da pranzo appartamento Lake At Home affitto breve Lecco" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Tavolo da pranzo</span></div>
-        </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/cucina1.webp','Cucina')">
-          <img src="images/cucina1.webp" alt="Cucina attrezzata appartamento Lake At Home Lecco" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Cucina</span></div>
-        </div>
-        <div class="gallery-item wide fade-up" onclick="openLightbox('images/cucina2.webp','Cucina con affaccio')">
-          <img src="images/cucina2.webp" alt="Cucina attrezzata con affaccio sui monti lecchesi appartamento Lecco" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Cucina con affaccio</span></div>
-        </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/camera.webp','Camera da letto')">
-          <img src="images/camera.webp" alt="Camera matrimoniale appartamento Lake At Home Lecco Lago di Como" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Camera da letto</span></div>
-        </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/camera2.webp','Camera da letto')">
-          <img src="images/camera2.webp" alt="Seconda camera da letto appartamento affitto breve Lecco" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Camera da letto</span></div>
-        </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/camera3.webp','Camera da letto')">
-          <img src="images/camera3.webp" alt="Camera design affitto breve Lecco Lago di Como" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Camera da letto</span></div>
-        </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/camera-tv.webp','Camera con TV')">
-          <img src="images/camera-tv.webp" alt="Camera con Smart TV appartamento Lake At Home Lecco" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Camera con TV</span></div>
-        </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/bagno.webp','Bagno')">
-          <img src="images/bagno.webp" alt="Bagno con doccia appartamento affitto breve Lecco Lago di Como" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Bagno</span></div>
-        </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/doccia.webp','Doccia')">
-          <img src="images/doccia.webp" alt="Doccia moderna appartamento Lake At Home Lecco" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Doccia</span></div>
-        </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/vista-finestra.webp','Vista dalla finestra')">
-          <img src="images/vista-finestra.webp" alt="Vista Lago di Como e monti lecchesi dalla finestra appartamento Lecco" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Vista dalla finestra</span></div>
-        </div>
-        <div class="gallery-item fade-up" onclick="openLightbox('images/balcone.webp','Balcone')">
-          <img src="images/balcone.webp" alt="Balcone appartamento Lake At Home Lecco con vista lago e monti" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Balcone</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ── LIGHTBOX ──────────────────────────────────────────────────── -->
   <div class="lightbox" id="lightbox">
@@ -871,7 +838,41 @@
     </div>
   </div>
 
-  <!-- ── FAQ ──────────────────────────────────────────────────────── -->
+  <!-- ── DESCRIZIONE SEO ──────────────────────────────────────────── -->
+  <section id="descrizione" style="background:var(--white)">
+    <div class="section-inner">
+      <div class="fade-up">
+        <p class="section-label" data-i18n="lake.desc.label">La destinazione</p>
+        <h2 class="section-title" data-i18n="lake.desc.title">Appartamento a Lecco sul Lago di Como</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px">
+        <div class="fade-up" style="transition-delay:.1s">
+          <p class="section-text" style="max-width:100%" data-i18n-html="lake.desc.p1">Cercate un <strong>appartamento a Lecco sul Lago di Como</strong> per un affitto breve? Lake At Home è la scelta ideale: un appartamento di design completamente ristrutturato, nel cuore del centro storico di Lecco, a pochi passi dal <strong>lungolago del Lago di Como</strong> e dalla stazione ferroviaria. Ospita fino a 4 persone in 2 camere da letto moderne e luminose.</p>
+          <br>
+          <p class="section-text" style="max-width:100%" data-i18n-html="lake.desc.p2"><strong>Lecco</strong> è una città affascinante adagiata all&rsquo;estremità meridionale del ramo orientale del Lago di Como, circondata dalle pareti dolomitiche delle Grigne e dal massiccio del Resegone. Conosciuta come la città di Alessandro Manzoni, Lecco offre un lungolago scenografico, un centro storico vivace e una posizione perfetta per escursioni in montagna, giri in barca e visite ai borghi del lago. Via Pasubio, dove si trova Lake At Home, è nel cuore della città, a meno di 5 minuti a piedi dal lungolago.</p>
+          <br>
+          <p class="section-text" style="max-width:100%" data-i18n-html="lake.desc.p3">L&rsquo;appartamento Lake At Home dispone di <strong>2 camere da letto</strong> con design contemporaneo, soggiorno open space con zona dining e cucina attrezzata, 2 bagni moderni con doccia, Smart TV, Wi-Fi ad alta velocità gratuito e aria condizionata. Dalle finestre si apre una spettacolare <strong>vista sul Lago di Como e sui monti lecchesi</strong>, che al tramonto si tingono di colori caldi e unici.</p>
+        </div>
+        <div class="fade-up" style="transition-delay:.2s">
+          <p class="section-text" style="max-width:100%" data-i18n-html="lake.desc.p4">La posizione è uno dei punti di forza principali: a pochi minuti a piedi dal lungolago di Lecco, dalla Piazza XX Settembre e dalla stazione ferroviaria (collegamento diretto per Milano in 40 minuti). I ristoranti, bar e negozi del centro sono raggiungibili a piedi. In auto, i borghi di <strong>Varenna e Bellagio sul Lago di Como</strong> sono a 30-45 minuti.</p>
+          <br>
+          <p class="section-text" style="max-width:100%" data-i18n="lake.desc.p5">L'appartamento è registrato con CIN IT097042C246M9KVYP nel rispetto della normativa italiana sugli affitti brevi. Disponibile su Airbnb e Booking.com con risposta rapida garantita.</p>
+          <br>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--dark);margin-bottom:16px" data-i18n="lake.desc.nearby_title">Cosa visitare nei dintorni</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="lake.desc.near1">Lungolago di Lecco &ndash; 5 minuti a piedi</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="lake.desc.near2">Stazione Lecco (Milano in 40 min) &ndash; 5 min a piedi</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="lake.desc.near3">Varenna e Lago di Como &ndash; 30 minuti in auto</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="lake.desc.near4">Bellagio &ndash; 45 minuti in auto</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="lake.desc.near5">Grigne e Valsassina (escursioni)</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
   <section id="faq">
     <div class="section-inner">
       <p class="section-label fade-up" data-i18n="common.faq_label">FAQ</p>
@@ -1046,6 +1047,16 @@
       });
     });
   </script>
-  <script src="../i18n.js?v=10" defer></script>
+  <script src="../i18n.js?v=11" defer></script>
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/393474120611?text=Ciao!%20Vorrei%20informazioni%20su%20Lake%20at%20Home%20a%20Lecco." class="wa-float" target="_blank" rel="noopener" aria-label="Scrivi su WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.04 20.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.23 8.25c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+  </a>
+  <style>
+    .wa-float{position:fixed;right:20px;bottom:20px;z-index:90;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:transform .2s,box-shadow .2s;}
+    .wa-float:hover{transform:scale(1.08);box-shadow:0 8px 26px rgba(0,0,0,.32);}
+    .wa-float svg{width:32px;height:32px;}
+    @media(max-width:600px){.wa-float{right:14px;bottom:14px;width:52px;height:52px;}.wa-float svg{width:29px;height:29px;}}
+  </style>
 </body>
 </html>

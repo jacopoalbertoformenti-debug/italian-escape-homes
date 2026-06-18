@@ -558,36 +558,50 @@
     </div>
   </div>
 
-  <!-- ── DESCRIZIONE SEO ──────────────────────────────────────────── -->
-  <section id="descrizione" style="background:var(--white)">
+  <!-- ── GALLERIA ──────────────────────────────────────────────────── -->
+  <section id="galleria">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label" data-i18n="pool.desc.label">La destinazione</p>
-        <h2 class="section-title" data-i18n="pool.desc.title">Appartamento con piscina a Leggiuno, Lago Maggiore</h2>
+        <p class="section-label" data-i18n="common.gallery_label">Le foto</p>
+        <h2 class="section-title" data-i18n="common.gallery_title">Galleria</h2>
         <div class="section-divider"></div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px">
-        <div class="fade-up" style="transition-delay:.1s">
-          <p class="section-text" style="max-width:100%" data-i18n-html="pool.desc.p1">Cercate un <strong>appartamento con piscina a Leggiuno</strong> o nelle vicinanze del Lago Maggiore? Questo alloggio in <strong>affitto breve</strong> è la scelta ideale per famiglie e coppie che vogliono godersi la tranquillità del lago con tutti i comfort. Situato in un residence immerso nel verde di Via XXIV Maggio 84, offre accesso alla piscina condominiale stagionale, parcheggio privato incluso e una posizione a soli 2 minuti in auto dalle rive del Lago Maggiore.</p>
-          <br>
-          <p class="section-text" style="max-width:100%" data-i18n-html="pool.desc.p2">Leggiuno è un piccolo comune della provincia di Varese, adagiato sulle colline che scendono dolcemente verso il Lago Maggiore. Il paese è circondato da boschi e sentieri naturalistici, ed è posizionato strategicamente a metà strada tra Varese e Verbania. A soli 30 minuti dall&rsquo;aeroporto internazionale di Milano Malpensa, è una base ideale sia per <strong>vacanze estive sul Lago Maggiore</strong> che per soggiorni di transito.</p>
-          <br>
-          <p class="section-text" style="max-width:100%" data-i18n-html="pool.desc.p3">La <strong>casa vacanze a Leggiuno</strong> dispone di una camera matrimoniale spaziosa con armadio a muro, un soggiorno open space con zona living, cucina completamente attrezzata e letto aggiuntivo (fino a 4 ospiti), bagno moderno con doccia, Smart TV e Wi-Fi gratuito ad alta velocità. Ogni ambiente è curato nei dettagli per garantire un soggiorno piacevole e rilassante.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item wide fade-up" style="transition-delay:.05s" onclick="openLightbox('img/piscina2.webp','Piscina condominiale')">
+          <img src="img/piscina2.webp" alt="Piscina condominiale stagionale appartamento con piscina Leggiuno Lago Maggiore" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Piscina</span></div>
         </div>
-        <div class="fade-up" style="transition-delay:.2s">
-          <p class="section-text" style="max-width:100%" data-i18n-html="pool.desc.p4">Il vero punto di forza di questo <strong>appartamento sul Lago Maggiore</strong> è la piscina condominiale stagionale, aperta fino al 15 settembre con lettini e ombrelloni inclusi. Per le famiglie con bambini è un vantaggio fondamentale: basta scendere per ritrovarsi in piscina, senza code né traffico. La sera, il parcheggio privato con affaccio sul Lago Maggiore regala tramonti indimenticabili.</p>
-          <br>
-          <p class="section-text" style="max-width:100%" data-i18n="pool.desc.p5">La struttura si distingue per la valutazione di 4,68 su 5 basata su 25 recensioni verificate su Airbnb. Tra i motivi più apprezzati dagli ospiti: la pulizia, la tranquillità del residence, la vicinanza al lago e la comodità del parcheggio privato con vista. L&rsquo;appartamento è registrato con CIN IT012088C2B2FQHKFY, nel pieno rispetto della normativa italiana sugli affitti brevi.</p>
-          <br>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--dark);margin-bottom:16px" data-i18n="pool.desc.nearby_title">Cosa visitare nei dintorni</h3>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="pool.desc.near1">Eremo di Santa Caterina del Sasso &ndash; 5 minuti in auto</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="pool.desc.near2">Funivia del Sasso del Ferro di Laveno &ndash; 10 minuti</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="pool.desc.near3">Borghi di Arolo e Ranco &ndash; pochi minuti</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="pool.desc.near4">Stresa e le Isole Borromee &ndash; 30 minuti</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="pool.desc.near5">Villa Taranto e Verbania &ndash; 35 minuti</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="pool.desc.near6">Lago di Varese e Sacro Monte di Varese</span></li>
-          </ul>
+        <div class="gallery-item fade-up" style="transition-delay:.1s" onclick="openLightbox('img/camera1.webp','Camera matrimoniale')">
+          <img src="img/camera1.webp" alt="Camera matrimoniale spaziosa, appartamento affitto breve Leggiuno" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Camera</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.15s" onclick="openLightbox('img/cucina.webp','Cucina attrezzata')">
+          <img src="img/cucina.webp" alt="Cucina completamente attrezzata, casa vacanze Leggiuno Lago Maggiore" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Cucina</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.2s" onclick="openLightbox('img/bagno1.webp','Bagno con doccia')">
+          <img src="img/bagno1.webp" alt="Bagno moderno con doccia, appartamento Leggiuno" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Bagno</span></div>
+        </div>
+        <div class="gallery-item wide fade-up" style="transition-delay:.25s" onclick="openLightbox('img/soggiorno.webp','Soggiorno open space')">
+          <img src="img/soggiorno.webp" alt="Soggiorno open space con zona living, appartamento con piscina Leggiuno" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Soggiorno</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.3s" onclick="openLightbox('img/parcheggio.webp','Parcheggio con vista Lago Maggiore')">
+          <img src="img/parcheggio.webp" alt="Parcheggio privato con vista sul Lago Maggiore, appartamento Leggiuno" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Parcheggio</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.35s" onclick="openLightbox('img/tv.webp','Soggiorno Smart TV')">
+          <img src="img/tv.webp" alt="Smart TV soggiorno appartamento affitto breve Leggiuno" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Smart TV</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.4s" onclick="openLightbox('img/bagno2.webp','Secondo bagno')">
+          <img src="img/bagno2.webp" alt="Bagno con doccia appartamento Leggiuno Lago Maggiore" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Bagno</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.45s" onclick="openLightbox('img/camera3.webp','Camera da letto')">
+          <img src="img/camera3.webp" alt="Camera da letto appartamento vacanze con piscina Leggiuno" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Camera</span></div>
         </div>
       </div>
     </div>
@@ -761,68 +775,48 @@
               <p data-i18n="pool.loc.airport.text">Solo 30 minuti di auto dall&rsquo;aeroporto internazionale di Milano Malpensa (MXP).</p>
             </div>
           </div>
-          <div class="location-item">
-            <div class="location-item-icon">&#9968;</div>
-            <div>
-              <h4 data-i18n="common.nearby">Attrazioni vicine</h4>
-              <p data-i18n="pool.loc.nearby.text">Eremo di Santa Caterina del Sasso, funivia di Laveno, Isole Borromee, Stresa.</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── GALLERIA ──────────────────────────────────────────────────── -->
-  <section id="galleria">
+
+  <!-- ── DESCRIZIONE SEO ──────────────────────────────────────────── -->
+  <section id="descrizione" style="background:var(--white)">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label" data-i18n="common.gallery_label">Le foto</p>
-        <h2 class="section-title" data-i18n="common.gallery_title">Galleria</h2>
+        <p class="section-label" data-i18n="pool.desc.label">La destinazione</p>
+        <h2 class="section-title" data-i18n="pool.desc.title">Appartamento con piscina a Leggiuno, Lago Maggiore</h2>
         <div class="section-divider"></div>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-item wide fade-up" style="transition-delay:.05s" onclick="openLightbox('img/piscina2.webp','Piscina condominiale')">
-          <img src="img/piscina2.webp" alt="Piscina condominiale stagionale appartamento con piscina Leggiuno Lago Maggiore" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Piscina</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px">
+        <div class="fade-up" style="transition-delay:.1s">
+          <p class="section-text" style="max-width:100%" data-i18n-html="pool.desc.p1">Cercate un <strong>appartamento con piscina a Leggiuno</strong> o nelle vicinanze del Lago Maggiore? Questo alloggio in <strong>affitto breve</strong> è la scelta ideale per famiglie e coppie che vogliono godersi la tranquillità del lago con tutti i comfort. Situato in un residence immerso nel verde di Via XXIV Maggio 84, offre accesso alla piscina condominiale stagionale, parcheggio privato incluso e una posizione a soli 2 minuti in auto dalle rive del Lago Maggiore.</p>
+          <br>
+          <p class="section-text" style="max-width:100%" data-i18n-html="pool.desc.p2">Leggiuno è un piccolo comune della provincia di Varese, adagiato sulle colline che scendono dolcemente verso il Lago Maggiore. Il paese è circondato da boschi e sentieri naturalistici, ed è posizionato strategicamente a metà strada tra Varese e Verbania. A soli 30 minuti dall&rsquo;aeroporto internazionale di Milano Malpensa, è una base ideale sia per <strong>vacanze estive sul Lago Maggiore</strong> che per soggiorni di transito.</p>
+          <br>
+          <p class="section-text" style="max-width:100%" data-i18n-html="pool.desc.p3">La <strong>casa vacanze a Leggiuno</strong> dispone di una camera matrimoniale spaziosa con armadio a muro, un soggiorno open space con zona living, cucina completamente attrezzata e letto aggiuntivo (fino a 4 ospiti), bagno moderno con doccia, Smart TV e Wi-Fi gratuito ad alta velocità. Ogni ambiente è curato nei dettagli per garantire un soggiorno piacevole e rilassante.</p>
         </div>
-        <div class="gallery-item fade-up" style="transition-delay:.1s" onclick="openLightbox('img/camera1.webp','Camera matrimoniale')">
-          <img src="img/camera1.webp" alt="Camera matrimoniale spaziosa, appartamento affitto breve Leggiuno" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Camera</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.15s" onclick="openLightbox('img/cucina.webp','Cucina attrezzata')">
-          <img src="img/cucina.webp" alt="Cucina completamente attrezzata, casa vacanze Leggiuno Lago Maggiore" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Cucina</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.2s" onclick="openLightbox('img/bagno1.webp','Bagno con doccia')">
-          <img src="img/bagno1.webp" alt="Bagno moderno con doccia, appartamento Leggiuno" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Bagno</span></div>
-        </div>
-        <div class="gallery-item wide fade-up" style="transition-delay:.25s" onclick="openLightbox('img/soggiorno.webp','Soggiorno open space')">
-          <img src="img/soggiorno.webp" alt="Soggiorno open space con zona living, appartamento con piscina Leggiuno" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Soggiorno</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.3s" onclick="openLightbox('img/parcheggio.webp','Parcheggio con vista Lago Maggiore')">
-          <img src="img/parcheggio.webp" alt="Parcheggio privato con vista sul Lago Maggiore, appartamento Leggiuno" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Parcheggio</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.35s" onclick="openLightbox('img/tv.webp','Soggiorno Smart TV')">
-          <img src="img/tv.webp" alt="Smart TV soggiorno appartamento affitto breve Leggiuno" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Smart TV</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.4s" onclick="openLightbox('img/bagno2.webp','Secondo bagno')">
-          <img src="img/bagno2.webp" alt="Bagno con doccia appartamento Leggiuno Lago Maggiore" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Bagno</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.45s" onclick="openLightbox('img/camera3.webp','Camera da letto')">
-          <img src="img/camera3.webp" alt="Camera da letto appartamento vacanze con piscina Leggiuno" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Camera</span></div>
+        <div class="fade-up" style="transition-delay:.2s">
+          <p class="section-text" style="max-width:100%" data-i18n-html="pool.desc.p4">Il vero punto di forza di questo <strong>appartamento sul Lago Maggiore</strong> è la piscina condominiale stagionale, aperta fino al 15 settembre con lettini e ombrelloni inclusi. Per le famiglie con bambini è un vantaggio fondamentale: basta scendere per ritrovarsi in piscina, senza code né traffico. La sera, il parcheggio privato con affaccio sul Lago Maggiore regala tramonti indimenticabili.</p>
+          <br>
+          <p class="section-text" style="max-width:100%" data-i18n="pool.desc.p5">La struttura si distingue per la valutazione di 4,68 su 5 basata su 25 recensioni verificate su Airbnb. Tra i motivi più apprezzati dagli ospiti: la pulizia, la tranquillità del residence, la vicinanza al lago e la comodità del parcheggio privato con vista. L&rsquo;appartamento è registrato con CIN IT012088C2B2FQHKFY, nel pieno rispetto della normativa italiana sugli affitti brevi.</p>
+          <br>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--dark);margin-bottom:16px" data-i18n="pool.desc.nearby_title">Cosa visitare nei dintorni</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="pool.desc.near1">Eremo di Santa Caterina del Sasso &ndash; 5 minuti in auto</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="pool.desc.near2">Funivia del Sasso del Ferro di Laveno &ndash; 10 minuti</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="pool.desc.near3">Borghi di Arolo e Ranco &ndash; pochi minuti</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="pool.desc.near4">Stresa e le Isole Borromee &ndash; 30 minuti</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="pool.desc.near5">Villa Taranto e Verbania &ndash; 35 minuti</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="pool.desc.near6">Lago di Varese e Sacro Monte di Varese</span></li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── FAQ ──────────────────────────────────────────────────────── -->
+  <!-- FAQ -->
   <section id="faq">
     <div class="section-inner">
       <p class="section-label fade-up" data-i18n="common.faq_label">FAQ</p>
@@ -1023,6 +1017,16 @@
       });
     });
   </script>
-  <script src="../i18n.js?v=10" defer></script>
+  <script src="../i18n.js?v=11" defer></script>
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/393474120611?text=Ciao!%20Vorrei%20informazioni%20sull'Appartamento%20con%20piscina%20a%20Leggiuno." class="wa-float" target="_blank" rel="noopener" aria-label="Scrivi su WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.04 20.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.23 8.25c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+  </a>
+  <style>
+    .wa-float{position:fixed;right:20px;bottom:20px;z-index:90;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:transform .2s,box-shadow .2s;}
+    .wa-float:hover{transform:scale(1.08);box-shadow:0 8px 26px rgba(0,0,0,.32);}
+    .wa-float svg{width:32px;height:32px;}
+    @media(max-width:600px){.wa-float{right:14px;bottom:14px;width:52px;height:52px;}.wa-float svg{width:29px;height:29px;}}
+  </style>
 </body>
 </html>

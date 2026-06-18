@@ -233,7 +233,7 @@ const IEH_TRANSLATIONS = {
     /* ── Pool about ── */
     "pool.about.label"       : "Il tuo spazio",
     "pool.about.title"       : "Relax sul\nLago Maggiore",
-    "pool.about.p1"          : "Rilassati con tutta la famiglia in questo alloggio tranquillo in residence con piscina stagionale (aperta fino al 15 settembre). L'appartamento si trova in un residence panoramico immerso nel verde, a soli 2 minuti dalle spiagge del lago.",
+    "pool.about.p1"          : "Un appartamento luminoso dove rientrare dopo una giornata sul lago, tra un tuffo in piscina e il fresco del verde tutt'intorno. L'atmosfera è tranquilla e familiare: il posto giusto per ritrovarsi e ricaricarsi senza pensieri.",
     "pool.about.p2"          : "La posizione è ideale per esplorare le bellezze del Lago Maggiore: l'eremo di Santa Caterina del Sasso, la funivia di Laveno e i sentieri naturalistici della zona sono tutti raggiungibili in pochi minuti. A 30 minuti dall'aeroporto di Malpensa, è perfetto anche per soggiorni di transito.",
 
     /* ── Pool bedrooms ── */
@@ -322,7 +322,7 @@ const IEH_TRANSLATIONS = {
     /* ── Casa Mariangela about ── */
     "mari.about.label"       : "L'appartamento",
     "mari.about.title"       : "La tua casa\nsul mare",
-    "mari.about.p1"          : "Vivi la tua splendida vacanza in questo accogliente appartamento a 30 metri dal mare, nel centro di San Bartolomeo al Mare. Un'oasi di comfort e stile, con tutto il necessario per un soggiorno indimenticabile sulla Riviera Ligure di Ponente.",
+    "mari.about.p1"          : "Apri la finestra e senti già il profumo del mare. A Casa Mariangela le mattine iniziano con una passeggiata sul lungomare e i pomeriggi sanno di salsedine e di Liguria: spiaggia, borgo e buona tavola sono tutti a portata di mano.",
     "mari.about.p2"          : "L'appartamento è curato in ogni dettaglio per farti sentire come a casa, con un'atmosfera calda e accogliente che ti accoglie fin dal primo momento.",
     "mari.about.f1"          : "🏠 Appartamento intero",
     "mari.about.f2"          : "👥 Fino a 4 ospiti",
@@ -433,7 +433,7 @@ const IEH_TRANSLATIONS = {
     /* ── Lake about ── */
     "lake.about.label"       : "Il tuo spazio",
     "lake.about.title"       : "Vivi Lecco\ncome a casa",
-    "lake.about.p1"          : "Un appartamento di design completamente ristrutturato nel cuore di Lecco, con finiture moderne e materiali di qualità. Dalle finestre si apre una vista spettacolare sui monti e sul lago, che al tramonto regala colori unici.",
+    "lake.about.p1"          : "Varcata la porta, ti accolgono linee pulite, luce e materiali di pregio. Dalle finestre lo sguardo corre ai monti e al lago, che al tramonto si accende di colori unici: il piacere di vivere Lecco con il gusto del design.",
     "lake.about.p2"          : "La posizione è ideale per esplorare il Lago di Como e la Valsassina: il lungolago, la Piazza XX Settembre e la stazione ferroviaria sono a pochi minuti a piedi. Perfetto per coppie e famiglie che vogliono vivere la città con tutto il comfort di casa.",
 
     /* ── Lake bedrooms ── */
@@ -523,7 +523,7 @@ const IEH_TRANSLATIONS = {
     /* ── Pool & Garden about ── */
     "garden.about.label"     : "La tua casa",
     "garden.about.title"     : "Relax con piscina\nsul Lago Maggiore",
-    "garden.about.p1"        : "Una casa indipendente con piscina privata e ampio giardino, in un residence panoramico a Leggiuno. La terrazza e il giardino offrono una vista mozzafiato sul Lago Maggiore e sulle Alpi circostanti.",
+    "garden.about.p1"        : "Qui le giornate iniziano con un tuffo e finiscono con il cielo che si infiamma sul lago. Pool & Garden è il rifugio pensato per chi vuole staccare davvero: spazi ampi, tanta privacy e il tempo che rallenta tra il verde e l'acqua.",
     "garden.about.p2"        : "Ideale per famiglie e gruppi che cercano privacy e relax. A 2 minuti dalle spiagge del lago e 30 minuti dall'aeroporto di Malpensa, è la base perfetta per esplorare il Lago Maggiore.",
 
     /* ── Pool & Garden rooms ── */
@@ -615,7 +615,7 @@ const IEH_TRANSLATIONS = {
     "dvv.about.badge"        : "Cuore delle Alpi",
     "dvv.about.label"        : "Il tuo rifugio",
     "dvv.about.title"        : "Un appartamento<br>tra le Alpi",
-    "dvv.about.p1"           : "Dolce Vetta Valmalenco è un appartamento di charme recentemente ristrutturato, nel centro di Chiesa in Valmalenco, ai piedi del massiccio del Bernina.",
+    "dvv.about.p1"           : "Dopo una giornata sulle piste o sui sentieri, qui ti aspetta il calore di una casa di montagna con il gusto di oggi. Legno, atmosfera intima e il respiro delle Alpi fuori dalla porta: Dolce Vetta è il rifugio dove ricaricarsi in ogni stagione.",
     "dvv.about.p2"           : "Una camera matrimoniale con letto a castello e un ampio soggiorno con divano letto consentono di ospitare fino a 6 persone. Cucina attrezzata, bagno moderno, terrazzo privato, box auto e parcheggio gratuito: tutto quello che serve per una vacanza in montagna in ogni stagione.",
 
     /* ── Dolce Vetta – Camere ── */
@@ -922,7 +922,7 @@ const IEH_TRANSLATIONS = {
     /* ── Pool about ── */
     "pool.about.label"       : "Your space",
     "pool.about.title"       : "Relax on\nLake Maggiore",
-    "pool.about.p1"          : "Relax with the whole family in this peaceful apartment in a residence with a seasonal pool (open until 15 September). Set in a panoramic green complex, it's just 2 minutes from the lake shores.",
+    "pool.about.p1"          : "A bright apartment to come home to after a day by the lake, between a dip in the pool and the cool of the greenery all around. The mood is calm and family-friendly: just the place to reconnect and recharge without a worry.",
     "pool.about.p2"          : "The location is ideal for exploring Lake Maggiore: the Hermitage of Santa Caterina del Sasso, the Laveno cable car and the natural trails of the area are all just minutes away. Only 30 minutes from Milan Malpensa Airport, it's also perfect for transit stays.",
 
     /* ── Pool bedrooms ── */
@@ -1011,7 +1011,7 @@ const IEH_TRANSLATIONS = {
     /* ── Casa Mariangela about ── */
     "mari.about.label"       : "The apartment",
     "mari.about.title"       : "Your home\nby the sea",
-    "mari.about.p1"          : "Enjoy your holiday in this welcoming apartment just 30 metres from the sea, in the centre of San Bartolomeo al Mare. An oasis of comfort and style on the Ligurian Riviera di Ponente, with everything you need for an unforgettable stay.",
+    "mari.about.p1"          : "Open the window and you can already smell the sea. At Casa Mariangela mornings begin with a stroll along the seafront and afternoons taste of salt air and of Liguria: the beach, the old town and good food are all within reach.",
     "mari.about.p2"          : "Every detail has been taken care of to make you feel right at home, with a warm and welcoming atmosphere from the moment you arrive.",
     "mari.about.f1"          : "🏠 Entire apartment",
     "mari.about.f2"          : "👥 Up to 4 guests",
@@ -1122,7 +1122,7 @@ const IEH_TRANSLATIONS = {
     /* ── Lake about ── */
     "lake.about.label"       : "Your space",
     "lake.about.title"       : "Experience Lecco\nlike a local",
-    "lake.about.p1"          : "A fully renovated design apartment in the heart of Lecco, with modern finishes and quality materials. The windows frame a spectacular view of the mountains and lake, with breathtaking colours at sunset.",
+    "lake.about.p1"          : "Step inside and you're welcomed by clean lines, light and fine materials. From the windows your gaze runs to the mountains and the lake, which lights up with unique colours at sunset: the pleasure of experiencing Lecco with a designer's touch.",
     "lake.about.p2"          : "The location is ideal for exploring Lake Como and Valsassina: the lakefront promenade, Piazza XX Settembre and the train station are all just a short walk away. Perfect for couples and families who want to experience the city with all the comforts of home.",
 
     /* ── Lake bedrooms ── */
@@ -1212,7 +1212,7 @@ const IEH_TRANSLATIONS = {
     /* ── Pool & Garden about ── */
     "garden.about.label"     : "Your home",
     "garden.about.title"     : "Relax with a pool\non Lake Maggiore",
-    "garden.about.p1"        : "An independent holiday house with private pool and large garden in a panoramic residence in Leggiuno. The terrace and garden offer breathtaking views of Lake Maggiore and the surrounding Alps.",
+    "garden.about.p1"        : "Here the days begin with a dive and end with the sky blazing over the lake. Pool & Garden is the retreat made for switching off completely: generous spaces, plenty of privacy and time that slows down between the greenery and the water.",
     "garden.about.p2"        : "Ideal for families and groups looking for privacy and relaxation. Just 2 minutes from the lake shores and 30 minutes from Malpensa Airport, it's the perfect base for exploring Lake Maggiore.",
 
     /* ── Pool & Garden rooms ── */
@@ -1299,7 +1299,7 @@ const IEH_TRANSLATIONS = {
     "dvv.about.badge"        : "Heart of the Alps",
     "dvv.about.label"        : "Your retreat",
     "dvv.about.title"        : "An apartment<br>in the Alps",
-    "dvv.about.p1"           : "Dolce Vetta Valmalenco is a charming, recently renovated apartment in the centre of Chiesa in Valmalenco, at the foot of the Bernina massif.",
+    "dvv.about.p1"           : "After a day on the slopes or the trails, the warmth of a mountain home with a contemporary feel is waiting for you. Wood, an intimate atmosphere and the breath of the Alps just outside the door: Dolce Vetta is the retreat where you recharge in any season.",
     "dvv.about.p2"           : "A double bedroom with bunk bed and a spacious living room with sofa bed accommodate up to 6 people. Equipped kitchen, modern bathroom, private terrace, garage and free parking: everything you need for a mountain holiday in any season.",
 
     "dvv.room1.title"        : "Double bedroom with bunk bed",
@@ -1599,7 +1599,7 @@ const IEH_TRANSLATIONS = {
     /* ── Pool about ── */
     "pool.about.label"       : "Ihr Bereich",
     "pool.about.title"       : "Entspannen am\nLago Maggiore",
-    "pool.about.p1"          : "Erholen Sie sich mit der ganzen Familie in dieser ruhigen Ferienwohnung in einer Anlage mit Saisonpool (geöffnet bis 15. September). Die Wohnung liegt in einer Panoramaanlage inmitten von Grün, nur 2 Minuten von den Stränden des Sees entfernt.",
+    "pool.about.p1"          : "Eine helle Wohnung, in die man nach einem Tag am See zurückkehrt – zwischen einem Sprung in den Pool und der Frische des Grüns ringsum. Die Atmosphäre ist ruhig und familiär: der richtige Ort, um sorgenfrei aufzutanken.",
     "pool.about.p2"          : "Die Lage ist ideal, um den Lago Maggiore zu erkunden: die Einsiedelei Santa Caterina del Sasso, die Seilbahn von Laveno und die Naturwanderwege sind alle in wenigen Minuten erreichbar. Nur 30 Minuten vom Flughafen Mailand Malpensa – auch perfekt für Zwischenstopps.",
 
     /* ── Pool bedrooms ── */
@@ -1686,7 +1686,7 @@ const IEH_TRANSLATIONS = {
     /* ── Casa Mariangela about ── */
     "mari.about.label"       : "Die Wohnung",
     "mari.about.title"       : "Ihr Zuhause\nam Meer",
-    "mari.about.p1"          : "Genießen Sie Ihren Urlaub in dieser einladenden Ferienwohnung, nur 30 Meter vom Meer entfernt, im Zentrum von San Bartolomeo al Mare. Eine Oase des Komforts und Stils an der Ligurischen Riviera di Ponente, mit allem, was Sie für einen unvergesslichen Aufenthalt benötigen.",
+    "mari.about.p1"          : "Öffnen Sie das Fenster und Sie riechen bereits das Meer. Im Casa Mariangela beginnen die Vormittage mit einem Spaziergang an der Strandpromenade, und die Nachmittage schmecken nach Salzluft und nach Ligurien: Strand, Altstadt und gute Küche sind ganz nah.",
     "mari.about.p2"          : "Jedes Detail ist liebevoll gestaltet, damit Sie sich wie zu Hause fühlen – eine warme und einladende Atmosphäre, die Sie vom ersten Moment an empfängt.",
     "mari.about.f1"          : "🏠 Gesamte Wohnung",
     "mari.about.f2"          : "👥 Bis zu 4 Gäste",
@@ -1797,7 +1797,7 @@ const IEH_TRANSLATIONS = {
     /* ── Lake about ── */
     "lake.about.label"       : "Ihr Bereich",
     "lake.about.title"       : "Lecco erleben\nwie ein Einheimischer",
-    "lake.about.p1"          : "Eine vollständig renovierte Designwohnung im Herzen von Lecco, mit modernen Oberflächen und hochwertigen Materialien. Aus den Fenstern öffnet sich ein spektakulärer Blick auf die Berge und den See, der bei Sonnenuntergang atemberaubende Farben zeigt.",
+    "lake.about.p1"          : "Sobald Sie eintreten, empfangen Sie klare Linien, Licht und edle Materialien. Aus den Fenstern schweift der Blick zu den Bergen und zum See, der bei Sonnenuntergang in einzigartigen Farben erstrahlt: Lecco erleben mit dem Gespür für Design.",
     "lake.about.p2"          : "Die Lage ist ideal, um den Comer See und das Valsassina zu erkunden: die Uferpromenade, die Piazza XX Settembre und der Bahnhof sind alle zu Fuß in wenigen Minuten erreichbar. Perfekt für Paare und Familien, die die Stadt mit allem Komfort eines Zuhauses erleben möchten.",
 
     /* ── Lake bedrooms ── */
@@ -1887,7 +1887,7 @@ const IEH_TRANSLATIONS = {
     /* ── Pool & Garden about ── */
     "garden.about.label"     : "Ihr Haus",
     "garden.about.title"     : "Entspannen mit Pool\nam Lago Maggiore",
-    "garden.about.p1"        : "Ein freistehendes Ferienhaus mit privatem Pool und großem Garten in einer Panoramaanlage in Leggiuno. Die Terrasse und der Garten bieten einen atemberaubenden Blick auf den Lago Maggiore und die umliegenden Alpen.",
+    "garden.about.p1"        : "Hier beginnen die Tage mit einem Sprung ins Wasser und enden, wenn der Himmel über dem See in Flammen steht. Pool & Garden ist das Refugium für alle, die wirklich abschalten wollen: viel Platz, viel Privatsphäre und Zeit, die zwischen Grün und Wasser langsamer vergeht.",
     "garden.about.p2"        : "Ideal für Familien und Gruppen, die Privatsphäre und Entspannung suchen. Nur 2 Minuten von den Stränden und 30 Minuten vom Flughafen Malpensa entfernt – die perfekte Basis für die Erkundung des Lago Maggiore.",
 
     /* ── Pool & Garden rooms ── */
@@ -1974,7 +1974,7 @@ const IEH_TRANSLATIONS = {
     "dvv.about.badge"        : "Herz der Alpen",
     "dvv.about.label"        : "Ihr Refugium",
     "dvv.about.title"        : "Eine Wohnung<br>in den Alpen",
-    "dvv.about.p1"           : "Dolce Vetta Valmalenco ist eine charmante, kürzlich renovierte Wohnung im Zentrum von Chiesa in Valmalenco, am Fuße des Bernina-Massivs.",
+    "dvv.about.p1"           : "Nach einem Tag auf der Piste oder auf den Wanderwegen erwartet Sie hier die Wärme eines Bergzuhauses mit dem Geschmack von heute. Holz, eine intime Atmosphäre und der Atem der Alpen direkt vor der Tür: Dolce Vetta ist das Refugium, in dem Sie zu jeder Jahreszeit auftanken.",
     "dvv.about.p2"           : "Ein Doppelzimmer mit Etagenbett und ein geräumiges Wohnzimmer mit Schlafsofa bieten Platz für bis zu 6 Personen. Ausgestattete Küche, modernes Bad, private Terrasse, Garage und kostenloser Parkplatz: alles, was Sie für einen Bergurlaub in jeder Jahreszeit brauchen.",
 
     "dvv.room1.title"        : "Doppelzimmer mit Etagenbett",
@@ -2274,7 +2274,7 @@ const IEH_TRANSLATIONS = {
     /* ── À propos appartement piscine ── */
     "pool.about.label"       : "Votre espace",
     "pool.about.title"       : "Détente sur\nle lac Majeur",
-    "pool.about.p1"          : "Détendez-vous en famille dans cet appartement paisible dans une résidence avec piscine saisonnière (ouverte jusqu'au 15 septembre). L'appartement se trouve dans une résidence panoramique entourée de verdure, à seulement 2 minutes des plages du lac.",
+    "pool.about.p1"          : "Un appartement lumineux où rentrer après une journée au bord du lac, entre une baignade dans la piscine et la fraîcheur de la verdure alentour. L'ambiance est calme et familiale : l'endroit idéal pour se ressourcer l'esprit léger.",
     "pool.about.p2"          : "L'emplacement est idéal pour explorer les beautés du lac Majeur : l'ermitage de Santa Caterina del Sasso, le téléphérique de Laveno et les sentiers naturels de la région sont tous accessibles en quelques minutes. À 30 minutes de l'aéroport de Malpensa, il est parfait pour les séjours de transit.",
 
     /* ── Chambres appartement piscine ── */
@@ -2363,7 +2363,7 @@ const IEH_TRANSLATIONS = {
     /* ── À propos Casa Mariangela ── */
     "mari.about.label"       : "L'appartement",
     "mari.about.title"       : "Votre maison\nau bord de la mer",
-    "mari.about.p1"          : "Profitez de vos vacances dans ce bel appartement à 30 mètres de la mer, dans le centre de San Bartolomeo al Mare. Une oasis de confort et de style sur la Riviera Ligure di Ponente, avec tout le nécessaire pour un séjour inoubliable.",
+    "mari.about.p1"          : "Ouvrez la fenêtre et vous sentez déjà la mer. À Casa Mariangela, les matins commencent par une promenade sur le front de mer et les après-midi ont le goût de l'air marin et de la Ligurie : la plage, le vieux bourg et la bonne cuisine sont à portée de main.",
     "mari.about.p2"          : "Chaque détail a été soigné pour vous faire sentir comme chez vous, avec une atmosphère chaleureuse et accueillante dès le premier instant.",
     "mari.about.f1"          : "🏠 Appartement entier",
     "mari.about.f2"          : "👥 Jusqu'à 4 hôtes",
@@ -2474,7 +2474,7 @@ const IEH_TRANSLATIONS = {
     /* ── À propos Lake At Home ── */
     "lake.about.label"       : "Votre espace",
     "lake.about.title"       : "Vivre Lecco\ncomme un local",
-    "lake.about.p1"          : "Un appartement de design entièrement rénové au cœur de Lecco, avec des finitions modernes et des matériaux de qualité. Les fenêtres encadrent une vue spectaculaire sur les montagnes et le lac, aux couleurs uniques au coucher du soleil.",
+    "lake.about.p1"          : "Une fois la porte franchie, des lignes épurées, de la lumière et des matériaux raffinés vous accueillent. Des fenêtres, le regard file vers les montagnes et le lac, qui s'embrase de couleurs uniques au coucher du soleil : le plaisir de vivre Lecco avec le goût du design.",
     "lake.about.p2"          : "L'emplacement est idéal pour explorer le lac de Côme et la Valsassina : la promenade lacustre, la Piazza XX Settembre et la gare ferroviaire sont à quelques minutes à pied. Parfait pour les couples et les familles qui souhaitent vivre la ville avec tout le confort d'un foyer.",
 
     /* ── Chambres Lake At Home ── */
@@ -2564,7 +2564,7 @@ const IEH_TRANSLATIONS = {
     /* ── À propos Pool & Garden ── */
     "garden.about.label"     : "Votre maison",
     "garden.about.title"     : "Détente avec piscine\nsur le lac Majeur",
-    "garden.about.p1"        : "Une maison de vacances indépendante avec piscine privée et grand jardin dans une résidence panoramique à Leggiuno. La terrasse et le jardin offrent une vue imprenable sur le lac Majeur et les Alpes environnantes.",
+    "garden.about.p1"        : "Ici, les journées commencent par un plongeon et s'achèvent quand le ciel s'embrase sur le lac. Pool & Garden est le refuge pensé pour ceux qui veulent vraiment déconnecter : de grands espaces, beaucoup d'intimité et le temps qui ralentit entre la verdure et l'eau.",
     "garden.about.p2"        : "Idéale pour les familles et les groupes à la recherche d'intimité et de détente. À 2 minutes des plages et à 30 minutes de l'aéroport de Malpensa, c'est la base parfaite pour explorer le lac Majeur.",
 
     /* ── Chambres Pool & Garden ── */
@@ -2651,7 +2651,7 @@ const IEH_TRANSLATIONS = {
     "dvv.about.badge"        : "Cœur des Alpes",
     "dvv.about.label"        : "Votre refuge",
     "dvv.about.title"        : "Un appartement<br>dans les Alpes",
-    "dvv.about.p1"           : "Dolce Vetta Valmalenco est un appartement de charme récemment rénové, au centre de Chiesa in Valmalenco, au pied du massif de la Bernina.",
+    "dvv.about.p1"           : "Après une journée sur les pistes ou les sentiers, la chaleur d'une maison de montagne au goût d'aujourd'hui vous attend. Le bois, une atmosphère intime et le souffle des Alpes juste devant la porte : Dolce Vetta est le refuge où se ressourcer en toute saison.",
     "dvv.about.p2"           : "Une chambre double avec lits superposés et un vaste séjour avec canapé-lit permettent d'accueillir jusqu'à 6 personnes. Cuisine équipée, salle de bains moderne, terrasse privée, garage et parking gratuit : tout ce qu'il faut pour des vacances à la montagne en toute saison.",
 
     "dvv.room1.title"        : "Chambre double avec lits superposés",

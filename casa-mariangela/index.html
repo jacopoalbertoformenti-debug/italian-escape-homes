@@ -1208,33 +1208,58 @@
     </div>
   </div>
 
-  <!-- ── DESCRIZIONE SEO ──────────────────────────────────── -->
-  <section id="descrizione" style="background:var(--white)">
+  <!-- ── GALLERIA ─────────────────────────────────────── -->
+  <section id="galleria">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label" data-i18n="mari.desc.label">La destinazione</p>
-        <h2 class="section-title" data-i18n="mari.desc.title">B&B Casa Mariangela a San Bartolomeo al Mare</h2>
+        <p class="section-label" data-i18n="common.gallery_label">Scorri le foto</p>
+        <h2 class="section-title" data-i18n="common.gallery_title">Galleria</h2>
         <div class="section-divider"></div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px">
-        <div class="fade-up" style="transition-delay:.1s">
-          <p class="section-text" style="max-width:100%" data-i18n-html="mari.desc.p1">Cercate una <strong>casa vacanze a San Bartolomeo al Mare</strong> a pochi passi dal mare? B&B Casa Mariangela è la risposta: un appartamento accogliente in <strong>affitto breve</strong>, situato a soli 30 metri dalla spiaggia di San Bartolomeo al Mare, nel cuore della <strong>Riviera Ligure di Ponente</strong>. Ideale per famiglie e coppie, ospita fino a 4 persone con 2 camere da letto, parcheggio privato gratuito, Wi-Fi e aria condizionata.</p>
-          <br>
-          <p class="section-text" style="max-width:100%" data-i18n-html="mari.desc.p2"><strong>San Bartolomeo al Mare</strong> è un borgo marinaro della provincia di Imperia, incastonato tra il mare e i rilievi liguri. La sua posizione è strategica: dista pochi minuti da Diano Marina e Cervo, e una trentina di chilometri da Sanremo. Il porto turistico, i ristoranti di pesce e il mercato del giovedì animano il centro, mentre le spiagge di sabbia fine e ciottoli si estendono per oltre un chilometro. Via Colombo, dove si trova Casa Mariangela, è nel cuore della zona balneare: tutto è raggiungibile a piedi.</p>
-          <br>
-          <p class="section-text" style="max-width:100%" data-i18n-html="mari.desc.p3">L'appartamento dispone di <strong>2 camere da letto</strong> (una matrimoniale, una con letti singoli), soggiorno con cucina completamente attrezzata, bagno privato, Smart TV, Wi-Fi ad alta velocità e aria condizionata in ogni stanza. Il <strong>parcheggio privato gratuito</strong> è un plus raro a San Bartolomeo al Mare, soprattutto in alta stagione.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item wide fade-up" style="transition-delay:.05s" onclick="openLightbox('img/soggiorno.webp','Soggiorno')">
+          <img src="img/soggiorno.webp" alt="Soggiorno B&B Casa Mariangela San Bartolomeo al Mare Liguria" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Soggiorno</span></div>
         </div>
-        <div class="fade-up" style="transition-delay:.2s">
-          <p class="section-text" style="max-width:100%" data-i18n-html="mari.desc.p4">Con una valutazione di <strong>4,97 su 5</strong> basata su 29 recensioni verificate su Airbnb, B&B Casa Mariangela è tra le strutture più apprezzate della Riviera Ligure di Ponente. Gli ospiti lodano la pulizia impeccabile, la posizione eccellente – a 30 metri dal mare – e l'accoglienza della proprietà. L'appartamento è registrato con CIN IT008052C22DNK6SGM nel pieno rispetto della normativa sugli affitti brevi.</p>
-          <br>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--dark);margin-bottom:16px" data-i18n="mari.desc.nearby_title">Cosa visitare nei dintorni</h3>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="mari.desc.near1">Cervo, borgo medievale &ndash; 5 minuti in auto</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="mari.desc.near2">Diano Marina e spiagge &ndash; 5 minuti</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="mari.desc.near3">Imperia, capoluogo di provincia &ndash; 15 minuti</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="mari.desc.near4">Sanremo &ndash; 30 minuti</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="mari.desc.near5">Entroterra ligure e olivi centenari</span></li>
-          </ul>
+        <div class="gallery-item fade-up" style="transition-delay:.1s" onclick="openLightbox('img/camera1.webp','Camera matrimoniale')">
+          <img src="img/camera1.webp" alt="Camera matrimoniale affitto breve San Bartolomeo al Mare" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Camera matrimoniale</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.15s" onclick="openLightbox('img/camera2.webp','Seconda camera')">
+          <img src="img/camera2.webp" alt="Seconda camera casa vacanze Riviera Ligure di Ponente" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Seconda camera</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.2s" onclick="openLightbox('img/cucina.webp','Cucina attrezzata')">
+          <img src="img/cucina.webp" alt="Cucina attrezzata B&B Casa Mariangela San Bartolomeo al Mare" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Cucina</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.25s" onclick="openLightbox('img/bagno.webp','Bagno privato')">
+          <img src="img/bagno.webp" alt="Bagno privato appartamento vacanze San Bartolomeo al Mare" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Bagno</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.3s" onclick="openLightbox('img/balcone.webp','Balcone')">
+          <img src="img/balcone.webp" alt="Balcone vista mare San Bartolomeo al Mare Liguria" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Balcone</span></div>
+        </div>
+        <div class="gallery-item wide fade-up" style="transition-delay:.35s" onclick="openLightbox('img/soggiorno2.webp','Sala da pranzo')">
+          <img src="img/soggiorno2.webp" alt="Sala da pranzo affitto breve San Bartolomeo al Mare Riviera Ligure" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Sala da pranzo</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.4s" onclick="openLightbox('img/camera1b.webp','Camera matrimoniale')">
+          <img src="img/camera1b.webp" alt="Camera matrimoniale B&B Casa Mariangela Liguria" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Camera matrimoniale</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.45s" onclick="openLightbox('img/ingresso.webp','Ingresso')">
+          <img src="img/ingresso.webp" alt="Ingresso appartamento vacanze San Bartolomeo al Mare" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Ingresso</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.5s" onclick="openLightbox('img/parcheggio.webp','Parcheggio gratuito')">
+          <img src="img/parcheggio.webp" alt="Parcheggio privato gratuito B&B San Bartolomeo al Mare" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Parcheggio</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.55s" onclick="openLightbox('img/camera2b.webp','Seconda camera')">
+          <img src="img/camera2b.webp" alt="Seconda camera casa vacanze Riviera Ligure di Ponente" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span>Seconda camera</span></div>
         </div>
       </div>
     </div>
@@ -1416,6 +1441,38 @@
     </div>
   </section>
 
+  <!-- ── DESCRIZIONE SEO ──────────────────────────────────── -->
+  <section id="descrizione" style="background:var(--white)">
+    <div class="section-inner">
+      <div class="fade-up">
+        <p class="section-label" data-i18n="mari.desc.label">La destinazione</p>
+        <h2 class="section-title" data-i18n="mari.desc.title">B&B Casa Mariangela a San Bartolomeo al Mare</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px">
+        <div class="fade-up" style="transition-delay:.1s">
+          <p class="section-text" style="max-width:100%" data-i18n-html="mari.desc.p1">Cercate una <strong>casa vacanze a San Bartolomeo al Mare</strong> a pochi passi dal mare? B&B Casa Mariangela è la risposta: un appartamento accogliente in <strong>affitto breve</strong>, situato a soli 30 metri dalla spiaggia di San Bartolomeo al Mare, nel cuore della <strong>Riviera Ligure di Ponente</strong>. Ideale per famiglie e coppie, ospita fino a 4 persone con 2 camere da letto, parcheggio privato gratuito, Wi-Fi e aria condizionata.</p>
+          <br>
+          <p class="section-text" style="max-width:100%" data-i18n-html="mari.desc.p2"><strong>San Bartolomeo al Mare</strong> è un borgo marinaro della provincia di Imperia, incastonato tra il mare e i rilievi liguri. La sua posizione è strategica: dista pochi minuti da Diano Marina e Cervo, e una trentina di chilometri da Sanremo. Il porto turistico, i ristoranti di pesce e il mercato del giovedì animano il centro, mentre le spiagge di sabbia fine e ciottoli si estendono per oltre un chilometro. Via Colombo, dove si trova Casa Mariangela, è nel cuore della zona balneare: tutto è raggiungibile a piedi.</p>
+          <br>
+          <p class="section-text" style="max-width:100%" data-i18n-html="mari.desc.p3">L'appartamento dispone di <strong>2 camere da letto</strong> (una matrimoniale, una con letti singoli), soggiorno con cucina completamente attrezzata, bagno privato, Smart TV, Wi-Fi ad alta velocità e aria condizionata in ogni stanza. Il <strong>parcheggio privato gratuito</strong> è un plus raro a San Bartolomeo al Mare, soprattutto in alta stagione.</p>
+        </div>
+        <div class="fade-up" style="transition-delay:.2s">
+          <p class="section-text" style="max-width:100%" data-i18n-html="mari.desc.p4">Con una valutazione di <strong>4,97 su 5</strong> basata su 29 recensioni verificate su Airbnb, B&B Casa Mariangela è tra le strutture più apprezzate della Riviera Ligure di Ponente. Gli ospiti lodano la pulizia impeccabile, la posizione eccellente – a 30 metri dal mare – e l'accoglienza della proprietà. L'appartamento è registrato con CIN IT008052C22DNK6SGM nel pieno rispetto della normativa sugli affitti brevi.</p>
+          <br>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--dark);margin-bottom:16px" data-i18n="mari.desc.nearby_title">Cosa visitare nei dintorni</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="mari.desc.near1">Cervo, borgo medievale &ndash; 5 minuti in auto</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="mari.desc.near2">Diano Marina e spiagge &ndash; 5 minuti</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="mari.desc.near3">Imperia, capoluogo di provincia &ndash; 15 minuti</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="mari.desc.near4">Sanremo &ndash; 30 minuti</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="mari.desc.near5">Entroterra ligure e olivi centenari</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── RECENSIONI ────────────────────────────────────── -->
   <section id="recensioni">
     <div class="section-inner">
@@ -1472,62 +1529,6 @@
     </div>
   </section>
 
-  <!-- ── GALLERIA ─────────────────────────────────────── -->
-  <section id="galleria">
-    <div class="section-inner">
-      <div class="fade-up">
-        <p class="section-label" data-i18n="common.gallery_label">Scorri le foto</p>
-        <h2 class="section-title" data-i18n="common.gallery_title">Galleria</h2>
-        <div class="section-divider"></div>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item wide fade-up" style="transition-delay:.05s" onclick="openLightbox('img/soggiorno.webp','Soggiorno')">
-          <img src="img/soggiorno.webp" alt="Soggiorno B&B Casa Mariangela San Bartolomeo al Mare Liguria" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Soggiorno</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.1s" onclick="openLightbox('img/camera1.webp','Camera matrimoniale')">
-          <img src="img/camera1.webp" alt="Camera matrimoniale affitto breve San Bartolomeo al Mare" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Camera matrimoniale</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.15s" onclick="openLightbox('img/camera2.webp','Seconda camera')">
-          <img src="img/camera2.webp" alt="Seconda camera casa vacanze Riviera Ligure di Ponente" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Seconda camera</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.2s" onclick="openLightbox('img/cucina.webp','Cucina attrezzata')">
-          <img src="img/cucina.webp" alt="Cucina attrezzata B&B Casa Mariangela San Bartolomeo al Mare" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Cucina</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.25s" onclick="openLightbox('img/bagno.webp','Bagno privato')">
-          <img src="img/bagno.webp" alt="Bagno privato appartamento vacanze San Bartolomeo al Mare" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Bagno</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.3s" onclick="openLightbox('img/balcone.webp','Balcone')">
-          <img src="img/balcone.webp" alt="Balcone vista mare San Bartolomeo al Mare Liguria" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Balcone</span></div>
-        </div>
-        <div class="gallery-item wide fade-up" style="transition-delay:.35s" onclick="openLightbox('img/soggiorno2.webp','Sala da pranzo')">
-          <img src="img/soggiorno2.webp" alt="Sala da pranzo affitto breve San Bartolomeo al Mare Riviera Ligure" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Sala da pranzo</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.4s" onclick="openLightbox('img/camera1b.webp','Camera matrimoniale')">
-          <img src="img/camera1b.webp" alt="Camera matrimoniale B&B Casa Mariangela Liguria" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Camera matrimoniale</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.45s" onclick="openLightbox('img/ingresso.webp','Ingresso')">
-          <img src="img/ingresso.webp" alt="Ingresso appartamento vacanze San Bartolomeo al Mare" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Ingresso</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.5s" onclick="openLightbox('img/parcheggio.webp','Parcheggio gratuito')">
-          <img src="img/parcheggio.webp" alt="Parcheggio privato gratuito B&B San Bartolomeo al Mare" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Parcheggio</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.55s" onclick="openLightbox('img/camera2b.webp','Seconda camera')">
-          <img src="img/camera2b.webp" alt="Seconda camera casa vacanze Riviera Ligure di Ponente" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span>Seconda camera</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox">
@@ -1789,6 +1790,16 @@
       });
     });
   </script>
-  <script src="../i18n.js?v=10" defer></script>
+  <script src="../i18n.js?v=11" defer></script>
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/393474120611?text=Ciao!%20Vorrei%20informazioni%20sul%20B%26B%20Casa%20Mariangela." class="wa-float" target="_blank" rel="noopener" aria-label="Scrivi su WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.04 20.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.23 8.25c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+  </a>
+  <style>
+    .wa-float{position:fixed;right:20px;bottom:20px;z-index:90;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:transform .2s,box-shadow .2s;}
+    .wa-float:hover{transform:scale(1.08);box-shadow:0 8px 26px rgba(0,0,0,.32);}
+    .wa-float svg{width:32px;height:32px;}
+    @media(max-width:600px){.wa-float{right:14px;bottom:14px;width:52px;height:52px;}.wa-float svg{width:29px;height:29px;}}
+  </style>
 </body>
 </html>

@@ -405,35 +405,94 @@
     </div>
   </div>
 
-  <!-- DESCRIZIONE SEO -->
-  <section id="descrizione" style="background:var(--white)">
+  <!-- GALLERIA -->
+  <section id="galleria">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label" data-i18n="dvv.desc.label">La destinazione</p>
-        <h2 class="section-title" data-i18n="dvv.desc.title">Appartamento in centro a Chiesa in Valmalenco</h2>
+        <p class="section-label" data-i18n="common.gallery_label">Le foto</p>
+        <h2 class="section-title" data-i18n="common.gallery_title">Galleria</h2>
         <div class="section-divider"></div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px">
-        <div class="fade-up" style="transition-delay:.1s">
-          <p class="section-text" style="max-width:100%" data-i18n-html="dvv.desc.p1">Cercate un <strong>appartamento in Valmalenco</strong> per la vostra vacanza in montagna? <strong>Dolce Vetta Valmalenco</strong> è un nuovissimo appartamento di charme nel centro di <strong>Chiesa in Valmalenco</strong>, ai piedi del massiccio del Bernina, nel cuore delle Alpi Retiche. Recentemente ristrutturato, accoglie fino a 6 ospiti tra camera matrimoniale con letto a castello, divano letto in soggiorno e ogni comfort moderno.</p>
-          <br>
-          <p class="section-text" style="max-width:100%" data-i18n-html="dvv.desc.p2">L'appartamento si trova in <strong>via Squadrani 15A</strong>, una posizione strategica: <strong>tutto il centro a portata di passo</strong> – negozi, ristoranti, panifici e gelaterie – e a pochi minuti dalla cabinovia <strong>Snow Eagle</strong>, la porta d'accesso al comprensorio sciistico di Caspoggio-Chiesa.</p>
-          <br>
-          <p class="section-text" style="max-width:100%" data-i18n-html="dvv.desc.p3">All'interno trovate un ampio soggiorno con caminetto decorativo, zona pranzo, smart TV e divano letto matrimoniale; una camera matrimoniale luminosa con letto a castello e armadio; un bagno moderno con doccia; cucina completamente attrezzata; lavatrice; riscaldamento autonomo e <strong>terrazzo privato</strong> con vista sulle montagne. Il <strong>box auto privato</strong> e il parcheggio gratuito sono inclusi nel soggiorno.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item wide fade-up" style="transition-delay:.05s" onclick="openLightbox('img/hero.jpg','Soggiorno con caminetto')">
+          <img src="img/hero.jpg" alt="Soggiorno Dolce Vetta Valmalenco con caminetto e divano letto" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.living">Soggiorno</span></div>
         </div>
-        <div class="fade-up" style="transition-delay:.2s">
-          <p class="section-text" style="max-width:100%" data-i18n-html="dvv.desc.p4">La <strong>Valmalenco</strong> è una delle vallate alpine più affascinanti della Lombardia. D'inverno è regno di sci alpino, snowboard, sci di fondo, ciaspole e fat bike sulla neve. D'estate offre decine di sentieri escursionistici tra rifugi, malghe e laghi alpini come il celebre <strong>Lago Palù</strong>, a 30 minuti dall'appartamento.</p>
-          <br>
-          <p class="section-text" style="max-width:100%" data-i18n="dvv.desc.p5">L'appartamento è disponibile su Airbnb e Booking.com con risposta rapida garantita. Una nuova proprietà appena aperta: siate tra i primi a vivere Dolce Vetta Valmalenco.</p>
-          <br>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--dark);margin-bottom:16px" data-i18n="dvv.desc.nearby_title">Cosa fare nei dintorni</h3>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="dvv.desc.near1">Cabinovia Snow Eagle &ndash; comprensorio sciistico, a pochi passi</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="dvv.desc.near2">Lago Pal&ugrave; &ndash; 30 minuti, escursioni e canoa</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="dvv.desc.near3">Sentieri escursionistici della Valmalenco &ndash; partenze dal centro</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="dvv.desc.near4">Piscina di Chiesa in Valmalenco &ndash; in centro paese</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="dvv.desc.near5">Centro storico di Chiesa &ndash; negozi, ristoranti, vita di paese</span></li>
-          </ul>
+        <div class="gallery-item fade-up" style="transition-delay:.1s" onclick="openLightbox('img/camera1.jpg','Camera matrimoniale')">
+          <img src="img/camera1.webp" alt="Camera matrimoniale Dolce Vetta Valmalenco" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.bedroom">Camera</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.15s" onclick="openLightbox('img/soggiorno1.jpg','Soggiorno e zona pranzo')">
+          <img src="img/soggiorno1.webp" alt="Soggiorno con zona pranzo e TV" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.living">Soggiorno</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.2s" onclick="openLightbox('img/terrazzo1.jpg','Terrazzo privato')">
+          <img src="img/terrazzo1.webp" alt="Terrazzo privato Dolce Vetta Valmalenco" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.terrace">Terrazzo</span></div>
+        </div>
+        <div class="gallery-item wide fade-up" style="transition-delay:.25s" onclick="openLightbox('img/soggiorno2.jpg','Soggiorno con caminetto')">
+          <img src="img/soggiorno2.webp" alt="Soggiorno con caminetto e divano letto" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.living">Soggiorno</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.3s" onclick="openLightbox('img/camera2.jpg','Camera con letto a castello')">
+          <img src="img/camera2.webp" alt="Camera matrimoniale con letto a castello e finestra" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.bedroom">Camera</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.32s" onclick="openLightbox('img/castello.jpg','Letto a castello')">
+          <img src="img/castello.webp" alt="Letto a castello in camera da letto Dolce Vetta Valmalenco" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.bunk">Letto a castello</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.35s" onclick="openLightbox('img/bagno1.jpg','Bagno')">
+          <img src="img/bagno1.webp" alt="Bagno moderno con doccia" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.bath">Bagno</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.4s" onclick="openLightbox('img/bagno3.jpg','Bagno')">
+          <img src="img/bagno3.webp" alt="Bagno con doccia" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.bath">Bagno</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.45s" onclick="openLightbox('img/terrazzo2.jpg','Terrazzo')">
+          <img src="img/terrazzo2.webp" alt="Terrazzo privato con vista" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.terrace">Terrazzo</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.5s" onclick="openLightbox('img/soggiorno3.jpg','Divano letto')">
+          <img src="img/soggiorno3.webp" alt="Divano letto del soggiorno" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.living">Soggiorno</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.55s" onclick="openLightbox('img/corridoio.jpg','Anticamera')">
+          <img src="img/corridoio.webp" alt="Anticamera dell'appartamento" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.entry">Anticamera</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.6s" onclick="openLightbox('img/terrazzo3.jpg','Terrazzo')">
+          <img src="img/terrazzo3.webp" alt="Terrazzo con vista montagne" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.terrace">Terrazzo</span></div>
+        </div>
+        <div class="gallery-item wide fade-up" style="transition-delay:.65s" onclick="openLightbox('img/cucina1.jpg','Cucina attrezzata')">
+          <img src="img/cucina1.webp" alt="Cucina attrezzata Dolce Vetta Valmalenco" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.kitchen">Cucina</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.7s" onclick="openLightbox('img/cucina2.jpg','Cucina e zona pranzo')">
+          <img src="img/cucina2.webp" alt="Cucina e zona pranzo Dolce Vetta Valmalenco" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.kitchen">Cucina</span></div>
+        </div>
+        <div class="gallery-item wide fade-up" style="transition-delay:.75s" onclick="openLightbox('img/soggiorno5.jpg','Cucina-soggiorno open space')">
+          <img src="img/soggiorno5.webp" alt="Open space cucina e soggiorno Dolce Vetta Valmalenco" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.openspace">Open space</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.8s" onclick="openLightbox('img/cucina3.jpg','Piano cottura a induzione')">
+          <img src="img/cucina3.webp" alt="Piano cottura a induzione e posateria" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.kitchen">Cucina</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.85s" onclick="openLightbox('img/cucina4.jpg','Macchina del caffè Nespresso')">
+          <img src="img/cucina4.webp" alt="Macchina del caffè Nespresso in cucina" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.kitchen">Cucina</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.9s" onclick="openLightbox('img/cucina5.jpg','Dettagli cucina')">
+          <img src="img/cucina5.webp" alt="Dettagli cucina con utensili" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.kitchen">Cucina</span></div>
+        </div>
+        <div class="gallery-item fade-up" style="transition-delay:.95s" onclick="openLightbox('img/esterno1.jpg','Esterno del palazzo')">
+          <img src="img/esterno1.webp" alt="Esterno del palazzo Dolce Vetta Valmalenco con vista montagne" loading="lazy" decoding="async" />
+          <div class="gallery-overlay"><span data-i18n="dvv.gal.exterior">Esterno</span></div>
         </div>
       </div>
     </div>
@@ -639,94 +698,36 @@
     </div>
   </section>
 
-  <!-- GALLERIA -->
-  <section id="galleria">
+
+  <!-- DESCRIZIONE SEO -->
+  <section id="descrizione" style="background:var(--white)">
     <div class="section-inner">
       <div class="fade-up">
-        <p class="section-label" data-i18n="common.gallery_label">Le foto</p>
-        <h2 class="section-title" data-i18n="common.gallery_title">Galleria</h2>
+        <p class="section-label" data-i18n="dvv.desc.label">La destinazione</p>
+        <h2 class="section-title" data-i18n="dvv.desc.title">Appartamento in centro a Chiesa in Valmalenco</h2>
         <div class="section-divider"></div>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-item wide fade-up" style="transition-delay:.05s" onclick="openLightbox('img/hero.jpg','Soggiorno con caminetto')">
-          <img src="img/hero.jpg" alt="Soggiorno Dolce Vetta Valmalenco con caminetto e divano letto" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.living">Soggiorno</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px">
+        <div class="fade-up" style="transition-delay:.1s">
+          <p class="section-text" style="max-width:100%" data-i18n-html="dvv.desc.p1">Cercate un <strong>appartamento in Valmalenco</strong> per la vostra vacanza in montagna? <strong>Dolce Vetta Valmalenco</strong> è un nuovissimo appartamento di charme nel centro di <strong>Chiesa in Valmalenco</strong>, ai piedi del massiccio del Bernina, nel cuore delle Alpi Retiche. Recentemente ristrutturato, accoglie fino a 6 ospiti tra camera matrimoniale con letto a castello, divano letto in soggiorno e ogni comfort moderno.</p>
+          <br>
+          <p class="section-text" style="max-width:100%" data-i18n-html="dvv.desc.p2">L'appartamento si trova in <strong>via Squadrani 15A</strong>, una posizione strategica: <strong>tutto il centro a portata di passo</strong> – negozi, ristoranti, panifici e gelaterie – e a pochi minuti dalla cabinovia <strong>Snow Eagle</strong>, la porta d'accesso al comprensorio sciistico di Caspoggio-Chiesa.</p>
+          <br>
+          <p class="section-text" style="max-width:100%" data-i18n-html="dvv.desc.p3">All'interno trovate un ampio soggiorno con caminetto decorativo, zona pranzo, smart TV e divano letto matrimoniale; una camera matrimoniale luminosa con letto a castello e armadio; un bagno moderno con doccia; cucina completamente attrezzata; lavatrice; riscaldamento autonomo e <strong>terrazzo privato</strong> con vista sulle montagne. Il <strong>box auto privato</strong> e il parcheggio gratuito sono inclusi nel soggiorno.</p>
         </div>
-        <div class="gallery-item fade-up" style="transition-delay:.1s" onclick="openLightbox('img/camera1.jpg','Camera matrimoniale')">
-          <img src="img/camera1.webp" alt="Camera matrimoniale Dolce Vetta Valmalenco" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.bedroom">Camera</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.15s" onclick="openLightbox('img/soggiorno1.jpg','Soggiorno e zona pranzo')">
-          <img src="img/soggiorno1.webp" alt="Soggiorno con zona pranzo e TV" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.living">Soggiorno</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.2s" onclick="openLightbox('img/terrazzo1.jpg','Terrazzo privato')">
-          <img src="img/terrazzo1.webp" alt="Terrazzo privato Dolce Vetta Valmalenco" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.terrace">Terrazzo</span></div>
-        </div>
-        <div class="gallery-item wide fade-up" style="transition-delay:.25s" onclick="openLightbox('img/soggiorno2.jpg','Soggiorno con caminetto')">
-          <img src="img/soggiorno2.webp" alt="Soggiorno con caminetto e divano letto" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.living">Soggiorno</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.3s" onclick="openLightbox('img/camera2.jpg','Camera con letto a castello')">
-          <img src="img/camera2.webp" alt="Camera matrimoniale con letto a castello e finestra" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.bedroom">Camera</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.32s" onclick="openLightbox('img/castello.jpg','Letto a castello')">
-          <img src="img/castello.webp" alt="Letto a castello in camera da letto Dolce Vetta Valmalenco" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.bunk">Letto a castello</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.35s" onclick="openLightbox('img/bagno1.jpg','Bagno')">
-          <img src="img/bagno1.webp" alt="Bagno moderno con doccia" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.bath">Bagno</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.4s" onclick="openLightbox('img/bagno3.jpg','Bagno')">
-          <img src="img/bagno3.webp" alt="Bagno con doccia" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.bath">Bagno</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.45s" onclick="openLightbox('img/terrazzo2.jpg','Terrazzo')">
-          <img src="img/terrazzo2.webp" alt="Terrazzo privato con vista" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.terrace">Terrazzo</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.5s" onclick="openLightbox('img/soggiorno3.jpg','Divano letto')">
-          <img src="img/soggiorno3.webp" alt="Divano letto del soggiorno" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.living">Soggiorno</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.55s" onclick="openLightbox('img/corridoio.jpg','Anticamera')">
-          <img src="img/corridoio.webp" alt="Anticamera dell'appartamento" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.entry">Anticamera</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.6s" onclick="openLightbox('img/terrazzo3.jpg','Terrazzo')">
-          <img src="img/terrazzo3.webp" alt="Terrazzo con vista montagne" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.terrace">Terrazzo</span></div>
-        </div>
-        <div class="gallery-item wide fade-up" style="transition-delay:.65s" onclick="openLightbox('img/cucina1.jpg','Cucina attrezzata')">
-          <img src="img/cucina1.webp" alt="Cucina attrezzata Dolce Vetta Valmalenco" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.kitchen">Cucina</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.7s" onclick="openLightbox('img/cucina2.jpg','Cucina e zona pranzo')">
-          <img src="img/cucina2.webp" alt="Cucina e zona pranzo Dolce Vetta Valmalenco" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.kitchen">Cucina</span></div>
-        </div>
-        <div class="gallery-item wide fade-up" style="transition-delay:.75s" onclick="openLightbox('img/soggiorno5.jpg','Cucina-soggiorno open space')">
-          <img src="img/soggiorno5.webp" alt="Open space cucina e soggiorno Dolce Vetta Valmalenco" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.openspace">Open space</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.8s" onclick="openLightbox('img/cucina3.jpg','Piano cottura a induzione')">
-          <img src="img/cucina3.webp" alt="Piano cottura a induzione e posateria" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.kitchen">Cucina</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.85s" onclick="openLightbox('img/cucina4.jpg','Macchina del caffè Nespresso')">
-          <img src="img/cucina4.webp" alt="Macchina del caffè Nespresso in cucina" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.kitchen">Cucina</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.9s" onclick="openLightbox('img/cucina5.jpg','Dettagli cucina')">
-          <img src="img/cucina5.webp" alt="Dettagli cucina con utensili" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.kitchen">Cucina</span></div>
-        </div>
-        <div class="gallery-item fade-up" style="transition-delay:.95s" onclick="openLightbox('img/esterno1.jpg','Esterno del palazzo')">
-          <img src="img/esterno1.webp" alt="Esterno del palazzo Dolce Vetta Valmalenco con vista montagne" loading="lazy" decoding="async" />
-          <div class="gallery-overlay"><span data-i18n="dvv.gal.exterior">Esterno</span></div>
+        <div class="fade-up" style="transition-delay:.2s">
+          <p class="section-text" style="max-width:100%" data-i18n-html="dvv.desc.p4">La <strong>Valmalenco</strong> è una delle vallate alpine più affascinanti della Lombardia. D'inverno è regno di sci alpino, snowboard, sci di fondo, ciaspole e fat bike sulla neve. D'estate offre decine di sentieri escursionistici tra rifugi, malghe e laghi alpini come il celebre <strong>Lago Palù</strong>, a 30 minuti dall'appartamento.</p>
+          <br>
+          <p class="section-text" style="max-width:100%" data-i18n="dvv.desc.p5">L'appartamento è disponibile su Airbnb e Booking.com con risposta rapida garantita. Una nuova proprietà appena aperta: siate tra i primi a vivere Dolce Vetta Valmalenco.</p>
+          <br>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--dark);margin-bottom:16px" data-i18n="dvv.desc.nearby_title">Cosa fare nei dintorni</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="dvv.desc.near1">Cabinovia Snow Eagle &ndash; comprensorio sciistico, a pochi passi</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="dvv.desc.near2">Lago Pal&ugrave; &ndash; 30 minuti, escursioni e canoa</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="dvv.desc.near3">Sentieri escursionistici della Valmalenco &ndash; partenze dal centro</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="dvv.desc.near4">Piscina di Chiesa in Valmalenco &ndash; in centro paese</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="dvv.desc.near5">Centro storico di Chiesa &ndash; negozi, ristoranti, vita di paese</span></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -920,6 +921,16 @@
       });
     });
   </script>
-  <script src="../i18n.js?v=10" defer></script>
+  <script src="../i18n.js?v=11" defer></script>
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/393474120611?text=Ciao!%20Vorrei%20informazioni%20su%20Dolce%20Vetta%20in%20Valmalenco." class="wa-float" target="_blank" rel="noopener" aria-label="Scrivi su WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.04 20.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.23 8.25c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+  </a>
+  <style>
+    .wa-float{position:fixed;right:20px;bottom:20px;z-index:90;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:transform .2s,box-shadow .2s;}
+    .wa-float:hover{transform:scale(1.08);box-shadow:0 8px 26px rgba(0,0,0,.32);}
+    .wa-float svg{width:32px;height:32px;}
+    @media(max-width:600px){.wa-float{right:14px;bottom:14px;width:52px;height:52px;}.wa-float svg{width:29px;height:29px;}}
+  </style>
 </body>
 </html>
