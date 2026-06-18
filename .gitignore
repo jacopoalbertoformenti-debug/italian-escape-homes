@@ -9,3 +9,6 @@ wrangler.toml
 # Git
 .git
 .vercel
+
+# Claude Code (local tooling)
+.claude

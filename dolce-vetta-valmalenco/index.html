@@ -413,9 +413,7 @@
         <h2 class="section-title" data-i18n="common.gallery_title">Galleria</h2>
         <div class="section-divider"></div>
       </div>
-      <div class="gallery-carousel">
-        <button class="gal-arrow gal-prev" type="button" aria-label="Foto precedenti" onclick="galScroll(this,-1)">&#8249;</button>
-        <div class="gallery-grid">
+      <div class="gallery-grid">
         <div class="gallery-item wide fade-up" style="transition-delay:.05s" onclick="openLightbox('img/hero.jpg','Soggiorno con caminetto')">
           <img src="img/hero.jpg" alt="Soggiorno Dolce Vetta Valmalenco con caminetto e divano letto" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span data-i18n="dvv.gal.living">Soggiorno</span></div>
@@ -497,8 +495,6 @@
           <div class="gallery-overlay"><span data-i18n="dvv.gal.exterior">Esterno</span></div>
         </div>
         </div>
-        <button class="gal-arrow gal-next" type="button" aria-label="Foto successive" onclick="galScroll(this,1)">&#8250;</button>
-      </div>
     </div>
   </section>
 
@@ -936,29 +932,14 @@
     .wa-float svg{width:32px;height:32px;}
     @media(max-width:600px){.wa-float{right:16px;bottom:calc(26px + env(safe-area-inset-bottom));width:52px;height:52px;}.wa-float svg{width:29px;height:29px;}}
   </style>
-  <!-- GALLERY CAROUSEL -->
+  <!-- GALLERY MOSAIC -->
   <style>
-    .gallery-carousel{position:relative;margin-top:48px;}
-    .gallery-grid{display:flex !important;grid-template-columns:none !important;grid-auto-rows:auto !important;gap:14px;margin-top:0 !important;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scroll-behavior:smooth;padding-bottom:10px;}
-    .gallery-grid::-webkit-scrollbar{height:8px;}
-    .gallery-grid::-webkit-scrollbar-thumb{background:rgba(0,0,0,.18);border-radius:4px;}
-    .gallery-item{flex:0 0 32%;height:340px;scroll-snap-align:start;}
-    .gallery-item.wide{flex:0 0 32% !important;grid-column:auto !important;}
-    .gal-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,.92);color:var(--dark);font-size:1.6rem;line-height:1;cursor:pointer;box-shadow:var(--shadow-sm);display:flex;align-items:center;justify-content:center;transition:background .2s;}
-    .gal-arrow:hover{background:#fff;}
-    .gal-prev{left:-12px;}
-    .gal-next{right:-12px;}
-    @media(max-width:900px){.gallery-item{flex-basis:60%;height:300px;}.gal-arrow{display:none;}}
-    @media(max-width:600px){.gallery-item{flex-basis:82%;height:260px;}}
+    .gallery-grid{display:block !important;grid-template-columns:none !important;grid-auto-rows:auto !important;column-count:3;column-gap:14px;margin-top:48px;}
+    .gallery-item{display:block;width:100%;break-inside:avoid;-webkit-column-break-inside:avoid;margin:0 0 14px;height:auto !important;}
+    .gallery-item img{width:100%;height:auto !important;}
+    .gallery-item.wide{grid-column:auto !important;}
+    @media(max-width:900px){.gallery-grid{column-count:2;}}
+    @media(max-width:600px){.gallery-grid{column-count:2;column-gap:10px;}.gallery-item{margin-bottom:10px;}}
   </style>
-  <script>
-    function galScroll(btn, dir){
-      var grid = btn.parentElement.querySelector('.gallery-grid');
-      if(!grid) return;
-      var item = grid.querySelector('.gallery-item');
-      var step = item ? (item.getBoundingClientRect().width + 14) : grid.clientWidth * 0.8;
-      grid.scrollBy({left: dir*step, behavior:'smooth'});
-    }
-  </script>
 </body>
 </html>
