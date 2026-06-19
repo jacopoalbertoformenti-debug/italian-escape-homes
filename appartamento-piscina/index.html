@@ -568,39 +568,39 @@
       </div>
       <div class="gallery-grid">
         <div class="gallery-item wide fade-up" style="transition-delay:.05s" onclick="openLightbox('img/piscina2.webp','Piscina condominiale')">
-          <img src="img/piscina2.webp" alt="Piscina condominiale stagionale appartamento con piscina Leggiuno Lago Maggiore" loading="lazy" decoding="async" />
+          <img width="1500" height="2000" src="img/piscina2.webp" alt="Piscina condominiale stagionale appartamento con piscina Leggiuno Lago Maggiore" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Piscina</span></div>
         </div>
         <div class="gallery-item fade-up" style="transition-delay:.1s" onclick="openLightbox('img/camera1.webp','Camera matrimoniale')">
-          <img src="img/camera1.webp" alt="Camera matrimoniale spaziosa, appartamento affitto breve Leggiuno" loading="lazy" decoding="async" />
+          <img width="1500" height="2000" src="img/camera1.webp" alt="Camera matrimoniale spaziosa, appartamento affitto breve Leggiuno" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Camera</span></div>
         </div>
         <div class="gallery-item fade-up" style="transition-delay:.15s" onclick="openLightbox('img/cucina.webp','Cucina attrezzata')">
-          <img src="img/cucina.webp" alt="Cucina completamente attrezzata, casa vacanze Leggiuno Lago Maggiore" loading="lazy" decoding="async" />
+          <img width="1500" height="2000" src="img/cucina.webp" alt="Cucina completamente attrezzata, casa vacanze Leggiuno Lago Maggiore" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Cucina</span></div>
         </div>
         <div class="gallery-item fade-up" style="transition-delay:.2s" onclick="openLightbox('img/bagno1.webp','Bagno con doccia')">
-          <img src="img/bagno1.webp" alt="Bagno moderno con doccia, appartamento Leggiuno" loading="lazy" decoding="async" />
+          <img width="1500" height="2000" src="img/bagno1.webp" alt="Bagno moderno con doccia, appartamento Leggiuno" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Bagno</span></div>
         </div>
         <div class="gallery-item wide fade-up" style="transition-delay:.25s" onclick="openLightbox('img/soggiorno.webp','Soggiorno open space')">
-          <img src="img/soggiorno.webp" alt="Soggiorno open space con zona living, appartamento con piscina Leggiuno" loading="lazy" decoding="async" />
+          <img width="1500" height="2000" src="img/soggiorno.webp" alt="Soggiorno open space con zona living, appartamento con piscina Leggiuno" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Soggiorno</span></div>
         </div>
         <div class="gallery-item fade-up" style="transition-delay:.3s" onclick="openLightbox('img/parcheggio.webp','Parcheggio con vista Lago Maggiore')">
-          <img src="img/parcheggio.webp" alt="Parcheggio privato con vista sul Lago Maggiore, appartamento Leggiuno" loading="lazy" decoding="async" />
+          <img width="1500" height="2000" src="img/parcheggio.webp" alt="Parcheggio privato con vista sul Lago Maggiore, appartamento Leggiuno" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Parcheggio</span></div>
         </div>
         <div class="gallery-item fade-up" style="transition-delay:.35s" onclick="openLightbox('img/tv.webp','Soggiorno Smart TV')">
-          <img src="img/tv.webp" alt="Smart TV soggiorno appartamento affitto breve Leggiuno" loading="lazy" decoding="async" />
+          <img width="2000" height="1500" src="img/tv.webp" alt="Smart TV soggiorno appartamento affitto breve Leggiuno" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Smart TV</span></div>
         </div>
         <div class="gallery-item fade-up" style="transition-delay:.4s" onclick="openLightbox('img/bagno2.webp','Secondo bagno')">
-          <img src="img/bagno2.webp" alt="Bagno con doccia appartamento Leggiuno Lago Maggiore" loading="lazy" decoding="async" />
+          <img width="1500" height="2000" src="img/bagno2.webp" alt="Bagno con doccia appartamento Leggiuno Lago Maggiore" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Bagno</span></div>
         </div>
         <div class="gallery-item fade-up" style="transition-delay:.45s" onclick="openLightbox('img/camera3.webp','Camera da letto')">
-          <img src="img/camera3.webp" alt="Camera da letto appartamento vacanze con piscina Leggiuno" loading="lazy" decoding="async" />
+          <img width="1500" height="2000" src="img/camera3.webp" alt="Camera da letto appartamento vacanze con piscina Leggiuno" loading="lazy" decoding="async" />
           <div class="gallery-overlay"><span>Camera</span></div>
         </div>
         </div>
@@ -1033,7 +1033,6 @@
     .gallery-grid{display:grid !important;grid-template-columns:repeat(3,1fr) !important;grid-auto-rows:8px;gap:14px;margin-top:48px;}
     .gallery-item{width:auto !important;height:auto !important;margin:0 !important;break-inside:auto;}
     .gallery-item img{width:100%;height:auto !important;display:block;}
-    .gallery-item.wide{grid-column:auto !important;}
     @media(max-width:900px){.gallery-grid{grid-template-columns:repeat(2,1fr) !important;}}
     @media(max-width:600px){.gallery-grid{grid-template-columns:repeat(2,1fr) !important;gap:10px;}}
   </style>
@@ -1043,28 +1042,27 @@
         document.querySelectorAll('.gallery-grid').forEach(function(g){
           var cs=getComputedStyle(g);
           var ncol=cs.gridTemplateColumns.split(' ').length;
-          var row=parseFloat(cs.gridAutoRows)||8, gap=parseFloat(cs.rowGap)||14;
+          var row=parseFloat(cs.gridAutoRows)||8;
+          var cgap=parseFloat(cs.columnGap)||14, rgap=parseFloat(cs.rowGap)||cgap;
+          var colW=(g.clientWidth-(ncol-1)*cgap)/ncol;
+          if(colW<=0) return;
           var colH=[]; for(var k=0;k<ncol;k++) colH.push(0);
           g.querySelectorAll('.gallery-item').forEach(function(it){
             var im=it.querySelector('img');
-            var h=im?im.getBoundingClientRect().height:it.getBoundingClientRect().height;
-            if(!h) return;
-            var span=Math.max(1,Math.round((h+gap)/(row+gap)));
+            var aw=im?(+im.getAttribute('width')||im.naturalWidth||4):4;
+            var ah=im?(+im.getAttribute('height')||im.naturalHeight||3):3;
+            var span=Math.max(1,Math.round((colW*ah/aw+rgap)/(row+rgap)));
             var c=0; for(var i=1;i<ncol;i++){ if(colH[i]<colH[c]) c=i; }
-            it.style.gridColumn=String(c+1);
+            it.style.setProperty('grid-column',String(c+1),'important');
             it.style.gridRow=(colH[c]+1)+' / span '+span;
             colH[c]=colH[c]+span;
           });
         });
       }
-      function ready(){
-        L();
-        document.querySelectorAll('.gallery-item img').forEach(function(im){ if(!im.complete) im.addEventListener('load',L); });
-      }
-      if(document.readyState!=='loading') ready(); else document.addEventListener('DOMContentLoaded',ready);
+      function go(){ L(); requestAnimationFrame(L); }
+      if(document.readyState!=='loading') go(); else document.addEventListener('DOMContentLoaded',go);
       window.addEventListener('load',L);
-      window.addEventListener('resize',L);
-      setTimeout(L,400); setTimeout(L,1500);
+      var t; window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(L,150);});
     })();
   </script>
 </body>
