@@ -11,6 +11,7 @@ const IEH_TRANSLATIONS = {
   it: {
     /* ── Common ── */
     "common.book"            : "Prenota",
+    "common.availability"    : "Verifica disponibilità",
     "common.discover"        : "Scopri di più",
     "common.contact_us"      : "Contattaci",
     "common.scroll"          : "Scorri",
@@ -177,9 +178,9 @@ const IEH_TRANSLATIONS = {
     "home.contacts.c1.link"  : "Chiama ora →",
     "home.contacts.c2.label" : "Email",
     "home.contacts.c2.link"  : "Scrivi →",
-    "home.contacts.c3.label" : "Airbnb",
-    "home.contacts.c3.value" : "Tutte le proprietà",
-    "home.contacts.c3.link"  : "Vedi su Airbnb →",
+    "home.contacts.c3.label" : "Disponibilità",
+    "home.contacts.c3.value" : "Tutte le case",
+    "home.contacts.c3.link"  : "Vedi calendario →",
 
     /* ── Footer ── */
     "home.footer.tagline"    : "Cinque proprietà selezionate tra mare, lago e montagna. L'Italia più bella, a portata di casa.",
@@ -700,6 +701,7 @@ const IEH_TRANSLATIONS = {
   en: {
     /* ── Common ── */
     "common.book"            : "Book",
+    "common.availability"    : "Check availability",
     "common.discover"        : "Discover more",
     "common.contact_us"      : "Contact us",
     "common.scroll"          : "Scroll",
@@ -866,9 +868,9 @@ const IEH_TRANSLATIONS = {
     "home.contacts.c1.link"  : "Call now →",
     "home.contacts.c2.label" : "Email",
     "home.contacts.c2.link"  : "Write to us →",
-    "home.contacts.c3.label" : "Airbnb",
-    "home.contacts.c3.value" : "All properties",
-    "home.contacts.c3.link"  : "View on Airbnb →",
+    "home.contacts.c3.label" : "Availability",
+    "home.contacts.c3.value" : "All our homes",
+    "home.contacts.c3.link"  : "View calendar →",
 
     /* ── Footer ── */
     "home.footer.tagline"    : "Five handpicked vacation homes on the sea, lakes and mountains. The best of Italy, within your reach.",
@@ -1377,6 +1379,7 @@ const IEH_TRANSLATIONS = {
   de: {
     /* ── Common ── */
     "common.book"            : "Buchen",
+    "common.availability"    : "Verfügbarkeit prüfen",
     "common.discover"        : "Mehr entdecken",
     "common.contact_us"      : "Kontakt",
     "common.scroll"          : "Scrollen",
@@ -1543,9 +1546,9 @@ const IEH_TRANSLATIONS = {
     "home.contacts.c1.link"  : "Jetzt anrufen →",
     "home.contacts.c2.label" : "E-Mail",
     "home.contacts.c2.link"  : "Schreiben →",
-    "home.contacts.c3.label" : "Airbnb",
+    "home.contacts.c3.label" : "Verfügbarkeit",
     "home.contacts.c3.value" : "Alle Unterkünfte",
-    "home.contacts.c3.link"  : "Auf Airbnb ansehen →",
+    "home.contacts.c3.link"  : "Kalender ansehen →",
 
     /* ── Footer ── */
     "home.footer.tagline"    : "Fünf sorgfältig ausgewählte Ferienhäuser am Meer, an Seen und in den Bergen. Das schönste Italien zum Greifen nah.",
@@ -2052,6 +2055,7 @@ const IEH_TRANSLATIONS = {
   fr: {
     /* ── Commun ── */
     "common.book"            : "Réserver",
+    "common.availability"    : "Vérifier les disponibilités",
     "common.discover"        : "Découvrir",
     "common.contact_us"      : "Nous contacter",
     "common.scroll"          : "Défiler",
@@ -2218,9 +2222,9 @@ const IEH_TRANSLATIONS = {
     "home.contacts.c1.link"  : "Appeler maintenant →",
     "home.contacts.c2.label" : "E-mail",
     "home.contacts.c2.link"  : "Écrire →",
-    "home.contacts.c3.label" : "Airbnb",
-    "home.contacts.c3.value" : "Toutes les propriétés",
-    "home.contacts.c3.link"  : "Voir sur Airbnb →",
+    "home.contacts.c3.label" : "Disponibilités",
+    "home.contacts.c3.value" : "Toutes les maisons",
+    "home.contacts.c3.link"  : "Voir le calendrier →",
 
     /* ── Pied de page ── */
     "home.footer.tagline"    : "Cinq maisons de vacances sélectionnées entre mer, lacs et montagne. La plus belle Italie, à portée de main.",
