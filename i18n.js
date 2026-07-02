@@ -2834,11 +2834,18 @@ document.addEventListener('DOMContentLoaded', () => {
     var cards = document.querySelectorAll('.prop-card');
     for (var i = 0; i < cards.length; i++) {
       var link = cards[i].querySelector('a.prop-img[href]');
-      var badge = cards[i].querySelector('.prop-badge-rating');
-      if (!link || !badge) continue;
+      if (!link) continue;
       var s = (link.getAttribute('href') || '').replace(/\.?\//g, '');
       var r = dati[s];
       if (!r || (!r.airbnb && !r.booking)) continue;
+
+      /* Il badge può mancare nel markup (card senza rating statico): crealo */
+      var badge = cards[i].querySelector('.prop-badge-rating');
+      if (!badge) {
+        badge = document.createElement('div');
+        badge.className = 'prop-badge-rating';
+        link.appendChild(badge);
+      }
 
       var parti = [];
       var totRec = 0;
