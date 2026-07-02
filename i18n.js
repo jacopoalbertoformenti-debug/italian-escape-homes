@@ -2809,3 +2809,75 @@ document.addEventListener('DOMContentLoaded', () => {
   const lang = iehGetLang();
   iehApply(lang);   /* always apply to set active state */
 });
+
+/* ── Rating live dal gestionale ─────────────────────────────────────────────
+   Legge i punteggi Airbnb/Booking da admin.italianescapeshomes.it/api/ratings
+   e aggiorna (o crea) il badge .hero-rating nelle pagine proprietà.
+   Se l'endpoint non risponde, resta il contenuto statico della pagina. */
+(function () {
+  var slug = location.pathname.split('/').filter(Boolean)[0];
+  if (!slug) return; /* homepage */
+
+  var PAROLE = {
+    it: { su: 'su', rec: 'recensioni' },
+    en: { su: 'on', rec: 'reviews' },
+    de: { su: 'auf', rec: 'Bewertungen' },
+    fr: { su: 'sur', rec: 'avis' }
+  };
+
+  function fmt(v) {
+    try { return v.toLocaleString('it-IT'); } catch (e) { return String(v); }
+  }
+
+  function render(dati) {
+    var r = dati[slug];
+    if (!r || (!r.airbnb && !r.booking)) return;
+    var lang = (typeof iehGetLang === 'function' ? iehGetLang() : 'it') || 'it';
+    var w = PAROLE[lang] || PAROLE.it;
+
+    var parti = [];
+    var totRec = 0;
+    if (r.airbnb) {
+      parti.push('<strong>' + fmt(r.airbnb.voto) + '</strong>/5 ' + w.su + ' Airbnb');
+      if (r.airbnb.recensioni) totRec += r.airbnb.recensioni;
+    }
+    if (r.booking) {
+      parti.push('<strong>' + fmt(r.booking.voto) + '</strong>/10 ' + w.su + ' Booking');
+      if (r.booking.recensioni) totRec += r.booking.recensioni;
+    }
+    var testo = parti.join(' &middot; ') + (totRec > 0 ? ' &middot; ' + totRec + ' ' + w.rec : '');
+
+    var badge = document.querySelector('.hero-rating');
+    if (badge) {
+      /* Aggiorna il badge esistente e stacca l'i18n statico per non farci sovrascrivere */
+      var span = badge.querySelector('[data-i18n-html]') || badge.querySelector('span:not(.stars)');
+      if (span) {
+        span.removeAttribute('data-i18n-html');
+        span.innerHTML = testo;
+      }
+      return;
+    }
+
+    /* Crea il badge nelle pagine che non lo hanno */
+    var contenuto = document.querySelector('.hero-content');
+    var sub = contenuto && contenuto.querySelector('.hero-sub');
+    if (!contenuto || !sub) return;
+    badge = document.createElement('div');
+    badge.className = 'hero-rating';
+    badge.style.cssText =
+      'display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);' +
+      'backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);border-radius:30px;' +
+      'padding:8px 20px;margin-top:14px;font-size:.85rem;color:#fff;';
+    badge.innerHTML =
+      '<span class="stars" style="color:#D4A76A;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>' +
+      '<span>' + testo + '</span>';
+    sub.insertAdjacentElement('afterend', badge);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    fetch('https://admin.italianescapeshomes.it/api/ratings')
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (dati) { if (dati) render(dati); })
+      .catch(function () { /* endpoint non raggiungibile: resta lo statico */ });
+  });
+})();
