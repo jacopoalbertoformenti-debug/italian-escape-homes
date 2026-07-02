@@ -2811,12 +2811,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ── Rating live dal gestionale ─────────────────────────────────────────────
-   Legge i punteggi Airbnb/Booking da admin.italianescapeshomes.it/api/ratings
-   e aggiorna (o crea) il badge .hero-rating nelle pagine proprietà.
+   Legge i punteggi Airbnb/Booking da admin.italianescapeshomes.it/api/ratings.
+   Pagine proprietà: aggiorna (o crea) il badge .hero-rating nella hero.
+   Homepage: aggiorna i badge .prop-badge-rating sulle card.
    Se l'endpoint non risponde, resta il contenuto statico della pagina. */
 (function () {
   var slug = location.pathname.split('/').filter(Boolean)[0];
-  if (!slug) return; /* homepage */
 
   var PAROLE = {
     it: { su: 'su', rec: 'recensioni' },
@@ -2827,6 +2827,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function fmt(v) {
     try { return v.toLocaleString('it-IT'); } catch (e) { return String(v); }
+  }
+
+  /* Homepage: aggiorna i badge sulle card proprietà */
+  function renderHomepage(dati) {
+    var cards = document.querySelectorAll('.prop-card');
+    for (var i = 0; i < cards.length; i++) {
+      var link = cards[i].querySelector('a.prop-img[href]');
+      var badge = cards[i].querySelector('.prop-badge-rating');
+      if (!link || !badge) continue;
+      var s = (link.getAttribute('href') || '').replace(/\.?\//g, '');
+      var r = dati[s];
+      if (!r || (!r.airbnb && !r.booking)) continue;
+
+      var parti = [];
+      var totRec = 0;
+      if (r.airbnb) {
+        parti.push(fmt(r.airbnb.voto) + '/5');
+        if (r.airbnb.recensioni) totRec += r.airbnb.recensioni;
+      }
+      if (r.booking) {
+        parti.push(fmt(r.booking.voto) + '/10');
+        if (r.booking.recensioni) totRec += r.booking.recensioni;
+      }
+      badge.innerHTML =
+        '<span class="star">&#9733;</span> ' +
+        parti.join(' &middot; ') +
+        (totRec > 0 ? ' &middot; ' + totRec + ' rec.' : '');
+    }
   }
 
   function render(dati) {
@@ -2877,7 +2905,11 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('DOMContentLoaded', function () {
     fetch('https://admin.italianescapeshomes.it/api/ratings')
       .then(function (res) { return res.ok ? res.json() : null; })
-      .then(function (dati) { if (dati) render(dati); })
+      .then(function (dati) {
+        if (!dati) return;
+        if (slug) render(dati);
+        else renderHomepage(dati);
+      })
       .catch(function () { /* endpoint non raggiungibile: resta lo statico */ });
   });
 })();
