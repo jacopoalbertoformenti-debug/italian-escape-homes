@@ -12,6 +12,7 @@ const IEH_TRANSLATIONS = {
     /* ── Common ── */
     "common.book"            : "Prenota",
     "common.availability"    : "Verifica disponibilità",
+    "common.availability_short" : "Disponibilità",
     "common.discover"        : "Scopri di più",
     "common.contact_us"      : "Contattaci",
     "common.scroll"          : "Scorri",
@@ -702,6 +703,7 @@ const IEH_TRANSLATIONS = {
     /* ── Common ── */
     "common.book"            : "Book",
     "common.availability"    : "Check availability",
+    "common.availability_short" : "Availability",
     "common.discover"        : "Discover more",
     "common.contact_us"      : "Contact us",
     "common.scroll"          : "Scroll",
@@ -1380,6 +1382,7 @@ const IEH_TRANSLATIONS = {
     /* ── Common ── */
     "common.book"            : "Buchen",
     "common.availability"    : "Verfügbarkeit prüfen",
+    "common.availability_short" : "Verfügbarkeit",
     "common.discover"        : "Mehr entdecken",
     "common.contact_us"      : "Kontakt",
     "common.scroll"          : "Scrollen",
@@ -2056,6 +2059,7 @@ const IEH_TRANSLATIONS = {
     /* ── Commun ── */
     "common.book"            : "Réserver",
     "common.availability"    : "Vérifier les disponibilités",
+    "common.availability_short" : "Disponibilités",
     "common.discover"        : "Découvrir",
     "common.contact_us"      : "Nous contacter",
     "common.scroll"          : "Défiler",
