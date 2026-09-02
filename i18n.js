@@ -119,7 +119,7 @@ const IEH_TRANSLATIONS = {
     "home.card1.d3"          : "🌊 30 m dal mare",
     "home.card1.d4"          : "🚗 Parcheggio",
 
-    "home.card2.title"       : "Apartment with swimming pool",
+    "home.card2.title"       : "Apartment with Swimming Pool",
     "home.card2.tipo"        : "Appartamento · Lago",
     "home.card2.desc"        : "In un residence panoramico immerso nel verde, a 2 minuti dal Lago Maggiore. Piscina stagionale, sentieri e vicinanza alle attrazioni locali.",
     "home.card2.d1"          : "👥 4 ospiti",
@@ -203,7 +203,7 @@ const IEH_TRANSLATIONS = {
     "pool.nav.location"      : "Posizione",
 
     /* ── Pool apartment hero ── */
-    "pool.hero.title"        : "Apartment with swimming pool<br><em>Leggiuno, Lago Maggiore</em>",
+    "pool.hero.title"        : "Apartment with Swimming Pool<br><em>Leggiuno, Lago Maggiore</em>",
     "pool.hero.sub"          : "Un rifugio tranquillo immerso nel verde, a due passi dal Lago Maggiore e a 30 minuti da Malpensa",
     "pool.hero.rating"       : "<strong>4.68</strong> su 5 · 25 recensioni su Airbnb",
 
@@ -578,7 +578,7 @@ const IEH_TRANSLATIONS = {
 
     /* ── Dolce Vetta Valmalenco – Meta ── */
     "dvv.meta.title"         : "Dolce Vetta Valmalenco – Appartamento in centro a Chiesa in Valmalenco (SO), 6 ospiti",
-    "dvv.meta.desc"          : "Appartamento di charme nel centro di Chiesa in Valmalenco, ai piedi del Bernina. 1 camera con letto a castello + divano letto, 6 ospiti, terrazzo privato, box e parcheggio. A pochi passi dalla cabinovia Snow Eagle.",
+    "dvv.meta.desc"          : "Appartamento di charme a Chiesa in Valmalenco, ai piedi del Bernina. Fino a 6 ospiti, terrazzo privato e box auto. A due passi dalla cabinovia Snow Eagle.",
 
     /* ── Dolce Vetta – Nav ── */
     "dvv.nav.about"          : "L'appartamento",
@@ -810,7 +810,7 @@ const IEH_TRANSLATIONS = {
     "home.card1.d3"          : "🌊 30 m from sea",
     "home.card1.d4"          : "🚗 Parking",
 
-    "home.card2.title"       : "Apartment with swimming pool",
+    "home.card2.title"       : "Apartment with Swimming Pool",
     "home.card2.tipo"        : "Apartment · Lake",
     "home.card2.desc"        : "In a panoramic residence surrounded by greenery, 2 minutes from Lake Maggiore. Seasonal pool, walking trails and easy access to local attractions.",
     "home.card2.d1"          : "👥 4 guests",
@@ -894,7 +894,7 @@ const IEH_TRANSLATIONS = {
     "pool.nav.location"      : "Location",
 
     /* ── Pool apartment hero ── */
-    "pool.hero.title"        : "Apartment with swimming pool<br><em>Leggiuno, Lago Maggiore</em>",
+    "pool.hero.title"        : "Apartment with Swimming Pool<br><em>Leggiuno, Lago Maggiore</em>",
     "pool.hero.sub"          : "A peaceful retreat surrounded by greenery, steps from Lake Maggiore and 30 minutes from Malpensa Airport",
     "pool.hero.rating"       : "<strong>4.68</strong> out of 5 · 25 reviews on Airbnb",
 
@@ -1489,7 +1489,7 @@ const IEH_TRANSLATIONS = {
     "home.card1.d3"          : "🌊 30 m vom Meer",
     "home.card1.d4"          : "🚗 Parkplatz",
 
-    "home.card2.title"       : "Apartment with swimming pool",
+    "home.card2.title"       : "Apartment with Swimming Pool",
     "home.card2.tipo"        : "Ferienwohnung · See",
     "home.card2.desc"        : "In einer Panoramaanlage inmitten von Grün, 2 Minuten vom Lago Maggiore. Saisonaler Pool, Wanderwege und Nähe zu lokalen Attraktionen.",
     "home.card2.d1"          : "👥 4 Gäste",
@@ -1573,7 +1573,7 @@ const IEH_TRANSLATIONS = {
     "pool.nav.location"      : "Lage",
 
     /* ── Pool apartment hero ── */
-    "pool.hero.title"        : "Apartment with swimming pool<br><em>Leggiuno, Lago Maggiore</em>",
+    "pool.hero.title"        : "Apartment with Swimming Pool<br><em>Leggiuno, Lago Maggiore</em>",
     "pool.hero.sub"          : "Ein ruhiges Refugium inmitten von Grün, direkt am Lago Maggiore und 30 Minuten vom Flughafen Malpensa",
     "pool.hero.rating"       : "<strong>4,68</strong> von 5 · 25 Bewertungen auf Airbnb",
 
@@ -2166,7 +2166,7 @@ const IEH_TRANSLATIONS = {
     "home.card1.d3"          : "🌊 30 m de la mer",
     "home.card1.d4"          : "🚗 Parking",
 
-    "home.card2.title"       : "Apartment with swimming pool",
+    "home.card2.title"       : "Apartment with Swimming Pool",
     "home.card2.tipo"        : "Appartement · Lac",
     "home.card2.desc"        : "Dans une résidence panoramique entourée de verdure, à 2 minutes du lac Majeur. Piscine saisonnière, sentiers et accès facile aux attractions locales.",
     "home.card2.d1"          : "👥 4 hôtes",
@@ -2250,7 +2250,7 @@ const IEH_TRANSLATIONS = {
     "pool.nav.location"      : "Emplacement",
 
     /* ── Hero appartement piscine ── */
-    "pool.hero.title"        : "Apartment with swimming pool<br><em>Leggiuno, Lago Maggiore</em>",
+    "pool.hero.title"        : "Apartment with Swimming Pool<br><em>Leggiuno, Lago Maggiore</em>",
     "pool.hero.sub"          : "Un havre de paix entouré de verdure, à deux pas du lac Majeur et à 30 minutes de Malpensa",
     "pool.hero.rating"       : "<strong>4,68</strong> sur 5 · 25 avis sur Airbnb",
 
