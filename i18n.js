@@ -19,8 +19,8 @@ const IEH_TRANSLATIONS = {
     "common.sticky.title": "Date libere?",
     "home.hero.h1": "Mare, lago e montagna.<br><em>Cinque case</em> scelte una a una.",
     "home.hero.sub2": "Gestite direttamente da noi: risposta rapida e cura in ogni dettaglio.",
-    "home.hero.trust1": "Fino a <b>4.97</b> su Airbnb",
-    "home.hero.trust2": "<b>50+</b> recensioni",
+    "home.hero.trust1": "<b>4.86</b> di media su Airbnb",
+    "home.hero.trust2": "<b>60+</b> recensioni",
     "home.hero.trust3": "<b>Risposta rapida</b>, gestione diretta",
     "home.dest.sea": "Mare",
     "home.dest.sea_meta": "Liguria · 1 casa",
@@ -180,7 +180,7 @@ const IEH_TRANSLATIONS = {
     "home.brand.v3.title"    : "Ospitalità",
     "home.brand.v3.text"     : "Risposta rapida, disponibilità e cura degli ospiti sono la nostra priorità.",
     "home.brand.v4.title"    : "Affidabilità",
-    "home.brand.v4.text"     : "Oltre 50 recensioni su Airbnb con punteggi superiori a 4.6 su 5.",
+    "home.brand.v4.text"     : "Oltre 60 recensioni su Airbnb con punteggi superiori a 4.6 su 5.",
 
     /* ── Destinations section ── */
     "home.dest.label"        : "Dove siamo",
@@ -518,6 +518,7 @@ const IEH_TRANSLATIONS = {
     /* ── Pool & Garden hero ── */
     "garden.hero.title"      : "Casa Mariangela: Pool &amp; Garden<br><em>Leggiuno, Lago Maggiore</em>",
     "garden.hero.sub"        : "Piscina privata, giardino panoramico e vista mozzafiato sul Lago Maggiore a Leggiuno",
+    "garden.hero.rating": "5.0 · 6 recensioni · Airbnb",
 
     /* ── Pool & Garden SEO description section ── */
     "garden.desc.label"      : "La destinazione",
@@ -729,8 +730,8 @@ const IEH_TRANSLATIONS = {
     "common.sticky.title": "Dates available?",
     "home.hero.h1": "Sea, lake and mountains.<br><em>Five homes</em>, each one hand-picked.",
     "home.hero.sub2": "Managed directly by us: quick replies and care in every detail.",
-    "home.hero.trust1": "Up to <b>4.97</b> on Airbnb",
-    "home.hero.trust2": "<b>50+</b> reviews",
+    "home.hero.trust1": "<b>4.86</b> average on Airbnb",
+    "home.hero.trust2": "<b>60+</b> reviews",
     "home.hero.trust3": "<b>Quick replies</b>, managed directly",
     "home.dest.sea": "Sea",
     "home.dest.sea_meta": "Liguria · 1 home",
@@ -890,7 +891,7 @@ const IEH_TRANSLATIONS = {
     "home.brand.v3.title"    : "Hospitality",
     "home.brand.v3.text"     : "Quick responses, attentiveness and genuine care for our guests are our top priority.",
     "home.brand.v4.title"    : "Reliability",
-    "home.brand.v4.text"     : "Over 50 Airbnb reviews with scores above 4.6 out of 5.",
+    "home.brand.v4.text"     : "Over 60 Airbnb reviews with scores above 4.6 out of 5.",
 
     /* ── Destinations section ── */
     "home.dest.label"        : "Where we are",
@@ -1228,6 +1229,7 @@ const IEH_TRANSLATIONS = {
     /* ── Pool & Garden hero ── */
     "garden.hero.title"      : "Casa Mariangela: Pool &amp; Garden<br><em>Leggiuno, Lago Maggiore</em>",
     "garden.hero.sub"        : "Private pool, panoramic garden and breathtaking views over Lake Maggiore in Leggiuno",
+    "garden.hero.rating": "5.0 · 6 reviews · Airbnb",
 
     /* ── Pool & Garden SEO description section ── */
     "garden.desc.label"      : "The destination",
@@ -1427,8 +1429,8 @@ const IEH_TRANSLATIONS = {
     "common.sticky.title": "Freie Termine?",
     "home.hero.h1": "Meer, See und Berge.<br><em>Fünf Häuser</em>, jedes einzeln ausgewählt.",
     "home.hero.sub2": "Direkt von uns betreut: schnelle Antworten und Liebe zum Detail.",
-    "home.hero.trust1": "Bis zu <b>4,97</b> auf Airbnb",
-    "home.hero.trust2": "<b>50+</b> Bewertungen",
+    "home.hero.trust1": "<b>4,86</b> im Schnitt auf Airbnb",
+    "home.hero.trust2": "<b>60+</b> Bewertungen",
     "home.hero.trust3": "<b>Schnelle Antwort</b>, direkte Betreuung",
     "home.dest.sea": "Meer",
     "home.dest.sea_meta": "Ligurien · 1 Haus",
@@ -1588,7 +1590,7 @@ const IEH_TRANSLATIONS = {
     "home.brand.v3.title"    : "Gastfreundschaft",
     "home.brand.v3.text"     : "Schnelle Antworten, Verfügbarkeit und echte Fürsorge für unsere Gäste haben höchste Priorität.",
     "home.brand.v4.title"    : "Zuverlässigkeit",
-    "home.brand.v4.text"     : "Über 50 Airbnb-Bewertungen mit Punktzahlen über 4,6 von 5.",
+    "home.brand.v4.text"     : "Über 60 Airbnb-Bewertungen mit Punktzahlen über 4,6 von 5.",
 
     /* ── Destinations section ── */
     "home.dest.label"        : "Wo wir sind",
@@ -1924,6 +1926,7 @@ const IEH_TRANSLATIONS = {
     /* ── Pool & Garden hero ── */
     "garden.hero.title"      : "Casa Mariangela: Pool &amp; Garden<br><em>Leggiuno, Lago Maggiore</em>",
     "garden.hero.sub"        : "Privater Pool, Panoramagarten und atemberaubender Blick auf den Lago Maggiore in Leggiuno",
+    "garden.hero.rating": "5,0 · 6 Bewertungen · Airbnb",
 
     /* ── Pool & Garden SEO description section ── */
     "garden.desc.label"      : "Das Reiseziel",
@@ -2123,8 +2126,8 @@ const IEH_TRANSLATIONS = {
     "common.sticky.title": "Dates libres ?",
     "home.hero.h1": "Mer, lac et montagne.<br><em>Cinq maisons</em> choisies une à une.",
     "home.hero.sub2": "Gérées directement par nous : réponse rapide et soin du détail.",
-    "home.hero.trust1": "Jusqu'à <b>4,97</b> sur Airbnb",
-    "home.hero.trust2": "<b>50+</b> avis",
+    "home.hero.trust1": "<b>4,86</b> de moyenne sur Airbnb",
+    "home.hero.trust2": "<b>60+</b> avis",
     "home.hero.trust3": "<b>Réponse rapide</b>, gestion directe",
     "home.dest.sea": "Mer",
     "home.dest.sea_meta": "Ligurie · 1 maison",
@@ -2284,7 +2287,7 @@ const IEH_TRANSLATIONS = {
     "home.brand.v3.title"    : "Hospitalité",
     "home.brand.v3.text"     : "Réponses rapides, disponibilité et vrai soin pour nos hôtes sont notre priorité.",
     "home.brand.v4.title"    : "Fiabilité",
-    "home.brand.v4.text"     : "Plus de 50 avis Airbnb avec des scores supérieurs à 4,6 sur 5.",
+    "home.brand.v4.text"     : "Plus de 60 avis Airbnb avec des scores supérieurs à 4,6 sur 5.",
 
     /* ── Section destinations ── */
     "home.dest.label"        : "Où nous sommes",
@@ -2622,6 +2625,7 @@ const IEH_TRANSLATIONS = {
     /* ── Hero Pool & Garden ── */
     "garden.hero.title"      : "Casa Mariangela: Pool &amp; Garden<br><em>Leggiuno, Lago Maggiore</em>",
     "garden.hero.sub"        : "Piscine privée, jardin panoramique et vue imprenable sur le lac Majeur à Leggiuno",
+    "garden.hero.rating": "5,0 · 6 avis · Airbnb",
 
     /* ── Section SEO Pool & Garden ── */
     "garden.desc.label"      : "La destination",
