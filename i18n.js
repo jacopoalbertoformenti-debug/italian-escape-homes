@@ -2882,6 +2882,15 @@ function iehApply(lang) {
   /* html lang */
   document.documentElement.lang = lang;
 
+  /* pagina disponibilità del gestionale: si apre nella stessa lingua */
+  document.querySelectorAll('a[href*="admin.italianescapeshomes.it/disponibilita"]').forEach(a => {
+    try {
+      const u = new URL(a.href);
+      u.searchParams.set('lang', lang);
+      a.href = u.toString();
+    } catch (e) { /* link non valido: lascialo com'è */ }
+  });
+
   /* switcher active state */
   document.querySelectorAll('[data-lang-btn]').forEach(btn => {
     btn.classList.toggle('lang-active', btn.getAttribute('data-lang-btn') === lang);
