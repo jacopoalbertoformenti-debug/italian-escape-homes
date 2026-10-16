@@ -319,8 +319,67 @@
     ]
   }
   </script>
+  <style id="ieh-redesign-v1">
+    /* ieh-redesign-v1: icone SVG, menu lingue mobile, dissolvenze */
+    :root { --ic-accent: var(--green); }
+    .ic { width: 1em; height: 1em; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; display: inline-block; vertical-align: -.14em; }
+    .ic-fill { fill: currentColor; stroke: none; }
+    .has-ic { display: inline-flex; align-items: center; gap: .45em; }
+    .prop-detail .ic, .camera-detail .ic, .servizio-icon .ic, .brand-value-icon .ic, .contatto-icon-wrap .ic { color: var(--ic-accent); }
+    .highlight-icon .ic, .location-item-icon .ic { color: var(--gold); }
+    .servizio-icon, .highlight-icon, .location-item-icon, .brand-value-icon, .contatto-icon-wrap { line-height: 1; }
+    .nav-lang { display: none; }
+    @media (max-width: 900px) {
+      nav .lang-switcher { display: none !important; }
+      .nav-links.open .nav-lang { display: flex; gap: 8px; margin-top: 10px; }
+      .nav-lang button { background: transparent; border: 1px solid rgba(255,255,255,.45); color: #fff; font: 500 .8rem Inter, sans-serif; letter-spacing: .1em; padding: 8px 13px; border-radius: 6px; cursor: pointer; }
+      .nav-lang button.lang-active { background: var(--gold); border-color: var(--gold); color: #1E1810; }
+    }
+    .fade-up { transform: translateY(14px) !important; transition: opacity .45s ease, transform .45s ease !important; }
+    .fade-up.visible { transform: none !important; }
+    @media (prefers-reduced-motion: reduce) { .fade-up { opacity: 1 !important; transform: none !important; transition: none !important; } }
+
+    .hero-cta { margin-top: 26px; }
+    .hero-cta .btn { margin: 0 0 14px !important; }
+    .hero-platforms { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+    .hero-platforms a { font-size: .78rem; letter-spacing: .08em; color: #fff; border: 1px solid rgba(255,255,255,.45); background: rgba(0,0,0,.2); backdrop-filter: blur(6px); border-radius: 999px; padding: 7px 18px; }
+    .book-card { display: none; }
+    @media (min-width: 1100px) {
+      .hero { justify-content: flex-start !important; text-align: left !important; }
+      .hero-content { margin-left: max(48px, 6vw) !important; margin-right: auto !important; max-width: 600px !important; text-align: left !important; }
+      .hero-content [style*="justify-content:center"] { justify-content: flex-start !important; }
+      .hero-sub { margin-left: 0 !important; }
+      .hero-carousel::after { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.2) 45%, rgba(0,0,0,0) 68%); pointer-events: none; }
+      .hero-cta { display: none; }
+      .book-card { display: block; position: absolute; z-index: 4; right: max(48px, 6vw); top: 50%; transform: translateY(-50%); width: 360px; background: #fff; color: #1E1810; border-radius: 18px; box-shadow: 0 18px 50px rgba(0,0,0,.25); padding: 26px; text-align: left; }
+    }
+    .book-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.7rem; line-height: 1.1; margin: 0 0 6px; color: #1E1810; }
+    .book-sub { font-size: .85rem; color: #6b5b4e; margin: 0 0 18px; line-height: 1.5; }
+    .book-card .book-main { display: flex !important; width: 100%; max-width: none !important; justify-content: center; align-items: center; gap: 8px; margin: 0 !important; }
+    .book-or { display: flex; align-items: center; gap: 10px; font-size: .75rem; color: #8a7a6c; margin: 16px 0; }
+    .book-or::before, .book-or::after { content: ''; flex: 1; height: 1px; background: #eadfd3; }
+    .book-platforms { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+    .book-platforms a { border: 1px solid #e6dccf; border-radius: 10px; padding: 10px 6px; text-align: center; font-size: .8rem; font-weight: 600; color: #1E1810; display: flex; align-items: center; justify-content: center; gap: 6px; transition: border-color .2s, background .2s; }
+    .book-platforms a:hover { border-color: #b9aa9a; background: #faf7f3; }
+    .book-platforms a.wa { color: #1a8f4c; border-color: #bfe6cf; background: #f1fbf5; }
+    .book-platforms a.wa .ic { color: #25D366; font-size: 15px; }
+    .book-note { font-size: .75rem; color: #8a7a6c; text-align: center; margin: 14px 0 0; }
+    .sticky-book { display: none; }
+    @media (max-width: 768px) {
+      .hero-cta .btn { display: none !important; }
+      .sticky-book { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 95; align-items: center; gap: 10px; background: rgba(255,255,255,.97); backdrop-filter: blur(10px); border-top: 1px solid rgba(0,0,0,.08); padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); }
+      .sb-info { flex: 1; min-width: 0; font-size: .72rem; color: #7a6a5c; line-height: 1.3; }
+      .sb-info b { display: block; font-size: .9rem; color: #1E1810; }
+      .sticky-book .sb-btn { margin: 0 !important; padding: 12px 18px !important; font-size: .78rem !important; letter-spacing: .06em !important; white-space: nowrap; display: inline-flex !important; width: auto !important; max-width: none !important; }
+      .sb-wa { width: 46px; height: 46px; border-radius: 50%; background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 24px; }
+      .wa-float { display: none !important; }
+      body { padding-bottom: 76px; }
+    }
+    @media (max-width: 360px) { .sb-info { display: none; } }
+  </style>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-bed" viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></symbol><symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol><symbol id="i-tv" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="m17 2-5 5-5-5"/></symbol><symbol id="i-wardrobe" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="18" rx="1.5"/><path d="M12 2v18M9.5 10v2.5M14.5 10v2.5M6 20v2M18 20v2"/></symbol><symbol id="i-wa" viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.04 20.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.23 8.25c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></symbol></svg>
 
   <!-- NAV -->
   <nav id="nav">
@@ -331,6 +390,7 @@
       <li><a href="#galleria" data-i18n="garden.nav.gallery">Galleria</a></li>
       <li><a href="#posizione" data-i18n="garden.nav.location">Posizione</a></li>
       <li><a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank" rel="noopener" class="nav-cta" data-i18n="common.book">Prenota</a></li>
+      <li class="nav-lang"><button data-lang-btn="it" onclick="iehSetLang('it')">IT</button><button data-lang-btn="en" onclick="iehSetLang('en')">EN</button><button data-lang-btn="de" onclick="iehSetLang('de')">DE</button><button data-lang-btn="fr" onclick="iehSetLang('fr')">FR</button></li>
     </ul>
     <div class="lang-switcher">
       <button data-lang-btn="it" onclick="iehSetLang('it')">IT</button>
@@ -364,12 +424,22 @@
         <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span data-i18n="home.hero.stat_rating">Su Airbnb</span>
       </div>
-      <br>
-      <a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank" rel="noopener" class="btn btn-primary">Airbnb</a>
-      <a href="https://www.booking.com/hotel/it/casa-mariangela-pool-and-garden.it.html?label=gen173bo-10CAsocUIfY2FzYS1tYXJpYW5nZWxhLXBvb2wtYW5kLWdhcmRlbkgzWANocYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAZgCBqgCAbgCrY6K0QbAAgHSAiRhMjVkOTlhYy02ZTc2LTQ0NTEtYTExNy0wMjM0ZDZkZDcyMTDYAgHgAgE&sid=408ba262120226241ffc0d8a2469b7ac&dist=0&sb_price_type=total&type=total&" target="_blank" rel="noopener" class="btn btn-primary">Booking</a>
-      <a href="https://admin.italianescapeshomes.it/disponibilita?casa=pool-and-garden" class="btn btn-white" data-i18n="common.availability">Verifica disponibilit&agrave;</a>
-      <a href="#casa" class="btn btn-outline" data-i18n="common.discover">Scopri di pi&ugrave;</a>
+      <div class="hero-cta">
+        <a href="https://admin.italianescapeshomes.it/disponibilita?casa=pool-and-garden" class="btn btn-white" data-i18n="common.availability">Verifica disponibilit&agrave;</a>
+        <div class="hero-platforms"><a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank" rel="noopener">Airbnb</a><a href="https://www.booking.com/hotel/it/casa-mariangela-pool-and-garden.it.html?label=gen173bo-10CAsocUIfY2FzYS1tYXJpYW5nZWxhLXBvb2wtYW5kLWdhcmRlbkgzWANocYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAZgCBqgCAbgCrY6K0QbAAgHSAiRhMjVkOTlhYy02ZTc2LTQ0NTEtYTExNy0wMjM0ZDZkZDcyMTDYAgHgAgE&sid=408ba262120226241ffc0d8a2469b7ac&dist=0&sb_price_type=total&type=total&" target="_blank" rel="noopener">Booking</a></div>
+      </div>
     </div>
+    <aside class="book-card">
+      <h3 data-i18n="common.bookcard.title">Prenota il tuo soggiorno</h3>
+      <p class="book-sub" data-i18n="common.bookcard.sub">Su Airbnb, Booking o scrivendoci direttamente.</p>
+      <a href="https://admin.italianescapeshomes.it/disponibilita?casa=pool-and-garden" class="btn btn-primary book-main"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="common.availability">Verifica disponibilit&agrave;</span></a>
+      <div class="book-or" data-i18n="common.or">oppure</div>
+      <div class="book-platforms">
+        <a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank" rel="noopener">Airbnb</a><a href="https://www.booking.com/hotel/it/casa-mariangela-pool-and-garden.it.html?label=gen173bo-10CAsocUIfY2FzYS1tYXJpYW5nZWxhLXBvb2wtYW5kLWdhcmRlbkgzWANocYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAZgCBqgCAbgCrY6K0QbAAgHSAiRhMjVkOTlhYy02ZTc2LTQ0NTEtYTExNy0wMjM0ZDZkZDcyMTDYAgHgAgE&sid=408ba262120226241ffc0d8a2469b7ac&dist=0&sb_price_type=total&type=total&" target="_blank" rel="noopener">Booking</a>
+        <a href="https://wa.me/393474120611?text=Ciao!%20Vorrei%20informazioni%20su%20Pool%20%26%20Garden%20a%20Leggiuno." class="wa" target="_blank" rel="noopener"><svg class="ic ic-fill" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+      </div>
+      <p class="book-note" data-i18n="common.bookcard.note">Gestita direttamente da noi &middot; risposta rapida</p>
+    </aside>
     <div class="hero-scroll" data-i18n="common.scroll">Scorri</div>
   </header>
 
@@ -377,22 +447,22 @@
   <div id="highlights">
     <div class="highlights-inner">
       <div class="highlight-item">
-        <div class="highlight-icon">&#127946;</div>
+        <div class="has-ic highlight-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
         <div class="highlight-val" data-i18n="garden.hl.pool.val">Piscina</div>
         <div class="highlight-label" data-i18n="garden.hl.pool.lbl">Privata</div>
       </div>
       <div class="highlight-item">
-        <div class="highlight-icon">&#127968;</div>
+        <div class="has-ic highlight-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
         <div class="highlight-val">2</div>
         <div class="highlight-label" data-i18n="garden.hl.rooms.lbl">Camere</div>
       </div>
       <div class="highlight-item">
-        <div class="highlight-icon">&#128101;</div>
+        <div class="has-ic highlight-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
         <div class="highlight-val">4</div>
         <div class="highlight-label" data-i18n="garden.hl.guests.lbl">Ospiti max</div>
       </div>
       <div class="highlight-item">
-        <div class="highlight-icon">&#127796;</div>
+        <div class="has-ic highlight-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
         <div class="highlight-val" data-i18n="lake.hl.view.val">Vista</div>
         <div class="highlight-label">Lago Maggiore</div>
       </div>
@@ -455,7 +525,7 @@
         <div class="about-img-wrap fade-up">
           <img src="img/vista-lago.webp" alt="Vista panoramica Lago Maggiore da casa vacanze con piscina privata Leggiuno" loading="lazy" decoding="async" />
           <div class="about-badge">
-            <div class="big">&#127796;</div>
+            <div class="has-ic big"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
             <div class="small">Vista lago</div>
           </div>
         </div>
@@ -498,9 +568,9 @@
             <h3 data-i18n="garden.room1.title">Camera matrimoniale</h3>
             <p data-i18n="garden.room1.text">Ampia camera mansardata con letto matrimoniale, illuminazione d&rsquo;atmosfera e armadio a muro.</p>
             <div class="camera-details">
-              <span class="camera-detail" data-i18n="garden.room1.d1">&#127769; Letto matrimoniale</span>
-              <span class="camera-detail" data-i18n="garden.room1.d2">&#129695; Armadio</span>
-              <span class="camera-detail" data-i18n="garden.room1.d3">&#128261; Mansarda</span>
+              <span class="has-ic camera-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bed"/></svg><span data-i18n="garden.room1.d1">Letto matrimoniale</span></span>
+              <span class="has-ic camera-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wardrobe"/></svg><span data-i18n="garden.room1.d2">Armadio</span></span>
+              <span class="has-ic camera-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="garden.room1.d3">Mansarda</span></span>
             </div>
           </div>
         </div>
@@ -512,9 +582,9 @@
             <h3 data-i18n="garden.room2.title">Soggiorno &amp; seconda camera</h3>
             <p data-i18n="garden.room2.text">Spazioso soggiorno con divano letto, TV e accesso diretto al giardino privato con vista sul verde.</p>
             <div class="camera-details">
-              <span class="camera-detail" data-i18n="garden.room2.d1">&#128715; Divano letto</span>
-              <span class="camera-detail" data-i18n="garden.room2.d2">&#128250; Smart TV</span>
-              <span class="camera-detail" data-i18n="garden.room2.d3">&#127807; Giardino</span>
+              <span class="has-ic camera-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bed"/></svg><span data-i18n="garden.room2.d1">Divano letto</span></span>
+              <span class="has-ic camera-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tv"/></svg><span data-i18n="garden.room2.d2">Smart TV</span></span>
+              <span class="has-ic camera-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-leaf"/></svg><span data-i18n="garden.room2.d3">Giardino</span></span>
             </div>
           </div>
         </div>
@@ -532,42 +602,42 @@
       </div>
       <div class="servizi-grid">
         <div class="servizio-item fade-up" style="transition-delay:.05s">
-          <div class="servizio-icon">&#127946;</div>
+          <div class="has-ic servizio-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
           <div>
             <h4 data-i18n="garden.svc.s1.title">Piscina privata</h4>
             <p data-i18n="garden.svc.s1.text">Piscina ad uso esclusivo degli ospiti, con area solarium e lettini.</p>
           </div>
         </div>
         <div class="servizio-item fade-up" style="transition-delay:.1s">
-          <div class="servizio-icon">&#127807;</div>
+          <div class="has-ic servizio-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
           <div>
             <h4 data-i18n="garden.svc.s2.title">Giardino privato</h4>
             <p data-i18n="garden.svc.s2.text">Ampio giardino privato con tavolo esterno, perfetto per cene all&rsquo;aperto.</p>
           </div>
         </div>
         <div class="servizio-item fade-up" style="transition-delay:.15s">
-          <div class="servizio-icon">&#128663;</div>
+          <div class="has-ic servizio-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
           <div>
             <h4 data-i18n="garden.svc.s3.title">Parcheggio privato</h4>
             <p data-i18n="garden.svc.s3.text">Posto auto privato incluso nel soggiorno.</p>
           </div>
         </div>
         <div class="servizio-item fade-up" style="transition-delay:.2s">
-          <div class="servizio-icon">&#127860;</div>
+          <div class="has-ic servizio-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
           <div>
             <h4 data-i18n="garden.svc.s4.title">Cucina attrezzata</h4>
             <p data-i18n="garden.svc.s4.text">Cucina rustica completa con forno, lavastoviglie e tutto l&rsquo;occorrente per cucinare.</p>
           </div>
         </div>
         <div class="servizio-item fade-up" style="transition-delay:.25s">
-          <div class="servizio-icon">&#128246;</div>
+          <div class="has-ic servizio-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
           <div>
             <h4 data-i18n="garden.svc.s5.title">Wi-Fi gratuito</h4>
             <p data-i18n="garden.svc.s5.text">Connessione internet inclusa in tutta la casa.</p>
           </div>
         </div>
         <div class="servizio-item fade-up" style="transition-delay:.3s">
-          <div class="servizio-icon">&#127796;</div>
+          <div class="has-ic servizio-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
           <div>
             <h4 data-i18n="garden.svc.s6.title">Vista panoramica</h4>
             <p data-i18n="garden.svc.s6.text">Vista mozzafiato sul Lago Maggiore e sulle montagne circostanti.</p>
@@ -595,21 +665,21 @@
         </div>
         <div class="location-info fade-up" style="transition-delay:.2s">
           <div class="location-item">
-            <div class="location-item-icon">&#128205;</div>
+            <div class="has-ic location-item-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
             <div>
               <h4>Indirizzo</h4>
               <p>Via XXIV Maggio 21<br>21038 Leggiuno (VA)</p>
             </div>
           </div>
           <div class="location-item">
-            <div class="location-item-icon">&#127796;</div>
+            <div class="has-ic location-item-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
             <div>
               <h4 data-i18n="garden.loc.lake.title">Lago Maggiore</h4>
               <p data-i18n="garden.loc.lake.text">A 2 minuti dalle spiagge. Vista panoramica sul lago e sulle Alpi dalla propriet&agrave;.</p>
             </div>
           </div>
           <div class="location-item">
-            <div class="location-item-icon">&#9992;</div>
+            <div class="has-ic location-item-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
             <div>
               <h4>Aeroporto di Malpensa</h4>
               <p>30 minuti di auto dall&rsquo;aeroporto internazionale di Milano Malpensa (MXP).</p>
@@ -644,11 +714,11 @@
           <br>
           <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--dark);margin-bottom:16px" data-i18n="garden.desc.nearby_title">Cosa visitare nei dintorni</h3>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="garden.desc.near1">Eremo di Santa Caterina del Sasso &ndash; 5 minuti in auto</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="garden.desc.near2">Funivia del Sasso del Ferro di Laveno &ndash; 10 minuti</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="garden.desc.near3">Stresa e le Isole Borromee &ndash; 30 minuti</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="garden.desc.near4">Villa Taranto e Verbania &ndash; 35 minuti</span></li>
-            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0">&#9650;</span><span data-i18n="garden.desc.near5">Lago di Varese e Sacro Monte di Varese</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0" class="has-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span></span></span><span data-i18n="garden.desc.near1">Eremo di Santa Caterina del Sasso &ndash; 5 minuti in auto</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0" class="has-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span></span></span><span data-i18n="garden.desc.near2">Funivia del Sasso del Ferro di Laveno &ndash; 10 minuti</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0" class="has-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span></span></span><span data-i18n="garden.desc.near3">Stresa e le Isole Borromee &ndash; 30 minuti</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0" class="has-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span></span></span><span data-i18n="garden.desc.near4">Villa Taranto e Verbania &ndash; 35 minuti</span></li>
+            <li style="font-size:.9rem;color:var(--text-light);display:flex;gap:10px"><span style="color:var(--gold);flex-shrink:0" class="has-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span></span></span><span data-i18n="garden.desc.near5">Lago di Varese e Sacro Monte di Varese</span></li>
           </ul>
         </div>
       </div>
@@ -823,7 +893,7 @@
     const fadeEls = document.querySelectorAll('.fade-up');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.12 });
+    }, { threshold: 0, rootMargin: '0px 0px 160px 0px' });
     fadeEls.forEach(el => observer.observe(el));
 
     // Progressive image fade-in on load
@@ -842,7 +912,7 @@
       });
     });
   </script>
-  <script src="../i18n.js?v=18" defer></script>
+  <script src="../i18n.js?v=19" defer></script>
   <!-- WHATSAPP FLOATING BUTTON -->
   <a href="https://wa.me/393474120611?text=Ciao!%20Vorrei%20informazioni%20su%20Pool%20%26%20Garden%20a%20Leggiuno." class="wa-float" target="_blank" rel="noopener" aria-label="Scrivi su WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.04 20.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.23 8.25c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
@@ -890,5 +960,11 @@
       var t; window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(L,150);});
     })();
   </script>
+
+  <div class="sticky-book">
+    <div class="sb-info"><b data-i18n="common.sticky.title">Date libere?</b>Airbnb &middot; Booking</div>
+    <a href="https://admin.italianescapeshomes.it/disponibilita?casa=pool-and-garden" class="btn btn-primary sb-btn" data-i18n="common.availability_short">Disponibilit&agrave;</a>
+    <a href="https://wa.me/393474120611?text=Ciao!%20Vorrei%20informazioni%20su%20Pool%20%26%20Garden%20a%20Leggiuno." class="sb-wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ic ic-fill" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></a>
+  </div>
 </body>
 </html>

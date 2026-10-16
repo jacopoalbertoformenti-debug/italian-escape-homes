@@ -60,7 +60,7 @@
     "mainEntity": [
       {"@type":"Question","name":"Quante proprietà gestite?","acceptedAnswer":{"@type":"Answer","text":"Cinque alloggi selezionati in quattro destinazioni italiane: Liguria (mare), Lago Maggiore, Lago di Como e Valmalenco (montagna)."}},
       {"@type":"Question","name":"In quali regioni si trovano le vostre case?","acceptedAnswer":{"@type":"Answer","text":"Liguria (San Bartolomeo al Mare), Lombardia (Leggiuno sul Lago Maggiore, Lecco sul Lago di Como) e Valmalenco nelle Alpi."}},
-      {"@type":"Question","name":"Come si prenota?","acceptedAnswer":{"@type":"Answer","text":"Tutte le proprietà sono prenotabili su Airbnb e la maggior parte anche su Booking.com. Puoi anche contattarci direttamente tramite il modulo sul sito."}},
+      {"@type":"Question","name":"Come si prenota?","acceptedAnswer":{"@type":"Answer","text":"Tutte le proprietà sono prenotabili su Airbnb e la maggior parte anche su Booking.com. Puoi anche scriverci direttamente su WhatsApp, per telefono o via email."}},
       {"@type":"Question","name":"Qual è la capacità massima di ospiti?","acceptedAnswer":{"@type":"Answer","text":"Gli alloggi ospitano da 4 a 6 persone a seconda della proprietà. Sono ideali per coppie, famiglie con bambini o piccoli gruppi."}},
       {"@type":"Question","name":"Accettate animali domestici?","acceptedAnswer":{"@type":"Answer","text":"La politica sugli animali varia in base alla proprietà. Ti invitiamo a contattarci prima di prenotare per verificare la disponibilità."}},
       {"@type":"Question","name":"È possibile soggiornare in più proprietà?","acceptedAnswer":{"@type":"Answer","text":"Sì, gestiamo direttamente tutte le proprietà. Contattaci per organizzare itinerari combinati tra mare, lago e montagna."}}
@@ -613,8 +613,86 @@
     .faq-item.open .faq-a { max-height:300px; }
     .faq-a p { padding-bottom:18px; color:var(--text-light); line-height:1.7; }
   </style>
+  <link rel="preload" as="image" href="pool-and-garden/img/vista-lago.webp" fetchpriority="high">
+  <style id="ieh-redesign-v1">
+    /* ieh-redesign-v1: icone SVG, menu lingue mobile, dissolvenze */
+    :root { --ic-accent: var(--terracotta); }
+    .ic { width: 1em; height: 1em; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; display: inline-block; vertical-align: -.14em; }
+    .ic-fill { fill: currentColor; stroke: none; }
+    .has-ic { display: inline-flex; align-items: center; gap: .45em; }
+    .prop-detail .ic, .camera-detail .ic, .servizio-icon .ic, .brand-value-icon .ic, .contatto-icon-wrap .ic { color: var(--ic-accent); }
+    .highlight-icon .ic, .location-item-icon .ic { color: var(--gold); }
+    .servizio-icon, .highlight-icon, .location-item-icon, .brand-value-icon, .contatto-icon-wrap { line-height: 1; }
+    .nav-lang { display: none; }
+    @media (max-width: 900px) {
+      nav .lang-switcher { display: none !important; }
+      .nav-links.open .nav-lang { display: flex; gap: 8px; margin-top: 10px; }
+      .nav-lang button { background: transparent; border: 1px solid rgba(255,255,255,.45); color: #fff; font: 500 .8rem Inter, sans-serif; letter-spacing: .1em; padding: 8px 13px; border-radius: 6px; cursor: pointer; }
+      .nav-lang button.lang-active { background: var(--gold); border-color: var(--gold); color: #1E1810; }
+    }
+    .fade-up { transform: translateY(14px) !important; transition: opacity .45s ease, transform .45s ease !important; }
+    .fade-up.visible { transform: none !important; }
+    @media (prefers-reduced-motion: reduce) { .fade-up { opacity: 1 !important; transform: none !important; transition: none !important; } }
+
+    .hero3 { position: relative; height: min(100vh, 880px); min-height: 640px; display: grid; grid-template-columns: repeat(3, 1fr); color: #fff; }
+    .hero3 .dest { position: relative; overflow: hidden; display: block; }
+    .hero3 .dest img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .9s ease; }
+    .hero3 .dest:hover img { transform: scale(1.05); }
+    .hero3 .dest::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,14,8,.45) 0%, rgba(20,14,8,0) 28%, rgba(20,14,8,.12) 55%, rgba(20,14,8,.78) 100%); }
+    .hero3 .dest-label { position: absolute; left: 28px; right: 28px; bottom: 56px; z-index: 3; display: flex; justify-content: space-between; align-items: flex-end; }
+    .hero3 .dest-label small { display: block; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; opacity: .9; }
+    .hero3 .dest-label strong { font-family: 'Cormorant Garamond', serif; font-size: 2.1rem; font-weight: 400; line-height: 1.1; }
+    .hero3 .dest-label .ic { font-size: 1.5rem; transition: transform .25s; }
+    .hero3 .dest:hover .dest-label .ic { transform: translateX(4px); }
+    .hero3-veil { position: absolute; inset: 0; z-index: 2; pointer-events: none; background: radial-gradient(ellipse 60% 55% at 50% 44%, rgba(20,14,8,.62) 0%, rgba(20,14,8,.28) 60%, rgba(20,14,8,0) 100%); }
+    .hero3-copy { position: absolute; z-index: 3; left: 50%; top: 45%; transform: translate(-50%, -50%); text-align: center; width: min(800px, 90%); pointer-events: none; }
+    .hero3-copy a { pointer-events: auto; }
+    .hero3-copy h1 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(2.6rem, 5vw, 4.6rem); line-height: 1.04; margin: 14px 0 18px; color: #fff; text-shadow: 0 2px 30px rgba(0,0,0,.35); }
+    .hero3-copy h1 em { font-style: italic; color: var(--gold); }
+    .hero3-sub { font-size: 1.08rem; max-width: 580px; margin: 0 auto 26px; opacity: .95; text-shadow: 0 1px 12px rgba(0,0,0,.4); }
+    .hero3-chips { display: none; }
+    .trust-wrap { position: relative; z-index: 5; height: 0; }
+    .hero3-trust { position: absolute; left: 50%; top: -30px; transform: translateX(-50%); display: flex; align-items: center; gap: 22px; background: #fff; color: var(--text); border-radius: 999px; box-shadow: var(--shadow); padding: 15px 30px; font-size: .9rem; white-space: nowrap; }
+    .hero3-trust b { color: var(--dark); font-weight: 600; }
+    .hero3-trust .sep { width: 1px; height: 20px; background: var(--sand-dark); }
+    .hero3-trust .ic-fill { color: #E8A33D; }
+    .prop-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+    .prop-filters button { border: 1px solid var(--sand-dark); background: #fff; color: var(--text); border-radius: 999px; padding: 8px 16px; font: 500 .82rem Inter, sans-serif; cursor: pointer; transition: all .2s; }
+    .prop-filters button:hover { border-color: var(--terracotta); color: var(--terracotta); }
+    .prop-filters button.on { background: var(--dark); border-color: var(--dark); color: #fff; }
+    .prop-card.is-hidden { display: none !important; }
+    .prop-img { position: relative; overflow: hidden; }
+    .prop-img > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+    .prop-card:hover .prop-img > img { transform: scale(1.04); }
+    .prop-img .prop-badge-location, .prop-img .prop-badge-rating, .prop-img .prop-badge-new { z-index: 2; }
+    .prop-badge-location { display: inline-flex; align-items: center; gap: 5px; }
+    .prop-desc { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .prop-cin { font-size: .68rem !important; opacity: .7; }
+    .prop-actions.v2 { display: flex; justify-content: space-between; align-items: center; gap: 12px; border-top: 1px solid #F1E6DA; padding-top: 14px; margin-top: 6px; }
+    .card-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: .9rem; color: var(--terracotta); }
+    .card-link .ic { transition: transform .2s; }
+    .card-link:hover .ic { transform: translateX(3px); }
+    .card-link-muted { display: inline-flex; align-items: center; gap: 6px; font-size: .85rem; color: var(--text-light); }
+    .card-link-muted:hover { color: var(--terracotta); }
+    @media (max-width: 768px) {
+      .hero3 { grid-template-columns: 1fr; height: 88svh; min-height: 560px; }
+      .hero3 .dest:not(.dest-main) { display: none; }
+      .hero3 .dest-label { display: none; }
+      .hero3-veil { background: linear-gradient(180deg, rgba(20,14,8,.45) 0%, rgba(20,14,8,.08) 35%, rgba(20,14,8,.78) 100%); }
+      .hero3-copy { top: auto; bottom: 46px; transform: translateX(-50%); text-align: left; }
+      .hero3-sub { margin-left: 0; font-size: 1rem; }
+      .hero3 .hero-eyebrow::before, .hero3 .hero-eyebrow::after { display: none; }
+      .hero3 .hero-eyebrow { font-size: .68rem; }
+      .hero3-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; pointer-events: auto; }
+      .hero3-chips a { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.45); backdrop-filter: blur(6px); color: #fff; border-radius: 999px; padding: 7px 14px; font-size: .85rem; }
+      .trust-wrap { height: auto; padding: 0 16px; }
+      .hero3-trust { position: relative; left: auto; top: -22px; transform: none; margin: 0 auto; flex-wrap: wrap; justify-content: center; white-space: normal; gap: 6px 14px; border-radius: 16px; padding: 12px 16px; font-size: .82rem; }
+      .hero3-trust .sep { display: none; }
+    }
+  </style>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-bed" viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></symbol><symbol id="i-cablecar" viewBox="0 0 24 24"><path d="M2 3l20 4M12 5v4"/><rect x="5" y="9" width="14" height="10" rx="2"/><path d="M5 14h14M10 9v5M14 9v5"/></symbol><symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol><symbol id="i-car" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol><symbol id="i-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol><symbol id="i-pool" viewBox="0 0 24 24"><path d="M8 13V5a2 2 0 0 1 2-2M16 13V5a2 2 0 0 0-2-2M8 7h8M8 10.5h8"/><path d="M2 17.5c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/><path d="M2 21c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol><symbol id="i-view" viewBox="0 0 24 24"><path d="M2 20l6.5-9 4 5.5 3-3.5L22 20z"/><circle cx="17" cy="6" r="2.2"/></symbol><symbol id="i-waves" viewBox="0 0 24 24"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></symbol><symbol id="i-wa" viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.04 20.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.23 8.25c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></symbol></svg>
 
   <!-- ── NAV ───────────────────────────────────────── -->
   <nav id="nav">
@@ -624,6 +702,7 @@
       <li><a href="#destinazioni" data-i18n="home.nav.destinations">Destinazioni</a></li>
       <li><a href="#contatti" data-i18n="home.nav.contacts">Contatti</a></li>
       <li><a href="#contatti" class="nav-cta" data-i18n="common.book">Prenota</a></li>
+      <li class="nav-lang"><button data-lang-btn="it" onclick="iehSetLang('it')">IT</button><button data-lang-btn="en" onclick="iehSetLang('en')">EN</button><button data-lang-btn="de" onclick="iehSetLang('de')">DE</button><button data-lang-btn="fr" onclick="iehSetLang('fr')">FR</button></li>
     </ul>
     <div class="lang-switcher">
       <button data-lang-btn="it" onclick="iehSetLang('it')">IT</button>
@@ -637,33 +716,28 @@
   </nav>
 
   <!-- ── HERO ──────────────────────────────────────── -->
-  <header class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-shape hero-shape-1"></div>
-    <div class="hero-shape hero-shape-2"></div>
-    <div class="hero-content">
+  <header class="hero3">
+    <a class="dest" href="#proprieta" data-filter="mare"><img src="casa-mariangela/img/mare2.webp" alt="Il mare di San Bartolomeo al Mare, Liguria"><div class="dest-label"><div><small data-i18n="home.dest.sea_meta">Liguria &middot; 1 casa</small><strong data-i18n="home.dest.sea">Mare</strong></div><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></div></a>
+    <a class="dest dest-main" href="#proprieta" data-filter="lago"><img src="pool-and-garden/img/vista-lago.webp" alt="Vista sul Lago Maggiore da Leggiuno" fetchpriority="high"><div class="dest-label"><div><small data-i18n="home.dest.lake_meta">Maggiore e Como &middot; 3 case</small><strong data-i18n="home.dest.lake">Lago</strong></div><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></div></a>
+    <a class="dest" href="#proprieta" data-filter="montagna"><img src="dolce-vetta-valmalenco/img/terrazzo2.webp" alt="Terrazzo di Dolce Vetta in Valmalenco"><div class="dest-label"><div><small data-i18n="home.dest.mountain_meta">Valmalenco &middot; 1 casa</small><strong data-i18n="home.dest.mountain">Montagna</strong></div><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></div></a>
+    <div class="hero3-veil"></div>
+    <div class="hero3-copy">
       <div class="hero-eyebrow" data-i18n="home.hero.eyebrow">Soggiorni d&rsquo;eccezione in Italia</div>
-      <h1>Italian<br><em>Escapes</em> Homes</h1>
-      <p class="hero-tagline" data-i18n="home.hero.tagline">Mare, lago e montagna &mdash; cinque case per cinque esperienze uniche</p>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <strong>5</strong>
-          <span data-i18n="home.hero.stat_prop">Propriet&agrave;</span>
-        </div>
-        <div class="hero-stat">
-          <strong>4</strong>
-          <span data-i18n="home.hero.stat_dest">Destinazioni</span>
-        </div>
-        <div class="hero-stat">
-          <strong>4.8+</strong>
-          <span data-i18n="home.hero.stat_rating">Su Airbnb</span>
-        </div>
-      </div>
+      <h1 data-i18n-html="home.hero.h1">Mare, lago e montagna.<br><em>Cinque case</em> scelte una a una.</h1>
+      <p class="hero3-sub" data-i18n="home.hero.sub2">Gestite direttamente da noi: risposta rapida e cura in ogni dettaglio.</p>
       <a href="#proprieta" class="btn btn-primary" data-i18n="home.hero.cta_discover">Scopri le case</a>
-      <a href="#contatti" class="btn btn-outline-w" data-i18n="common.contact_us">Contattaci</a>
+      <div class="hero3-chips">
+        <a href="#proprieta" data-filter="mare" data-i18n="home.dest.sea">Mare</a>
+        <a href="#proprieta" data-filter="lago" data-i18n="home.dest.lake">Lago</a>
+        <a href="#proprieta" data-filter="montagna" data-i18n="home.dest.mountain">Montagna</a>
+      </div>
     </div>
-    <div class="hero-scroll" data-i18n="common.scroll">Scorri</div>
   </header>
+  <div class="trust-wrap"><div class="hero3-trust">
+    <span class="has-ic"><svg class="ic ic-fill" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><span data-i18n-html="home.hero.trust1">Fino a <b>4.97</b> su Airbnb</span></span>
+    <span class="sep"></span><span data-i18n-html="home.hero.trust2"><b>50+</b> recensioni</span>
+    <span class="sep"></span><span data-i18n-html="home.hero.trust3"><b>Risposta rapida</b>, gestione diretta</span>
+  </div></div>
 
   <!-- ── PROPRIETA ─────────────────────────────────── -->
   <section id="proprieta">
@@ -678,14 +752,22 @@
           Ogni alloggio &egrave; selezionato e curato personalmente per garantire il massimo comfort,
           in location uniche tra il mare ligure, i laghi e le Alpi.
         </p>
+        <div class="prop-filters fade-up" role="group" aria-label="Filtra le case">
+          <button class="on" data-f="all" data-i18n="home.filter.all">Tutte</button>
+          <button data-f="mare" data-i18n="home.dest.sea">Mare</button>
+          <button data-f="lago" data-i18n="home.dest.lake">Lago</button>
+          <button data-f="montagna" data-i18n="home.dest.mountain">Montagna</button>
+          <button data-f="piscina" data-i18n="home.filter.pool">Con piscina</button>
+        </div>
       </div>
 
       <div class="proprieta-grid">
 
         <!-- 1. B&B Casa Mariangela – San Bartolomeo (FEATURED) -->
-        <div class="prop-card featured fade-up" style="transition-delay:.05s">
-          <a href="./casa-mariangela/" class="prop-img" data-bg="img/camera1-mariangela.webp">
-            <div class="prop-badge-location">&#127807; Liguria</div>
+        <div data-tags="mare" class="prop-card featured fade-up" style="transition-delay:.05s">
+          <a href="./casa-mariangela/" class="prop-img">
+            <img src="img/camera1-mariangela.webp" alt="B&amp;B Casa Mariangela" loading="lazy" decoding="async" width="1050" height="1400">
+            <div class="has-ic prop-badge-location"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span>Liguria</span></div>
             <div class="prop-badge-rating"><span class="star">&#9733;</span> 4.97 &middot; 29 rec.</div>
           </a>
           <div class="prop-body">
@@ -697,26 +779,25 @@
                 aria condizionata, Wi-Fi e parcheggio gratuito. Una delle nostre propriet&agrave; con il punteggio pi&ugrave; alto su Airbnb.
               </p>
               <div class="prop-details">
-                <span class="prop-detail" data-i18n="home.card1.d1">&#127968; 2 camere</span>
-                <span class="prop-detail" data-i18n="home.card1.d2">&#128101; 4 ospiti</span>
-                <span class="prop-detail" data-i18n="home.card1.d3">&#127754; 30 m dal mare</span>
-                <span class="prop-detail" data-i18n="home.card1.d4">&#128663; Parcheggio</span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bed"/></svg><span data-i18n="home.card1.d1">2 camere</span></span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="home.card1.d2">4 ospiti</span></span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-waves"/></svg><span data-i18n="home.card1.d3">30 m dal mare</span></span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-car"/></svg><span data-i18n="home.card1.d4">Parcheggio</span></span>
               </div>
               <p class="prop-cin">CIN: <strong>IT008052C22DNK6SGM</strong></p>
             </a>
-            <div class="prop-actions">
-              <a href="./casa-mariangela/" class="btn-card btn-card-primary" data-i18n="common.discover">Scopri di pi&ugrave;</a>
-              <a href="https://admin.italianescapeshomes.it/disponibilita?casa=casa-mariangela" class="btn-card btn-card-outline" data-i18n="common.availability_short">Disponibilit&agrave;</a>
-              <a href="https://www.airbnb.it/rooms/1022566699352195921" target="_blank" rel="noopener" class="btn-card btn-card-outline">Airbnb</a>
-              <a href="https://www.booking.com/hotel/it/b-amp-b-casa-mariangela.it.html?label=gen173bo-10CAsocUIXYi1hbXAtYi1jYXNhLW1hcmlhbmdlbGFIM1gDaHGIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGYAgaoAgG4AsL2iM4GwAIB0gIkYmFhYjZiMzAtNzg3MC00MTZkLWFiODItOWI3MDc4YjY3MzI32AIB4AIB&sid=408ba262120226241ffc0d8a2469b7ac&dist=0&sb_price_type=total&type=total&" target="_blank" rel="noopener" class="btn-card btn-card-outline">Booking</a>
+            <div class="prop-actions v2">
+              <a href="./casa-mariangela/" class="card-link"><span data-i18n="common.discover">Scopri di pi&ugrave;</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a href="https://admin.italianescapeshomes.it/disponibilita?casa=casa-mariangela" class="card-link-muted"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="common.availability_short">Disponibilit&agrave;</span></a>
             </div>
           </div>
         </div>
 
         <!-- 2. Apartment with Swimming Pool – Leggiuno -->
-        <div class="prop-card fade-up" style="transition-delay:.1s">
-          <a href="./appartamento-piscina/" class="prop-img" data-bg="appartamento-piscina/img/piscina1.webp">
-            <div class="prop-badge-location">&#127807; Lago Maggiore</div>
+        <div data-tags="lago piscina" class="prop-card fade-up" style="transition-delay:.1s">
+          <a href="./appartamento-piscina/" class="prop-img">
+            <img src="appartamento-piscina/img/piscina1.webp" alt="Apartment with Swimming Pool" loading="lazy" decoding="async" width="1050" height="1400">
+            <div class="has-ic prop-badge-location"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span>Lago Maggiore</span></div>
             <div class="prop-badge-rating"><span class="star">&#9733;</span> 4.68 &middot; 25 rec.</div>
           </a>
           <div class="prop-body">
@@ -728,25 +809,24 @@
                 Piscina stagionale, sentieri e vicinanza alle attrazioni locali.
               </p>
               <div class="prop-details">
-                <span class="prop-detail" data-i18n="home.card2.d1">&#128101; 4 ospiti</span>
-                <span class="prop-detail" data-i18n="home.card2.d2">&#127946; Piscina</span>
-                <span class="prop-detail" data-i18n="home.card2.d3">&#9992; 30 min da Malpensa</span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="home.card2.d1">4 ospiti</span></span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pool"/></svg><span data-i18n="home.card2.d2">Piscina</span></span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-plane"/></svg><span data-i18n="home.card2.d3">30 min da Malpensa</span></span>
               </div>
               <p class="prop-cin">CIN: <strong>IT012088C2B2FQHKFY</strong></p>
             </a>
-            <div class="prop-actions">
-              <a href="./appartamento-piscina/" class="btn-card btn-card-primary" data-i18n="common.discover">Scopri di pi&ugrave;</a>
-              <a href="https://admin.italianescapeshomes.it/disponibilita?casa=appartamento-piscina" class="btn-card btn-card-outline" data-i18n="common.availability_short">Disponibilit&agrave;</a>
-              <a href="https://www.airbnb.it/rooms/936851155880605469" target="_blank" rel="noopener" class="btn-card btn-card-outline">Airbnb</a>
-              <a href="https://www.booking.com/Share-rDfiDJ" target="_blank" rel="noopener" class="btn-card btn-card-outline">Booking</a>
+            <div class="prop-actions v2">
+              <a href="./appartamento-piscina/" class="card-link"><span data-i18n="common.discover">Scopri di pi&ugrave;</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a href="https://admin.italianescapeshomes.it/disponibilita?casa=appartamento-piscina" class="card-link-muted"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="common.availability_short">Disponibilit&agrave;</span></a>
             </div>
           </div>
         </div>
 
         <!-- 3. Casa Mariangela pool and garden – Leggiuno -->
-        <div class="prop-card fade-up" style="transition-delay:.15s">
-          <a href="./pool-and-garden/" class="prop-img" data-bg="pool-and-garden/img/vista-lago.webp">
-            <div class="prop-badge-location">&#127807; Lago Maggiore</div>
+        <div data-tags="lago piscina" class="prop-card fade-up" style="transition-delay:.15s">
+          <a href="./pool-and-garden/" class="prop-img">
+            <img src="pool-and-garden/img/vista-lago.webp" alt="Casa Mariangela: Pool &amp; Garden" loading="lazy" decoding="async" width="1400" height="1050">
+            <div class="has-ic prop-badge-location"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span>Lago Maggiore</span></div>
           </a>
           <div class="prop-body">
             <a href="./pool-and-garden/" class="prop-body-link">
@@ -757,26 +837,25 @@
                 a 2 minuti dal Lago Maggiore e 30 minuti da Malpensa.
               </p>
               <div class="prop-details">
-                <span class="prop-detail" data-i18n="home.card3.d1">&#128101; 4 ospiti</span>
-                <span class="prop-detail" data-i18n="home.card3.d2">&#127946; Piscina privata</span>
-                <span class="prop-detail" data-i18n="home.card3.d3">&#127807; Giardino</span>
-                <span class="prop-detail" data-i18n="home.card3.d4">&#127796; Vista lago</span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="home.card3.d1">4 ospiti</span></span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pool"/></svg><span data-i18n="home.card3.d2">Piscina privata</span></span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-leaf"/></svg><span data-i18n="home.card3.d3">Giardino</span></span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-view"/></svg><span data-i18n="home.card3.d4">Vista lago</span></span>
               </div>
               <p class="prop-cin">CIN: <strong>IT012088C22FDPNF3K</strong></p>
             </a>
-            <div class="prop-actions">
-              <a href="./pool-and-garden/" class="btn-card btn-card-primary" data-i18n="common.discover">Scopri di pi&ugrave;</a>
-              <a href="https://admin.italianescapeshomes.it/disponibilita?casa=pool-and-garden" class="btn-card btn-card-outline" data-i18n="common.availability_short">Disponibilit&agrave;</a>
-              <a href="https://www.airbnb.it/rooms/1623160266652933637" target="_blank" rel="noopener" class="btn-card btn-card-outline">Airbnb</a>
-              <a href="https://www.booking.com/hotel/it/casa-mariangela-pool-and-garden.it.html?label=gen173bo-10CAsocUIfY2FzYS1tYXJpYW5nZWxhLXBvb2wtYW5kLWdhcmRlbkgzWANocYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAZgCBqgCAbgCrY6K0QbAAgHSAiRhMjVkOTlhYy02ZTc2LTQ0NTEtYTExNy0wMjM0ZDZkZDcyMTDYAgHgAgE&sid=408ba262120226241ffc0d8a2469b7ac&dist=0&sb_price_type=total&type=total&" target="_blank" rel="noopener" class="btn-card btn-card-outline">Booking</a>
+            <div class="prop-actions v2">
+              <a href="./pool-and-garden/" class="card-link"><span data-i18n="common.discover">Scopri di pi&ugrave;</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a href="https://admin.italianescapeshomes.it/disponibilita?casa=pool-and-garden" class="card-link-muted"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="common.availability_short">Disponibilit&agrave;</span></a>
             </div>
           </div>
         </div>
 
         <!-- 4. Lake At Home – Lecco -->
-        <div class="prop-card fade-up" style="transition-delay:.2s">
-          <a href="./lake-at-home/" class="prop-img" data-bg="img/lake-at-home.avif">
-            <div class="prop-badge-location">&#127807; Lago di Como</div>
+        <div data-tags="lago" class="prop-card fade-up" style="transition-delay:.2s">
+          <a href="./lake-at-home/" class="prop-img">
+            <img src="img/lake-at-home.avif" alt="Lake At Home" loading="lazy" decoding="async" width="960" height="681">
+            <div class="has-ic prop-badge-location"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span>Lago di Como</span></div>
             <div class="prop-badge-rating"><span class="star">&#9733;</span> 5.0 &middot; 5 rec.</div>
           </a>
           <div class="prop-body">
@@ -788,25 +867,24 @@
                 A pochi passi dal lungolago e dalla stazione.
               </p>
               <div class="prop-details">
-                <span class="prop-detail" data-i18n="home.card4.d1">&#128101; 4 ospiti</span>
-                <span class="prop-detail" data-i18n="home.card4.d2">&#9741; Vista lago</span>
-                <span class="prop-detail" data-i18n="home.card4.d3">&#127968; Lecco</span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="home.card4.d1">4 ospiti</span></span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-view"/></svg><span data-i18n="home.card4.d2">Vista lago</span></span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="home.card4.d3">Lecco</span></span>
               </div>
               <p class="prop-cin">CIN: <strong>IT097042C246M9KVYP</strong></p>
             </a>
-            <div class="prop-actions">
-              <a href="./lake-at-home/" class="btn-card btn-card-primary" data-i18n="common.discover">Scopri di pi&ugrave;</a>
-              <a href="https://admin.italianescapeshomes.it/disponibilita?casa=lake-at-home" class="btn-card btn-card-outline" data-i18n="common.availability_short">Disponibilit&agrave;</a>
-              <a href="https://www.airbnb.it/rooms/1550769806025179622" target="_blank" rel="noopener" class="btn-card btn-card-outline">Airbnb</a>
-              <a href="https://www.booking.com/hotel/it/lake-at-home.it.html" target="_blank" rel="noopener" class="btn-card btn-card-outline">Booking</a>
+            <div class="prop-actions v2">
+              <a href="./lake-at-home/" class="card-link"><span data-i18n="common.discover">Scopri di pi&ugrave;</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a href="https://admin.italianescapeshomes.it/disponibilita?casa=lake-at-home" class="card-link-muted"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="common.availability_short">Disponibilit&agrave;</span></a>
             </div>
           </div>
         </div>
 
         <!-- 5. Dolce Vetta Valmalenco – Chiesa in Valmalenco -->
-        <div class="prop-card fade-up" style="transition-delay:.25s">
-          <a href="./dolce-vetta-valmalenco/" class="prop-img" data-bg="dolce-vetta-valmalenco/img/hero.webp">
-            <div class="prop-badge-location">&#127956; Valmalenco</div>
+        <div data-tags="montagna" class="prop-card fade-up" style="transition-delay:.25s">
+          <a href="./dolce-vetta-valmalenco/" class="prop-img">
+            <img src="dolce-vetta-valmalenco/img/hero.webp" alt="Dolce Vetta Valmalenco" loading="lazy" decoding="async" width="1400" height="1050">
+            <div class="has-ic prop-badge-location"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg><span>Valmalenco</span></div>
             <div class="prop-badge-new">Novit&agrave;</div>
           </a>
           <div class="prop-body">
@@ -818,17 +896,15 @@
                 A pochi passi dalla cabinovia Snow Eagle, perfetto per sci ed escursioni.
               </p>
               <div class="prop-details">
-                <span class="prop-detail" data-i18n="home.card5.d1">&#128101; 6 ospiti</span>
-                <span class="prop-detail" data-i18n="home.card5.d2">&#127935; Snow Eagle</span>
-                <span class="prop-detail" data-i18n="home.card5.d3">&#127956; Terrazzo privato</span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="home.card5.d1">6 ospiti</span></span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cablecar"/></svg><span data-i18n="home.card5.d2">Snow Eagle</span></span>
+                <span class="has-ic prop-detail"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-sun"/></svg><span data-i18n="home.card5.d3">Terrazzo privato</span></span>
               </div>
               <p class="prop-cin">CIN: <strong>IT014019C2Y82LZ89V</strong></p>
             </a>
-            <div class="prop-actions">
-              <a href="./dolce-vetta-valmalenco/" class="btn-card btn-card-primary" data-i18n="common.discover">Scopri di pi&ugrave;</a>
-              <a href="https://admin.italianescapeshomes.it/disponibilita?casa=dolce-vetta-valmalenco" class="btn-card btn-card-outline" data-i18n="common.availability_short">Disponibilit&agrave;</a>
-              <a href="https://www.airbnb.it/rooms/1681051848122956854" target="_blank" rel="noopener" class="btn-card btn-card-outline">Airbnb</a>
-              <a href="https://www.booking.com/hotel/it/dolce-vetta-valmalenco.it.html" target="_blank" rel="noopener" class="btn-card btn-card-outline">Booking</a>
+            <div class="prop-actions v2">
+              <a href="./dolce-vetta-valmalenco/" class="card-link"><span data-i18n="common.discover">Scopri di pi&ugrave;</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a href="https://admin.italianescapeshomes.it/disponibilita?casa=dolce-vetta-valmalenco" class="card-link-muted"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg><span data-i18n="common.availability_short">Disponibilit&agrave;</span></a>
             </div>
           </div>
         </div>
@@ -852,22 +928,22 @@
       </div>
       <div class="brand-values">
         <div class="brand-value fade-up" style="transition-delay:.1s">
-          <div class="brand-value-icon">&#11088;</div>
+          <div class="has-ic brand-value-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
           <h4 data-i18n="home.brand.v1.title">Qualit&agrave;</h4>
           <p data-i18n="home.brand.v1.text">Alloggi selezionati e curati personalmente, con standard elevati in ogni dettaglio.</p>
         </div>
         <div class="brand-value fade-up" style="transition-delay:.2s">
-          <div class="brand-value-icon">&#127759;</div>
+          <div class="has-ic brand-value-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
           <h4 data-i18n="home.brand.v2.title">Posizioni uniche</h4>
           <p data-i18n="home.brand.v2.text">Mare ligure, Lago Maggiore, Lago di Como e Alpi: le pi&ugrave; belle cornici d&rsquo;Italia.</p>
         </div>
         <div class="brand-value fade-up" style="transition-delay:.3s">
-          <div class="brand-value-icon">&#129309;</div>
+          <div class="has-ic brand-value-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
           <h4 data-i18n="home.brand.v3.title">Ospitalit&agrave;</h4>
           <p data-i18n="home.brand.v3.text">Risposta rapida, disponibilit&agrave; e cura degli ospiti sono la nostra priorit&agrave;.</p>
         </div>
         <div class="brand-value fade-up" style="transition-delay:.4s">
-          <div class="brand-value-icon">&#128274;</div>
+          <div class="has-ic brand-value-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
           <h4 data-i18n="home.brand.v4.title">Affidabilit&agrave;</h4>
           <p data-i18n="home.brand.v4.text">Oltre 50 recensioni su Airbnb con punteggi superiori a 4.6 su 5.</p>
         </div>
@@ -980,7 +1056,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-q">Come si prenota?</button>
-          <div class="faq-a"><p>Tutte le proprietà sono prenotabili su Airbnb e la maggior parte anche su Booking.com. Puoi anche contattarci direttamente tramite il modulo sul sito.</p></div>
+          <div class="faq-a"><p>Tutte le proprietà sono prenotabili su Airbnb e la maggior parte anche su Booking.com. Puoi anche scriverci direttamente su WhatsApp, per telefono o via email.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q">Qual è la capacità massima di ospiti?</button>
@@ -1011,19 +1087,19 @@
       </div>
       <div class="contatti-grid">
         <div class="contatto-card fade-up" style="transition-delay:.1s">
-          <div class="contatto-icon-wrap">&#128222;</div>
+          <div class="has-ic contatto-icon-wrap"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
           <div class="contatto-label" data-i18n="home.contacts.c1.label">Telefono &amp; WhatsApp</div>
           <div class="contatto-value">347 412 0611</div>
           <a href="tel:+393474120611" class="contatto-link" data-i18n="home.contacts.c1.link">Chiama ora &rarr;</a>
         </div>
         <div class="contatto-card fade-up" style="transition-delay:.2s">
-          <div class="contatto-icon-wrap">&#128140;</div>
+          <div class="has-ic contatto-icon-wrap"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
           <div class="contatto-label" data-i18n="home.contacts.c2.label">Email</div>
           <div class="contatto-value" style="font-size:1rem">info@italianescapeshomes.it</div>
           <a href="mailto:info@italianescapeshomes.it" class="contatto-link" data-i18n="home.contacts.c2.link">Scrivi &rarr;</a>
         </div>
         <div class="contatto-card fade-up" style="transition-delay:.3s">
-          <div class="contatto-icon-wrap">&#128197;</div>
+          <div class="has-ic contatto-icon-wrap"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
           <div class="contatto-label" data-i18n="home.contacts.c3.label">Disponibilit&agrave;</div>
           <div class="contatto-value" data-i18n="home.contacts.c3.value">Tutte le case</div>
           <a href="https://admin.italianescapeshomes.it/disponibilita" class="contatto-link" data-i18n="home.contacts.c3.link">Vedi calendario &rarr;</a>
@@ -1093,7 +1169,7 @@
     // ── Fade-in ──
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-    }, { threshold: 0.1 });
+    }, { threshold: 0, rootMargin: '0px 0px 160px 0px' });
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
     // ── Lazy-load property card backgrounds ──
@@ -1118,7 +1194,7 @@
       });
     });
   </script>
-  <script src="./i18n.js?v=18" defer></script>
+  <script src="./i18n.js?v=19" defer></script>
   <!-- WHATSAPP FLOATING BUTTON -->
   <a href="https://wa.me/393474120611?text=Ciao!%20Vorrei%20informazioni%20sulle%20vostre%20case%20vacanza." class="wa-float" target="_blank" rel="noopener" aria-label="Scrivi su WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.04 20.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.23 8.25c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
@@ -1129,5 +1205,22 @@
     .wa-float svg{width:32px;height:32px;}
     @media(max-width:600px){.wa-float{right:16px;bottom:calc(26px + env(safe-area-inset-bottom));width:52px;height:52px;}.wa-float svg{width:29px;height:29px;}}
   </style>
+
+  <script>
+    (function () {
+      var btns = document.querySelectorAll('.prop-filters button');
+      function apply(f) {
+        btns.forEach(function (b) { b.classList.toggle('on', b.dataset.f === f); });
+        document.querySelectorAll('.prop-card[data-tags]').forEach(function (c) {
+          c.classList.toggle('is-hidden', f !== 'all' && c.dataset.tags.split(' ').indexOf(f) < 0);
+          if (f !== 'all') c.classList.add('visible');
+        });
+      }
+      btns.forEach(function (b) { b.addEventListener('click', function () { apply(b.dataset.f); }); });
+      document.querySelectorAll('[data-filter]').forEach(function (a) {
+        a.addEventListener('click', function () { apply(a.dataset.filter); });
+      });
+    })();
+  </script>
 </body>
 </html>
