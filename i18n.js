@@ -111,7 +111,7 @@ const IEH_TRANSLATIONS = {
     "lake.faq.a5" : "Su Airbnb o Booking.com. L'appartamento è disponibile su entrambe le piattaforme.",
 
     /* ── Homepage meta ── */
-    "home.meta.title"        : "Italian Escapes Homes – Soggiorni d'eccezione in Italia",
+    "home.meta.title"        : "Case vacanza in Liguria, Lago Maggiore, Lago di Como e Valmalenco – Italian Escapes Homes",
     "home.meta.desc"         : "Cinque alloggi selezionati tra mare, lago e montagna. Scopri le nostre proprietà in Liguria, Lago Maggiore, Lago di Como e Valmalenco.",
 
     /* ── Homepage nav ── */
@@ -238,7 +238,7 @@ const IEH_TRANSLATIONS = {
     "pool.nav.location"      : "Posizione",
 
     /* ── Pool apartment hero ── */
-    "pool.hero.title"        : "Apartment with Swimming Pool<br><em>Leggiuno, Lago Maggiore</em>",
+    "pool.hero.title"        : "Appartamento con piscina<br><em>Leggiuno, Lago Maggiore</em>",
     "pool.hero.sub"          : "Un rifugio tranquillo immerso nel verde, a due passi dal Lago Maggiore e a 30 minuti da Malpensa",
     "pool.hero.rating"       : "<strong>4.68</strong> su 5 · 25 recensioni su Airbnb",
 
@@ -439,7 +439,7 @@ const IEH_TRANSLATIONS = {
     "lake.nav.location"      : "Posizione",
 
     /* ── Lake At Home hero ── */
-    "lake.hero.title"        : "Lake At Home<br><em>Lecco, Lago di Como</em>",
+    "lake.hero.title"        : "Lake At Home<br><em>Appartamento a Lecco, Lago&nbsp;di&nbsp;Como</em>",
     "lake.hero.sub"          : "Appartamento moderno nel cuore di Lecco, con vista sui monti e a pochi passi dal lungolago",
     "lake.hero.rating"       : "5.0 · 5 recensioni · Airbnb",
 
@@ -631,7 +631,7 @@ const IEH_TRANSLATIONS = {
     "dvv.nav.location"       : "Posizione",
 
     /* ── Dolce Vetta – Hero ── */
-    "dvv.hero.title"         : "Dolce Vetta<br><em>Valmalenco</em>",
+    "dvv.hero.title"         : "Dolce Vetta<br><em>Appartamento in Valmalenco</em>",
     "dvv.hero.sub"           : "Appartamento di charme nel centro di Chiesa in Valmalenco, ai piedi del massiccio del Bernina",
 
     /* ── Dolce Vetta – Highlights ── */
@@ -843,7 +843,7 @@ const IEH_TRANSLATIONS = {
     "lake.faq.a5" : "On Airbnb or Booking.com. The apartment is available on both platforms.",
 
     /* ── Homepage meta ── */
-    "home.meta.title"        : "Italian Escapes Homes – Exceptional holiday rentals in Italy",
+    "home.meta.title"        : "Holiday homes in Liguria, Lake Maggiore, Lake Como and Valmalenco – Italian Escapes Homes",
     "home.meta.desc"         : "Five handpicked vacation homes on the sea, lakes and mountains. Holiday rentals in Liguria, Lake Maggiore, Lake Como and the Alps. Rated 4.8+ on Airbnb.",
 
     /* ── Homepage nav ── */
@@ -970,7 +970,7 @@ const IEH_TRANSLATIONS = {
     "pool.nav.location"      : "Location",
 
     /* ── Pool apartment hero ── */
-    "pool.hero.title"        : "Apartment with Swimming Pool<br><em>Leggiuno, Lago Maggiore</em>",
+    "pool.hero.title"        : "Apartment with Swimming Pool<br><em>Leggiuno, Lake Maggiore</em>",
     "pool.hero.sub"          : "A peaceful retreat surrounded by greenery, steps from Lake Maggiore and 30 minutes from Malpensa Airport",
     "pool.hero.rating"       : "<strong>4.68</strong> out of 5 · 25 reviews on Airbnb",
 
@@ -1171,7 +1171,7 @@ const IEH_TRANSLATIONS = {
     "lake.nav.location"      : "Location",
 
     /* ── Lake At Home hero ── */
-    "lake.hero.title"        : "Lake At Home<br><em>Lecco, Lago di Como</em>",
+    "lake.hero.title"        : "Lake At Home<br><em>Apartment in Lecco, Lake&nbsp;Como</em>",
     "lake.hero.sub"          : "Modern apartment in the heart of Lecco, with mountain views and steps from the lakefront",
     "lake.hero.rating"       : "5.0 · 5 reviews · Airbnb",
 
@@ -1361,7 +1361,7 @@ const IEH_TRANSLATIONS = {
     "dvv.nav.gallery"        : "Gallery",
     "dvv.nav.location"       : "Location",
 
-    "dvv.hero.title"         : "Dolce Vetta<br><em>Valmalenco</em>",
+    "dvv.hero.title"         : "Dolce Vetta<br><em>Apartment in Valmalenco</em>",
     "dvv.hero.sub"           : "Charming apartment in the centre of Chiesa in Valmalenco, at the foot of the Bernina massif",
 
     "dvv.hl.mountain.val"    : "Bernina",
@@ -1563,7 +1563,7 @@ const IEH_TRANSLATIONS = {
     "lake.faq.a5" : "Auf Airbnb oder Booking.com. Die Wohnung ist auf beiden Plattformen verfügbar.",
 
     /* ── Homepage meta ── */
-    "home.meta.title"        : "Italian Escapes Homes – Außergewöhnliche Ferienunterkünfte in Italien",
+    "home.meta.title"        : "Ferienwohnungen in Ligurien, am Lago Maggiore, Comer See und im Valmalenco – Italian Escapes Homes",
     "home.meta.desc"         : "Fünf sorgfältig ausgewählte Ferienhäuser am Meer, an Seen und in den Bergen. Ferienunterkünfte in Ligurien, Lago Maggiore, Comer See und den Alpen. Bewertet mit 4,8+ auf Airbnb.",
 
     /* ── Homepage nav ── */
@@ -1690,7 +1690,7 @@ const IEH_TRANSLATIONS = {
     "pool.nav.location"      : "Lage",
 
     /* ── Pool apartment hero ── */
-    "pool.hero.title"        : "Apartment with Swimming Pool<br><em>Leggiuno, Lago Maggiore</em>",
+    "pool.hero.title"        : "Ferienwohnung mit Pool<br><em>Leggiuno, Lago Maggiore</em>",
     "pool.hero.sub"          : "Ein ruhiges Refugium inmitten von Grün, direkt am Lago Maggiore und 30 Minuten vom Flughafen Malpensa",
     "pool.hero.rating"       : "<strong>4,68</strong> von 5 · 25 Bewertungen auf Airbnb",
 
@@ -1889,7 +1889,7 @@ const IEH_TRANSLATIONS = {
     "lake.nav.location"      : "Lage",
 
     /* ── Lake At Home hero ── */
-    "lake.hero.title"        : "Lake At Home<br><em>Lecco, Lago di Como</em>",
+    "lake.hero.title"        : "Lake At Home<br><em>Ferienwohnung in Lecco, Comer&nbsp;See</em>",
     "lake.hero.sub"          : "Moderne Ferienwohnung im Herzen von Lecco, mit Bergblick und direkt am Seeufer",
 
     /* ── Lake SEO description section ── */
@@ -2079,7 +2079,7 @@ const IEH_TRANSLATIONS = {
     "dvv.nav.gallery"        : "Galerie",
     "dvv.nav.location"       : "Lage",
 
-    "dvv.hero.title"         : "Dolce Vetta<br><em>Valmalenco</em>",
+    "dvv.hero.title"         : "Dolce Vetta<br><em>Ferienwohnung im Valmalenco</em>",
     "dvv.hero.sub"           : "Charmante Wohnung im Zentrum von Chiesa in Valmalenco, am Fuße des Bernina-Massivs",
 
     "dvv.hl.mountain.val"    : "Bernina",
@@ -2281,7 +2281,7 @@ const IEH_TRANSLATIONS = {
     "lake.faq.a5" : "Sur Airbnb ou Booking.com. L'appartement est disponible sur les deux plateformes.",
 
     /* ── Page d'accueil méta ── */
-    "home.meta.title"        : "Italian Escapes Homes – Séjours d'exception en Italie",
+    "home.meta.title"        : "Locations de vacances en Ligurie, au lac Majeur, au lac de Côme et en Valmalenco – Italian Escapes Homes",
     "home.meta.desc"         : "Cinq hébergements sélectionnés entre mer, lacs et montagne. Propriétés en Ligurie, lac Majeur, lac de Côme et dans les Alpes. Noté 4,8+ sur Airbnb.",
 
     /* ── Navigation ── */
@@ -2408,7 +2408,7 @@ const IEH_TRANSLATIONS = {
     "pool.nav.location"      : "Emplacement",
 
     /* ── Hero appartement piscine ── */
-    "pool.hero.title"        : "Apartment with Swimming Pool<br><em>Leggiuno, Lago Maggiore</em>",
+    "pool.hero.title"        : "Appartement avec piscine<br><em>Leggiuno, lac Majeur</em>",
     "pool.hero.sub"          : "Un havre de paix entouré de verdure, à deux pas du lac Majeur et à 30 minutes de Malpensa",
     "pool.hero.rating"       : "<strong>4,68</strong> sur 5 · 25 avis sur Airbnb",
 
@@ -2609,7 +2609,7 @@ const IEH_TRANSLATIONS = {
     "lake.nav.location"      : "Emplacement",
 
     /* ── Hero Lake At Home ── */
-    "lake.hero.title"        : "Lake At Home<br><em>Lecco, Lago di Como</em>",
+    "lake.hero.title"        : "Lake At Home<br><em>Appartement à Lecco, lac&nbsp;de&nbsp;Côme</em>",
     "lake.hero.sub"          : "Appartement moderne au cœur de Lecco, avec vue sur les montagnes et à deux pas de la promenade lacustre",
     "lake.hero.rating"       : "5,0 · 5 avis · Airbnb",
 
@@ -2799,7 +2799,7 @@ const IEH_TRANSLATIONS = {
     "dvv.nav.gallery"        : "Galerie",
     "dvv.nav.location"       : "Emplacement",
 
-    "dvv.hero.title"         : "Dolce Vetta<br><em>Valmalenco</em>",
+    "dvv.hero.title"         : "Dolce Vetta<br><em>Appartement en Valmalenco</em>",
     "dvv.hero.sub"           : "Appartement de charme au centre de Chiesa in Valmalenco, au pied du massif de la Bernina",
 
     "dvv.hl.mountain.val"    : "Bernina",
