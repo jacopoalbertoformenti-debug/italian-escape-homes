@@ -1,6 +1,9 @@
 /**
  * Italian Escapes Homes – Internationalization (i18n)
- * Languages: Italian (it), English (en), German (de)
+ * Languages: Italian (it), English (en), German (de), French (fr)
+ *
+ * Dopo ogni modifica a questo file o a una pagina italiana, rigenerare le pagine
+ * statiche /en/, /de/, /fr/ con:  node tools/build-i18n.mjs
  */
 
 const IEH_TRANSLATIONS = {
@@ -197,6 +200,19 @@ const IEH_TRANSLATIONS = {
     "home.contacts.c1.label" : "Telefono & WhatsApp",
     "home.contacts.c1.link"  : "Chiama ora →",
     "home.contacts.c2.label" : "Email",
+    "home.badge.new" : "Novità",
+    "home.faq.q1" : "Quante proprietà gestite?",
+    "home.faq.a1" : "Cinque alloggi selezionati in quattro destinazioni italiane: Liguria (mare), Lago Maggiore, Lago di Como e Valmalenco (montagna).",
+    "home.faq.q2" : "In quali regioni si trovano le vostre case?",
+    "home.faq.a2" : "Liguria (San Bartolomeo al Mare), Lombardia (Leggiuno sul Lago Maggiore, Lecco sul Lago di Como) e Valmalenco nelle Alpi.",
+    "home.faq.q3" : "Come si prenota?",
+    "home.faq.a3" : "Tutte le proprietà sono prenotabili su Airbnb e la maggior parte anche su Booking.com. Puoi anche scriverci direttamente su WhatsApp, per telefono o via email.",
+    "home.faq.q4" : "Qual è la capacità massima di ospiti?",
+    "home.faq.a4" : "Gli alloggi ospitano da 4 a 6 persone a seconda della proprietà. Sono ideali per coppie, famiglie con bambini o piccoli gruppi.",
+    "home.faq.q5" : "Accettate animali domestici?",
+    "home.faq.a5" : "La politica sugli animali varia in base alla proprietà. Ti invitiamo a contattarci prima di prenotare per verificare la disponibilità.",
+    "home.faq.q6" : "È possibile soggiornare in più proprietà?",
+    "home.faq.a6" : "Sì, gestiamo direttamente tutte le proprietà. Contattaci per organizzare itinerari combinati tra mare, lago e montagna.",
     "home.contacts.c2.link"  : "Scrivi →",
     "home.contacts.c3.label" : "Disponibilità",
     "home.contacts.c3.value" : "Tutte le case",
@@ -492,6 +508,14 @@ const IEH_TRANSLATIONS = {
     "lake.loc.train.title"   : "Stazione ferroviaria",
     "lake.loc.train.text"    : "La stazione di Lecco è a pochi minuti a piedi, con collegamenti diretti per Milano e altre città.",
     "lake.loc.nearby.text"   : "Varenna, Bellagio, Menaggio, Abbazia di Piona, sentieri della Valsassina.",
+    "lake.loc.apt.text" : "Via Pasubio 17, 23900 Lecco. Nel cuore della città, a pochi passi dal lungolago e dalla piazza principale. Tutti i servizi sono raggiungibili a piedi.",
+    "lake.loc.water.title" : "Il lago",
+    "lake.loc.water.text" : "Il Lago di Como è a portata di mano: passeggiate sul lungolago, escursioni in barca e sentieri panoramici tra i più belli d’Italia.",
+    "lake.loc.conn.title" : "Connessioni",
+    "lake.loc.conn.text" : "La stazione di Lecco è a pochi minuti a piedi. Da qui treni diretti per Milano in 50 minuti e Como in 30 minuti.",
+    "lake.loc.nature.title" : "Natura & sport",
+    "lake.loc.nature.text" : "Porta di accesso alla Valsassina, alle Grigne e ai sentieri del Resegone. Paradiso per trekking, MTB e arrampicata.",
+    "lake.cin.label" : "Codice Identificativo Nazionale (CIN):",
 
     /* ── Lake gallery ── */
     "lake.gallery.label"     : "Immagini",
@@ -908,6 +932,19 @@ const IEH_TRANSLATIONS = {
     "home.contacts.c1.label" : "Phone & WhatsApp",
     "home.contacts.c1.link"  : "Call now →",
     "home.contacts.c2.label" : "Email",
+    "home.badge.new" : "New",
+    "home.faq.q1" : "How many properties do you manage?",
+    "home.faq.a1" : "Five hand-picked homes in four Italian destinations: Liguria (seaside), Lake Maggiore, Lake Como and Valmalenco (mountains).",
+    "home.faq.q2" : "Which regions are your homes in?",
+    "home.faq.a2" : "Liguria (San Bartolomeo al Mare), Lombardy (Leggiuno on Lake Maggiore, Lecco on Lake Como) and Valmalenco in the Alps.",
+    "home.faq.q3" : "How do I book?",
+    "home.faq.a3" : "All properties can be booked on Airbnb, and most of them on Booking.com too. You can also contact us directly by WhatsApp, phone or email.",
+    "home.faq.q4" : "What is the maximum number of guests?",
+    "home.faq.a4" : "The homes sleep 4 to 6 guests depending on the property. They are ideal for couples, families with children or small groups.",
+    "home.faq.q5" : "Do you accept pets?",
+    "home.faq.a5" : "The pet policy varies from property to property. Please contact us before booking to check.",
+    "home.faq.q6" : "Can I stay in more than one property?",
+    "home.faq.a6" : "Yes, we manage all the properties directly. Contact us to plan a combined itinerary across sea, lake and mountains.",
     "home.contacts.c2.link"  : "Write to us →",
     "home.contacts.c3.label" : "Availability",
     "home.contacts.c3.value" : "All our homes",
@@ -1203,6 +1240,14 @@ const IEH_TRANSLATIONS = {
     "lake.loc.train.title"   : "Train station",
     "lake.loc.train.text"    : "Lecco station is a short walk away, with direct connections to Milan and other cities.",
     "lake.loc.nearby.text"   : "Varenna, Bellagio, Menaggio, Abbazia di Piona, Valsassina trails.",
+    "lake.loc.apt.text" : "Via Pasubio 17, 23900 Lecco. In the heart of the city, a short walk from the lakefront and the main square. All amenities are within walking distance.",
+    "lake.loc.water.title" : "The lake",
+    "lake.loc.water.text" : "Lake Como is on your doorstep: lakefront walks, boat trips and some of the most beautiful scenic trails in Italy.",
+    "lake.loc.conn.title" : "Connections",
+    "lake.loc.conn.text" : "Lecco station is a few minutes' walk away, with direct trains to Milan in 50 minutes and Como in 30 minutes.",
+    "lake.loc.nature.title" : "Nature & sport",
+    "lake.loc.nature.text" : "Gateway to Valsassina, the Grigne and the Resegone trails. A paradise for hiking, mountain biking and climbing.",
+    "lake.cin.label" : "National Identification Code (CIN):",
 
     /* ── Lake gallery ── */
     "lake.gallery.label"     : "Photos",
@@ -1607,6 +1652,19 @@ const IEH_TRANSLATIONS = {
     "home.contacts.c1.label" : "Telefon & WhatsApp",
     "home.contacts.c1.link"  : "Jetzt anrufen →",
     "home.contacts.c2.label" : "E-Mail",
+    "home.badge.new" : "Neu",
+    "home.faq.q1" : "Wie viele Unterkünfte verwalten Sie?",
+    "home.faq.a1" : "Fünf ausgewählte Unterkünfte an vier italienischen Reisezielen: Ligurien (Meer), Lago Maggiore, Comer See und Valmalenco (Berge).",
+    "home.faq.q2" : "In welchen Regionen liegen Ihre Unterkünfte?",
+    "home.faq.a2" : "Ligurien (San Bartolomeo al Mare), Lombardei (Leggiuno am Lago Maggiore, Lecco am Comer See) und Valmalenco in den Alpen.",
+    "home.faq.q3" : "Wie kann ich buchen?",
+    "home.faq.a3" : "Alle Unterkünfte sind über Airbnb buchbar, die meisten auch über Booking.com. Sie können uns auch direkt per WhatsApp, Telefon oder E-Mail kontaktieren.",
+    "home.faq.q4" : "Wie viele Gäste finden maximal Platz?",
+    "home.faq.a4" : "Die Unterkünfte bieten je nach Objekt Platz für 4 bis 6 Personen. Ideal für Paare, Familien mit Kindern oder kleine Gruppen.",
+    "home.faq.q5" : "Sind Haustiere erlaubt?",
+    "home.faq.a5" : "Die Regelung für Haustiere ist je nach Unterkunft unterschiedlich. Bitte kontaktieren Sie uns vor der Buchung, um dies zu klären.",
+    "home.faq.q6" : "Kann ich in mehreren Unterkünften übernachten?",
+    "home.faq.a6" : "Ja, wir verwalten alle Unterkünfte selbst. Kontaktieren Sie uns, um eine kombinierte Reise zwischen Meer, See und Bergen zu planen.",
     "home.contacts.c2.link"  : "Schreiben →",
     "home.contacts.c3.label" : "Verfügbarkeit",
     "home.contacts.c3.value" : "Alle Unterkünfte",
@@ -1900,6 +1958,14 @@ const IEH_TRANSLATIONS = {
     "lake.loc.train.title"   : "Bahnhof",
     "lake.loc.train.text"    : "Der Bahnhof Lecco ist zu Fuß in wenigen Minuten erreichbar, mit Direktverbindungen nach Mailand und anderen Städten.",
     "lake.loc.nearby.text"   : "Varenna, Bellagio, Menaggio, Abtei Piona, Wanderwege im Valsassina.",
+    "lake.loc.apt.text" : "Via Pasubio 17, 23900 Lecco. Im Herzen der Stadt, nur wenige Schritte von der Seepromenade und dem Hauptplatz entfernt. Alles ist zu Fuß erreichbar.",
+    "lake.loc.water.title" : "Der See",
+    "lake.loc.water.text" : "Der Comer See liegt direkt vor der Tür: Spaziergänge an der Seepromenade, Bootsausflüge und einige der schönsten Panoramawege Italiens.",
+    "lake.loc.conn.title" : "Verbindungen",
+    "lake.loc.conn.text" : "Der Bahnhof Lecco ist zu Fuß in wenigen Minuten erreichbar. Von hier fahren Direktzüge in 50 Minuten nach Mailand und in 30 Minuten nach Como.",
+    "lake.loc.nature.title" : "Natur & Sport",
+    "lake.loc.nature.text" : "Tor zum Valsassina, zu den Grigne und den Wanderwegen am Resegone. Ein Paradies für Wanderer, Mountainbiker und Kletterer.",
+    "lake.cin.label" : "Nationaler Identifikationscode (CIN):",
 
     /* ── Lake gallery ── */
     "lake.gallery.label"     : "Fotos",
@@ -2304,6 +2370,19 @@ const IEH_TRANSLATIONS = {
     "home.contacts.c1.label" : "Téléphone & WhatsApp",
     "home.contacts.c1.link"  : "Appeler maintenant →",
     "home.contacts.c2.label" : "E-mail",
+    "home.badge.new" : "Nouveau",
+    "home.faq.q1" : "Combien de logements gérez-vous ?",
+    "home.faq.a1" : "Cinq logements sélectionnés dans quatre destinations italiennes : la Ligurie (mer), le lac Majeur, le lac de Côme et le Valmalenco (montagne).",
+    "home.faq.q2" : "Dans quelles régions se trouvent vos logements ?",
+    "home.faq.a2" : "En Ligurie (San Bartolomeo al Mare), en Lombardie (Leggiuno sur le lac Majeur, Lecco sur le lac de Côme) et dans le Valmalenco, dans les Alpes.",
+    "home.faq.q3" : "Comment réserver ?",
+    "home.faq.a3" : "Tous les logements sont réservables sur Airbnb et la plupart également sur Booking.com. Vous pouvez aussi nous écrire directement par WhatsApp, par téléphone ou par e-mail.",
+    "home.faq.q4" : "Quelle est la capacité maximale d'accueil ?",
+    "home.faq.a4" : "Les logements accueillent de 4 à 6 personnes selon le bien. Ils sont parfaits pour les couples, les familles avec enfants ou les petits groupes.",
+    "home.faq.q5" : "Acceptez-vous les animaux de compagnie ?",
+    "home.faq.a5" : "La politique concernant les animaux varie selon le logement. Nous vous invitons à nous contacter avant de réserver pour vérifier.",
+    "home.faq.q6" : "Est-il possible de séjourner dans plusieurs logements ?",
+    "home.faq.a6" : "Oui, nous gérons directement tous les logements. Contactez-nous pour organiser un itinéraire combiné entre mer, lac et montagne.",
     "home.contacts.c2.link"  : "Écrire →",
     "home.contacts.c3.label" : "Disponibilités",
     "home.contacts.c3.value" : "Toutes les maisons",
@@ -2599,6 +2678,14 @@ const IEH_TRANSLATIONS = {
     "lake.loc.train.title"   : "Gare ferroviaire",
     "lake.loc.train.text"    : "La gare de Lecco est à quelques minutes à pied, avec des liaisons directes vers Milan et d'autres villes.",
     "lake.loc.nearby.text"   : "Varenna, Bellagio, Menaggio, Abbaye de Piona, sentiers de la Valsassina.",
+    "lake.loc.apt.text" : "Via Pasubio 17, 23900 Lecco. Au cœur de la ville, à deux pas de la promenade du lac et de la place principale. Tous les services sont accessibles à pied.",
+    "lake.loc.water.title" : "Le lac",
+    "lake.loc.water.text" : "Le lac de Côme est à portée de main : promenades au bord du lac, excursions en bateau et sentiers panoramiques parmi les plus beaux d'Italie.",
+    "lake.loc.conn.title" : "Liaisons",
+    "lake.loc.conn.text" : "La gare de Lecco est à quelques minutes à pied. Trains directs pour Milan en 50 minutes et pour Côme en 30 minutes.",
+    "lake.loc.nature.title" : "Nature & sport",
+    "lake.loc.nature.text" : "Porte d'entrée vers la Valsassina, les Grigne et les sentiers du Resegone. Un paradis pour la randonnée, le VTT et l'escalade.",
+    "lake.cin.label" : "Code d'identification national (CIN) :",
 
     /* ── Galerie Lake At Home ── */
     "lake.gallery.label"     : "Photos",
@@ -2816,17 +2903,75 @@ const IEH_TRANSLATIONS = {
    ENGINE
 ═══════════════════════════════════════════════════════════════ */
 
+/* Ogni lingua ha il suo indirizzo: l'italiano alla radice, le altre sotto /en/, /de/, /fr/
+   (pagine statiche generate da tools/build-i18n.mjs). La lingua la decide l'indirizzo,
+   mai il browser: così Google indicizza ogni versione nella lingua giusta. */
+const IEH_URL_LANGS = ['en', 'de', 'fr'];
+const IEH_LANG_PREFIX = /^\/(en|de|fr)(?=\/|$)/;
+
 function iehGetLang() {
-  const stored = localStorage.getItem('ieh-lang');
-  if (stored && IEH_TRANSLATIONS[stored]) return stored;
-  const browser = (navigator.language || navigator.userLanguage || 'it').split('-')[0];
-  return IEH_TRANSLATIONS[browser] ? browser : 'it';
+  const m = location.pathname.match(IEH_LANG_PREFIX);
+  return m ? m[1] : 'it';
+}
+
+/* Indirizzo della pagina corrente in un'altra lingua */
+function iehLangUrl(lang) {
+  const page = location.pathname.replace(IEH_LANG_PREFIX, '') || '/';
+  return (lang === 'it' ? '' : '/' + lang) + page;
+}
+
+function iehStore(key, value) {
+  try {
+    if (value === undefined) return localStorage.getItem(key);
+    localStorage.setItem(key, value);
+  } catch (e) { /* storage non disponibile (navigazione privata): si prosegue senza */ }
+  return null;
 }
 
 function iehSetLang(lang) {
   if (!IEH_TRANSLATIONS[lang]) lang = 'it';
-  localStorage.setItem('ieh-lang', lang);
-  iehApply(lang);
+  iehStore('ieh-lang', lang);
+  if (lang === iehGetLang()) return;
+  location.href = iehLangUrl(lang) + location.hash;
+}
+
+/* Sulla pagina italiana, a chi preferisce EN/DE/FR (scelta salvata o lingua del browser)
+   propone la versione tradotta. Solo un invito: nessun redirect automatico. */
+function iehSuggestLang() {
+  if (iehGetLang() !== 'it' || iehStore('ieh-lang-hint')) return;
+  const pref = iehStore('ieh-lang') || (navigator.language || '').split('-')[0];
+  if (!IEH_URL_LANGS.includes(pref)) return;
+  const testo = {
+    en: 'View this page in English',
+    de: 'Diese Seite auf Deutsch ansehen',
+    fr: 'Voir cette page en français'
+  }[pref];
+
+  const box = document.createElement('div');
+  box.className = 'ieh-lang-hint';
+  box.style.cssText =
+    'position:fixed;top:84px;left:50%;transform:translateX(-50%);z-index:99;display:flex;align-items:center;' +
+    'gap:6px;max-width:calc(100vw - 24px);padding:8px 8px 8px 18px;border-radius:30px;' +
+    'background:rgba(26,44,61,.94);box-shadow:0 6px 24px rgba(0,0,0,.25);' +
+    "font-family:'Inter',sans-serif;font-size:.82rem;font-weight:400;white-space:nowrap;";
+  const link = document.createElement('a');
+  link.href = iehLangUrl(pref) + location.hash;
+  link.lang = pref;
+  link.textContent = testo + ' →';
+  link.style.cssText = 'color:#fff;text-decoration:none;';
+  const close = document.createElement('button');
+  close.type = 'button';
+  close.setAttribute('aria-label', 'Chiudi');
+  close.textContent = '×';
+  close.style.cssText =
+    'background:none;border:none;color:rgba(255,255,255,.7);font-size:1.2rem;line-height:1;cursor:pointer;padding:2px 8px;';
+  close.addEventListener('click', function () {
+    iehStore('ieh-lang-hint', '1');
+    box.remove();
+  });
+  box.appendChild(link);
+  box.appendChild(close);
+  document.body.appendChild(box);
 }
 
 function iehApply(lang) {
@@ -2901,6 +3046,7 @@ function iehApply(lang) {
 document.addEventListener('DOMContentLoaded', () => {
   const lang = iehGetLang();
   iehApply(lang);   /* always apply to set active state */
+  iehSuggestLang();
 });
 
 /* ── Rating live dal gestionale ─────────────────────────────────────────────
@@ -2909,7 +3055,8 @@ document.addEventListener('DOMContentLoaded', () => {
    Homepage: aggiorna i badge .prop-badge-rating sulle card.
    Se l'endpoint non risponde, resta il contenuto statico della pagina. */
 (function () {
-  var slug = location.pathname.split('/').filter(Boolean)[0];
+  /* primo segmento del percorso, tolto l'eventuale prefisso lingua (/en/lake-at-home/) */
+  var slug = location.pathname.replace(IEH_LANG_PREFIX, '').split('/').filter(Boolean)[0];
 
   var PAROLE = {
     it: { su: 'su', rec: 'recensioni' },
