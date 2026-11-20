@@ -2,8 +2,12 @@
 /**
  * Genera le versioni statiche EN / DE / FR delle pagine del sito.
  *
- * Sorgenti: le 6 pagine italiane (index.html + le 5 schede) e le traduzioni in i18n.js.
+ * Sorgenti: le 6 pagine italiane (index.html + le 5 schede), le traduzioni in i18n.js
+ *           (elementi con data-i18n) e il dizionario tools/i18n-phrases.json (testi scritti
+ *           direttamente nell'HTML: didascalie, alt delle foto, etichette).
  * Output:   /en/…, /de/…, /fr/… (una cartella per lingua, stessa struttura) e sitemap.xml.
+ *           Inoltre le pagine destinazione (/lago-maggiore/, /valmalenco/, …) in tutte e
+ *           quattro le lingue, a partire da tools/destinations.mjs.
  *
  * Le cartelle en/ de/ fr/ sono generate: non modificarle a mano. Dopo ogni modifica a
  * una pagina italiana o a i18n.js rilanciare:
@@ -14,6 +18,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
+import { renderDestination, DESTINATIONS } from './destination-page.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://www.italianescapeshomes.it';
@@ -21,7 +26,10 @@ const LANGS = ['en', 'de', 'fr'];
 const OG_LOCALE = { en: 'en_GB', de: 'de_DE', fr: 'fr_FR' };
 /* '' = homepage; gli altri sono gli slug delle schede */
 const PAGES = ['', 'casa-mariangela', 'appartamento-piscina', 'pool-and-garden', 'lake-at-home', 'dolce-vetta-valmalenco'];
-const PAGE_PATHS = new Set(PAGES.map(pagePath));
+/* le pagine destinazione (guide alle zone) sono generate in tutte le lingue, italiano
+   compreso, da tools/destinations.mjs + tools/destination-page.mjs */
+const DEST_SLUGS = DESTINATIONS.map(d => d.slug);
+const PAGE_PATHS = new Set([...PAGES, ...DEST_SLUGS].map(pagePath));
 
 function pagePath(slug) { return slug ? `/${slug}/` : '/'; }
 function sourceFile(slug) { return path.join(ROOT, slug, 'index.html'); }
@@ -60,6 +68,69 @@ function replaceOutsideCode(html, re, fn) {
     const offset = args[args.length - 2];
     return inRanges(ranges, offset) ? args[0] : fn(...args);
   });
+}
+
+/* ── Testi senza data-i18n: dizionario tools/i18n-phrases.json ──────────────
+   Didascalie delle gallerie, alt delle foto, aria-label, etichette: nell'HTML italiano
+   sono scritti direttamente. Qui vengono tradotti per corrispondenza esatta del testo. */
+const PHRASE_FILE = path.join(ROOT, 'tools', 'i18n-phrases.json');
+const PHRASES = JSON.parse(fs.readFileSync(PHRASE_FILE, 'utf8'));
+const PHRASE_PATTERNS = PHRASES.patterns.map(p => ({ ...p, re: new RegExp(p.it) }));
+const PHRASE_KEEP = new Set(PHRASES.keep);
+
+const ENTITIES = {
+  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', middot: '·', mdash: '—', ndash: '–',
+  rsquo: '’', lsquo: '‘', copy: '©', times: '×', agrave: 'à', egrave: 'è', eacute: 'é', igrave: 'ì',
+  ograve: 'ò', ugrave: 'ù', Egrave: 'È', rarr: '→', larr: '←', hellip: '…',
+};
+function decodeEntities(s) {
+  return s.replace(/&(#x?[0-9a-fA-F]+|[a-zA-Z]+);/g, (all, e) => {
+    if (e[0] === '#') return String.fromCodePoint(e[1] === 'x' || e[1] === 'X' ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10));
+    return e in ENTITIES ? ENTITIES[e] : all;
+  });
+}
+
+/* Traduzione di un testo italiano, o null se il dizionario non lo prevede */
+function phrase(raw, lang) {
+  const key = decodeEntities(raw).replace(/\s+/g, ' ').trim();
+  if (!key) return null;
+  const hit = PHRASES.phrases[key];
+  if (hit) return hit[LANGS.indexOf(lang)];
+  for (const p of PHRASE_PATTERNS) if (p.re.test(key)) return key.replace(p.re, p[lang]);
+  return null;
+}
+
+/* `missing` raccoglie alt / aria-label / title / didascalie rimasti senza traduzione */
+function applyPhrases(html, lang, missing) {
+  const note = raw => {
+    const key = decodeEntities(raw).replace(/\s+/g, ' ').trim();
+    if (key && !PHRASE_KEEP.has(key)) missing.add(key);
+  };
+  /* nodi di testo */
+  html = replaceOutsideCode(html, />([^<>]+)</g, (all, txt) => {
+    const t = phrase(txt, lang);
+    if (t === null) return all;
+    return '>' + txt.match(/^\s*/)[0] + escText(t) + txt.match(/\s*$/)[0] + '<';
+  });
+  /* attributi descrittivi */
+  html = replaceOutsideCode(html, /(\s(?:alt|aria-label|title)=")([^"]*)(")/g, (all, a, val, b) => {
+    const t = phrase(val, lang);
+    if (t === null) { note(val); return all; }
+    return a + escAttr(t) + b;
+  });
+  html = html.replace(/(<meta property="og:image:alt" content=")([^"]*)(")/g, (all, a, val, b) => {
+    const t = phrase(val, lang);
+    if (t === null) { note(val); return all; }
+    return a + escAttr(t) + b;
+  });
+  /* didascalie del lightbox: stanno in una stringa JS tra apici dentro onclick,
+     quindi l'apostrofo dritto va sostituito con quello tipografico */
+  html = replaceOutsideCode(html, /(openLightbox\('[^']+',')([^']*)('\))/g, (all, a, val, b) => {
+    const t = phrase(val, lang);
+    if (t === null) { note(val); return all; }
+    return a + escAttr(t.replace(/'/g, '’')) + b;
+  });
+  return html;
 }
 
 /* ── data-i18n / data-i18n-html: stesso effetto di iehApply(), ma statico ── */
@@ -201,7 +272,7 @@ function rewriteJsonLd(html, slug, lang, t, desc) {
 }
 
 /* ── Una pagina, una lingua ──────────────────────────────────────────────── */
-function buildPage(slug, lang, t) {
+function buildPage(slug, lang, t, missing) {
   const file = sourceFile(slug);
   const source = fs.readFileSync(file, 'utf8');
   const rel = path.relative(ROOT, file).replace(/\\/g, '/');
@@ -216,7 +287,9 @@ function buildPage(slug, lang, t) {
   const desc = t[descKey];
   if (!title || !desc) throw new Error(`${rel}: ${titleKey} o ${descKey} non tradotti in ${lang}`);
 
-  let html = applyTranslations(source, t, rel);
+  /* prima il dizionario (sul testo italiano), poi le chiavi i18n che hanno la precedenza */
+  let html = applyPhrases(source, lang, missing);
+  html = applyTranslations(html, t, rel);
   html = html.replace(/<html lang="it">/, `<html lang="${lang}">`);
   html = html.replace(/(<link rel="canonical" href=")[^"]*(")/, (all, a, b) => a + pageUrl(slug, lang) + b);
   html = setMeta(html, 'property', 'og:url', pageUrl(slug, lang));
@@ -244,16 +317,18 @@ function day(file) {
 
 function buildSitemap() {
   const i18nDay = day(path.join(ROOT, 'i18n.js'));
+  const destDay = [day(path.join(ROOT, 'tools', 'destinations.mjs')), day(path.join(ROOT, 'tools', 'destination-page.mjs'))].sort().pop();
   const all = ['it', ...LANGS];
   const rows = [];
-  for (const slug of PAGES) {
-    const srcDay = day(sourceFile(slug));
+  for (const slug of [...PAGES, ...DEST_SLUGS]) {
+    const isDest = DEST_SLUGS.includes(slug);
+    const srcDay = isDest ? destDay : day(sourceFile(slug));
     const alternates = all
       .map(l => `    <xhtml:link rel="alternate" hreflang="${l}" href="${pageUrl(slug, l)}"/>`)
       .concat(`    <xhtml:link rel="alternate" hreflang="x-default" href="${pageUrl(slug, 'en')}"/>`)
       .join('\n');
     for (const l of all) {
-      const lastmod = l === 'it' || srcDay > i18nDay ? srcDay : i18nDay;
+      const lastmod = isDest || l === 'it' || srcDay > i18nDay ? srcDay : i18nDay;
       rows.push(`  <url>\n    <loc>${pageUrl(slug, l)}</loc>\n    <lastmod>${lastmod}</lastmod>\n${alternates}\n  </url>`);
     }
   }
@@ -265,10 +340,30 @@ function buildSitemap() {
 
 /* ── Main ────────────────────────────────────────────────────────────────── */
 const T = loadTranslations();
+const missing = new Set();
 for (const lang of LANGS) {
   if (!T[lang]) throw new Error(`i18n.js: manca la lingua "${lang}"`);
   fs.rmSync(path.join(ROOT, lang), { recursive: true, force: true });
-  for (const slug of PAGES) console.log('  ' + buildPage(slug, lang, T[lang]));
+  for (const slug of PAGES) console.log('  ' + buildPage(slug, lang, T[lang], missing));
 }
+
+/* pagine destinazione: una per lingua, italiano compreso */
+const i18nVersion = (fs.readFileSync(sourceFile(''), 'utf8').match(/i18n\.js\?v=(\d+)/) || [])[1];
+if (!i18nVersion) throw new Error('index.html: versione di i18n.js non trovata');
+const destCtx = { site: SITE, i18nVersion, year: new Date().getFullYear() };
+for (const dest of DESTINATIONS) {
+  for (const lang of ['it', ...LANGS]) {
+    const outFile = path.join(ROOT, lang === 'it' ? '' : lang, dest.slug, 'index.html');
+    fs.mkdirSync(path.dirname(outFile), { recursive: true });
+    fs.writeFileSync(outFile, renderDestination(dest, lang, destCtx));
+    console.log('  ' + path.relative(ROOT, outFile).replace(/\\/g, '/'));
+  }
+}
+
 buildSitemap();
-console.log(`  sitemap.xml (${PAGES.length * (LANGS.length + 1)} indirizzi)`);
+console.log(`  sitemap.xml (${(PAGES.length + DEST_SLUGS.length) * (LANGS.length + 1)} indirizzi)`);
+if (missing.size) {
+  console.log(`\n  ATTENZIONE: ${missing.size} testi (alt, didascalie, etichette) restano in italiano nelle pagine tradotte.`);
+  console.log('  Aggiungili a tools/i18n-phrases.json ("phrases", oppure "keep" se sono nomi propri):');
+  for (const s of missing) console.log('    - ' + s);
+}
